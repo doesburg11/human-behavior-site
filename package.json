@@ -1,0 +1,19 @@
+{
+  "name": "human-behavior-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve",
+    "deploy": "./deploy.sh"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.8.1",
+    "@docusaurus/preset-classic": "^3.8.1",
+    "@docsearch/react": "^3.0.0",
+    "clsx": "^2.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}

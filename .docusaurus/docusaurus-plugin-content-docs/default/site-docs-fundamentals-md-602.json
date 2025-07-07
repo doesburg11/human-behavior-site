@@ -1,0 +1,27 @@
+{
+  "id": "fundamentals",
+  "title": "Fundamentals of Behavior",
+  "description": "Which fundamentals do generate human behavior?",
+  "source": "@site/docs/fundamentals.md",
+  "sourceDirName": ".",
+  "slug": "/fundamentals",
+  "permalink": "/fundamentals",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/doesburg11/doesburg11.github.io/edit/main/docs/fundamentals.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "fundamentals",
+    "title": "Fundamentals of Behavior"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Human Behavior Patterns",
+    "permalink": "/human-behavior-patterns-overview"
+  },
+  "next": {
+    "title": "Domains",
+    "permalink": "/fundamentals/domains"
+  }
+}

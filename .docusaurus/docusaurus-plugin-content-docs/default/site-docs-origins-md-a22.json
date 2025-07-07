@@ -1,0 +1,23 @@
+{
+  "id": "origins",
+  "title": "Origins of Behavior",
+  "description": "Historic Origins of Behavior",
+  "source": "@site/docs/origins.md",
+  "sourceDirName": ".",
+  "slug": "/origins",
+  "permalink": "/origins",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/doesburg11/doesburg11.github.io/edit/main/docs/origins.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "origins",
+    "title": "Origins of Behavior"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "The Workings",
+    "permalink": "/brain"
+  }
+}

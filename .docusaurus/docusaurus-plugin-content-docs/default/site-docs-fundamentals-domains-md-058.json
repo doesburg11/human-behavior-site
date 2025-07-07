@@ -1,0 +1,26 @@
+{
+  "id": "fundamentals/domains",
+  "title": "Fundamentals per domain",
+  "description": "A closer look into the origins of behavior",
+  "source": "@site/docs/fundamentals/domains.md",
+  "sourceDirName": "fundamentals",
+  "slug": "/fundamentals/domains",
+  "permalink": "/fundamentals/domains",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/doesburg11/doesburg11.github.io/edit/main/docs/fundamentals/domains.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Fundamentals per domain"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Fundamentals of Behavior",
+    "permalink": "/fundamentals"
+  },
+  "next": {
+    "title": "The Workings",
+    "permalink": "/brain"
+  }
+}

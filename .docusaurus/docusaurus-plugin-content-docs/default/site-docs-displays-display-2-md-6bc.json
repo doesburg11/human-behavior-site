@@ -1,0 +1,23 @@
+{
+  "id": "displays/display2",
+  "title": "Display 2",
+  "description": "Display 2: Behavior and its fundamentals",
+  "source": "@site/docs/displays/display2.md",
+  "sourceDirName": "displays",
+  "slug": "/displays/display2",
+  "permalink": "/displays/display2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/doesburg11/doesburg11.github.io/edit/main/docs/displays/display2.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "display2",
+    "title": "Display 2"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Origins of Behavior",
+    "permalink": "/origins"
+  }
+}

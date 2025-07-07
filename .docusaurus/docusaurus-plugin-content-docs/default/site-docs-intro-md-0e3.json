@@ -1,0 +1,23 @@
+{
+  "id": "intro",
+  "title": "Overview",
+  "description": "This project aims to model general human behavior patterns. This modeling of human behavior is meant to be descriptive, rather than prescriptive. Furthermore we aim to integrate state-of-the-art Artificial Intelligence concepts into into modeling human behavior patterns, notably from multi agent reinforcement learning (MARL) and Artificial Life Intelligence.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/doesburg11/human_behavior_site/edit/main/docs/intro.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "Overview"
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Fundamentals",
+    "permalink": "/fundamentals"
+  }
+}
