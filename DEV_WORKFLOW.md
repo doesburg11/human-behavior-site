@@ -61,7 +61,7 @@ npm start
 When you're ready to publish your changes:
 
 ```bash
-npm run deploy
+./deploy
 ```
 
 This runs the `deploy.sh` script, which:
