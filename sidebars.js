@@ -28,13 +28,13 @@ export default {
       items: [
         {
           type: 'category',
-          label: 'Fundamentals',
+          label: 'Ecosystem',
           link: { type: 'doc', id: 'fundamentals' }, // Summary page
           items: [
             { type: 'doc', id: 'fundamentals/domains', label: 'Domains' },
           ],
         },
-        { type: 'doc', id: 'brain', label: 'The Workings' },
+        { type: 'doc', id: 'brain', label: 'Evaluation' },
       ],
     },
   ],
