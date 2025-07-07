@@ -9,8 +9,12 @@ To implement this, a [multi-agent reinforcement learning (MARL)](https://en.wiki
 
 Predators die of starvation when their energy is zero, Prey die either of starvation or when being eaten by a Predator. The agents asexually reproduce when energy levels of learning agents rise above a certain threshold by eating. Learning agents, learn to execute movement actions based on their partial observations of the environment to maximize cumulative reward.
 
-<video width="640" height="360" controls>
-  <source src="/videos/predpreygrass.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
 
+<figure style={{ textAlign: 'center' }}>
+  <video controls style={{ width: '100%', height: 'auto' }}>
+    <source src="/videos/predpreygrass.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+    <figcaption><strong>Display 1:</strong> Behavior visibility</figcaption>
+  </video>
+  <figcaption><strong>Display 1:</strong> A trained Predator, Prey, Grass environment</figcaption>
+</figure>
