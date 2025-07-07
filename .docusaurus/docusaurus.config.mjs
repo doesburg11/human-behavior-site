@@ -81,8 +81,8 @@ export default {
           "title": "Resources",
           "items": [
             {
-              "label": "Overview",
-              "to": "/"
+              "label": "Predator-Prey-Grass repo",
+              "href": "https://github.com/doesburg11/PredPreyGrass"
             }
           ]
         },
@@ -100,7 +100,7 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2025 Peter Doesburg."
+      "copyright": "Copyright © 2025 Peter van Doesburg."
     },
     "prism": {
       "theme": {

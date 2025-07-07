@@ -63,7 +63,10 @@ const config = {
         {
           title: 'Resources',
           items: [
-            { label: 'Overview', to: '/' },
+            { 
+              label: 'Predator-Prey-Grass repo',
+              href: 'https://github.com/doesburg11/PredPreyGrass',
+            },
           ],
         },
         {
@@ -80,7 +83,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Peter Doesburg.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Peter van Doesburg.`,
     },
     prism: {
       theme: prismThemes.github,

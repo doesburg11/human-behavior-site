@@ -34,6 +34,11 @@
               "id": "index",
               "path": "/",
               "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pred-prey-grass-project",
+              "path": "/pred-prey-grass-project",
+              "sidebar": "tutorialSidebar"
             }
           ],
           "draftIds": [],

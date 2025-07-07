@@ -21,5 +21,21 @@ export default {
         { type: 'doc', id: 'brain', label: 'The Workings' },
       ],
     },
+    {
+      type: 'category',
+      label: 'Predator, Prey, Grass project',
+      link: { type: 'doc', id: 'pred-prey-grass-project' },  
+      items: [
+        {
+          type: 'category',
+          label: 'Fundamentals',
+          link: { type: 'doc', id: 'fundamentals' }, // Summary page
+          items: [
+            { type: 'doc', id: 'fundamentals/domains', label: 'Domains' },
+          ],
+        },
+        { type: 'doc', id: 'brain', label: 'The Workings' },
+      ],
+    },
   ],
 };
