@@ -1,3 +1,7 @@
+# Ignore Docusaurus build artifacts
+.docusaurus/
+build/
+
 # dependencies
 node_modules/
 .cache/
