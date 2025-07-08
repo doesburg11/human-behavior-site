@@ -20,8 +20,9 @@ echo "📦 Copying new build files..."
 cp -r "$SOURCE_DIR/build/"* "$DEPLOY_DIR"
 
 echo "📤 Committing and pushing to GitHub..."
+git pull --rebase origin "$BRANCH" || echo "⚠️ Pull/rebase skipped or failed, continuing..."
 git add .
 git commit -m "$COMMIT_MSG" || echo "⚠️ Nothing to commit"
-git push origin $BRANCH
+git push origin "$BRANCH"
 
 echo "✅ Deployment complete!"
