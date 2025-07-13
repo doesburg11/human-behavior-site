@@ -6,7 +6,7 @@ title: Fundamentals of Behavior
 ### Which fundamentals do generate human behavior?
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/fundamentals/display-1.jpg" alt="Display 1: Behavior and its fundamentals" width="400" />
+  <img src="/img/human-behavior-patterns/fundamentals/display-1.jpg" alt="Display 1: Behavior and its fundamentals" width="400" />
   <figcaption><strong>Display 1:</strong> Behavior and its fundamentals</figcaption>
 </figure>
 
