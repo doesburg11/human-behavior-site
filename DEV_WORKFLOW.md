@@ -58,6 +58,8 @@ npm start
 
 ## 🚀 Deploy to GitHub Pages
 
+Commit and sync your changes
+
 When you're ready to publish your changes:
 
 ```bash
