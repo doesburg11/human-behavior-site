@@ -63,7 +63,7 @@ Commit and sync your changes
 When you're ready to publish your changes:
 
 ```bash
-./deploy
+./deploy.sh
 ```
 
 This runs the `deploy.sh` script, which:
