@@ -1,4 +1,5 @@
 ---
+id: domains-fundamentals
 title: Fundamentals per domain
 ---
 

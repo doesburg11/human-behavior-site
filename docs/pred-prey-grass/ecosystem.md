@@ -1,13 +1,15 @@
 ---
-id: fundamentals
-title: Fundamentals of Behavior
+id: ecosystem-ppg
+title: The Predator, Prey, Grass Ecosystem
 ---
 
-### Which fundamentals do generate human behavior?
+### The Predator, Prey, Grass Ecosystem
+
+To analyze human behavior patterns and interactions, we developed a multi agent Predator-Prey-Grass model. In this dynamic and sequential environment grass is growing over time and
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/display-2.jpg" alt="Display 2: Behavior and its fundamentals" width="400" />
-  <figcaption><strong>Display 2:</strong> Behavior and its fundamentals</figcaption>
+  <img src="/img/fundamentals/display-1.jpg" alt="Display 1: Behavior and its fundamentals" width="400" />
+  <figcaption><strong>Display 1:</strong> Behavior and its fundamentals</figcaption>
 </figure>
 
 Despite the visibility of behavior, the origins or fundamentals of behavior are frequently not (or only partially) detectable by others, such as emotions, beliefs and intentions. In its most simplified form human behavior originates from a mixture of genetics (‘nature’) and experience (‘nurture’) which both intertwine and have feedback loops to (life time) experience and evolution, as shown in Display 2.

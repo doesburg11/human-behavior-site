@@ -1,5 +1,5 @@
 ---
-id: pred-prey-grass-project
+id: overview-ppg
 title: Predator, Prey, Grass project
 ---
 

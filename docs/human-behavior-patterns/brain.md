@@ -1,5 +1,5 @@
 ---
-id: brain
+id: brain-hbp
 title: The Workings
 ---
 

@@ -8,33 +8,30 @@ export default {
     {
       type: 'category',
       label: 'Human Behavior Patterns',
-      link: { type: 'doc', id: 'human-behavior-patterns-overview' },  
+      link: { type: 'doc', id: 'human-behavior-patterns/overview-hbp' },  
       items: [
         {
           type: 'category',
           label: 'Fundamentals',
-          link: { type: 'doc', id: 'fundamentals' }, // Summary page
+          link: { type: 'doc', id: 'human-behavior-patterns/fundamentals/overview-fundamentals' }, 
           items: [
-            { type: 'doc', id: 'fundamentals/domains', label: 'Domains' },
+            { type: 'doc', id: 'human-behavior-patterns/fundamentals/domains-fundamentals', label: 'Domains' },
           ],
         },
-        { type: 'doc', id: 'brain', label: 'The Workings' },
+        { type: 'doc', id: 'human-behavior-patterns/brain-hbp', label: 'The Workings' },
       ],
     },
     {
       type: 'category',
       label: 'Predator, Prey, Grass project',
-      link: { type: 'doc', id: 'pred-prey-grass-project' },  
+      link: { type: 'doc', id: 'pred-prey-grass/overview-ppg' },  
       items: [
         {
           type: 'category',
           label: 'Ecosystem',
-          link: { type: 'doc', id: 'fundamentals' }, // Summary page
-          items: [
-            { type: 'doc', id: 'fundamentals/domains', label: 'Domains' },
-          ],
+          link: { type: 'doc', id: 'pred-prey-grass/ecosystem-ppg' }, // Summary page
+          items: [],
         },
-        { type: 'doc', id: 'brain', label: 'Evaluation' },
       ],
     },
   ],
