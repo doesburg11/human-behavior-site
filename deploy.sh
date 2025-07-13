@@ -14,15 +14,14 @@ npm run build
 
 echo "🧹 Cleaning old site in $DEPLOY_DIR..."
 cd "$DEPLOY_DIR"
-find . -maxdepth 1 ! -name '.' ! -name '.git' -exec rm -rf {} +
+find . -mindepth 1 ! -name '.git' -exec rm -rf {} +
 
 echo "📦 Copying new build files..."
 cp -r "$SOURCE_DIR/build/"* "$DEPLOY_DIR"
 
-echo "📤 Committing and pushing to GitHub..."
-git pull --rebase origin "$BRANCH" || echo "⚠️ Pull/rebase skipped or failed, continuing..."
+echo "📤 Committing and force-pushing to GitHub..."
 git add .
 git commit -m "$COMMIT_MSG" || echo "⚠️ Nothing to commit"
-git push origin "$BRANCH"
+git push origin $BRANCH --force
 
 echo "✅ Deployment complete!"
