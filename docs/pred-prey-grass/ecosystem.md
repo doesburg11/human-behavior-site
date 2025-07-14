@@ -153,3 +153,6 @@ This diagram captures the key thermodynamic and behavioral dynamics within the P
 - Local **order (low entropy)** is maintained in predator and prey populations by exploiting external gradients (grass energy).
 - Without energy input or efficient strategies, **populations collapse** and entropy increases.
 - This reinforces the ecological and physical realism of the simulation.
+
+## References
+- [Bailey, Regina. (2025, April 22). Laws of Thermodynamics as Related to Biology.]https://www.thoughtco.com/laws-of-thermodynamics-373307)
