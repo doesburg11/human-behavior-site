@@ -1,27 +1,24 @@
 #!/bin/bash
-set -e
 
-# -------- CONFIG --------
-SOURCE_DIR=~/Projects/human-behavior-site
-DEPLOY_DIR=~/Projects/doesburg11.github.io
-BRANCH=main
-COMMIT_MSG="Deploy Docusaurus site"
-# ------------------------
+set -e  # Exit on error
 
 echo "🔧 Building Docusaurus site..."
-cd "$SOURCE_DIR"
 npm run build
 
-echo "🧹 Cleaning old site in $DEPLOY_DIR..."
-cd "$DEPLOY_DIR"
-find . -mindepth 1 ! -name '.git' -exec rm -rf {} +
+echo "🧹 Cleaning old site in ~/Projects/doesburg11.github.io..."
+rsync -av --delete --exclude=".git" build/ ../doesburg11.github.io/
 
-echo "📦 Copying new build files..."
-cp -r "$SOURCE_DIR/build/"* "$DEPLOY_DIR"
+echo "📤 Committing and pushing to GitHub..."
+cd ../doesburg11.github.io
 
-echo "📤 Committing and force-pushing to GitHub..."
+# Only initialize if not already a git repo
+if [ ! -d ".git" ]; then
+  echo "🛠️ Git repo not found — initializing..."
+  git init
+  git checkout -b main
+  git remote add origin git@github.com:doesburg11/doesburg11.github.io.git
+fi
+
 git add .
-git commit -m "$COMMIT_MSG" || echo "⚠️ Nothing to commit"
-git push origin $BRANCH --force
-
-echo "✅ Deployment complete!"
+git commit -m "Manual deploy on $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit."
+git push origin main --force
