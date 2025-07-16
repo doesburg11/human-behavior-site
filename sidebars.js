@@ -34,5 +34,11 @@ export default {
         },
       ],
     },
+    {
+      type: 'doc',
+      id: 'to_do',
+      label: 'To do',
+    },
+
   ],
 };
