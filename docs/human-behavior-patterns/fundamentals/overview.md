@@ -10,13 +10,13 @@ title: Fundamentals of Behavior
   <figcaption><strong>Display 1:</strong> Behavior and its fundamentals</figcaption>
 </figure>
 
-Despite the visibility of behavior, the origins or fundamentals of behavior are frequently not (or only partially) detectable by others, such as emotions, beliefs and intentions. In its most simplified form human behavior originates from a mixture of genetics (‘nature’) and experience (‘nurture’) which both intertwine and have feedback loops to (life time) experience and evolution, as shown in Display 2.
+Despite the visibility of behavior, the origins or fundamentals of behavior are frequently not (or only partially) detectable by others, such as emotions, beliefs and intentions. In its most simplified form human behavior originates from a mixture of genetics (‘nature’) and experience (‘nurture’) which both intertwine and have feedback loops to (life time) experience and evolution, as shown in Display 1.
 
 Evolution influences the pool of behavior-influencing genes available to the members of human beings. Experience modifies the expression of an individual’s genetic program. Each individual’s genes initiate a unique program of neural development. The development of an individual’s nervous system depends on its interactions with its environment (i.e., on its experience).
 
 Each individual’s current behavioral capacities and tendencies are determined by its unique patterns of neural activity, some of which are experienced as thoughts, feelings, memories, etc. The individual’s actual behavior arises out of interactions among its ongoing patterns of neural activity and its perception of the current situation. The success of each individual’s behavior influences the likelihood that its genes will be passed on to perpetuating offspring and thus influences evolution.
 
-Human behavior could be viewed as contemporary action based upon ancestral hardware. Moreover, the origins of current human behavior is a blend of events in history ranging from millions of years in the past until split seconds ago, as shown in Display 3.
+Human behavior could be viewed as contemporary action based upon ancestral hardware. Moreover, the origins of current human behavior is a blend of events in history ranging from millions of years in the past until split seconds ago, as shown in Display 2.
 
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/human-behavior-patterns/fundamentals/display-2.jpg" alt="Display 2: Historic origins of behavior" width="800" />
@@ -29,5 +29,5 @@ The intention of this display however, is mainly to show that there is a range o
 
 ### What is the purpose of human behavior?
 
-Paramount to the origins and fundamentals of human behavior is the question what the purpose of human behavior actually is. The purpose of human behavior is to make alterations to the environment which are beneficial to its individual well being. Individual well being of humans can also be enhanced by increasing the well being of other living organisms, notably other humans or relatives. All human behavior can be regarded as an investment with an uncertain payoff. Humans make consciously or unconsciously predictions of these probabilities in weighing alternative behavior options before executing them. Comparable with this investment analogy, humans naturally strive for some optimal payoff with minimal investment. In other words, humans aim for behaviors which generate maximal output with minimal input. This originates from natural selection which favors maximizing evolutionary fitness.
+Paramount to the origins and fundamentals of human behavior is the question what the purpose of human behavior actually is. For the moment we state the purpose of human behavior as to make alterations to the environment which are beneficial to its individual well being. Individual well being of humans can also be enhanced by increasing the well being of other living organisms, notably other humans or relatives. All human behavior can be regarded as an investment with an uncertain payoff. Humans make consciously or unconsciously predictions of these probabilities in weighing alternative behavior options before executing them. Comparable with this investment analogy, humans naturally strive for some optimal payoff with minimal investment. In other words, humans aim for behaviors which generate maximal output with minimal input. This originates from natural selection which favors maximizing evolutionary fitness.
 
