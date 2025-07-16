@@ -18,7 +18,7 @@ export default {
             { type: 'doc', id: 'human-behavior-patterns/fundamentals/domains-fundamentals', label: 'Domains' },
           ],
         },
-        { type: 'doc', id: 'human-behavior-patterns/brain-hbp', label: 'The Workings' },
+        { type: 'doc', id: 'human-behavior-patterns/machinery', label: 'The Machinery' },
       ],
     },
     {
