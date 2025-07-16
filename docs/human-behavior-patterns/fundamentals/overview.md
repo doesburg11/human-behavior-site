@@ -6,7 +6,7 @@ title: Fundamentals of Behavior
 ### Which fundamentals do generate human behavior?
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/human-behavior-patterns/fundamentals/display-1.jpg" alt="Display 1: Behavior and its fundamentals" width="400" />
+  <img src="/img/human-behavior-patterns/fundamentals/overview/display-1.jpg" alt="Display 1: Behavior and its fundamentals" width="400" />
   <figcaption><strong>Display 1:</strong> Behavior and its fundamentals</figcaption>
 </figure>
 
@@ -19,7 +19,7 @@ Each individual’s current behavioral capacities and tendencies are determined 
 Human behavior could be viewed as contemporary action based upon ancestral hardware. Moreover, the origins of current human behavior is a blend of events in history ranging from millions of years in the past until split seconds ago, as shown in Display 2.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/human-behavior-patterns/fundamentals/display-2.jpg" alt="Display 2: Historic origins of behavior" width="800" />
+  <img src="/img/human-behavior-patterns/fundamentals/overview/display-2.jpg" alt="Display 2: Historic origins of behavior" width="800" />
   <figcaption><strong>Display 2:</strong> Historic origins of behavior</figcaption>
 </figure>
 
