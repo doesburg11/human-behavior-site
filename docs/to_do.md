@@ -16,3 +16,7 @@ sidebar_position: 1
     - [DI-zoo](https://github.com/opendilab/DI-engine#environment-versatility): various decision intelligence demonstrations and benchmark environments with DI-engine.
 </details>
 
+- Explore examples: https://github.com/flairox/jaxmarl?tab=readme-ov-file
+  - https://raw.githubusercontent.com/FLAIROx/JaxMARL/refs/heads/main/docs/imgs/smax.gif
+  - SMAX: https://github.com/FLAIROx/JaxMARL/tree/main/jaxmarl/environments/smax
+
