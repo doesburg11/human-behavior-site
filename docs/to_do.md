@@ -12,7 +12,7 @@ sidebar_position: 1
 
 - Collapsable menu in readme.md: https://github.com/opendilab/DI-engine
 
-<details open>
+<details closed>
 <summary>(Click to Collapse)</summary>
 
 - Traditional academic environments
