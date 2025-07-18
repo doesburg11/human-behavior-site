@@ -6,5 +6,8 @@ sidebar_position: 1
 
 - Create training algorithm of competing policies and select 'winner' after each iteration. Competing policies have different environment configs. Goal: optimize environment parameters more efficiently and automaticly at run time rather than manually after full (10 hour) experiments.
 
+- [2.4]: experiment_1 / experiment are powerfull examples of the Malthusian trap. Record this on site. 
+
 - Fix link in https://github.com/doesburg11/PredPreyGrass/tree/main/src/predpreygrass/rllib/v1_0. Create .md for reward scaling from legacy website.
 
+- Collapsable menu in readme.md: https://github.com/opendilab/DI-engine
