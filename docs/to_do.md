@@ -11,8 +11,7 @@ sidebar_position: 1
 - Fix link in https://github.com/doesburg11/PredPreyGrass/tree/main/src/predpreygrass/rllib/v1_0. Create .md for reward scaling from legacy website.
 
 - <details closed>
-  <summary>Collapsable menu</summary>
-
+    <summary>Collapsable menu ></summary>
     - Traditional academic environments
     - [DI-zoo](https://github.com/opendilab/DI-engine#environment-versatility): various decision intelligence demonstrations and benchmark environments with DI-engine.
 </details>
