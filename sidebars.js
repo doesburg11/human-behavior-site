@@ -26,6 +26,14 @@ export default {
             { type: 'doc', id: 'human-behavior-patterns/machinery/values-machinery', label: 'Values' },
           ],
         },
+        {
+          type: 'category',
+          label: 'MARL',
+          link: { type: 'doc', id: 'human-behavior-patterns/marl/overview-marl' },
+          items: [
+            { type: 'doc', id: 'human-behavior-patterns/marl/values-marl', label: 'Values' },
+          ],/home/doesburg/Projects/human-behavior-site/static/img/marl/display-1.jpg
+        },
       ],
     },
     {
