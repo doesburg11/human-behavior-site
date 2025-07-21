@@ -18,7 +18,14 @@ export default {
             { type: 'doc', id: 'human-behavior-patterns/fundamentals/domains-fundamentals', label: 'Domains' },
           ],
         },
-        { type: 'doc', id: 'human-behavior-patterns/machinery', label: 'The Machinery' },
+        {
+          type: 'category',
+          label: 'The Machinery',
+          link: { type: 'doc', id: 'human-behavior-patterns/machinery/overview-machinery' }, 
+          items: [
+            { type: 'doc', id: 'human-behavior-patterns/machinery/values-machinery', label: 'Values' },
+          ],
+        },
       ],
     },
     {
