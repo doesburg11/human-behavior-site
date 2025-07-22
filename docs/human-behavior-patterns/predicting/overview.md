@@ -13,14 +13,14 @@ For example, when we are walking down a busy street, our brain is constantly pre
 
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/human-behavior-patterns/marl/display-1.jpg" alt="Display 1: Street calculus" width="400" />
+  <img src="/img/human-behavior-patterns/predicting/display-1.jpg" alt="Display 1: Street calculus" width="400" />
   <figcaption><strong>Display 1:</strong> Street calculus</figcaption>
 </figure>
 
 This process of planning of humans and interacting with an environment can be modeled through the paradigm of Reinforcement Learning (RL) which is a special branch in Machine Learning (ML). RL in AI is schematically described below and is based on the idea of trial and error learning. The goal of reinforcement learning is to train an agent to take actions in an environment in order to predict and maximize a cumulative expected reward signal.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/human-behavior-patterns/marl/display-2.jpg" alt="Display 2: Reinforcement learning" width="400" />
+  <img src="/img/human-behavior-patterns/predicting/display-2.jpg" alt="Display 2: Reinforcement learning" width="400" />
   <figcaption><strong>Display 2:</strong> Reinforcement learning</figcaption>
 </figure>
 

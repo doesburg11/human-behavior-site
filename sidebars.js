@@ -28,11 +28,24 @@ export default {
         },
         {
           type: 'category',
-          label: 'MARL',
-          link: { type: 'doc', id: 'human-behavior-patterns/marl/overview-marl' },
+          label: 'Predicting',
+          link: { type: 'doc', id: 'human-behavior-patterns/predicting/overview-marl' },
           items: [
-            { type: 'doc', id: 'human-behavior-patterns/marl/values-marl', label: 'Values' },
-          ],/home/doesburg/Projects/human-behavior-site/static/img/marl/display-1.jpg
+            { type: 'doc', id: 'human-behavior-patterns/predicting/overview-marl', label: 'Values' },
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Multi Agent Reinforcement Learning (MARL)',
+      link: { type: 'doc', id: 'marl3/overview-marl' },  
+      items: [
+        {
+          type: 'category',
+          label: 'Ecosystem',
+          link: { type: 'doc', id: 'pred-prey-grass/ecosystem-ppg' }, // Summary page
+          items: [],
         },
       ],
     },
