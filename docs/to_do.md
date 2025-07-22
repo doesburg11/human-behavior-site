@@ -20,3 +20,5 @@ sidebar_position: 1
   - https://raw.githubusercontent.com/FLAIROx/JaxMARL/refs/heads/main/docs/imgs/smax.gif
   - SMAX: https://github.com/FLAIROx/JaxMARL/tree/main/jaxmarl/environments/smax
 
+- Tune for hyperparameter tuning?
+
