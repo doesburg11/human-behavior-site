@@ -39,7 +39,7 @@ export default {
     {
       type: 'category',
       label: 'Multi Agent Reinforcement Learning (MARL)',
-      link: { type: 'doc', id: 'marl3/overview-marl' },  
+      link: { type: 'doc', id: 'marl/overview-marl' },  
       items: [
         {
           type: 'category',
