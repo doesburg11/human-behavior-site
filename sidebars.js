@@ -43,8 +43,8 @@ export default {
       items: [
         {
           type: 'category',
-          label: 'Ecosystem',
-          link: { type: 'doc', id: 'pred-prey-grass/ecosystem-ppg' }, // Summary page
+          label: 'Sequence',
+          link: { type: 'doc', id: 'marl/sequence' },
           items: [],
         },
       ],
