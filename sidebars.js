@@ -60,6 +60,20 @@ export default {
           link: { type: 'doc', id: 'pred-prey-grass/ecosystem-ppg' }, // Summary page
           items: [],
         },
+        {
+          type: 'category',
+          label: 'MARL used in PredPreyGrass',
+          link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/overview-marl-ppg' },  
+          items: [
+            {
+              type: 'category',
+              label: 'Sequence',
+              link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/sequence-ppg' },
+              items: [],
+            },
+          ],
+        },
+
       ],
     },
     {
