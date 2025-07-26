@@ -38,16 +38,9 @@ export default {
     },
     {
       type: 'category',
-      label: 'Multi Agent Reinforcement Learning (MARL)',
+      label: 'Multi Agent Reinforcement Learning',
       link: { type: 'doc', id: 'marl/overview-marl' },  
-      items: [
-        {
-          type: 'category',
-          label: 'Sequence',
-          link: { type: 'doc', id: 'marl/sequence' },
-          items: [],
-        },
-      ],
+      items: [],
     },
     {
       type: 'category',
@@ -62,15 +55,26 @@ export default {
         },
         {
           type: 'category',
-          label: 'MARL used in PredPreyGrass',
+          label: 'MARL used in PPG',
           link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/overview-marl-ppg' },  
           items: [
+
             {
               type: 'category',
-              label: 'Sequence',
+              label: 'Rewards PPG',
+              link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/rewards' },
+              items: [
+                { type: 'doc', id: 'pred-prey-grass/marl-ppg/rewards-ppg/scaling' },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Sequence in PPG',
               link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/sequence-ppg' },
               items: [],
             },
+
+
           ],
         },
 
