@@ -69,7 +69,7 @@ export default {
             },
             {
               type: 'category',
-              label: 'Sequence in PPG',
+              label: 'Sequence in',
               link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/sequence-ppg' },
               items: [],
             },
