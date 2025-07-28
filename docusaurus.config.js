@@ -61,24 +61,28 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: 'Resources',
+          title: 'About',
           items: [
             { 
-              label: 'Predator-Prey-Grass repo',
+              label: 'GitHub',
               href: 'https://github.com/doesburg11/PredPreyGrass',
+            },
+            { 
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/peter-van-doesburg/',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Resources',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'RLlib: Industry-Grade, Scalable Reinforcement Learning',
+              href: 'https://docs.ray.io/en/master/rllib/index.html#rllib-industry-grade-scalable-reinforcement-learning',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/doesburg11/human_behavior_site',
+              label: 'Multi-Agent Reinforcement Learning: Foundations and Modern Approaches.',
+              href: 'https://www.marl-book.com/download/marl-book.pdf',
             },
           ],
         },
