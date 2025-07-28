@@ -42,7 +42,7 @@ These results align with known insights from reinforcement learning:
 
 In short: reward magnitude is not just a multiplier. It shapes the entire learning dynamics.
 
-### Evaluation of trained polcies Confirms the Effect
+### Evaluation of trained policies Confirms the Effect
 
 After training two sets of PPO agents — one with reproduction reward set to 1.0, and one with it set to 10.0 — post-training evaluations under identical conditions were conducted.
 
