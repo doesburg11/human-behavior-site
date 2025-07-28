@@ -22,8 +22,6 @@ Predators die of starvation when their energy is zero, Prey die either of starva
 
 ## Features of the [base enviornment](https://github.com/doesburg11/PredPreyGrass/tree/main/src/predpreygrass/rllib/v1_0)
 
-[TO DO: MAKE A FLOW CHART]
-
 * At startup Predator, Prey and Grass are randomly positioned on the gridworld.
 
 * Predators and Prey are independently (decentralized) trained via their respective [RLlib policy module](https://docs.ray.io/en/master/rllib/rl-modules.html).:
