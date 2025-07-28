@@ -61,7 +61,7 @@ export default {
 
             {
               type: 'category',
-              label: 'Rewards in PPG',
+              label: 'Rewards PPG',
               link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/rewards' },
               items: [
                 { type: 'doc', id: 'pred-prey-grass/marl-ppg/rewards-ppg/scaling' },
