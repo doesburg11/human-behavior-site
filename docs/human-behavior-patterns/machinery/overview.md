@@ -5,7 +5,7 @@ title: The Machinery
 
 ## The Brain and Behavior – How does it work?
 
-Humans can process stimuli from the environment which lead to behavior in various and very complex manners. Generally speaking there are three distinct pathways in the brain which are utilized in generating behavioral responses from external or internal stimuli:
+Humans can process stimuli from the environment which lead to behavior in various and very complex ways and mechanisms. Generally speaking, there are three distinct pathways in the brain which are utilized in generating behavioral responses from external or internal stimuli:
 
 - Reflexive (“automatic”)response
 - Low road (“emotional”) response
@@ -28,7 +28,7 @@ A “low road response” and a “reflexive response” share similarities in t
 </figure>
 
 
-- **High road response**: This reponse is on the other hand much slower than the reflexive road response and the low road response. This pathway allows for more complex, nuanced and reflective understanding of the stimulus and can lead to a more controlled and reasoned emotional response
+- **High road response**: This response is on the other hand much slower than the reflexive road response and the low road response. This pathway allows for more complex, nuanced and reflective understanding of the stimulus and can lead to a more controlled and reasoned emotional response
 
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/human-behavior-patterns/fundamentals/machinery/display-3.jpg" alt="Display 3: Schematic overview of the three response pathways" width="500" />
@@ -42,6 +42,6 @@ While both low road responses and reflexive responses share the characteristic o
 Therefore we have to distinguish emotions from reflexes. According to Lazarus (1991, p. 53): “Startle is a good example of the distinction between reflexes and emotions. Some writers have treated startle as a primitive emotion. I believe this is a mistake, because it confuses emotion with reflexes. Startle is relatively fixed and rigid and is best regarded as a sensorimotor reflex” (Lazarus, 1991, p.53). According to this view emotions are complex interactions.
 
 ### The mechanisms leading to which road is taken
-All things simplified, the reflexive response can be considered as an automatic response, the low road response can be considered as an emotional response and the high road response can be consider as a reflective and reasoned response. This does not mean that a certain stimuli will only follow one particular path. It is likely that multiple paths can be followed and interact in more or less the same time. However that depends on the urgency of stimuli and is decided by the thalamus. In our scope of research, the reflexive response is least interesting in the investigation of human behavior patterns. Therefore, we focus primarily on the distinction between low road response and the high road response.
+All things simplified, the reflexive response can be considered as an automatic response, the low road response can be considered as an emotional response and the high road response can be considered as a reflective and reasoned response. This does not mean that a certain stimulus will follow only one particular path. It is likely that multiple paths can be followed and interact more or less instantaneously. However, that depends on the urgency of stimuli and is decided by the thalamus. In our scope of research, the reflexive response is the least interesting in the investigation of human behavior patterns. Therefore, we focus primarily on the distinction between the low road response and the high road response.
 
 
