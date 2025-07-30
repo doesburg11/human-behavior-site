@@ -8,8 +8,6 @@ sidebar_position: 1
 
 - [2.5]: experiment_1 / experiment are powerfull examples of the Malthusian trap. Record this on site. 
 
-- Fix link in https://github.com/doesburg11/PredPreyGrass/tree/main/src/predpreygrass/rllib/v1_0. Create .md for reward scaling from legacy website.
-
 - Explore examples: https://github.com/flairox/jaxmarl?tab=readme-ov-file
   - https://raw.githubusercontent.com/FLAIROx/JaxMARL/refs/heads/main/docs/imgs/smax.gif
   - SMAX: https://github.com/FLAIROx/JaxMARL/tree/main/jaxmarl/environments/smax
@@ -23,10 +21,7 @@ sidebar_position: 1
 - Fitness parameters:
     - offspring per agent
     - offspring per agent per energy
-- Protocol for storing/retrieving stats per step (outside env: in evaluatio loop)
-- Flowcharts Visio-like
-    - In Linux?
-    - Windows emulator?
+- Protocol for storing/retrieving stats per step (outside env: in evaluation loop)
 
 Record for agents to be used in tooltips:
 
