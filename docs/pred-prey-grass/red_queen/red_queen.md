@@ -3,7 +3,7 @@ id: red-queen-ppg
 title: The Red Queen effect
 ---
 
-# Detecting the Red Queen Effect in a Predator–Prey Co-Evolutionary System
+# The Red Queen Effect in a Predator–Prey Co-Evolutionary System
 
 ## 🧬 Introduction
 
