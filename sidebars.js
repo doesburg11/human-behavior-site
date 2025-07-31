@@ -79,7 +79,7 @@ export default {
         },
         {
           type: 'category',
-          label: 'Red queen',
+          label: 'Red Queen Effect',
           link: { type: 'doc', id: 'pred-prey-grass/red_queen/red-queen-ppg' }, // Summary page
           items: [],
         },
