@@ -50,7 +50,7 @@ export default {
         {
           type: 'category',
           label: 'Ecosystem',
-          link: { type: 'doc', id: 'pred-prey-grass/ecosystem-ppg' }, // Summary page
+          link: { type: 'doc', id: 'pred-prey-grass/ecosystem/ecosystem-ppg' }, // Summary page
           items: [],
         },
         {
@@ -80,7 +80,7 @@ export default {
         {
           type: 'category',
           label: 'Red queen',
-          link: { type: 'doc', id: 'pred-prey-grass/red-queen-ppg' }, // Summary page
+          link: { type: 'doc', id: 'pred-prey-grass/red_queen/red-queen-ppg' }, // Summary page
           items: [],
         },
 
