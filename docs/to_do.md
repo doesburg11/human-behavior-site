@@ -26,3 +26,9 @@ sidebar_position: 1
 Record for agents to be used in tooltips:
 
     - Age
+
+
+- Meta learning example RLlib ("learning-to-learn"):
+https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr_supervised_learning.py
+- curriliculum: https://github.com/ray-project/ray/blob/master/rllib/examples/curriculum/curriculum_learning.py
+- curiosity: https://github.com/ray-project/ray/tree/master/rllib/examples/curiosity
