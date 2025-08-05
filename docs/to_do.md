@@ -3,6 +3,7 @@ id: to_do
 title: To do
 sidebar_position: 1
 ---
+- define solution concept: maximize the episode length
 
 - Create training algorithm of competing policies and select 'winner' after each iteration. Competing policies have different environment configs. Goal: optimize environment parameters more efficiently and automaticly at run time rather than manually after full (10 hour) experiments.
 
