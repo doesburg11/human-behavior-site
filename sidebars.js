@@ -73,6 +73,16 @@ export default {
               link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/sequence-ppg' },
               items: [],
             },
+            {
+              type: 'category',
+              label: 'Hyper parameter Tuning',
+              link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/tuning-ppg' }, // Summary page
+              items: [
+                { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/epochs-ppg' },
+                { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/pbt-ppg' },
+              ],
+            },
+
 
 
           ],
@@ -83,6 +93,7 @@ export default {
           link: { type: 'doc', id: 'pred-prey-grass/red_queen/red-queen-ppg' }, // Summary page
           items: [],
         },
+
 
       ],
     },
