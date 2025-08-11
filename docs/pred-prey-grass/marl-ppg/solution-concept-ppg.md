@@ -15,7 +15,7 @@ Our Predator-Prey-Grass MARL project aligns most with the "descriptive" agenda: 
 
 A clear cut solution problem is hard to define as there is not ultimate end goal in which all agents individually reach an otpimal solution irrespective of all other agents. So a solution concept as for instance a Nash Equilibirum is not what we are looking for in an ever evolving open ended human behavior spectrum.
 
-Therefore, we are more looking for a *process* solution concept — something like Co-evolutionary Stable State or Open-Ended Dynamic Equilibrium. These recognise that in asymmetric, mutating systems, “solution” means ongoing adaptability, not stasis.
+Therefore, we are more looking for a *process* solution concept — something like Co-evolutionary Stable State or Open-Ended Dynamic Equilibrium. These recognise that in asymmetric, mutating systems, “solution” means ongoing adaptability, not stasis. If ever a solution concept should be defined than it is just that: ongoing adaptability.
 
 
 ## References
