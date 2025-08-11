@@ -60,7 +60,7 @@ export default {
           items: [
             {
               type: 'category',
-              label: 'Solution concept',
+              label: 'Solution concept in PPG',
               link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/solution-concept-ppg' },
               items: [],
             },
