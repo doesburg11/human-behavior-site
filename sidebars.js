@@ -58,7 +58,12 @@ export default {
           label: 'MARL used in PPG',
           link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/overview-marl-ppg' },  
           items: [
-
+            {
+              type: 'category',
+              label: 'Solution concept',
+              link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/solution-concept-ppg' },
+              items: [],
+            },
             {
               type: 'category',
               label: 'Rewards in PPG',
@@ -89,12 +94,23 @@ export default {
         },
         {
           type: 'category',
-          label: 'Red Queen Effect',
-          link: { type: 'doc', id: 'pred-prey-grass/red_queen/red-queen-ppg' }, // Summary page
-          items: [],
+          label: 'Emergent behavior',
+          link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/overview-marl-ppg' },  
+          items: [
+            {
+              type: 'category',
+              label: 'Red Queen effect',
+              link: { type: 'doc', id: 'pred-prey-grass/red-queen/red-queen-ppg' }, // Summary page
+              items: [],
+            },
+            {
+              type: 'category',
+              label: 'Malthusian Trap',
+              link: { type: 'doc', id: 'pred-prey-grass/malthusian-trap/malthusian-trap-ppg' }, // Summary page
+              items: [],
+            },
+          ],
         },
-
-
       ],
     },
     {
