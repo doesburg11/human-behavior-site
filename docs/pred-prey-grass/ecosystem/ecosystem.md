@@ -155,4 +155,4 @@ This diagram captures the key thermodynamic and behavioral dynamics within the P
 - This reinforces the ecological and physical realism of the simulation.
 
 ## References
-- [Bailey, Regina. (2025, April 22). Laws of Thermodynamics as Related to Biology.]https://www.thoughtco.com/laws-of-thermodynamics-373307)
+- [Laws of Thermodynamics as Related to Biology, (blog, 2025).](https://www.thoughtco.com/laws-of-thermodynamics-373307)
