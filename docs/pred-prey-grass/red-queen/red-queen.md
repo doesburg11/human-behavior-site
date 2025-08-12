@@ -14,7 +14,7 @@ In this experiment, we test for the presence of the Red Queen effect using a **P
 - **`type_1_prey`**: a single prey archetype  
 to isolate pure co-evolutionary interactions without intra-species competition.
 
-We assess whether adaptation is required for either population to maintain fitness by applying the classic **freeze–unfreeze test**. This involves fixing (freezing) one agent population’s policy while allowing the other to continue evolving.
+We assess whether adaptation is required for either population to maintain fitness by applying a **freeze–unfreeze test**. This involves fixing (freezing) one agent population’s policy while allowing the other to continue evolving.
 
 ---
 
