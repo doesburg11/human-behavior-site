@@ -27,6 +27,10 @@ A persistent co-evolutionary dynamic in which predator and prey populations main
 
 3. **Mutual responsiveness** — changes in one population’s strategies measurably alter the fitness landscape of the other population(s), preventing convergence to a static equilibrium.
 
+**TODO**
+- The simulation now terminates when there are either no predators or prey left. Replace this termination somehow with when there "is no live left". Currently, predators will die out anyway when there are no prey left. However, when there are no predators left then prey can still evolve due to the abundance of grass. Starting from an envolutionary standpoint, increassingly complex creatures evolved which can threaten the foodchain downwards. How to get rid of "terminational ending" of the simulation without making it trivial? At least coexistence of learning agents is needed?
+- Refine solution concept: maximize the episode length of mortal agents?
+
 
 ## References
 
