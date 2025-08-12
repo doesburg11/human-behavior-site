@@ -3,19 +3,13 @@ id: to_do
 title: To do
 sidebar_position: 1
 ---
-- Define solution concept: maximize the episode length of mortal
 
 - Create training algorithm of competing policies and select 'winner' after each iteration. Competing policies have different environment configs. Goal: optimize environment parameters more efficiently and automaticly at run time rather than manually after full (10 hour) experiments.
 
-- [2.5]: experiment_1 / experiment are powerfull examples of the Malthusian trap. Record this on site. Create a "Malthusian Trap" 
 
 - Explore examples: https://github.com/flairox/jaxmarl?tab=readme-ov-file
   - https://raw.githubusercontent.com/FLAIROx/JaxMARL/refs/heads/main/docs/imgs/smax.gif
   - SMAX: https://github.com/FLAIROx/JaxMARL/tree/main/jaxmarl/environments/smax
-
-- Tune for hyperparameter tuning?
-
-- Make flow chart from step function
 
 - curriculum reward tuning
 
@@ -23,7 +17,6 @@ sidebar_position: 1
     - offspring per agent
     - offspring per agent per energy
 - Protocol for storing/retrieving stats per step (outside env: in evaluation loop)
-
 
 - Meta learning example RLlib ("learning-to-learn"):
 https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr_supervised_learning.py
