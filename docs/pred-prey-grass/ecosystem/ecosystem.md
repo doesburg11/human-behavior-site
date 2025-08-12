@@ -154,5 +154,9 @@ This diagram captures the key thermodynamic and behavioral dynamics within the P
 - Without energy input or efficient strategies, **populations collapse** and entropy increases.
 - This reinforces the ecological and physical realism of the simulation.
 
+**TODO**
+- Make flow chart from step function
+
+
 ## References
 - [Laws of Thermodynamics as Related to Biology, (blog, 2025).](https://www.thoughtco.com/laws-of-thermodynamics-373307)
