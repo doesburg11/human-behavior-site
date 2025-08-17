@@ -1,67 +1,28 @@
 ---
 id: pbt-ppg
-title: Population based training
+title: Overview
 ---
 
-# Population Based Training (PBT) with the Pred-Prey-Grass Environment
+# Overview Population Based Training (PBT)
 
-This experiment uses **Population Based Training (PBT)** to explore adaptive learning dynamics in a multi-agent Predator-Prey-Grass simulation. The goal is not to converge to a single optimal policy, but to allow diverse agent types to co-evolve and adapt their hyperparameters over time in response to a dynamic environment and each other.
+Population-Based Training (PBT) is a technique for efficiently searching and adapting hyperparameters during reinforcement learning.
 
-## 🌱 Environment: PredPreyGrass
+Instead of running a fixed hyperparameter search, PBT trains a population of models in parallel, each initialized with different random hyperparameters. Over time, the population evolves by exploiting information from the best-performing models and exploring new hyperparameter variations.
 
-The environment simulates interactions between:
-- **Predators** of different movement speeds
-- **Prey** of different movement speeds
-- **Grass** as a renewable resource
+PBT is inspired by genetic algorithms:
 
-Each agent group has its own policy and configuration, allowing asymmetric capabilities and behaviors. The environment is designed to support evolutionary dynamics like:
-- Arms races (e.g., faster prey vs. faster predators)
-- Emergent survival strategies
-- Shifting population balances
+- Exploit: Poorly performing models adopt the weights and hyperparameters of stronger performers.
 
-## 🧪 Why Population Based Training?
+- Explore: These cloned hyperparameters are then slightly perturbed to introduce variation.
 
-Traditional RL fine-tunes a single agent or population using fixed hyperparameters. PBT offers a more dynamic and biologically inspired alternative:
-- **Exploration:** Each trial (i.e., agent population) begins with slightly different hyperparameters.
-- **Selection:** Periodically, poorly performing trials are **replaced (cloned)** by better-performing ones.
-- **Mutation:** Cloned trials mutate their hyperparameters to explore new niches.
+This cycle of exploit → explore continues throughout training, allowing the population to adapt dynamically rather than relying on a fixed hyperparameter schedule. As the training of the population of neural networks progresses, this process of exploiting and exploring is performed periodically, ensuring that all the workers in the population have a good base level of performance and also consistently exploring new hyperparameters configurations. This means that PBT can quickly exploit good hyperparameters, dedicate more training time to promising models and, crucially, mutate the hyperparameter values throughout training, leading to learning the best adaptive hyperparameter schedules.
 
-This encourages continual adaptation, mimicking **natural selection and evolution**.
+In practice, the population is the set of Tune trials running in parallel. Trial performance is evaluated using a user-specified metric such as ```episode_return_mean```. After a specified interval, trial performances are compared, better configurations replace worse ones, and the cycle repeats (see Display 1).
 
-## ⚙️ Technical Setup
-
-- **Framework:** Ray Tune + RLlib (new API stack)
-- **Algorithm:** Proximal Policy Optimization (PPO)
-- **Resource Scaling:** Automatically adapts to 8 CPU or 32 CPU / 1 GPU setups
-- **Parallel Trials:** 6 PBT trials run concurrently on available hardware
-- **Hyperparameters Mutated:**
-  - Learning rate
-  - Entropy coefficient
-  - Minibatch size
-  - Epoch count
-  - Train batch size per learner
-
-## 📈 Metrics and Checkpoints
-
-Each trial is evaluated on:
-- `env_runners/episode_return_mean`
-- Cloning is triggered every `perturbation_interval = 3` iterations
-- Frequent checkpoints are saved to enable cloning
-
-## 🧭 Experiment Goals
-
-This experiment is part of a broader investigation into:
-- **Open-ended evolution** of agent behaviors
-- **Emergent adaptation** in multi-agent ecosystems
-- Identifying **conditions under which diversity persists** rather than collapsing into a single dominant strategy
-
-Ultimately, this setup provides a testbed for studying **co-evolutionary learning** and the spontaneous emergence of complex dynamics under competitive and cooperative pressures.
-
----
-
-
-
-[Implementation](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/v2_7/tune_ppo_predpreygrass_pbt_dev_0.py)
+<figure style={{ textAlign: 'center' }}>
+  <img src="/img/pred-prey-grass/marl-ppg/hyper-parameter-tuning/pbt/display-1.png" alt="Display 1: PBT cloning top performers into bottom performers during training" width="1200" />
+  <figcaption><strong>Display 1:</strong> PBT cloning top performers into bottom performers during training</figcaption>
+</figure>
 
 
 ## References
@@ -69,5 +30,6 @@ Ultimately, this setup provides a testbed for studying **co-evolutionary learnin
 
 - [Population Based Training of Neural Networks(paper, 2017)](https://arxiv.org/abs/1711.09846)
 
-- [Ray RLlib (API, 2025)](https://docs.ray.io/en/latest/tune/api/doc/ray.tune.schedulers.PopulationBasedTraining.html)
+- [Ray RLlib PBT API, 2025)](https://docs.ray.io/en/latest/tune/api/doc/ray.tune.schedulers.PopulationBasedTraining.html)
 
+- [A Guide to Population Based Training with Tune, 2025](https://docs.ray.io/en/latest/tune/examples/pbt_guide.html)
