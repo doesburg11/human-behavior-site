@@ -87,17 +87,14 @@ export default {
                 {
                   type: 'category',
                   label: 'Population Based Training',
-                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/pbt-ppg' },
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/pbt-overview' },
                   items: [
-                    { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/population-based-training/implementation-pbt' },
+                    { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/population-based-training/pbt-implementation' },
                     { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/population-based-training/pbt-config' },
                   ],
                 },
               ],
             },
-
-
-
           ],
         },
         {
