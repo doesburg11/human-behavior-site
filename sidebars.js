@@ -84,7 +84,15 @@ export default {
               link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/tuning-ppg' }, // Summary page
               items: [
                 { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/epochs-ppg' },
-                { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/pbt-ppg' },
+                {
+                  type: 'category',
+                  label: 'Population Based Training',
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/pbt-ppg' },
+                  items: [
+                    { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/population-based-training/implementation-pbt' },
+                    { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/population-based-training/pbt-config' },
+                  ],
+                },
               ],
             },
 
