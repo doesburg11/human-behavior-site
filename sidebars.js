@@ -31,7 +31,6 @@ export default {
           label: 'Predicting',
           link: { type: 'doc', id: 'human-behavior-patterns/predicting/overview-marl' },
           items: [
-            { type: 'doc', id: 'human-behavior-patterns/predicting/overview-marl', label: 'Values' },
           ],
         },
       ],
@@ -44,7 +43,7 @@ export default {
     },
     {
       type: 'category',
-      label: 'Predator, Prey, Grass project',
+      label: 'Predator-Prey-Grass project',
       link: { type: 'doc', id: 'pred-prey-grass/overview-ppg' },  
       items: [
         {
@@ -66,21 +65,21 @@ export default {
                 {
                   type: 'category',
                   label: 'Solution concept in PPG',
-                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/solution-concept-ppg' },
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/challenges/solution-concept-ppg' },
                   items: [],
                 },
                 {
                   type: 'category',
                   label: 'Rewards in PPG',
-                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/rewards' },  
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/challenges/rewards-ppg/rewards' },  
                   items: [
-                    { type: 'doc', id: 'pred-prey-grass/marl-ppg/rewards-ppg/scaling' },
+                    { type: 'doc', id: 'pred-prey-grass/marl-ppg/challenges/rewards-ppg/scaling' },
                   ],
                 },
                 {
                   type: 'category',
                   label: 'Sequence in PPG',
-                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/sequence-ppg' },
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/challenges/sequence-ppg' },
                   items: [],
                 },
               ],
@@ -104,19 +103,11 @@ export default {
             },
             {
               type: 'category',
-              label: 'Configurations',
-              link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/tuning-ppg' }, // Summary page
+              label: 'Environment Configurations',
+              link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/configurations/configurations-ppg' }, // Summary page
               items: [
-                { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/epochs-ppg' },
-                {
-                  type: 'category',
-                  label: 'Population Based Training',
-                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/pbt-overview' },
-                  items: [
-                    { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/population-based-training/pbt-implementation' },
-                    { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/population-based-training/pbt-config' },
-                  ],
-                },
+                { type: 'doc', id: 'pred-prey-grass/marl-ppg/configurations/v1_0/v1_0-ppg' },
+                { type: 'doc', id: 'pred-prey-grass/marl-ppg/configurations/v2_0/v2_0-ppg' },
               ],
             },
           ],
