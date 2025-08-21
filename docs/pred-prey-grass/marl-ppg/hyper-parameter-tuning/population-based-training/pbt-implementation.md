@@ -63,5 +63,5 @@ Ultimately, this setup provides a testbed for studying **co-evolutionary learnin
 
 ## References
 
-- [Implementation PredPreyGrass experiment on GitHub (2025)](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/v3_0/tune_ppo_predpreygrass_pbt_dev_3.py)
+- [Implementation PredPreyGrass experiment on GitHub (2025)](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/v3_0/tune_ppo_predpreygrass_pbt_dev_3_works.py)
 
