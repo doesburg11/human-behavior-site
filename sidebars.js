@@ -52,7 +52,7 @@ export default {
           label: 'Ecosystem',
           link: { type: 'doc', id: 'pred-prey-grass/ecosystem/ecosystem-ppg' }, // Summary page
           items: [],
-        },
+        },        
         {
           type: 'category',
           label: 'MARL used in PPG',
@@ -60,27 +60,51 @@ export default {
           items: [
             {
               type: 'category',
-              label: 'Solution concept in PPG',
-              link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/solution-concept-ppg' },
-              items: [],
-            },
-            {
-              type: 'category',
-              label: 'Rewards in PPG',
-              link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/rewards' },
-              items: [
-                { type: 'doc', id: 'pred-prey-grass/marl-ppg/rewards-ppg/scaling' },
+              label: 'Challenges',
+              link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/challenges/challenges-ppg' },
+              items: [            
+                {
+                  type: 'category',
+                  label: 'Solution concept in PPG',
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/solution-concept-ppg' },
+                  items: [],
+                },
+                {
+                  type: 'category',
+                  label: 'Rewards in PPG',
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/rewards' },  
+                  items: [
+                    { type: 'doc', id: 'pred-prey-grass/marl-ppg/rewards-ppg/scaling' },
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Sequence in PPG',
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/sequence-ppg' },
+                  items: [],
+                },
               ],
             },
             {
               type: 'category',
-              label: 'Sequence in PPG',
-              link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/sequence-ppg' },
-              items: [],
+              label: 'Hyper parameter Tuning',
+              link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/tuning-ppg' }, // Summary page
+              items: [
+                { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/epochs-ppg' },
+                {
+                  type: 'category',
+                  label: 'Population Based Training',
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/pbt-overview' },
+                  items: [
+                    { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/population-based-training/pbt-implementation' },
+                    { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/population-based-training/pbt-config' },
+                  ],
+                },
+              ],
             },
             {
               type: 'category',
-              label: 'Hyper parameter Tuning',
+              label: 'Configurations',
               link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/tuning-ppg' }, // Summary page
               items: [
                 { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/epochs-ppg' },
