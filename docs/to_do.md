@@ -3,12 +3,12 @@ id: to_do
 title: To do
 sidebar_position: 1
 ---
-- Testing Red Queen hypothesis --> Positive
-- Implement Population Based Training from Deepmind (2017).
-- Hyperparameter search.
-
 
 - Create training algorithm of competing policies and select 'winner' after each iteration. Competing policies have different environment configs. Goal: optimize environment parameters more efficiently and automaticly at run time rather than manually after full (10 hour) experiments.
+  - determine succes
+  - fitness
+  - ability to co-adapt
+  
 
 
 - Explore examples: https://github.com/flairox/jaxmarl?tab=readme-ov-file
