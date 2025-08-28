@@ -52,8 +52,8 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 ChatGPT -> Equal ranges
 Symmetric information. Easier to debug/troubleshoot because agents learn with comparable observation sizes. Might be a good baseline when you’re simplifying for network experiments.
 so:
-  - predator_obs_range = 9
-  - prey_obs_range = 9
+  - predator_obs_range = 7
+  - prey_obs_range = 7
 
 
 
