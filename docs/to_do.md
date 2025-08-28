@@ -46,14 +46,8 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
             ],
         }
   ```
-- default:
-  - predator_obs_range = 7
-  - prey_obs_range = 9
-ChatGPT -> Equal ranges
-Symmetric information. Easier to debug/troubleshoot because agents learn with comparable observation sizes. Might be a good baseline when you’re simplifying for network experiments.
-so:
-  - predator_obs_range = 7
-  - prey_obs_range = 7
-
-
-
+- the network is now adjustable to the observation range. was not effectively tuned for observation_range = 9 (for Prey)
+- TODO: test experiment"_network_tuning" on HBP computer 
+- change config_ppo_gpu
+  - batch_size_per_earner-> batch_size
+  - adjust other scripts? pbt? maybe externalize build_policy_spec?
