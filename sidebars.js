@@ -89,7 +89,18 @@ export default {
               label: 'Hyper parameter Tuning',
               link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/tuning-ppg' }, // Summary page
               items: [
-                { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/epochs-ppg' },
+                {
+                  type: 'category',
+                  label: 'Epochs variation',
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/epochs/epochs-ppg' },
+                  items: [],
+                },
+                {
+                  type: 'category',
+                  label: 'Network architecture',
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/networks/network-architecture-ppg' },
+                  items: [],
+                },
                 {
                   type: 'category',
                   label: 'Population Based Training',
