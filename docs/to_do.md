@@ -19,7 +19,7 @@ sidebar_position: 1
     - offspring per agent per energy
 - Protocol for storing/retrieving stats per step (outside env: in evaluation loop)
 
-### Exampels to try out
+### Examples to try out
 
 - Meta learning example RLlib ("learning-to-learn"):
 https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr_supervised_learning.py
