@@ -51,3 +51,10 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 - change config_ppo_gpu
   - batch_size_per_earner-> batch_size
   - adjust other scripts? pbt? maybe externalize build_policy_spec?
+
+- Tuning hyperparameters and env parameters simultaneously
+
+
+
+
+
