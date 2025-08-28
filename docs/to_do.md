@@ -36,12 +36,14 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 - Build wall or move wall
 - Adding water/rivers
 
-- check for netter network:
+- ```python check for netter network:
         model_config={
             "conv_filters": [
                 [16, [3, 3], 1],
                 [32, [3, 3], 1],
                 [64, [3, 3], 1],
             ],
+        }
+  ```
 
 
