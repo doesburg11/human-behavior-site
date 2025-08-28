@@ -36,6 +36,7 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 - Build wall or move wall
 - Adding water/rivers
 
+### Improve network
 - ```python check for netter network:
         model_config={
             "conv_filters": [
@@ -45,5 +46,14 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
             ],
         }
   ```
+- default:
+  - predator_obs_range = 7
+  - prey_obs_range = 9
+ChatGPT -> Equal ranges
+Symmetric information. Easier to debug/troubleshoot because agents learn with comparable observation sizes. Might be a good baseline when you’re simplifying for network experiments.
+so:
+  - predator_obs_range = 9
+  - prey_obs_range = 9
+
 
 
