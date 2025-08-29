@@ -6,9 +6,9 @@ sidebar_position: 1
 
 ### Dynamic training
 
-- Create training algorithm of competing policies and select 'winner' after each iteration. Competing policies have different environment configs. Goal: optimize environment parameters more efficiently and automaticly at run time rather than manually after full (10 hour) experiments.
-  - determine succes
-  - fitness
+- Create training algorithm of competing policies and select 'winner' after each iteration/a number of iterations. Competing policies have different environment configs. Goal: optimize environment parameters more efficiently and automaticly at run time rather than manually after full (10 hour) experiments.
+Determine succes:
+  - fitness metrics
   - ability to co-adapt
 
 
@@ -52,7 +52,13 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
   - batch_size_per_earner-> batch_size
   - adjust other scripts? pbt? maybe externalize build_policy_spec?
 
-- Tuning hyperparameters and env parameters simultaneously
+  ### Experiments
+
+- Tuning hyperparameters and env parameters simultaneously (see chat)
+
+- Red Queen experiment type-1 & type-2 in Readme
+
+
 
 
 
