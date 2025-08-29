@@ -56,8 +56,16 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 
 - Tuning hyperparameters and env parameters simultaneously (see chat)
 
-- Red Queen experiment type-1 & type-2 in Readme
+- max_steps_per_episode: 
+  For policy learning performance: 500–2000 steps per episode is a common sweet spot in multi-agent RL — long enough for interactions to unfold, short enough for PPO to assign credit.
 
+  For open-ended co-evolution (your case): you might intentionally want longer episodes (e.g. 2000–5000) so emergent dynamics have time to play out, even if training is slower.
+
+  A good trick is to curriculum the horizon:
+
+  Start short (e.g. 500–1000) → agents learn basic survival.
+
+  Gradually increase (e.g. +500 every N iterations) → expose them to longer ecological timescales.
 
 
 
