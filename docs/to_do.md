@@ -67,8 +67,47 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 
   Gradually increase (e.g. +500 every N iterations) → expose them to longer ecological timescales.
 
+  “works-in-practice” plan for your PredPreyGrass run, plus what to tweak as you lengthen episodes.
 
+  ## Recommended episode horizon + hyperparams (curriculum)
 
+  Start shorter for stability/throughput, then stretch to let eco-dynamics (booms, busts, Red-Queen) unfold.
 
+  **Phase A (bootstrap)**
 
+  * `max_steps = 1_000`
+  * `gamma = 0.995` (effective credit horizon ≈ 1/(1−γ) ≈ **200** steps)
+  * `lambda_ (GAE) = 0.95–0.97`
 
+  **Phase B (mid)**
+
+  * `max_steps = 2_000–3_000`
+  * `gamma = 0.997–0.998` (horizon ≈ **333–500**)
+  * `lambda_ = 0.96–0.97`
+
+  **Phase C (long-term dynamics)**
+
+  * `max_steps = 4_000–5_000`
+  * `gamma = 0.998–0.999` (horizon ≈ **500–1 000**)
+  * `lambda_ = 0.97`
+
+  Why that mapping? PPO’s useful credit horizon is \~1/(1−γ). As you increase `max_steps`, you raise `γ` so actions can “see” far enough ahead without making variance explode.
+
+  > Remember: in your env, if `max_steps` isn’t set in the config, it silently defaults to **10 000**—so set it explicitly to avoid accidental long runs.&#x20;
+
+  ## Batch/throughput knobs to adjust as episodes get longer
+
+  Keep \~**4–10 episodes per PPO iteration** so you still get decent reset diversity:
+
+  * **train\_batch\_size**: roughly `episodes_per_iter × max_steps`.
+    Example: at `max_steps=1_000`, use `8_000–16_000`. When you move to `max_steps=3_000`, bump toward `24_000–48_000`.
+  * **rollout\_fragment\_length**: increase with horizon so GAE has longer contiguous fragments (e.g., 200 → 400 → 800).
+  * **num\_envs\_per\_env\_runner**: raise a bit as episodes lengthen to maintain sampler throughput.
+  * **KL/clip**: leave defaults unless you see instability; longer horizons often benefit from slightly smaller learning rate rather than big clip/kl changes.
+
+  ## When to stop stretching episodes
+
+  * If `timing/iter_minutes` balloons or TensorBoard curves update too slowly, hold the current `max_steps` for a while.
+  * If you see extinction before the cap, longer episodes won’t help—tune ecology (e.g., energy gains/losses) instead.
+
+  
