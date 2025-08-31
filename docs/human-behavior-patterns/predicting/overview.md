@@ -1,6 +1,6 @@
 ---
 id: overview-marl
-title: Humans as predicition machines
+title: Humans as prediction machines
 sidebar_position: 1
 ---
 

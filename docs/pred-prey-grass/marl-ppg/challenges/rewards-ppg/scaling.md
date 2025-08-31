@@ -28,7 +28,7 @@ Simply increasing the reproduction reward to 10.0 — while keeping everything e
 
 - The environment began to show dynamic, emergent co-evolution between agent types.
 
-With a sparse reproduction reward of 1.0 it appeared that learnig was poore while training. On the other hand, with a reward of 10.0, even a sparse signal became strong enough to be learned. It allowed early successes (like an agent reproducing) to result in meaningful gradient updates. This is essential in environments with no intermediate reward shaping.
+With a sparse reproduction reward of 1.0 it appeared that learning was poor while training. On the other hand, with a reward of 10.0, even a sparse signal became strong enough to be learned. It allowed early successes (like an agent reproducing) to result in meaningful gradient updates. This is essential in environments with no intermediate reward shaping.
 
 ### Why Reward Scaling Matters in Sparse Settings
 

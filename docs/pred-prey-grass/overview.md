@@ -20,7 +20,7 @@ Predators die of starvation when their energy is zero, Prey die either of starva
 </figure>
 
 
-## Features of the [base enviornment](https://github.com/doesburg11/PredPreyGrass/tree/main/src/predpreygrass/rllib/v1_0)
+## Features of the [base environment](https://github.com/doesburg11/PredPreyGrass/tree/main/src/predpreygrass/rllib/v1_0)
 
 * At startup Predator, Prey and Grass are randomly positioned on the gridworld.
 

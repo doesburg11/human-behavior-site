@@ -6,8 +6,8 @@ sidebar_position: 1
 
 ### Dynamic training
 
-- Create training algorithm of competing policies and select 'winner' after each iteration/a number of iterations. Competing policies have different environment configs. Goal: optimize environment parameters more efficiently and automaticly at run time rather than manually after full (10 hour) experiments.
-Determine succes:
+- Create training algorithm of competing policies and select 'winner' after each iteration/a number of iterations. Competing policies have different environment configs. Goal: optimize environment parameters more efficiently and automatically at run time rather than manually after full (10 hour) experiments.
+Determine success:
   - fitness metrics
   - ability to co-adapt
 
@@ -23,7 +23,7 @@ Determine succes:
 
 - Meta learning example RLlib ("learning-to-learn"):
 https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr_supervised_learning.py
-- curriliculum: https://github.com/ray-project/ray/blob/master/rllib/examples/curriculum/curriculum_learning.py
+- curriculum: https://github.com/ray-project/ray/blob/master/rllib/examples/curriculum/curriculum_learning.py
 - curiosity: https://github.com/ray-project/ray/tree/master/rllib/examples/curiosity
 
 - Explore examples: https://github.com/flairox/jaxmarl?tab=readme-ov-file
@@ -31,7 +31,7 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
   - SMAX: https://github.com/FLAIROx/JaxMARL/tree/main/jaxmarl/environments/smax
 
 
-### Envrionment enhancements
+### Environment enhancements
 - Male & Female reproduction instead of asexual reproduction
 - Build wall or move wall
 - Adding water/rivers
@@ -69,7 +69,7 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 
   “works-in-practice” plan for your PredPreyGrass run, plus what to tweak as you lengthen episodes.
 
-  ## Recommended episode horizon + hyperparams (curriculum)
+  ## Recommended episode horizon + hyperpsarameters (curriculum)
 
   Start shorter for stability/throughput, then stretch to let eco-dynamics (booms, busts, Red-Queen) unfold.
 
