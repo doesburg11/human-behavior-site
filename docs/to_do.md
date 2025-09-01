@@ -37,7 +37,7 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 - Adding water/rivers
 
 ### Improve network
-- ```python check for netter network:
+- ```python check for better network:
         model_config={
             "conv_filters": [
                 [16, [3, 3], 1],
@@ -49,8 +49,6 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 - the network is now adjustable to the observation range. was not effectively tuned for observation_range = 9 (for Prey)
 - TODO: test experiment"_network_tuning" on HBP computer 
 - change config_ppo_gpu
-  - batch_size_per_earner-> batch_size
-  - adjust other scripts? pbt? maybe externalize build_policy_spec?
 
   ### Experiments
 
