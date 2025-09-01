@@ -1,6 +1,6 @@
 ---
 id: index
-title: Human Behavior Patterns
+title: The Human Behavior Patterns Project
 sidebar_position: 1
 ---
 <figure style={{ textAlign: 'center' }}>
