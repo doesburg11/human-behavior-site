@@ -67,7 +67,7 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 
   “works-in-practice” plan for your PredPreyGrass run, plus what to tweak as you lengthen episodes.
 
-  ## Recommended episode horizon + hyperpsarameters (curriculum)
+  ## Recommended episode horizon + hyperparameters (curriculum)
 
   Start shorter for stability/throughput, then stretch to let eco-dynamics (booms, busts, Red-Queen) unfold.
 
