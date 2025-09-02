@@ -111,3 +111,8 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
   ## Make available the BHP archive in a repository
 
   
+  ## LT-goal acquire more wealth as a population
+  * Energy as a proxy of wealth
+  * Only the top 10% of energy reproduces?
+  * Escaping the Malthusian trap
+
