@@ -116,3 +116,10 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
   * Only the top 10% of energy reproduces?
   * Escaping the Malthusian trap
 
+  ### Integrate Dynamic Field Theory 
+  - Wrapper around brain
+  - Visualize first!!!
+
+  ### Posting on the linkedin The Behavior Patterns Project?
+
+
