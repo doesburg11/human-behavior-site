@@ -97,7 +97,13 @@ export default {
                 },
                 {
                   type: 'category',
-                  label: 'Network architecture',
+                  label: 'Optuna with ASHA pruning',
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/optuna/optuna-ppg' },
+                  items: [],
+                },
+                {
+                  type: 'category',
+                  label: 'Tuning Network',
                   link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/networks/network-architecture-ppg' },
                   items: [],
                 },
@@ -109,6 +115,12 @@ export default {
                     { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/population-based-training/pbt-implementation' },
                     { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/population-based-training/pbt-config' },
                   ],
+                },
+                {
+                  type: 'category',
+                  label: 'Tuning Conclusions',
+                  link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/conclusions/tuning-conclusions-ppg' },
+                  items: [],
                 },
               ],
             },
