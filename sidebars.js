@@ -126,11 +126,10 @@ export default {
             },
             {
               type: 'category',
-              label: 'Environment Configurations',
-              link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/configurations/configurations-ppg' }, // Summary page
+              label: 'Experiments',
               items: [
-                { type: 'doc', id: 'pred-prey-grass/marl-ppg/configurations/v1_0/v1_0-ppg' },
-                { type: 'doc', id: 'pred-prey-grass/marl-ppg/configurations/v2_0/v2_0-ppg' },
+                { type: 'doc', id: 'pred-prey-grass/marl-ppg/experiments/base-environment/base-environment-ppg' },
+                { type: 'doc', id: 'pred-prey-grass/marl-ppg/experiments/mutating-agents/mutating-agents-ppg' },
               ],
             },
           ],
