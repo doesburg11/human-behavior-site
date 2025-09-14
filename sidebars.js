@@ -128,6 +128,7 @@ export default {
               type: 'category',
               label: 'Experiments',
               items: [
+                { type: 'doc', id: 'pred-prey-grass/marl-ppg/experiments/experiments-ppg' },
                 { type: 'doc', id: 'pred-prey-grass/marl-ppg/experiments/base-environment/base-environment-ppg' },
                 { type: 'doc', id: 'pred-prey-grass/marl-ppg/experiments/mutating-agents/mutating-agents-ppg' },
               ],
