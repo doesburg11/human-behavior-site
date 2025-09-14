@@ -129,8 +129,8 @@ export default {
               label: 'Environment Configurations',
               link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/configurations/configurations-ppg' }, // Summary page
               items: [
-                { type: 'doc', id: 'pred-prey-grass/marl-ppg/configurations/v1_0/v1_0-ppg' },
-                { type: 'doc', id: 'pred-prey-grass/marl-ppg/configurations/v2_0/v2_0-ppg' },
+                { type: 'doc', id: 'pred-prey-grass/marl-ppg/configurations/ppg-2-policies/ppg-2-policies' },
+                { type: 'doc', id: 'pred-prey-grass/marl-ppg/configurations/ppg-4-policies/ppg-4-policies' },
               ],
             },
           ],
