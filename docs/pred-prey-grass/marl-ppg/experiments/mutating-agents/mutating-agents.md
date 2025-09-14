@@ -54,3 +54,7 @@ This ecosystem, therefore, is not only an instance of artificial selection—it�
 Notably, agents in this system lack direct access to each other’s heritable traits such as speed class. Observations are limited to localized energy maps for predators, prey, and grass, with no explicit encoding of whether an observed agent is fast or slow. Despite this, we observe a clear evolutionary shift toward higher-speed phenotypes in both predator and prey populations. This shift occurs even when high-speed variants are initially absent and must arise through rare mutations, suggesting that selection is driven not by trait recognition but by differential survival and reproductive success. Faster agents outperform their slower counterparts in the competitive landscape created by evolving opponents, leading to a mutual escalation in speed. This dynamic constitutes an implicit form of co-evolution consistent with the Red Queen hypothesis: species must continuously adapt, not to gain an absolute advantage, but merely to maintain relative fitness in a co-adaptive system.
 
 A simulation test of the Red Queen effect in the base environment can be found [here](https://doesburg11.github.io/pred-prey-grass/red-queen/).
+<<<<<<< HEAD
+=======
+
+>>>>>>> a4e8a6dd2d0f14b3cf39cd4a76e890a2fbb3a8a5
