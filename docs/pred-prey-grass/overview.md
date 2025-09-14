@@ -20,7 +20,7 @@ Predators die of starvation when their energy is zero, Prey die either of starva
 </figure>
 
 
-## Features of the [base environment](https://github.com/doesburg11/PredPreyGrass/tree/main/src/predpreygrass/rllib/v1_0)
+## Features of the [base environment](https://github.com/doesburg11/PredPreyGrass/tree/main/src/predpreygrass/rllib/ppg_2_policies)
 
 * At startup Predator, Prey and Grass are randomly positioned on the gridworld.
 
@@ -46,6 +46,6 @@ Predators die of starvation when their energy is zero, Prey die either of starva
 
       * Both Predators and Prey reproduce **asexually** when their energy exceeds a threshold.
       * New agents are spawned near their parent.
-- **Sparse rewards**: agents only receive a reward when reproducing in the base configuration. However, this can be expanded with other rewards in the [environment configuration](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/v1_0/config_env.py). The sparse rewards configuration is to show that the ecological system is able to sustain with this minimalstic optimized incentive for both Predators and Prey.
+- **Sparse rewards**: agents only receive a reward when reproducing in the base configuration. However, this can be expanded with other rewards in the [environment configuration](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/ppg_2_policies/config_env.py). The sparse rewards configuration is to show that the ecological system is able to sustain with this minimalstic optimized incentive for both Predators and Prey.
 
 * Grass gradually regenerates at the same spot after being eaten by Prey. Grass, as a non-learning agent, is being regarded by the model as part of the environment, not as an actor.
