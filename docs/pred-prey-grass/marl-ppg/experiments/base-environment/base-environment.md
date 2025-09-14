@@ -1,10 +1,10 @@
 ---
-id: v1_0-ppg
+id: base-environment-ppg
 title: Base Environment
 ---
 # Predator-Prey-Grass base environment
 
-The base environment consists of two species: predator and prey. Both species are seperately trained, resulting into two separate policies.
+The [base environment](https://github.com/doesburg11/PredPreyGrass/tree/main/src/predpreygrass/rllib/base_environment) consists of two species: predator and prey. Both species are seperately trained, resulting into two separate policies.
 
 <figure style={{ textAlign: 'center' }}>
   <video controls style={{ width: '100%', height: 'auto' }}>
@@ -41,14 +41,14 @@ The base environment consists of two species: predator and prey. Both species ar
 
       - Both Predators and Prey reproduce **asexually** when their energy exceeds a threshold.
       - New agents are spawned near their parent.
-- **Sparse rewards**: agents only receive a reward when reproducing in the base configuration. However, this can be expanded with other rewards in the [environment configuration](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/v1_0/config_env.py). The sparse rewards configuration is to show that the ecological system is able to sustain with this minimalstic optimized incentive for both Predators and Prey.
+- **Sparse rewards**: agents only receive a reward when reproducing in the base configuration. However, this can be expanded with other rewards in the [environment configuration](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/base-environment/config_env.py). The sparse rewards configuration is to show that the ecological system is able to sustain with this minimalstic optimized incentive for both Predators and Prey.
 
 - Grass gradually regenerates at the same spot after being eaten by Prey. Grass, as a non-learning agent, is being regarded by the model as part of the environment, not as an actor.
 
 
 ## Training and evaluation results
 
-[Training](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/v1_0/tune_ppo_multiagent_v1_0.py) the agents and [evaluating](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/v1_0/evaluate_ppo_from_checkpoint_debug.py) the environment is an example of how elaborate behaviors can emerge from simple rules in MARL models. As pointed out earlier, rewards for learning agents are solely obtained by reproduction. So all other reward options are set to zero in the environment configuration. Find more background on this [reward shaping and scaling here](https://doesburg11.github.io/pred-prey-grass/marl-ppg/challenges/rewards-ppg/scaling). Despite this relatively sparse reward structure, maximizing these rewards results in elaborate emerging agents behaviors such as:
+[Training](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/base-environment/tune_ppo_multiagent_v1_0.py) the agents and [evaluating](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/base-environment/evaluate_ppo_from_checkpoint_debug.py) the environment is an example of how elaborate behaviors can emerge from simple rules in MARL models. As pointed out earlier, rewards for learning agents are solely obtained by reproduction. So all other reward options are set to zero in the environment configuration. Find more background on this [reward shaping and scaling here](https://doesburg11.github.io/pred-prey-grass/marl-ppg/challenges/rewards-ppg/scaling). Despite this relatively sparse reward structure, maximizing these rewards results in elaborate emerging agents behaviors such as:
 - Predators hunting Prey
 - Multiple Predators colaborating/competing hunting Prey; increasing the probability of Prey being caught
 - Prey finding and eating grass
@@ -63,7 +63,7 @@ Moreover, these learning behaviors lead to more complex emergent dynamics at the
 - The trained agents are displaying a classic [Lotka–Volterra](https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations) pattern over time:
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/pred-prey-grass/marl-ppg/environment-configurations/v1_0/display-2.png" alt="Display 2: The trained agents are displaying a Lotka–Volterra pattern" width="400" />
+  <img src="/img/pred-prey-grass/marl-ppg/experiments/base-environment/display-2.png" alt="Display 2: The trained agents are displaying a Lotka–Volterra pattern" width="400" />
   <figcaption><strong>Display 2:</strong> The trained agents are displaying a Lotka–Volterra pattern</figcaption>
 </figure>
 
@@ -75,12 +75,12 @@ The MARL environment [`predpregrass_base.py`](https://github.com/doesburg11/Pred
 
 ### Decentralized training: Pred-Prey-Grass MARL with RLlib new API stack
 
-Obviously, using only one network has its limitations as Predators and Prey lack true specialization in their training. The RLlib new API stack framework is able to circumvent this limitation elegantly. The environment dynamics of the RLlib environments are largely the same as in the PettingZoo environment. However, newly spawned agents are placed in the vicinity of the parent, rather than randomly spawned in the entire gridworld. The implementation under-the-hood of the setup is somewhat different, utilizing array lists to store agent data rather than implementing a separate agent class (largely a result of attempting to optimize compute time of the `step` function). Similarly as in the PettingZoo environment, rewards can be adjusted in a separate environment [configuration file](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/v1_0/config_env.py)
+Obviously, using only one network has its limitations as Predators and Prey lack true specialization in their training. The RLlib new API stack framework is able to circumvent this limitation elegantly. The environment dynamics of the RLlib environments are largely the same as in the PettingZoo environment. However, newly spawned agents are placed in the vicinity of the parent, rather than randomly spawned in the entire gridworld. The implementation under-the-hood of the setup is somewhat different, utilizing array lists to store agent data rather than implementing a separate agent class (largely a result of attempting to optimize compute time of the `step` function). Similarly as in the PettingZoo environment, rewards can be adjusted in a separate environment [configuration file](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/base-environment/config_env.py)
 
 Training is applied in accordance with the RLlib new API stack protocol. The training configuration is more out-of-the-box than the PettingZoo/SB3 solution, but nevertheless is much more applicable to MARL in general and especially decentralized training.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/pred-prey-grass/marl-ppg/environment-configurations/v1_0/display-3.png" alt="Display 3: TThe multi_agent_setup" width="400" />
+  <img src="/img/pred-prey-grass/marl-ppg/experiments/base-environment/display-3.png" alt="Display 3: The multi_agent_setup" width="400" />
   <figcaption><strong>Display 3:</strong> The multi_agent_setup</figcaption>
 </figure>
 
