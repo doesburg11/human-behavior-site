@@ -128,29 +128,10 @@ export default {
               type: 'category',
               label: 'Experiments',
               items: [
-                { type: 'doc', id: 'pred-prey-grass/marl-ppg/experiments/experiments-ppg' },
                 { type: 'doc', id: 'pred-prey-grass/marl-ppg/experiments/base-environment/base-environment-ppg' },
                 { type: 'doc', id: 'pred-prey-grass/marl-ppg/experiments/mutating-agents/mutating-agents-ppg' },
+                { type: 'doc', id: 'pred-prey-grass/red-queen/red-queen-ppg' }, // Summary page
               ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Emergent behavior',
-          link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/overview-marl-ppg' },  
-          items: [
-            {
-              type: 'category',
-              label: 'Red Queen effect',
-              link: { type: 'doc', id: 'pred-prey-grass/red-queen/red-queen-ppg' }, // Summary page
-              items: [],
-            },
-            {
-              type: 'category',
-              label: 'Malthusian Trap',
-              link: { type: 'doc', id: 'pred-prey-grass/malthusian-trap/malthusian-trap-ppg' }, // Summary page
-              items: [],
             },
           ],
         },
