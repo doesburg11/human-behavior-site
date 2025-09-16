@@ -122,4 +122,8 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 
   ### Posting on the linkedin The Behavior Patterns Project?
 
+  ### The Malthusian Trap in a Predator–Prey Co-Evolutionary System
+  - Limit population size of predators or prey; is that beneficial compared to unbounded reproduction?
+  - [2.5]: experiment_1 / experiment are powerfull examples of the Malthusian trap. Record this on site. Create a "Malthusian Trap" 
+
 
