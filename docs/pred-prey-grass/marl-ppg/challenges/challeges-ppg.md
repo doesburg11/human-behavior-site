@@ -8,11 +8,17 @@ Although a promissing tool, MARL faces many challenges. Also implementing the **
 ---
 
 ## 1. Non-stationarity
+Non-stationarity is severe in PPG because every agent’s behavior shifts the effective environment of all others
 
 * In PPG, prey and predators are **constantly adapting**.
 * From the predator’s perspective, the environment keeps changing because prey behaviors evolve (and vice versa).
 * This makes it very hard for a policy to converge — what works against today’s prey may fail tomorrow.
-
+* Mutations, in the case of `mutating_agents`. Each reproduction event has a chance to mutate type (from type-1 ↔ type-2).This means the environment’s population composition is constantly changing. A predator that learns to exploit type-1 prey suddenly faces mostly type-2 prey later.
+* Ecosystem feedback: Grass regeneration, prey eating, and predator hunting all feed back into each other:
+    * If prey overshoot grass consumption, predators starve even if their hunting skill is fine.
+    * If predators become too efficient, prey collapse, which then kills predators. Each population’s learning changes the “rules of survival” for the others in real time.
+* Masking of observations, in the case of `walls_occlusion` & LOS (Line-Of-Sight) masking. Non-stationarity is worsened by masking of observations. A predator may learn a policy assuming prey are always visible in range, but then walls block visibility and shift the effective dynamics. The environment seen by the agent is constantly changing as agents and walls interact.
+* Training instability: Because RLlib ties policies to agent groups (via policy_mapping_fn), each group’s distribution of experiences changes as population counts fluctuate. This makes the replay buffer distribution highly non-stationary, destabilizing PPO updates.
 ---
 
 ## 2. Scalability and Combinatorial Explosion
