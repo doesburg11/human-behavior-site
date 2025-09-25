@@ -37,12 +37,6 @@ export default {
     },
     {
       type: 'category',
-      label: 'Multi Agent Reinforcement Learning',
-      link: { type: 'doc', id: 'marl/overview-marl' },  
-      items: [],
-    },
-    {
-      type: 'category',
       label: 'Predator-Prey-Grass project',
       link: { type: 'doc', id: 'pred-prey-grass/overview-ppg' },  
       items: [
@@ -52,6 +46,12 @@ export default {
           link: { type: 'doc', id: 'pred-prey-grass/ecosystem/ecosystem-ppg' }, // Summary page
           items: [],
         },        
+        {
+          type: 'category',
+          label: 'Multi Agent Reinforcement Learning',
+          link: { type: 'doc', id: 'marl/overview-marl' },  
+          items: [],
+        },
         {
           type: 'category',
           label: 'MARL used in PPG',
