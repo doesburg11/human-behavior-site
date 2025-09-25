@@ -16,6 +16,7 @@ export default {
           link: { type: 'doc', id: 'human-behavior-patterns/fundamentals/overview-fundamentals' }, 
           items: [
             { type: 'doc', id: 'human-behavior-patterns/fundamentals/domains-fundamentals', label: 'Domains' },
+            { type: 'doc', id: 'human-behavior-patterns/hierarchy/maslow-hierarchy', label: 'Hierarchy' },
           ],
         },
         {
@@ -49,7 +50,7 @@ export default {
         {
           type: 'category',
           label: 'Multi Agent Reinforcement Learning',
-          link: { type: 'doc', id: 'marl/overview-marl' },  
+          link: { type: 'doc', id: 'pred-prey-grass/marl/overview-marl' },  
           items: [],
         },
         {
