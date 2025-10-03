@@ -35,7 +35,7 @@ The training results suggests that the population of the low-speed agents dimini
 Moreover, this hypothesis is supported further when evaluating the trained policies in a low-speed agent only environment at the start. It appears that when we initialize the evaluation with **only** low-speed predators and low-speed-prey, the population of low-speed agents is ultimately replaced by high-speed agents for predators as well as prey as displayed below. Note that after this shift the low-speed agents are not fully eradicated, but temporarily pop up due to back mutation.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/pred-prey-grass/marl-ppg/environment-configurations/v2_0/display-3.png" alt="Display 3: Low-speed agents replaced by high-Speed agents trough selection" width="300" />
+  <img src="/img/pred-prey-grass/marl-ppg/experiments/mutating-agents/display-3.png" alt="Display 3: Low-speed agents replaced by high-Speed agents trough selection" width="300" />
   <figcaption><strong>Display 3:</strong> Low-speed agents replaced by high-Speed agents through selection</figcaption>
 </figure>
 
