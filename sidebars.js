@@ -139,6 +139,14 @@ export default {
       ],
     },
     {
+      type: 'category',
+      label: 'Social behavior',
+      items: [
+        { type: 'doc', id: 'cooperation/overview-cooperation', label: 'Cooperation' },
+        { type: 'doc', id: 'cooperation/altruism/overview-altruism', label: 'Altruism' },
+      ],
+    },
+    {
       type: 'doc',
       id: 'to_do',
       label: 'To do',
