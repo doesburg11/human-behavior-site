@@ -3,6 +3,16 @@ id: to_do
 title: To do
 sidebar_position: 1
 ---
+### limited intake to enforce sharing 
+- fix last outcome befopre dying
+
+### more agents-on-one-spot gird with numpy operations
+- simplified rules, random enagagement rules if multiple agents in one cell
+
+### layered cooperationn in SocialBehavior
+- Marl Book example
+
+
 Display Maslow's Pyramid and describe project from bottom to top:
 - First layer: PredatorPreyGrass project. Typical for the first layer, physical need (eeating), survival an reproduction.
 - Second layer: social needs. Need to corporate 
