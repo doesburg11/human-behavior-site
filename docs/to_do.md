@@ -145,3 +145,5 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 
 - Communication: leave ant trace (ant colony/lenia), also keep previous state in Observation?
 - www.talkRL.com
+- Reshape Field of Vision for Predators; only into the direction of moiving? In that way Prey can hide more easily from Predators?
+- Is the existence of a prolonged episode betweeen predators and prey not an emergence of cooperation?
