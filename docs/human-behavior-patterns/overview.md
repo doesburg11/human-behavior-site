@@ -22,3 +22,6 @@ Human behavior encompasses the spectrum of actions and mannerisms exhibited by i
   <img src="/img/human-behavior-patterns/display-2.png" alt="Display 1: Behavior visibility" width="400" />
   <figcaption><strong>Display 2:</strong> The calculus of selfishness</figcaption>
 </figure>
+
+Experiment: Predators, Prey and Grass 
+If Predators and Prey are able together to prolong the epsiode then they must be cooperating!
