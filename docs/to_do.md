@@ -141,3 +141,7 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
   - [2.5]: experiment_1 / experiment are powerfull examples of the Malthusian trap. Record this on site. Create a "Malthusian Trap" 
 
 
+### Pranjal 2-12-2025
+
+- Communication: leave ant trace (ant colony/lenia), also keep previous state in Observation?
+- www.talkRL.com
