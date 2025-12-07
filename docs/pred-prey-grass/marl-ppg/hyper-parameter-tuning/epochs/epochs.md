@@ -1,6 +1,6 @@
 ---
 id: epochs-ppg
-title: Epochs variation
+title: Epochs Variation
 ---
 The number of epochs in the configuration has a strong impact on the wall time of iterations. The ```num_epochs``` determines how many times PPO will re-use the same batch of collected experiences for gradient updates before sampling a new batch of fresh data. Essentially, the ```num_epochs``` is a knob that trades off data efficiency vs. stability. Increasing  ```num_epochs``` increases stability of training but on the other hand takes more compute time.
 

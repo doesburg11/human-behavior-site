@@ -1,9 +1,9 @@
 ---
 id: related-research-ppg
-title: Related research
+title: Related Research
 ---
 
-# Related Work
+# Related Research
 
 Research at the intersection of **multi-agent reinforcement learning (MARL)**, **ecological modeling**, and **open-ended evolution** spans several largely disconnected literatures. The present work builds on foundations in **RL-based predator–prey models**, **agent-based ecology**, and **artificial life**, but differs substantially from existing approaches by integrating **multi-trophic resource dynamics**, **energy-based metabolism**, **lineage-aware reproduction**, and **mutation-driven evolutionary variation** within a unified MARL framework. Below, we summarize the most relevant work across these domains.
 
@@ -12,6 +12,8 @@ Research at the intersection of **multi-agent reinforcement learning (MARL)**, *
 Predator–prey interactions have long served as testbeds for emergent multi-agent behaviors. Early work focused on rule-based or evolutionary models rather than learning agents, but recent studies have explored the use of deep RL. **Park et al. (2021)** introduced a grid-world predator–prey system in which predators and prey alternately train approximate best-response policies using AlgaeDICE, showing oscillatory population dynamics reminiscent of Lotka–Volterra cycles and simple spatial self-organization. Their model, however, lacks resource flow, energy metabolism, reproduction, or evolutionary processes.
 
 **Wang et al. (2019, 2020)** developed DQN-based predator–prey environments where both species learn behavior policies under adversarial reward structures. While demonstrating co-adaptation and fluctuating population trajectories, these systems employ fixed population sizes, no trophic base, and no ecological constraints such as starvation or reproduction. Similarly, PettingZoo’s *Pursuit* environment and OpenAI’s Multi-Agent Particle Environment (*simple_tag*) frame predator–prey interactions as pursuit-evasion problems, but omit ecological realism, metabolic processes, and population turnover.
+
+The **Vectorized Multi-Agent Simulator (VMAS)** from the Prorok Lab (Bettini et al., 2023) provides highly efficient, differentiable PyTorch-based multi-agent physics tasks (including pursuit/escape scenarios) for MARL benchmarking. VMAS emphasizes batched simulation speed and gradient-based policy learning, but it models short-horizon tasks without trophic structure, resource metabolism, reproduction, or mutation-driven lineage change, making it complementary but not ecological in scope compared with PPG.
 
 More recent work has examined **cooperative hunting** using deep RL. Notably, **Moreira et al. (2024, eLife)** demonstrated that predators can spontaneously adopt complementary roles (e.g., chaser vs. ambusher) when jointly trained with PPO. While this constitutes an important step toward biologically inspired multi-agent behavior, the task is episodic, non-evolutionary, and lacks resource layers, trophic cascades, or multi-generational dynamics. In contrast, PPG allows cooperative or competitive behaviors to emerge within a continuously evolving ecological–evolutionary system.
 
@@ -44,6 +46,8 @@ Prior research has explored predator–prey interactions, cooperative hunting, m
 7. **Long-term open-ended eco-evolutionary dynamics**
 
 The PredPreyGrass project therefore occupies a unique position—**a genuinely ecological MARL platform** that supports both **behavioral learning** and **evolutionary adaptation**. To our knowledge, no prior MARL or artificial life system incorporates this combination of trophic structure, metabolism, reproduction, mutation, and lineages at scale. This work thus extends existing models toward a unified simulation of learning, ecology, and evolution.
+
+
 
 ## References
 
@@ -84,6 +88,16 @@ Zheng, L., Yang, J., Cai, H., Zhou, M., Zhang, W., Wang, J., & Yu, Y. (2017).
 MAgent: A Many-Agent Reinforcement Learning Platform for Artificial Collective Intelligence.
 arXiv:1712.00600.
 https://arxiv.org/abs/1712.00600
+
+Prorok, A., De Magistris, G., & Prorok Lab. (2023).
+Vectorized Multi-Agent Simulator (VMAS).
+GitHub repository.
+https://github.com/proroklab/VectorizedMultiAgentSimulator
+
+Bettini, G., Sakawa, Y., Liu, S., & Prorok, A. (2023).
+VMAS: A Vectorized Multi-Agent Simulator for Scalable Multi-Agent Reinforcement Learning.
+In Proceedings of the 2023 International Conference on Autonomous Agents and Multiagent Systems (AAMAS).
+https://github.com/proroklab/VectorizedMultiAgentSimulator
 
 Agent-Based Ecology & Predator–Prey Modeling
 

@@ -1,6 +1,6 @@
 ---
 id: network-architecture-ppg
-title: Network architecture
+title: Network Architecture
 ---
 # Predator–Prey–Grass: Network Architecture
 

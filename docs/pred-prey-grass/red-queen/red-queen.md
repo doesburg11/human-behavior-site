@@ -1,6 +1,6 @@
 ---
 id: red-queen-ppg
-title: The Red Queen effect
+title: The Red Queen Effect
 ---
 
 # The Red Queen Effect in a Predator–Prey Co-Evolutionary System

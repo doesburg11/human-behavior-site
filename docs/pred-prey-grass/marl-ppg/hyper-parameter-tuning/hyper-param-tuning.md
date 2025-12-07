@@ -1,6 +1,6 @@
 ---
 id: tuning-ppg
-title: Hyper parameter tuning
+title: Hyper Parameter Tuning
 ---
 In this section we provide experiments to tune the default solution of the default Predator-Prey-Grass environment towards a more efficient solution. Training a default environment satifactory (meaning that the simulation runs until truncation of 1000 evaluation steps), takes about 9 hours of compute time on a 32 CPU/1 GPU machine. The goal of our tuning experiments is to reduce compute time while remaining the same rewards (ie. reproduction) structure. The default PPO configuration is shown in Display 1.
 

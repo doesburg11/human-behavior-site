@@ -1,5 +1,5 @@
 ---
 id: experiments-ppg
-title: Environment experiments
+title: Environment Experiments
 ---
 Environment experiments.

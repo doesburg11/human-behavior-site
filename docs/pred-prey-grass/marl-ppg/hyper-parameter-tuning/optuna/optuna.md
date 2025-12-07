@@ -1,6 +1,6 @@
 ---
 id: optuna-ppg
-title: Optuna with ASHA pruning
+title: Optuna with ASHA Pruning
 ---
 # Optuna with ASHA Pruning
 

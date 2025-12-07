@@ -1,6 +1,6 @@
 ---
 id: scaling
-title: Rewards scaling in PredPreyGrass MARL
+title: Rewards Scaling in PredPreyGrass MARL
 ---
 
 One of the most subtle but crucial features in multi-agent reinforcement learning (MARL) is the reward magnitude — especially in environments where rewards are sparse and agents must coordinate to survive. In the custom-built MARL environment simulating predators, prey, and grass on a grid, changing the reproduction reward from 1.0 to 10.0 dramatically altered the course of learning. This section explains why that matters, and what it reveals about reward scaling in co-evolving agent populations.

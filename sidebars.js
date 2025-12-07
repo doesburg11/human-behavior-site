@@ -38,7 +38,7 @@ export default {
     },
     {
       type: 'category',
-      label: 'Predator-Prey-Grass project',
+      label: 'Predator-Prey-Grass Project',
       link: { type: 'doc', id: 'pred-prey-grass/overview-ppg' },  
       items: [
         {
@@ -65,7 +65,7 @@ export default {
               items: [            
                 {
                   type: 'category',
-                  label: 'Solution concept in PPG',
+                  label: 'Solution Concept in PPG',
                   link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/challenges/solution-concept-ppg' },
                   items: [],
                 },
@@ -87,7 +87,7 @@ export default {
             },
             {
               type: 'category',
-              label: 'Hyper parameter Tuning',
+              label: 'Hyper Parameter Tuning',
               link: { type: 'doc', id: 'pred-prey-grass/marl-ppg/hyper-parameter-tuning/tuning-ppg' }, // Summary page
               items: [
                 {
@@ -136,11 +136,17 @@ export default {
             },
           ],
         },
+        {
+          type: 'category',
+          label: 'Related Research',
+          link: { type: 'doc', id: 'pred-prey-grass/related-research/related-research-ppg' },  
+          items: [],
+        }
       ],
     },
     {
       type: 'category',
-      label: 'Social behavior',
+      label: 'Social Behavior',
       items: [
         { type: 'doc', id: 'cooperation/overview-cooperation', label: 'Cooperation' },
         { type: 'doc', id: 'cooperation/altruism/overview-altruism', label: 'Altruism' },
