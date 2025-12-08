@@ -3,11 +3,9 @@ id: to_do
 title: To do
 sidebar_position: 1
 ---
-### limited intake to enforce sharing 
-- fix last outcome befopre dying
 
-### more agents-on-one-spot gird with numpy operations
-- simplified rules, random enagagement rules if multiple agents in one cell
+
+
 
 ### layered cooperationn in SocialBehavior
 - Marl Book example
@@ -28,10 +26,7 @@ Determine success:
 
 - curriculum reward tuning
 
-- Fitness parameters:
-    - offspring per agent
-    - offspring per agent per energy
-- Protocol for storing/retrieving stats per step (outside env: in evaluation loop)
+
 
 ### Examples to try out
 
@@ -60,9 +55,7 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
             ],
         }
   ```
-- the network is now adjustable to the observation range. was not effectively tuned for observation_range = 9 (for Prey)
 - TODO: test experiment"_network_tuning" on HBP computer 
-- change config_ppo_gpu
 
   ### Experiments
 
@@ -105,7 +98,6 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 
   Why that mapping? PPO’s useful credit horizon is \~1/(1−γ). As you increase `max_steps`, you raise `γ` so actions can “see” far enough ahead without making variance explode.
 
-  > Remember: in your env, if `max_steps` isn’t set in the config, it silently defaults to **10 000**—so set it explicitly to avoid accidental long runs.&#x20;
 
   ## Batch/throughput knobs to adjust as episodes get longer
 
