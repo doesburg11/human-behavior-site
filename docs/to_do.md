@@ -4,7 +4,16 @@ title: To do
 sidebar_position: 1
 ---
 
+### Cooperation by bundled forces of predators
+- Predators can eat if the predators enters the Moore neighborhood of a Prey
+- It can only eat if it has a higher energy level than the Prey
+- If more Predators ar in the Moore neighborhood, it can eat the Prey only if their cumulative energy is greater or equal than the Prey. If so: the divide the energy proportionally to their own energy.
+- "When you can't do it alone you must do it together"
 
+### Macro-level energy
+- Add it to the file which is already in place: energy_by_type.json (created by evaluate_......_debug.py)
+- Substract cumulative decay energy Predator and Prey per step (homeostatic energy)
+- Add cumulative photosynthesis energy from grass
 
 
 ### layered cooperationn in SocialBehavior
