@@ -4,19 +4,24 @@ title: To do
 sidebar_position: 1
 ---
 
-### Cooperation by bundled forces of predators
+### [X]Cooperation by bundled forces of predators
 - Predators can eat if the predators enters the Moore neighborhood of a Prey
 - It can only eat if it has a higher energy level than the Prey
 - If more Predators ar in the Moore neighborhood, it can eat the Prey only if their cumulative energy is greater or equal than the Prey. If so: the divide the energy proportionally to their own energy.
 - "When you can't do it alone you must do it together"
 
-### Mammoths
+### [ ] Failed attack cost energy Predators 
+
+### [ ] Cooperation by bundled forces of predators and prey
+- Som energy Predators must be larger than sum Prey in Moore neighborhood of attacked Prey
+
+### [ ] Mammoths
 
 - Make Prey with behaving as Mamoths
   - Larger energy than Predators
   - Fewer in numbers than Predator
 
-### Mixed
+### [ ] Mixed
 - Have to types of Prey: Mammoths and Deer
   - Experiment for coevolution
 
