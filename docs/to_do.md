@@ -10,6 +10,16 @@ sidebar_position: 1
 - If more Predators ar in the Moore neighborhood, it can eat the Prey only if their cumulative energy is greater or equal than the Prey. If so: the divide the energy proportionally to their own energy.
 - "When you can't do it alone you must do it together"
 
+### Mammoths
+
+- Make Prey with behaving as Mamoths
+  - Larger energy than Predators
+  - Fewer in numbers than Predator
+
+### Mixed
+- Have to types of Prey: Mammoths and Deer
+  - Experiment for coevolution
+
 ### Macro-level energy
 - Add it to the file which is already in place: energy_by_type.json (created by evaluate_......_debug.py)
 - Substract cumulative decay energy Predator and Prey per step (homeostatic energy)
