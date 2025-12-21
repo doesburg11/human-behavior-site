@@ -11,9 +11,12 @@ sidebar_position: 1
 - "When you can't do it alone you must do it together"
 
 ### [ ] Failed attack cost energy Predators 
+- proportionally (to own energy level) punish failed Predators 
 
-### [ ] Cooperation by bundled forces of predators and prey
-- Som energy Predators must be larger than sum Prey in Moore neighborhood of attacked Prey
+### [ ] Dividing prey
+- Proportionally
+- Equally
+
 
 ### [ ] Mammoths
 
@@ -33,9 +36,7 @@ sidebar_position: 1
 
 ### layered cooperationn in SocialBehavior
 - Marl Book example
-
-
-Display Maslow's Pyramid and describe project from bottom to top:
+- Display Maslow's Pyramid and describe project from bottom to top:
 - First layer: PredatorPreyGrass project. Typical for the first layer, physical need (eeating), survival an reproduction.
 - Second layer: social needs. Need to corporate 
 
@@ -46,7 +47,6 @@ Display Maslow's Pyramid and describe project from bottom to top:
 Determine success:
   - fitness metrics
   - ability to co-adapt
-
 
 - curriculum reward tuning
 
@@ -68,18 +68,6 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 - Male & Female reproduction instead of asexual reproduction
 - Build wall or move wall
 - Adding water/rivers
-
-### Improve network
-- ```python check for better network:
-        model_config={
-            "conv_filters": [
-                [16, [3, 3], 1],
-                [32, [3, 3], 1],
-                [64, [3, 3], 1],
-            ],
-        }
-  ```
-- TODO: test experiment"_network_tuning" on HBP computer 
 
   ### Experiments
 
