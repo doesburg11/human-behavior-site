@@ -23,6 +23,7 @@ sidebar_position: 1
 - Make Prey with behaving as Mamoths
   - Larger energy than Predators
   - Fewer in numbers than Predator
+  - maybe, the sum of energy humans can be smaller (a fraction), because of more intelligence/tool use)
 
 ### [ ] Mixed -Stah Hunt
 - Have to types of Prey: Mammoths and Deer
