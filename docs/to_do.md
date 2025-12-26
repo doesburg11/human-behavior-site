@@ -24,9 +24,11 @@ sidebar_position: 1
   - Larger energy than Predators
   - Fewer in numbers than Predator
 
-### [ ] Mixed
+### [ ] Mixed -Stah Hunt
 - Have to types of Prey: Mammoths and Deer
   - Experiment for coevolution
+  - https://chatgpt.com/share/694e5758-e21c-8008-87d9-1c01dc66cf1b
+  - https://en.wikipedia.org/wiki/Stag_hunt
 
 ### Macro-level energy
 - Add it to the file which is already in place: energy_by_type.json (created by evaluate_......_debug.py)
