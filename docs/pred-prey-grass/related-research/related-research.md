@@ -74,6 +74,33 @@ The PredPreyGrass project therefore occupies a unique position—**a genuinely e
 | Main research question     | *Which behaviors survive?*     | *How do agents coordinate?* | *When do agents cooperate?* |
 
 
+**Comparison: Ecology × MARL Frameworks**
+| Dimension                  | **PredPreyGrass (PPG)**        | **VMAS**                    | **Melting Pot**             | **NetLogo**                | **MASON**                    | **POET**                    |
+| -------------------------- | ------------------------------ | --------------------------- | --------------------------- | -------------------------- | ---------------------------- | --------------------------- |
+| Primary focus              | Ecological dynamics + learning | Scalable MARL benchmarking  | Social dilemmas & norms     | Agent-based modeling (ABM) | Large-scale ABM              | Open-ended curriculum       |
+| Deep learning              | ✅ PPO / MAPPO (RLlib)          | ✅ PPO / MAPPO (PyTorch)     | ✅ PPO / DQN-style           | ❌                          | ❌                            | ⚠️ (often ES / RL hybrids)  |
+| Multi-agent RL             | ✅                              | ✅                           | ✅                           | ❌                          | ❌                            | ⚠️                          |
+| Population size            | Variable, endogenous           | Fixed                       | Fixed                       | Variable                   | Variable                     | Fixed per env               |
+| Birth & reproduction       | ✅                              | ❌                           | ❌                           | ✅                          | ✅                            | ❌                           |
+| Death & extinction         | ✅ (central)                    | ❌                           | ❌                           | ✅                          | ✅                            | ❌                           |
+| Energy budgets             | ✅                              | ❌                           | ❌                           | ✅ (common pattern)         | ✅                            | ❌                           |
+| Resource metabolism        | ✅ (grass → prey → predator)    | ❌                           | ⚠️ (abstract)               | ✅                          | ✅                            | ❌                           |
+| Predator–prey relations    | ✅ explicit                     | ⚠️ toy                      | ❌                           | ✅ classic                  | ✅ classic                    | ❌                           |
+| Cooperation pressure       | Emergent, ecological           | Reward-engineered           | Game-theoretic              | Rule-based / emergent      | Rule-based / emergent        | Task-driven                 |
+| Costly cooperation         | ✅                              | ⚠️                          | ⚠️                          | ✅                          | ✅                            | ❌                           |
+| Exploitation possible      | ✅                              | ✅                           | ✅                           | ✅                          | ✅                            | ⚠️                          |
+| Exploiters can go extinct  | ✅                              | ❌                           | ❌                           | ✅                          | ✅                            | ❌                           |
+| Lineages / generations     | ✅                              | ❌                           | ❌                           | ✅                          | ✅                            | ❌                           |
+| Co-evolution               | ✅                              | ❌                           | ❌                           | ⚠️ (manual)                | ⚠️ (manual)                  | ✅ (env–agent)               |
+| Open-ended dynamics        | ✅                              | ❌                           | ❌                           | ⚠️                         | ⚠️                           | ✅                           |
+| Environment non-stationary | ✅ (endogenous)                 | ❌                           | ❌                           | ✅                          | ✅                            | ✅                           |
+| Centralized critic         | Optional                       | ✅                           | Varies                      | ❌                          | ❌                            | ❌                           |
+| External reward shaping    | Minimal                        | Heavy                       | Heavy                       | ❌                          | ❌                            | Heavy                       |
+| Norms / conventions        | Implicit                       | Implicit                    | Explicit focus              | Emergent                   | Emergent                     | ❌                           |
+| Typical episode ending     | Ecosystem collapse / horizon   | Fixed horizon               | Fixed horizon               | User-defined               | User-defined                 | Curriculum shift            |
+| Main research question     | *Which behaviors survive?*     | *How do agents coordinate?* | *When do agents cooperate?* | *What patterns emerge?*    | *How do populations evolve?* | *How do skills accumulate?* |
+
+
 ## References
 
 Predator–Prey MARL and Cooperative Hunting
