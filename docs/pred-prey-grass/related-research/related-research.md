@@ -47,6 +47,31 @@ Prior research has explored predator–prey interactions, cooperative hunting, m
 
 The PredPreyGrass project therefore occupies a unique position—**a genuinely ecological MARL platform** that supports both **behavioral learning** and **evolutionary adaptation**. To our knowledge, no prior MARL or artificial life system incorporates this combination of trophic structure, metabolism, reproduction, mutation, and lineages at scale. This work thus extends existing models toward a unified simulation of learning, ecology, and evolution.
 
+**Comparison: Ecology × MARL Frameworks**
+| Dimension                  | **PredPreyGrass (PPG)**        | **VMAS**                    | **Melting Pot**             |
+| -------------------------- | ------------------------------ | --------------------------- | --------------------------- |
+| Primary focus              | Ecological dynamics + learning | Scalable MARL benchmarking  | Social dilemmas & norms     |
+| Deep learning              | ✅ PPO / MAPPO (RLlib)          | ✅ PPO / MAPPO (PyTorch)     | ✅ PPO / DQN-style           |
+| Multi-agent RL             | ✅                              | ✅                           | ✅                           |
+| Population size            | Variable, endogenous           | Fixed                       | Fixed                       |
+| Birth & reproduction       | ✅                              | ❌                           | ❌                           |
+| Death & extinction         | ✅ (central)                    | ❌                           | ❌                           |
+| Energy budgets             | ✅                              | ❌                           | ❌                           |
+| Resource metabolism        | ✅ (grass → prey → predator)    | ❌                           | ⚠️ (abstract resources)     |
+| Predator–prey relations    | ✅ explicit                     | ⚠️ toy (e.g. simple_tag)    | ❌                           |
+| Cooperation pressure       | Emergent, ecological           | Reward-engineered           | Game-theoretic              |
+| Costly cooperation         | ✅ (energy, risk, death)        | ⚠️ (reward trade-offs only) | ⚠️                          |
+| Exploitation possible      | ✅                              | ✅                           | ✅                           |
+| Exploiters can go extinct  | ✅                              | ❌                           | ❌                           |
+| Lineages / generations     | ✅                              | ❌                           | ❌                           |
+| Co-evolution               | ✅ (agent types, traits)        | ❌                           | ❌                           |
+| Open-ended dynamics        | ✅                              | ❌                           | ❌                           |
+| Environment non-stationary | ✅ (by population dynamics)     | ❌                           | ❌                           |
+| Centralized critic         | Optional                       | ✅                           | Varies                      |
+| External reward shaping    | Minimal                        | Heavy                       | Heavy                       |
+| Norms / conventions        | Implicit, learned              | Implicit                    | Explicitly studied          |
+| Typical episode ending     | Ecosystem collapse or horizon  | Fixed horizon               | Fixed horizon               |
+| Main research question     | *Which behaviors survive?*     | *How do agents coordinate?* | *When do agents cooperate?* |
 
 
 ## References
