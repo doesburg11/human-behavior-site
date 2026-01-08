@@ -19,9 +19,9 @@ Human behavior encompasses the spectrum of actions and mannerisms exhibited by i
 ## What is cooperation?
 
 - Cooperation must somehow be something to increase (individual) fitness. Either because:
-  - **Forced cooperation**:  One simply cannot do it alone ("When you can't do it alone you must do it together"); like for instance sexual mating, cooperation is a necessary condition.
+  - **Forced cooperation (necessary)**:  One simply cannot do it alone ("When you can't do it alone you must do it together"); like for instance sexual mating, cooperation is a necessary condition.
   Or:
-  - **Non-forced cooperation**: One can do it alone but not as economically efficient as doing it together; like for instance division of labor (one could also rephrase it like **voluntarily cooperation** but that has in our view too much of an altruistic ring to it).
+  - **Non-forced cooperation (voluntarily)**: One can do it alone but not as economically efficient as doing it together; like for instance division of labor (one could also rephrase it like **voluntarily cooperation** but that has in our view too much of an altruistic ring to it).
   - There is probably a continuum of changes to achieving something alone veruss achieving something together' For instance killing a mmamoth has very low probability of succeeding alone as a human being. Making children is impossible alone. However a pin can be made alone but it's very inefficient compared to a cooperativly made pin (as the famous example of Adam Smith's pin factory showed).
 
 
