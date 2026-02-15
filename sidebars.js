@@ -141,6 +141,12 @@ export default {
           label: 'Related Research',
           link: { type: 'doc', id: 'pred-prey-grass/related-research/related-research-ppg' },  
           items: [],
+        },
+        {
+          type: 'category',
+          label: 'Evolutionary Merits',
+          link: { type: 'doc', id: 'pred-prey-grass/evolutionary-merits-ppg/evolutionary-merits-ppg' },
+          items: [],
         }
       ],
     },
