@@ -8,7 +8,7 @@ sidebar_position: 1
 - `<=Nature===========Nurture=>`
 
 ### display 2
-- point out the RL bit and the evolutionary bit in th display
+- point out the RL bit and the evolutionary bit in the display
 
 ### [X]Cooperation by bundled forces of predators
 - Predators can eat if the predators enters the Moore neighborhood of a Prey
