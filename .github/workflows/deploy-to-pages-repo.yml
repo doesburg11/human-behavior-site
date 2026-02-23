@@ -1,0 +1,74 @@
+name: Deploy Site To Pages Repo
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-site-to-pages-repo
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      TARGET_REPO: doesburg11/doesburg11.github.io
+      TARGET_BRANCH: main
+      DOMAIN: humanbehaviorpatterns.org
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Docusaurus site
+        run: npm run build
+
+      - name: Verify CNAME in build output
+        run: |
+          test -f build/CNAME
+          grep -qx "$DOMAIN" build/CNAME
+
+      - name: Deploy build/ to target repo
+        env:
+          DEPLOY_REPO_PAT: ${{ secrets.DEPLOY_REPO_PAT }}
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          if [ -z "${DEPLOY_REPO_PAT}" ]; then
+            echo "Missing required secret: DEPLOY_REPO_PAT"
+            exit 1
+          fi
+
+          tmpdir="$(mktemp -d)"
+          trap 'rm -rf "$tmpdir"' EXIT
+
+          git clone --depth 1 "https://github.com/${TARGET_REPO}.git" "$tmpdir/target"
+          rsync -av --delete --exclude '.git/' build/ "$tmpdir/target/"
+
+          cd "$tmpdir/target"
+          git remote set-url origin "https://x-access-token:${DEPLOY_REPO_PAT}@github.com/${TARGET_REPO}.git"
+          git checkout "$TARGET_BRANCH" || git checkout -b "$TARGET_BRANCH"
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No deploy changes."
+            exit 0
+          fi
+
+          git commit -m "Deploy from ${GITHUB_REPOSITORY}@${GITHUB_SHA}"
+          git push origin "$TARGET_BRANCH"
