@@ -4,6 +4,10 @@ title: To do
 sidebar_position: 1
 ---
 
+### on top of display 1 at overview 
+- `<=Nature===========Nurture=>`
+
+
 ### [X]Cooperation by bundled forces of predators
 - Predators can eat if the predators enters the Moore neighborhood of a Prey
 - It can only eat if it has a higher energy level than the Prey

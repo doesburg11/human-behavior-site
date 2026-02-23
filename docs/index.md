@@ -6,9 +6,9 @@ sidebar_position: 1
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/display-0.jpg" alt="Display 1: Human Behavior Patterns" />
 </figure>
-This project aims to explore human **cooperative behavior** by Artificial Intelligence at two complementary levels:
+This project aims to explore human **cooperative behavior** by Artificial Intelligence at two complementary and intertwined levels:
 
-- **Nature** →  Evolving cooperation over generations by selection
+- **Nature** →  Evolving cooperation over generations by natural selection
 
 - **Nurture** → Learning to cooperate within lifetime
 
@@ -28,11 +28,11 @@ Rather than prescribing cooperative behavior through reward engineering, we inve
 
 - Ecological structure reshapes selection gradients.
 
-Plasticity functions as the bridge between nature and nurture. It refers to an agent’s capacity to modify its behavior in response to experience. Evolution (nature) does not directly encode specific cooperative behaviors; rather, it shapes the degree of plasticity — the learning rate, memory capacity, exploratory bias, and adaptability of the agent. Learning (nurture) then operates within these evolved constraints, adjusting behavior to local ecological conditions. In dynamic environments, higher plasticity may be favored because it allows rapid adaptation; in stable environments, lower plasticity may be selected for efficiency and robustness. Thus, evolution shapes the architecture of learning, while learning reshapes the selective landscape. Plasticity therefore closes the feedback loop between generational selection and lifetime adaptation, making nature and nurture inseparable components of behavioral dynamics.
+Plasticity functions as the bridge between nature and nurture. It refers to an agent’s inherited capacity to modify its behavior to current conditions in response to experience. Evolution (nature) does not directly encode specific cooperative behaviors; rather, it shapes the degree of plasticity — the learning rate, memory capacity, exploratory bias, and adaptability of the agent. Learning (nurture) then operates within these evolved constraints, adjusting behavior to local ecological conditions. In dynamic environments, higher plasticity may be favored because it allows rapid adaptation; in stable environments, lower plasticity may be selected for efficiency and robustness. Thus, evolution shapes the architecture of learning, while learning reshapes the selective landscape. Plasticity therefore closes the feedback loop between generational selection and lifetime adaptation, making nature and nurture inseparable components of behavioral dynamics.
 
 
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/display-2.jpg" alt="Display 2: Nature and Nurture as fundamentals of behavior" width="400" />
-  <figcaption><strong>Display 2:</strong> Nature and Nurture as fundamentals of behavior</figcaption>
+  <figcaption><strong>Display 2:</strong> Nature and Nurture as intertwined fundamentals of behavior</figcaption>
 </figure>
 
