@@ -48,14 +48,7 @@ const config = {
         alt: 'Behavior Logo',
         src: 'img/logo.png',
       },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Overview',
-        },
-      ],
+      items: [],
     },
     footer: {
       style: 'dark',
@@ -97,4 +90,3 @@ const config = {
 };
 
 export default config;
-
