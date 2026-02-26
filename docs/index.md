@@ -6,6 +6,7 @@ sidebar_position: 1
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/display-0.jpg" alt="Display 1: Human Behavior Patterns" />
 </figure>
+
 This project aims to explore human **cooperative behavior** by Artificial Intelligence at two complementary and intertwined levels:
 
 - **Nature** →  Evolving cooperation over generations by natural selection
@@ -15,8 +16,8 @@ This project aims to explore human **cooperative behavior** by Artificial Intell
 Human cooperative behavior could be viewed as contemporary action based upon ancestral hardware. The origins of curent human cooperative behavior is a blend of events in history ranging from millions of years in the past until split seconds ago.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/display-1.png" alt="Display 1: Shaping of behavior by Nature and Nurture" width="1000" />
-  <figcaption><strong>Display 1:</strong> Shaping of (cooperative) behavior by Nature and Nurture</figcaption>
+  <img src="/img/display-1.png" alt="Display 1: Origins of behavior by Nature and Nurture" width="1000" />
+  <figcaption><strong>Display 1:</strong> Origins of (cooperative) behavior by Nature and Nurture</figcaption>
 </figure>
 
 
