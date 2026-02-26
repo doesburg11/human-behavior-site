@@ -1,5 +1,7 @@
 // @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -13,6 +15,9 @@ const config = {
 
   url: 'https://doesburg11.github.io',
   baseUrl: '/',
+  stylesheets: [
+    'https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex.min.css',
+  ],
 
   organizationName: 'doesburg11', 
   projectName: 'doesburg11.github.io', 
@@ -31,6 +36,8 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           editUrl: 'https://github.com/doesburg11/doesburg11.github.io/edit/main/',
         },
         // BLOG REMOVED — no blog

@@ -39,18 +39,18 @@ Thus, cooperation can emerge **without requiring genetic relatedness or populati
 
 ## Reinforcement Learning as a Model of Plasticity
 
-In reinforcement learning, an agent updates its policy `pi(a | s)` to maximize expected cumulative reward:
+In reinforcement learning, an agent updates its policy $\pi(a \mid s)$ to maximize expected cumulative reward:
 
-```text
-pi_{t+1} <- pi_t + alpha * grad_pi E[R]
-```
+$$
+\pi_{t+1} \leftarrow \pi_t + \alpha \nabla_\pi \mathbb{E}[R]
+$$
 
 Where:
 
-- `s` = state (local ecological context),
-- `a` = action (e.g., hunt, wait, share space),
-- `R` = reward (in PredPreyGrass: reproduction),
-- `alpha` = learning rate.
+- $s$ = state (local ecological context),
+- $a$ = action (e.g., hunt, wait, share space),
+- $R$ = reward (in PredPreyGrass: reproduction),
+- $\alpha$ = learning rate.
 
 Because reward depends on **interactions with other agents**, the learning problem is inherently social.
 
