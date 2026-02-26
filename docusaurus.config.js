@@ -3,7 +3,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Human Behavior Patterns',
+  title: 'The Nature and Nurture of Cooperation',
   tagline: 'Exploring the roots of human actions',
   favicon: 'img/favicon.ico',
 
@@ -43,7 +43,7 @@ const config = {
 
   themeConfig: {
     navbar: {
-      title: 'Human Behavior Patterns',
+      title: 'The Nature and Nurture of Cooperation',
       logo: {
         alt: 'Behavior Logo',
         src: 'img/logo.png',

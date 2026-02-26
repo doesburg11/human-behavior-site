@@ -10,6 +10,11 @@ sidebar_position: 99
 ### display 2
 - point out the RL bit and the evolutionary bit in the display
 
+### Brainstorming
+
+- "The Inevitablity of Selfishness"
+- "Cooperation is not trivial. Competition is intuitivly more sensible due to the inevitability of selfishness"
+
 ### [X]Cooperation by bundled forces of predators
 - Predators can eat if the predators enters the Moore neighborhood of a Prey
 - It can only eat if it has a higher energy level than the Prey
