@@ -1,6 +1,7 @@
 ---
 id: overview-ppg
 title: Predator-Prey-Grass Project
+sidebar_position: 1
 ---
 
 The **Predator-Prey-Grass project**([PredPreyGrass](https://github.com/doesburg11/PredPreyGrass)) aims to investigate behavior of multiple agents in a simple closed grid world. Although only partially applicable to modern humans, this could shed light to ancestral human behavior. In the hunter-gatherer period of Homo Sapiens, until roughly 10,000 years ago a common setting, humans could be as well be predators as prey. Moreover, the limited availability of grass could be regarded as a proxy for the limited resources for humans down the food chain.

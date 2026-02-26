@@ -1,6 +1,7 @@
 ---
 id: overview-machinery
 title: The Machinery
+sidebar_position: 1
 ---
 
 ## The Brain and Behavior – How does it work?
@@ -43,5 +44,4 @@ Therefore we have to distinguish emotions from reflexes. According to Lazarus (1
 
 ### The mechanisms leading to which road is taken
 All things simplified, the reflexive response can be considered as an automatic response, the low road response can be considered as an emotional response and the high road response can be considered as a reflective and reasoned response. This does not mean that a certain stimulus will follow only one particular path. It is likely that multiple paths can be followed and interact more or less instantaneously. However, that depends on the urgency of stimuli and is decided by the thalamus. In our scope of research, the reflexive response is the least interesting in the investigation of human behavior patterns. Therefore, we focus primarily on the distinction between the low road response and the high road response.
-
 

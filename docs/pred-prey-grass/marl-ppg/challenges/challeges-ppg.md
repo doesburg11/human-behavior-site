@@ -1,6 +1,7 @@
 ---
 id: challenges-ppg
 title: Challenges of Multi-Agent Reinforcement Learning (MARL) in Predator-Prey-Grass
+sidebar_position: 1
 ---
 
 Although a promissing tool, MARL faces many challenges. Also implementing the **Predator-Prey-Grass (PPG)** environment highlights many of the core challenges of MARL. Below, some are listed in general.

@@ -1,6 +1,7 @@
 ---
 id: overview-fundamentals
 title: Fundamentals of Behavior
+sidebar_position: 1
 ---
 
 ### Which fundamentals do generate human behavior?
@@ -30,4 +31,3 @@ The intention of this display however, is mainly to show that there is a range o
 ### What is the purpose of human behavior?
 
 Paramount to the origins and fundamentals of human behavior is the question what the purpose of human behavior actually is. For the moment we state the purpose of human behavior as to make alterations to the environment which are beneficial to its individual well being. Individual well being of humans can also be enhanced by increasing the well being of other living organisms, notably other humans or relatives. All human behavior can be regarded as an investment with an uncertain payoff. Humans make consciously or unconsciously predictions of these probabilities in weighing alternative behavior options before executing them. Comparable with this investment analogy, humans naturally strive for some optimal payoff with minimal investment. In other words, humans aim for behaviors which generate maximal output with minimal input. This originates from natural selection which favors maximizing evolutionary fitness.
-
