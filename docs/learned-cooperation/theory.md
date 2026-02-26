@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Theory of Learned Cooperation
 
-## Cooperation Within Lifetimes
+## Learned Cooperation Within Lifetimes
 
 Learned cooperation refers to cooperative behavior that emerges **through adaptation during an agent’s lifetime**, rather than through genetic or evolutionary selection across generations.
 
