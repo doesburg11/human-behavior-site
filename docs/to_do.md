@@ -165,3 +165,20 @@ https://github.com/ray-project/ray/blob/master/rllib/examples/algorithms/maml_lr
 - www.talkRL.com
 - Reshape Field of Vision for Predators; only into the direction of moiving? In that way Prey can hide more easily from Predators?
 - Is the existence of a prolonged episode betweeen predators and prey not an emergence of cooperation?
+
+### Research shortlist: evolution + birth/death + MARL
+
+- Malthusian Reinforcement Learning (Leibo et al., 2018/2019): population pressure and ecology-linked MARL adaptation.  
+  https://arxiv.org/abs/1812.07019  
+  https://www.ifaamas.org/Proceedings/aamas2019/pdfs/p1099.pdf
+- Neural MMO (Suarez et al., 2019; Neural MMO 2.0, 2021): persistent many-agent worlds with spawn/death and resource pressure.  
+  https://arxiv.org/abs/1903.00784  
+  https://arxiv.org/abs/2110.07594
+- Evolutionary Population Curriculum (2020): evolutionary selection over policy populations in large-scale MARL.  
+  https://arxiv.org/abs/2003.10423
+- Evolutionary MARL in Group Social Dilemmas (Chaos, 2025): evolutionary pressure on RL traits in social dilemmas.  
+  https://pubmed.ncbi.nlm.nih.gov/39937196/
+- Iterated + Evolutionary Games with MARL (Nature Communications, 2025): MARL-discovered strategies tested in evolving populations.  
+  https://www.nature.com/articles/s41467-025-67178-6
+- Neural Population Learning beyond Symmetric Zero-Sum Games (AAMAS 2024): population-level selection/equilibrium in general-sum MARL.  
+  https://deepmind.google/research/publications/24820/

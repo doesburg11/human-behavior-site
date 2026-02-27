@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Theory of Learned Cooperation
 
-## Learned Cooperation Within Lifetimes
+## Cooperation Within Lifetimes
 
 Learned cooperation refers to cooperative behavior that emerges **through adaptation during an agent’s lifetime**, rather than through genetic or evolutionary selection across generations.
 
@@ -151,6 +151,8 @@ This creates several possibilities:
 - Learning can **enable** cooperation before evolution acts.
 - Learning can **mask** fitness differences, slowing selection.
 - Learning can **bias** evolutionary trajectories (Baldwin effect).
+
+NB: The Baldwin effect describes how learning within lifetimes alters evolutionary selection across generations. Individuals that can learn beneficial behaviors achieve higher reproductive success, causing evolution to favor traits that make those behaviors easier to acquire. In this way, plasticity guides the direction of selection without requiring the inheritance of learned behavior.
 
 PredPreyGrass provides a system in which both processes can be studied simultaneously.
 
