@@ -21,6 +21,13 @@ sidebar_position: 99
 - If more Predators ar in the Moore neighborhood, it can eat the Prey only if their cumulative energy is greater or equal than the Prey. If so: the divide the energy proportionally to their own energy.
 - "When you can't do it alone you must do it together"
 
+### SSD - sequential social dilemma
+
+- iterative tit-for-tat
+- always end defecting if finite ending
+- MARL training with random ending periods (max_steps), might result in cooperating
+
+
 ### [ ] Failed attack cost energy Predators 
 - proportionally (to own energy level) punish failed Predators 
 
