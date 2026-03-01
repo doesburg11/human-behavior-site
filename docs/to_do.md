@@ -22,7 +22,9 @@ sidebar_position: 99
 - "When you can't do it alone you must do it together"
 
 ### SSD - sequential social dilemma
+-
 
+### repo tit-for-tat
 - iterative tit-for-tat
 - always end defecting if finite ending
 - MARL training with random ending periods (max_steps), might result in cooperating
