@@ -6,6 +6,9 @@ sidebar_position: 99
 
 ### on top of display 1 at overview 
 - `<=Nature===========Nurture=>`
+- simplify the picture and use the color blue of the game-theory videos?
+- only nature and nurture.
+- what is nurture ? Pure "self nurtured" or "man made nurtured" or "nature nurtured? If someone is born near the equator in Africa; is that nurture? Is the behavior of ancestors nurture or nature?
 
 ### display 2
 - point out the RL bit and the evolutionary bit in the display
@@ -21,8 +24,15 @@ sidebar_position: 99
 - If more Predators ar in the Moore neighborhood, it can eat the Prey only if their cumulative energy is greater or equal than the Prey. If so: the divide the energy proportionally to their own energy.
 - "When you can't do it alone you must do it together"
 
-### SSD - sequential social dilemma
--
+### Similarties "Nature" and "Nurture"
+- maybe not so different
+- The natural selection of life time learning
+- diminshing returns on the happy behaviors (learning is also open-ended like evolution is)
+- reward system is adaptivre like evolution
+
+
+### Differences
+-  "nature" is very **binary**: survival/reproduction, "Nurture" is more continuous and less fatal.
 
 ### repo tit-for-tat
 - iterative tit-for-tat
