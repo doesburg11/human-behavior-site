@@ -6,7 +6,7 @@ sidebar_position: 99
 
 ### on top of display 1 at overview 
 - `<=Nature===========Nurture=>`
-- simplify the picture and use the color blue of the game-theory videos?
+- simplify the picture and use the color blue of the game-theory videos??
 - only nature and nurture.
 - what is nurture ? Pure "self nurtured" or "man made nurtured" or "nature nurtured? If someone is born near the equator in Africa; is that nurture? Is the behavior of ancestors nurture or nature?
 

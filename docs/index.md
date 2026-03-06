@@ -40,7 +40,7 @@ Plasticity functions as the bridge between nature and nurture. It refers to an a
 
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/display-2.jpg" alt="Display 2: Nature and Nurture as fundamentals of behavior" width="400" />
+  <img src="/img/display-2.png" alt="Display 2: Nature and Nurture as fundamentals of behavior" width="400" />
   <figcaption><strong>Display 2:</strong> Nature and Nurture as intertwined fundamentals of behavior</figcaption>
 </figure>
 
