@@ -1,7 +1,7 @@
 ---
 id: theory
-title: Theory
-sidebar_position: 1
+title: General Theory
+sidebar_position: 4
 ---
 
 # Theory of Learned Cooperation

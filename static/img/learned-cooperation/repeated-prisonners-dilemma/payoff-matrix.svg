@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="888" height="447" viewBox="-35 0 888 447" role="img" aria-label="Prisoner's Dilemma payoff matrix">
+  <style>
+    .serif { font-family: "Times New Roman", Times, serif; fill: #111; }
+    .head { font-size: 48px; font-weight: 600; text-anchor: middle; }
+    .row { font-size: 48px; font-weight: 600; text-anchor: middle; }
+    .cell { font-size: 50px; font-style: italic; text-anchor: middle; }
+    .ineq { font-size: 54px; font-style: italic; text-anchor: middle; }
+    .grid { fill: none; stroke: #111; stroke-width: 3; }
+  </style>
+
+  <rect x="-35" width="888" height="447" fill="#f3f3f3"/>
+
+  <text class="serif head" x="370" y="48">Cooperate</text>
+  <text class="serif head" x="680" y="48">Defect</text>
+
+  <text class="serif row" x="92" y="133">Cooperate</text>
+  <text class="serif row" x="74" y="250">Defect</text>
+
+  <rect class="grid" x="214" y="64" width="618" height="239"/>
+  <line class="grid" x1="523" y1="64" x2="523" y2="303"/>
+  <line class="grid" x1="214" y1="184" x2="832" y2="184"/>
+
+  <text class="serif cell" x="369" y="130">R=3, R=3</text>
+  <text class="serif cell" x="678" y="130">S=0, T=5</text>
+  <text class="serif cell" x="369" y="249">T=5, S=0</text>
+  <text class="serif cell" x="678" y="249">P=1, P=1</text>
+
+  <text class="serif ineq" x="523" y="387">T &gt; R &gt; P &gt; S</text>
+  <text class="serif ineq" x="523" y="433">R &gt; (S+T)/2</text>
+</svg>
