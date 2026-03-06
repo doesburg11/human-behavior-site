@@ -55,7 +55,7 @@ Observations:
 - **Freezing prey** resulted in shorter lifespans for prey, suggesting that **predator adaptation alone** is not enough to secure ongoing advantage.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/pred-prey-grass/red-queen/display-1.jpg" alt="Display 1: Life span comparison" width="600" />
+  <img src="/img/archive/pred-prey-grass/red-queen/display-1.jpg" alt="Display 1: Life span comparison" width="600" />
   <figcaption><strong>Display 1:</strong> Life span comparison</figcaption>
 </figure>
 

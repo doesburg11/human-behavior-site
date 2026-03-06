@@ -17,14 +17,14 @@ A “low road response” and a “reflexive response” share similarities in t
 - **Reflexive response**: Reflexes are rapid, involuntary responses to a specific stimulus. They are typically controlled by the spinal cord or lower brain centers, bypassing conscious thought and emotions. A classic example is the knee-jerk reflex that occurs when a doctor taps your knee with a hammer, causing your leg to kick without you consciously or emotionally deciding to do so.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/human-behavior-patterns/fundamentals/machinery/display-1.jpg" alt="Display 1: Reflexive response" width="800" />
+  <img src="/img/archive/human-behavior-patterns/fundamentals/machinery/display-1.jpg" alt="Display 1: Reflexive response" width="800" />
   <figcaption><strong>Display 1:</strong> Reflexive response</figcaption>
 </figure>
 
 - **Low Road Response**: This term is often used in the context of emotional and cognitive processes. The “low road” refers to the rapid, automatic, and subconscious processing of stimuli. For example, when you perceive a threat, your brain might initiate a low road response that triggers the fight-or-flight reaction, releasing stress hormones and preparing your body to respond quickly without conscious thought.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/human-behavior-patterns/fundamentals/machinery/display-2.jpg" alt="Display 2: Low road versus high road response" width="500" />
+  <img src="/img/archive/human-behavior-patterns/fundamentals/machinery/display-2.jpg" alt="Display 2: Low road versus high road response" width="500" />
   <figcaption><strong>Display 2:</strong> Low road versus high road response</figcaption>
 </figure>
 
@@ -32,7 +32,7 @@ A “low road response” and a “reflexive response” share similarities in t
 - **High road response**: This response is on the other hand much slower than the reflexive road response and the low road response. This pathway allows for more complex, nuanced and reflective understanding of the stimulus and can lead to a more controlled and reasoned emotional response
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/human-behavior-patterns/fundamentals/machinery/display-3.jpg" alt="Display 3: Schematic overview of the three response pathways" width="500" />
+  <img src="/img/archive/human-behavior-patterns/fundamentals/machinery/display-3.jpg" alt="Display 3: Schematic overview of the three response pathways" width="500" />
   <figcaption><strong>Display 3:</strong> Schematic overview of the three response pathways</figcaption>
 </figure>
 

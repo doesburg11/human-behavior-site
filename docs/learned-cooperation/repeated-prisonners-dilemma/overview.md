@@ -100,4 +100,4 @@ If you want to continue from this MARL bridge toward broader cooperation questio
 
 1. [Selected Cooperation Theory](/selected-cooperation/theory) for inherited, across-generation dynamics.
 2. [Learning-Selection Interaction Theory](/learning-selection-interaction/theory) for the full nature-nurture coupling.
-3. [Cooperation (Social Behavior)](/social-behavior/overview-cooperation) for a broader behavioral framing.
+3. [Cooperation (Social Behavior)](/archive/social-behavior/overview-cooperation) for a broader behavioral framing.

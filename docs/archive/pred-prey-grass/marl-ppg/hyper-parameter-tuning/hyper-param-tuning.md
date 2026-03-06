@@ -36,11 +36,11 @@ In this section we provide experiments to tune the default solution of the defau
 This configuration shows all explicitly defined hyperparameters. All other hyperparameters are implicitly defined by the Ray RLlib defaults. This setup generates the reward results for a typical predator and a typical prey are shown in display 1. The total training involved 1,000 iterations, which took 9.7 hours (see Display 3).
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/pred-prey-grass/marl-ppg/hyper-parameter-tuning/display-2.png" alt="Display 2: Tensorboard traing results default PPO configuration (iterations)" width="1200" />
+  <img src="/img/archive/pred-prey-grass/marl-ppg/hyper-parameter-tuning/display-2.png" alt="Display 2: Tensorboard traing results default PPO configuration (iterations)" width="1200" />
   <figcaption><strong>Display 2:</strong> Tensorboard training results default PPO configuration (iterations)</figcaption>
 </figure>
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/pred-prey-grass/marl-ppg/hyper-parameter-tuning/display-3.png" alt="Display 2: Tensorboard training results default PPO configuration" width="1200" />
+  <img src="/img/archive/pred-prey-grass/marl-ppg/hyper-parameter-tuning/display-3.png" alt="Display 2: Tensorboard training results default PPO configuration" width="1200" />
   <figcaption><strong>Display 3:</strong> Tensorboard training results (wall time)</figcaption>
 </figure>
 

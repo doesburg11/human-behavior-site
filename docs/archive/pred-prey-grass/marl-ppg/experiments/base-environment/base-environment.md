@@ -48,7 +48,7 @@ The [base environment](https://github.com/doesburg11/PredPreyGrass/tree/main/src
 
 ## Training and evaluation results
 
-[Training](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/base-environment/tune_ppo_multiagent_v1_0.py) the agents and [evaluating](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/base-environment/evaluate_ppo_from_checkpoint_debug.py) the environment is an example of how elaborate behaviors can emerge from simple rules in MARL models. As pointed out earlier, rewards for learning agents are solely obtained by reproduction. So all other reward options are set to zero in the environment configuration. Find more background on this [reward shaping and scaling here](https://doesburg11.github.io/pred-prey-grass/marl-ppg/challenges/rewards-ppg/scaling). Despite this relatively sparse reward structure, maximizing these rewards results in elaborate emerging agents behaviors such as:
+[Training](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/base-environment/tune_ppo_multiagent_v1_0.py) the agents and [evaluating](https://github.com/doesburg11/PredPreyGrass/blob/main/src/predpreygrass/rllib/base-environment/evaluate_ppo_from_checkpoint_debug.py) the environment is an example of how elaborate behaviors can emerge from simple rules in MARL models. As pointed out earlier, rewards for learning agents are solely obtained by reproduction. So all other reward options are set to zero in the environment configuration. Find more background on this [reward shaping and scaling here](/archive/pred-prey-grass/marl-ppg/challenges/rewards-ppg/scaling). Despite this relatively sparse reward structure, maximizing these rewards results in elaborate emerging agents behaviors such as:
 - Predators hunting Prey
 - Multiple Predators colaborating/competing hunting Prey; increasing the probability of Prey being caught
 - Prey finding and eating grass
@@ -63,7 +63,7 @@ Moreover, these learning behaviors lead to more complex emergent dynamics at the
 - The trained agents are displaying a classic [Lotka–Volterra](https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations) pattern over time:
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/pred-prey-grass/marl-ppg/experiments/base-environment/display-2.png" alt="Display 2: The trained agents are displaying a Lotka–Volterra pattern" width="400" />
+  <img src="/img/archive/pred-prey-grass/marl-ppg/experiments/base-environment/display-2.png" alt="Display 2: The trained agents are displaying a Lotka–Volterra pattern" width="400" />
   <figcaption><strong>Display 2:</strong> The trained agents are displaying a Lotka–Volterra pattern</figcaption>
 </figure>
 
@@ -80,7 +80,7 @@ Obviously, using only one network has its limitations as Predators and Prey lack
 Training is applied in accordance with the RLlib new API stack protocol. The training configuration is more out-of-the-box than the PettingZoo/SB3 solution, but nevertheless is much more applicable to MARL in general and especially decentralized training.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/pred-prey-grass/marl-ppg/experiments/base-environment/display-3.png" alt="Display 3: The multi_agent_setup" width="400" />
+  <img src="/img/archive/pred-prey-grass/marl-ppg/experiments/base-environment/display-3.png" alt="Display 3: The multi_agent_setup" width="400" />
   <figcaption><strong>Display 3:</strong> The multi_agent_setup</figcaption>
 </figure>
 

@@ -11,11 +11,11 @@ Learning agents Predators (red) and Prey (blue) both expend energy moving around
 Predators die of starvation when their energy is zero, Prey die either of starvation or when being eaten by a Predator. The agents asexually reproduce when energy levels of learning agents rise above a certain threshold by eating. Learning agents, learn to execute movement actions based on their partial observations of the environment to maximize cumulative reward. Due to the relatvely low ecological efficiency found in nature, unusually food chains are relatively short, not more than five steps ususally. Therefore we believe the implemented PredPreyGrass environment is already a decent abstraction from biological reality. 
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/pred-prey-grass/marl-ppg/display-1.jpg" alt="Display 1: Single Agent Reinforcement learning" width="400" />
+  <img src="/img/archive/pred-prey-grass/marl-ppg/display-1.jpg" alt="Display 1: Single Agent Reinforcement learning" width="400" />
   <figcaption><strong>Display 1:</strong> Single Agent Reinforcement Learning</figcaption>
 </figure>
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/pred-prey-grass/marl-ppg/display-2.jpg" alt="Display 2: Multi Agent Reinforcement learning" width="400" />
+  <img src="/img/archive/pred-prey-grass/marl-ppg/display-2.jpg" alt="Display 2: Multi Agent Reinforcement learning" width="400" />
   <figcaption><strong>Display 2:</strong> Multi Agent Reinforcement Learning</figcaption>
 </figure>
 
