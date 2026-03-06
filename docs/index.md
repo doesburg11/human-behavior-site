@@ -15,7 +15,7 @@ Cooperation is one of the central puzzles of biology, artificial intelligence, a
 
 - **Nurture** → Learning to cooperate within lifetime
 
-### The missing link - learned cooperation
+### The missing link between evolved and learned cooperation
 
 Most research studies have been focussed on evolutionary explanations for the emergence of cooperation, and . 
 \ either learning or evolution in isolation.
@@ -25,7 +25,7 @@ Human cooperative behavior could be viewed as contemporary action based upon anc
 
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/display-1.png" alt="Display 1: Origins of cooperative behavior by Nature and Nurture" width="1000" />
-  <figcaption><strong>Display 1:</strong> Origins of cooperative behavior by Nature and Nurture</figcaption>
+  <figcaption><strong>Display 1:</strong> Origins of behavior by Nature and Nurture</figcaption>
 </figure>
 
 Rather than prescribing cooperative behavior through direct engineering, we investigate the fundamental and minimal constraints under which cooperative behavior emerges and prevails in a multi-agent ecosystem. We view life time experience (nurture) and evolutionary selection (nature) as dynamically intertwined processes with feedback loops rather than separable explanatory categories:
