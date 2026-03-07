@@ -1,6 +1,6 @@
 ---
 title: What is cooperation?
-sidebar_position: 2
+sidebar_position: 1
 slug: /what-is-cooperation
 ---
 

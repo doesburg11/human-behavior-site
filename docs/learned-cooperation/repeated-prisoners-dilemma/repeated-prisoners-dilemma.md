@@ -1,10 +1,11 @@
 ---
-id: iterated-prisoners-dilemma
-title: Iterated Prisoner's Dilemma
-sidebar_position: 3
+id: repeated-prisoners-dilemma
+title: Repeated Prisoner's Dilemma
+slug: /learned-cooperation/repeated-prisoners-dilemma
+sidebar_position: 1
 ---
 
-# Iterated Prisoner's Dilemma: From Myopia to Reciprocity
+# Repeated Prisoner's Dilemma: From Myopia to Reciprocity
 
 When the Prisoner's Dilemma is repeated, strategy is no longer a single move.
 It becomes a policy over time: "what to do now given what happened before."
@@ -29,5 +30,4 @@ They learn from interaction.
 
 Multi-Agent Reinforcement Learning (MARL) lets us test whether cooperative conventions can emerge from repeated play under bounded learning dynamics, exploration, and non-stationarity.
 
-Next step: [Bridge via MARL in the repeated Prisonners Dilemma](./repeated-prisonners-dilemma/overview)
-
+Next step: [PPO Study](/learned-cooperation/repeated-prisoners-dilemma/ppo-study)

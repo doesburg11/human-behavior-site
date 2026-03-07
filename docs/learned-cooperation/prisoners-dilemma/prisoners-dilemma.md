@@ -1,10 +1,11 @@
 ---
 id: prisoners-dilemma
-title: Prisoner's Dilemma (One-Shot)
-sidebar_position: 2
+title: Prisoner's Dilemma
+slug: /learned-cooperation/prisoners-dilemma
+sidebar_position: 1
 ---
 
-# Prisoner's Dilemma (One-Shot): Why Defection Comes First
+# Prisoner's Dilemma: Why Defection Comes First
 
 The one-shot Prisoner's Dilemma captures the non-trivial core of cooperation.
 
@@ -38,5 +39,4 @@ So in one-shot play, rational best response is defection.
 If defection is the local optimum, then cooperation cannot be assumed. It needs a mechanism.
 That mechanism often comes from repeated interaction, memory, and contingent responses.
 
-Next step: [Iterated Prisoner's Dilemma](./iterated-prisoners-dilemma)
-
+Next step: [Theory](/learned-cooperation/repeated-prisoners-dilemma)

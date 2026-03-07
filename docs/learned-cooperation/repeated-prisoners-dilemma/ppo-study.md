@@ -1,13 +1,13 @@
 ---
-id: repeated-prisonners-dilemma-overview
-title: MARL Bridge
-slug: /learned-cooperation/repeated-prisonners-dilemma/overview
-sidebar_position: 1
+id: ppo-study
+title: PPO Study
+slug: /learned-cooperation/repeated-prisoners-dilemma/ppo-study
+sidebar_position: 2
 ---
 
-# Repeated Prisonners Dilemma
+# Repeated Prisoner's Dilemma: PPO Study
 
-This section summarizes the `SequentialPrisonersDilemma` project, where two independently trained PPO agents repeatedly play a Prisoner's Dilemma game. The goal is to test whether learned behavior converges to persistent defection, cooperative conventions, or mixed horizon-dependent patterns.
+This case study summarizes the `SequentialPrisonersDilemma` project, where two independently trained PPO agents repeatedly play a Prisoner's Dilemma game. The goal is to test whether learned behavior converges to persistent defection, cooperative conventions, or mixed horizon-dependent patterns.
 
 ## Environment and Learning Setup
 
@@ -20,7 +20,7 @@ This section summarizes the `SequentialPrisonersDilemma` project, where two inde
 Payoff matrix per round:
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/learned-cooperation/repeated-prisonners-dilemma/payoff-matrix.svg" alt="Prisonners Dilemma payoff matrix" width="420" />
+  <img src="/img/learned-cooperation/repeated-prisonners-dilemma/payoff-matrix.svg" alt="Prisoner's Dilemma payoff matrix" width="420" />
 </figure>
 
 Episodes run with a fixed horizon `n_sequential_games`, so each episode is a finite repeated game.
@@ -65,7 +65,7 @@ The repository also reports a broader sweep across `n_sequential_games = 5..100`
 
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/learned-cooperation/repeated-prisonners-dilemma/display-1.png" alt="Display 1: Mean cooperation rates across repeated games with 95% confidence bands" width="1000" />
-  <figcaption><strong>Display 1:</strong> Mean cooperation rates (20 seeds) across the number of repeated Prisonners Dilemma games, with 95% confidence bands.</figcaption>
+  <figcaption><strong>Display 1:</strong> Mean cooperation rates (20 seeds) across the number of repeated Prisoner's Dilemma games, with 95% confidence bands.</figcaption>
 </figure>
 
 Key observations summarized from the README:
