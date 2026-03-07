@@ -1,7 +1,7 @@
 ---
-id: overview-hbp
 title: The Human Behavior Patterns Project
 sidebar_position: 1
+slug: /archive/human-behavior-patterns/overview-hbp
 ---
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/display-1.jpg" alt="Display 1: Human Behavior Patterns" />

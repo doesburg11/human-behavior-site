@@ -1,5 +1,5 @@
 ---
-id: index
+id: the-nature-and-nurture-of-cooperation
 title: The Nature and Nurture of Cooperation
 sidebar_position: 1
 slug: /
