@@ -40,6 +40,6 @@ By following this order, the reader sees:
 
 After this section, there are three natural directions:
 
-1. **Toward broader social cooperation**: [Cooperation (Social Behavior)](/archive/social-behavior/overview-cooperation)
+1. **Toward broader social cooperation**: [Cooperation](/cooperation-in-perspective)
 2. **Toward inherited cooperation (nature)**: [Selected Cooperation Theory](/selected-cooperation/theory)
 3. **Toward the bridge between both**: [Learning-Selection Interaction Theory](/learning-selection-interaction/theory)

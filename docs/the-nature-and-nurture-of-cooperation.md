@@ -2,6 +2,7 @@
 id: index
 title: The Nature and Nurture of Cooperation
 sidebar_position: 1
+slug: /
 ---
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/display-0.jpg" alt="Display 1: Human Behavior Patterns" />
@@ -43,4 +44,3 @@ Plasticity functions as the bridge between nature and nurture. It refers to an a
   <img src="/img/display-2.png" alt="Display 2: Nature and Nurture as fundamentals of behavior" width="400" />
   <figcaption><strong>Display 2:</strong> Nature and Nurture as intertwined fundamentals of behavior</figcaption>
 </figure>
-
