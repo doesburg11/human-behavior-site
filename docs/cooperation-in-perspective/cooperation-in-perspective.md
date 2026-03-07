@@ -6,7 +6,6 @@ slug: /cooperation-in-perspective
 
 # Cooperation in Perspective
 
-
 Cooperation is a special case within general human behavior. Human behavior is the broad spectrum of observable responses through which individuals adapt to internal states, other people, and the environment. Within that wider field, cooperation is one specific class of behavior.
 
 Cooperation is a form of behavior in which two or more agents coordinate actions because acting together changes what each can achieve alone.

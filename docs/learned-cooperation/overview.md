@@ -25,7 +25,7 @@ So the right starting point is:
 1. [Prisoner's Dilemma (one-shot): defection as baseline](./prisoners-dilemma)
 2. [Iterated Prisoner's Dilemma: when reciprocity can become rational](./iterated-prisoners-dilemma)
 3. [Bridge via MARL: solving the iterated game with independent PPO](./repeated-prisonners-dilemma/overview)
-4. [General learned-cooperation theory in ecological systems](./theory)
+4. [General learned-cooperation theory in ecological systems](/learned-cooperation)
 
 ## What This Gives You
 
@@ -41,5 +41,5 @@ By following this order, the reader sees:
 After this section, there are three natural directions:
 
 1. **Toward broader social cooperation**: [Cooperation](/cooperation-in-perspective)
-2. **Toward inherited cooperation (nature)**: [Selected Cooperation Theory](/selected-cooperation/theory)
+2. **Toward inherited cooperation (nature)**: [Evolved Cooperation Theory](/evolved-cooperation)
 3. **Toward the bridge between both**: [Learning-Selection Interaction Theory](/learning-selection-interaction/theory)

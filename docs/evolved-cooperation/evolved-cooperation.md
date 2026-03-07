@@ -1,14 +1,13 @@
 ---
-id: theory
-title: Theory
+id: evolved-cooperation
+title: Evolved Cooperation
 sidebar_position: 1
+slug: /evolved-cooperation
 ---
-
-# Theory of Selected Cooperation
 
 ## Cooperation Across Generations
 
-Selected cooperation refers to cooperative behavior that becomes more common **through natural selection across generations**, rather than through adaptation during a single lifetime.
+Evolved cooperation refers to cooperative behavior that becomes more common **through natural selection across generations**, rather than through adaptation during a single lifetime.
 
 In this framework, populations:
 
@@ -24,9 +23,9 @@ This process corresponds to **evolutionary dynamics** in biology and to **select
 
 Classical evolutionary models treat cooperation as a trait or strategy that can spread when it improves reproductive success under specific ecological and social conditions.
 
-Selected cooperation differs fundamentally from learned cooperation:
+Evolved cooperation differs fundamentally from learned cooperation:
 
-| Learned cooperation | Selected cooperation |
+| Learned cooperation | Evolved cooperation |
 |---|---|
 Policy changes within lifetime | Strategy frequencies change across generations |
 Learning acts across interactions | Selection acts across generations |
@@ -59,7 +58,7 @@ This creates:
 
 ---
 
-## Selected Cooperation in Social Dilemmas
+## Evolved Cooperation in Social Dilemmas
 
 Evolutionary game theory shows that:
 
@@ -97,7 +96,7 @@ Such settings are better captured by ecological and evolutionary simulations tha
 
 ---
 
-## Selected Cooperation in PredPreyGrass
+## Evolved Cooperation in PredPreyGrass
 
 PredPreyGrass provides a setting to study how cooperative tendencies may be favored by selection when they improve survival and reproduction over generations.
 
@@ -161,7 +160,7 @@ The study of selected cooperation in PredPreyGrass focuses on:
 
 ## Summary
 
-Selected cooperation is:
+Evolved cooperation is:
 
 - a population-level adaptive process,
 - driven by differential reproduction and survival,
@@ -170,4 +169,4 @@ Selected cooperation is:
 
 Understanding its dynamics is essential for explaining the **nature** component of cooperation and how it interacts with lifetime learning.
 
-In PredPreyGrass, selected cooperation forms the **nature component** of a two-timescale theory of cooperation.
+In PredPreyGrass, evolved cooperation forms the **nature component** of a two-timescale theory of cooperation.

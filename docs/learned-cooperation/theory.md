@@ -1,10 +1,9 @@
 ---
 id: theory
-title: General Theory
+title: Learned Cooperation
 sidebar_position: 4
+slug: /learned-cooperation
 ---
-
-# Theory of Learned Cooperation
 
 ## Cooperation Within Lifetimes
 

@@ -98,6 +98,6 @@ Overall, the project supports a careful conclusion: in repeated social dilemmas,
 
 If you want to continue from this MARL bridge toward broader cooperation questions:
 
-1. [Selected Cooperation Theory](/selected-cooperation/theory) for inherited, across-generation dynamics.
+1. [Evolved Cooperation Theory](/evolved-cooperation) for inherited, across-generation dynamics.
 2. [Learning-Selection Interaction Theory](/learning-selection-interaction/theory) for the full nature-nurture coupling.
 3. [Cooperation](/cooperation-in-perspective) for a broader behavioral framing.
