@@ -37,7 +37,7 @@ These patterns are not mutually exclusive. The same person may compete in one se
 From that perspective, cooperation is not the opposite of human self-interest. It is one way human beings pursue survival, security, belonging, status, efficiency, and long-term stability under conditions where outcomes are partly shared.
 
 # Why cooperation matters within human behavior
-
+[PICTURE HUMANS V APES IN SOCIAL BEHAVIOR]
 Cooperation is central because it reveals a general principle of behavior:
 
 - people do not respond only as isolated individuals,

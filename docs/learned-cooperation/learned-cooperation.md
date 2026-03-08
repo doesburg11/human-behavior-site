@@ -220,4 +220,4 @@ After this section, there are three natural directions:
 
 1. **Toward broader social cooperation**: [Cooperation](/cooperation-in-perspective)
 2. **Toward inherited cooperation (nature)**: [Evolved Cooperation Theory](/evolved-cooperation)
-3. **Toward the bridge between both**: [Learning-Selection Interaction Theory](/learning-selection-interaction/theory)
+3. **Toward the bridge between both**: [Interaction Evolved-Learned Cooperation](/learning-selection-interaction/theory)

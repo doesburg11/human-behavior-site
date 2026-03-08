@@ -1,10 +1,11 @@
 ---
-id: theory
-title: Theory
+id: interaction-evolved-learned-cooperation
+title: Interaction Evolved-Learned Cooperation
 sidebar_position: 1
+slug: /learning-selection-interaction/theory
 ---
 
-# Theory of Learning-Selection Interaction
+# Interaction Evolved-Learned Cooperation
 
 ## A Two-Timescale Theory of Cooperation
 
