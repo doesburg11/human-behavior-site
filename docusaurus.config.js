@@ -50,7 +50,7 @@ const config = {
 
   themeConfig: {
     navbar: {
-      title: 'The Nature and Nurture of Cooperation',
+      title: 'The Nature and Nurture of Human Cooperation',
       logo: {
         alt: 'Behavior Logo',
         src: 'img/logo.png',

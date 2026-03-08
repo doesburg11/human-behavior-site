@@ -5,8 +5,26 @@ hide_title: true
 sidebar_position: 1
 slug: /
 ---
-<figure style={{ textAlign: 'center' }}>
-  <img src="/img/display-0.svg" alt="Display 1: Human Behavior Patterns" />
+<figure style={{ position: 'relative', margin: '0 0 2rem' }}>
+  <img
+    src="/img/display-0.svg"
+    alt="Display 0: The Nature and Nurture of Human Cooperation"
+    style={{ display: 'block', width: '100%', height: 'auto' }}
+  />
+  <img
+    src="/img/logo-white.png"
+    alt=""
+    aria-hidden="true"
+    style={{
+      position: 'absolute',
+      top: '50%',
+      left: 'clamp(0.75rem, 2vw, 2rem)',
+      width: 'clamp(2.5rem, 6vw, 4.5rem)',
+      height: 'auto',
+      transform: 'translateY(-50%)',
+      pointerEvents: 'none',
+    }}
+  />
 </figure>
 
 ## How does human cooperation emerge from evolution and learning?

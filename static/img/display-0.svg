@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="320" viewBox="0 0 1600 320" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="200" viewBox="0 0 1600 200" role="img" aria-labelledby="title desc">
   <title id="title">The Nature and Nurture of Human Cooperation</title>
   <desc id="desc">Blue banner with white centered text reading The Nature and Nurture of Human Cooperation.</desc>
 
-  <rect width="1600" height="320" fill="#1f5fbf"/>
+  <rect width="1600" height="200" fill="#0f3368"/>
 
   <text
     x="800"
-    y="160"
+    y="100"
     text-anchor="middle"
     dominant-baseline="middle"
     fill="#ffffff"
