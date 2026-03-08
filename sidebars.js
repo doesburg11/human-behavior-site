@@ -1,6 +1,6 @@
 export default {
   tutorialSidebar: [
-    'the-nature-and-nurture-of-cooperation',
+    'the-nature-and-nurture-of-human-cooperation',
     {
       type: 'category',
       label: 'Cooperation in Perspective',

@@ -14,7 +14,7 @@ sidebar_position: 99
 - point out the RL bit and the evolutionary bit in the display
 
 ### Brainstorming
-
+- Use Leary's Rose in Learned Cooperation?
 - "The Inevitablity of Selfishness"
 - "Cooperation is not trivial. Competition is intuitivly more sensible due to the inevitability of selfishness"
 

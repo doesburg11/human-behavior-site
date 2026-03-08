@@ -1,28 +1,27 @@
 ---
-id: the-nature-and-nurture-of-cooperation
-title: The Nature and Nurture of Cooperation
+id: the-nature-and-nurture-of-human-cooperation
+title: The Nature and Nurture of Human Cooperation
+hide_title: true
 sidebar_position: 1
 slug: /
 ---
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/display-0.jpg" alt="Display 1: Human Behavior Patterns" />
+  <img src="/img/display-0.svg" alt="Display 1: Human Behavior Patterns" />
 </figure>
 
-## How does cooperation emerge from learning and from evolution?
+## How does human cooperation emerge from evolution and learning?
 
-Cooperation is one of the central puzzles of biology, artificial intelligence, and the social sciences. It can arise within lifetimes through learning, and across generations through natural selection. This project aims to explore human cooperative behavior by Artificial Intelligence at two complementary and intertwined levels:
+Human cooperative behavior is one of the central puzzles in biology and the social sciences. It emerges across generations through natural selection, and within lifetimes through learning. This project explores human cooperation through Artificial Intelligence (AI) and Agent-Based Modeling (ABM) at two complementary and intertwined levels:
 
 - **Nature** →  Evolving cooperation over generations by natural selection
 
-- **Nurture** → Learning to cooperate within lifetime
+- **Nurture** → Learning to cooperate within a lifetime
 
 ### The missing link between evolved and learned cooperation
 
-Most research studies have been focussed on evolutionary explanations for the emergence of cooperation, and . 
-\ either learning or evolution in isolation.
-Yet in natural systems, cooperation emerges from their interaction across two timescales.
+Most research has focused either on evolutionary explanations for the emergence of cooperation or on learning-based explanations in isolation. Yet in natural systems, cooperation emerges from their interaction across two timescales.
 
-Human cooperative behavior could be viewed as contemporary action based upon ancestral hardware. The origins of curent human cooperative behavior is a blend of events in history ranging from millions of years in the past until split seconds ago.
+Human cooperative behavior can be understood as present-day action running on ancestral hardware. Its origins span multiple timescales, from evolutionary changes millions of years ago to learning processes unfolding just fractions of a second ago.
 
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/display-1.png" alt="Display 1: Origins of cooperative behavior by Nature and Nurture" width="1000" />
