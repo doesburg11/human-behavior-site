@@ -7,12 +7,12 @@ slug: /
 ---
 <figure style={{ position: 'relative', margin: '0 0 2rem' }}>
   <img
-    src="/img/display-0.svg"
+    src="/img/the-nature-and-nurture-of-human-cooperation/display-0.svg"
     alt="Display 0: The Nature and Nurture of Human Cooperation"
     style={{ display: 'block', width: '100%', height: 'auto' }}
   />
   <img
-    src="/img/logo-white.png"
+    src="/img/the-nature-and-nurture-of-human-cooperation/logo-white.png"
     alt=""
     aria-hidden="true"
     style={{
@@ -56,7 +56,7 @@ Most research has focused either on evolutionary explanations for the emergence 
 Human cooperative behavior can be understood as present-day action running on ancestral hardware. Its origins span multiple timescales, from evolutionary changes millions of years ago to learning processes unfolding fractions of a second ago.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/display-1.png" alt="Display 1: Origins of cooperative behavior by Nature and Nurture" width="1000" />
+  <img src="/img/the-nature-and-nurture-of-human-cooperation/display-1.png" alt="Display 1: Origins of cooperative behavior by Nature and Nurture" width="1000" />
   <figcaption><strong>Display 1:</strong> Cooperation explained across evolutionary and learning timescales</figcaption>
 </figure>
 
@@ -113,7 +113,7 @@ Rather than prescribing cooperative behavior through direct engineering, this pr
 Plasticity is the bridge between nature and nurture. It is an inherited capacity to modify behavior in response to current conditions and experience.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/display-2.png" alt="Display 2: Nature and Nurture as fundamentals of behavior" width="400" />
+  <img src="/img/the-nature-and-nurture-of-human-cooperation/display-2.png" alt="Display 2: Nature and Nurture as fundamentals of behavior" width="400" />
   <figcaption><strong>Display 2:</strong> Plasticity as the bridge between inherited structure and learned behavior</figcaption>
 </figure>
 

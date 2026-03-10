@@ -20,7 +20,7 @@ This cycle of exploit → explore continues throughout training, allowing the po
 In practice, the population is the set of Tune trials running in parallel. Trial performance is evaluated using a user-specified metric such as ```episode_return_mean```. After a specified interval, trial performances are compared, better configurations replace worse ones, and the cycle repeats (see Display 1).
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/archive/pred-prey-grass/marl-ppg/hyper-parameter-tuning/pbt/display-1.png" alt="Display 1: PBT cloning top performers into bottom performers during training" width="1200" />
+  <img src="/img/archive/pred-prey-grass/marl-ppg/hyper-parameter-tuning/pbt-overview/display-1.png" alt="Display 1: PBT cloning top performers into bottom performers during training" width="1200" />
   <figcaption><strong>Display 1:</strong> PBT cloning top performers into bottom performers during training</figcaption>
 </figure>
 

@@ -11,6 +11,6 @@ Cooperation must somehow be something to increase individual fitness. Either bec
 - There is probably a continuum between achieving something alone versus achieving something together. For instance, killing a mammoth has a very low probability of succeeding alone as a human being. Making children is impossible alone. However, a pin can be made alone, but it is far less efficient than a cooperatively made pin, as in Adam Smith's pin factory example.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/archive/human-behavior-patterns/display-2.png" alt="Display 2: Cooperation as a necessary condition" width="400" />
+  <img src="/img/cooperation-in-perspective/what-is-cooperation/display-2.png" alt="Display 2: Cooperation as a necessary condition" width="400" />
   <figcaption><strong>Display 2:</strong> Cooperation as a necessary condition</figcaption>
 </figure>
