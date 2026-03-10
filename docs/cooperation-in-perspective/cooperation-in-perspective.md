@@ -6,7 +6,110 @@ slug: /cooperation-in-perspective
 
 # Cooperation in Perspective
 
+<figure style={{ textAlign: 'center' }}>
+  <img src="/img/cooperation-in-perspective/display-1.png" alt="Display 1: Cooperation, competition, and conflict as overlapping forms of human interaction within human behavior" width="900" />
+  <figcaption><strong>Display 1:</strong> Cooperation, competition, and conflict as overlapping forms of human interaction within human behavior</figcaption>
+</figure>
+
+=======================
+1. Cooperation within conflict
+
+People cooperate with allies in order to engage in conflict against others.
+
+Examples:
+
+- a football team cooperates internally while in conflict with the opposing team
+
+- soldiers cooperate within a unit during war
+
+- coworkers unite against management during a strike
+
+- political factions cooperate internally while fighting rivals
+
+So:
+
+internal relation = cooperative
+
+external relation = conflictual
+
+2. Conflict inside cooperation
+
+Even within a cooperative relationship, there can be conflict.
+
+Examples:
+
+- spouses cooperate in family life but still argue
+
+- scientists collaborate but fight over credit
+
+- business partners cooperate but disagree over strategy
+
+- friends cooperate but compete for status or attention
+
+So cooperation and conflict are not opposites in a strict sense.
+
+3. Conflict can support cooperation
+
+Sometimes conflict is used to maintain cooperation.
+
+Examples:
+
+- punishing free riders
+
+- confronting cheating
+
+- enforcing norms
+
+- disciplining rule-breakers
+
+That is conflictual behavior, but it can serve a cooperative system.
+
+You could label the overlaps like this:
+
+Cooperation + Conflict
+
+- norm enforcement
+
+- collective struggle
+
+- disciplined confrontation
+
+Competition + Conflict
+
+- rivalry
+
+- aggression
+
+- dominance struggle
+
+Cooperation + Competition
+
+- co-opetition
+
+- bargaining
+
+- strategic coordination
+
+All three together
+
+- politics
+
+- labor strikes
+
+- team sports
+
+- war coalitions
+
+So the clean answer is:
+
+Conflict is part of interaction, often tied to competition, but it can also coexist with cooperation.
+
+==========================
+
 Cooperation is a special case within general human behavior. Human behavior is the broad spectrum of observable responses through which individuals adapt to internal states, other people, and the environment. Within that wider field, cooperation is one specific class of behavior.
+
+
+
 
 Cooperation is a form of behavior in which two or more agents coordinate actions because acting together changes what each can achieve alone.
 
