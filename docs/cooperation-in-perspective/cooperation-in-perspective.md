@@ -5,8 +5,8 @@ slug: /cooperation-in-perspective
 ---
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/display-1.svg" alt="Display 1: Cooperative interaction within human behavior" width="900" />
-  <figcaption><strong>Display 1:</strong> Cooperative interaction within human behavior</figcaption>
+  <img src="/img/cooperation-in-perspective/display-1.svg" alt="Display 1: Cooperation interaction within human behavior" width="900" />
+  <figcaption><strong>Display 1:</strong> Cooperation interaction within human behavior</figcaption>
 </figure>
 
 Cooperation is one of the most important forms of general human behavior, but it should not be understood in isolation. Within the broader domain of **human behavior**, a major subset is **human interaction**: behavior in which people orient to, respond to, influence, or regulate one another. Within this interactive domain, cooperation is best viewed alongside **adversarial interaction**, rather than as a stand-alone phenomenon.
