@@ -7,7 +7,7 @@ export default {
       link: { type: 'doc', id: 'cooperation-in-perspective/cooperation-in-perspective' },
       items: [
         'cooperation-in-perspective/human-behavior-in-general/human-behavior-in-general',
-        'cooperation-in-perspective/what-is-cooperation',
+        'cooperation-in-perspective/what-is-cooperation/what-is-cooperation',
         'cooperation-in-perspective/what-is-adversarial-behavior/what-is-adversarial-behavior',
       ],
     },

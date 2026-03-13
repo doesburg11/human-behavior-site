@@ -15,7 +15,7 @@ In a broad sense, **cooperation** includes not only explicit teamwork or collect
 
 These modes are not clean opposites. People may cooperate internally in order to compete externally, as in team sports, business organizations, political coalitions, or military groups. Conflict can also serve cooperation, for example when free riders are punished to protect collective norms. Cooperation is therefore best understood not as the absence of conflict or competition, but as one side of a broader interactive landscape shaped by both compatible and incompatible interdependence.
 
-The broader definition of cooperation is developed in [What is Cooperation?](/what-is-cooperation). The adversarial side of human interaction is developed in [What is Adversarial Behavior?](/what-is-adversarial-behavior).
+The definition of this broader cooperation is developed in [What is Cooperation?](/what-is-cooperation). The adversarial side of human interaction is developed in [What is Adversarial Behavior?](/what-is-adversarial-behavior).
 
 ---
 
