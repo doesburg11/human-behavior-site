@@ -209,6 +209,97 @@ Examples:
 
 These dimensions can be combined. For example, cooperation may be tacit, repeated, group-level, and necessary all at once.
 
+## Provisional empirical time division of cooperation
+
+The four-part subdivision above is conceptual. There is no major time-use dataset that already classifies human time directly into **mutual accommodation**, **active support**, **shared coordination**, and **norm-sustaining cooperation**. Any empirical estimate therefore has to be an **inference** from broader time-use and social-interaction data rather than a direct measurement.
+
+For **modern adult populations in OECD-like time-use-survey settings**, a plausible **relative division of cooperative time** is:
+
+<figure style={{ textAlign: 'center' }}>
+  <img src="/img/cooperation-in-perspective/what-is-cooperation/display-3.svg" alt="Display 3: Division of the four broad forms of cooperation" width="900" />
+  <figcaption><strong>Display 3:</strong> Division of the four broad forms of cooperation.</figcaption>
+</figure>
+
+These percentages are best read as shares of **cooperative time**, not shares of the entire day. In other words, if one looks only at the time people spend in behavior that can reasonably be classified as cooperative, the largest portion likely falls under **shared coordination**, followed by **norm-sustaining cooperation**, with **mutual accommodation** and **active support** each occupying smaller but still substantial shares.
+
+### Why shared coordination is estimated as the largest share
+
+The strongest empirical reason for assigning the largest share to **shared coordination** is that a large part of ordinary adult life is organized around coordinated activity: paid work, household production, schooling, childcare routines, and organized group tasks.
+
+According to the [U.S. Bureau of Labor Statistics American Time Use Survey 2024 Table 2](https://www.bls.gov/news.release/atus.t02.htm), adults averaged:
+
+- **4.37 weekday hours** and **1.22 weekend hours** in working and work-related activities
+- **1.87 weekday hours** and **2.35 weekend hours** in household activities
+
+Not all of this time is cooperative, but a substantial portion of it is structured through role coordination, joint production, shared routines, and interdependence. That makes **shared coordination** the most defensible largest category.
+
+### Why active support is substantial but smaller
+
+**Active support** includes helping, teaching, caregiving, and direct assistance. Time-use data do capture part of this category more directly than they capture some of the others.
+
+In the same 2024 BLS table, adults averaged:
+
+- **0.54 weekday hours** and **0.44 weekend hours** caring for and helping household members
+- **0.15 weekday hours** and **0.21 weekend hours** caring for and helping nonhousehold members
+
+This category becomes much larger in some life stages. In [BLS data for households with young children in 2024](https://www.bls.gov/opub/ted/2025/daily-time-use-in-households-with-young-children-in-2024.htm), adults living with a child under age 6 averaged **2.57 hours per day** caring for and helping household members. So **15%** is best understood as a population-level average, not as a universal constant across households or life stages.
+
+### Why mutual accommodation and norm-sustaining cooperation are harder to observe directly
+
+**Mutual accommodation** and **norm-sustaining cooperation** are likely undercounted in standard time-use surveys because they are often embedded inside other activities rather than recorded as separate primary activities.
+
+Examples include:
+
+- yielding space while walking
+- turn-taking in conversation
+- queueing properly
+- routine civility
+- low-level adherence to norms that keep interaction predictable
+
+These behaviors often occur during work, commuting, eating, shopping, or family life rather than appearing as a distinct main activity in a diary. This is why the estimate gives them meaningful shares even though they are not cleanly visible in ordinary activity tables.
+
+The OECD makes a similar methodological point in its discussion of time-use-based social-interaction measures. In [How's Life? 2020, Social Connections](https://www.oecd.org/en/publications/how-s-life/volume-/issue-_9870c393-en/full-report/component-14.html), the OECD notes that estimates based only on **primary activities** are likely to underestimate total social activity because they exclude interactions occurring alongside other tasks. Relatedly, [How's Life? 2024](https://www.oecd.org/en/publications/2024/11/how-s-life-2024_bdcf2f9f/full-report/component-5.html) reports that people across OECD countries spend on average about **6 hours per week** in measured social interactions, but this too is only part of the broader cooperative texture of everyday life.
+
+### Why norm-sustaining cooperation is estimated above mutual accommodation
+
+Both categories are diffuse and difficult to measure directly. The estimate places **norm-sustaining cooperation** somewhat above **mutual accommodation** because much of daily life in complex societies depends on sustained compliance with informal and formal expectations: punctuality, queueing, procedural order, traffic conventions, workplace rules, conversational conventions, and routine public civility.
+
+By contrast, **mutual accommodation** often consists of shorter, more local adjustments embedded in ongoing action:
+
+- moving aside
+- taking turns
+- small path corrections
+- moment-to-moment adjustment in shared space
+
+These behaviors are constant and important, but they are often brief. That is why they are given a smaller relative share than broad norm-sustaining conduct.
+
+### What this estimate does and does not claim
+
+This estimate does **not** claim to be a precise species-wide constant. It is a provisional empirical approximation for **modern surveyed populations**, especially those living in institutionalized, high-coordination societies.
+
+The distribution would likely differ across:
+
+- small-scale societies
+- child-rearing-heavy households
+- workplaces with high interdependence
+- institutional settings with strong formal rules
+- historical periods with less bureaucratic coordination
+
+In care-heavy households, **active support** would probably take a larger share. In highly institutionalized settings, **norm-sustaining cooperation** might increase. In collective labor or hunting settings, **shared coordination** could become even more dominant.
+
+So the table above should be read as a **defensible empirical working estimate**, not a final measurement.
+
+### Concise interpretation
+
+If cooperation is divided into these four forms, the best empirical approximation is that **shared coordination** occupies the largest portion of cooperative time in modern adult life, **norm-sustaining cooperation** forms the next largest share, and **active support** and **mutual accommodation** each occupy smaller but still important portions.
+
+### Sources
+
+- [U.S. Bureau of Labor Statistics, American Time Use Survey 2024 Table 2](https://www.bls.gov/news.release/atus.t02.htm)
+- [U.S. Bureau of Labor Statistics, Daily time use in households with young children in 2024](https://www.bls.gov/opub/ted/2025/daily-time-use-in-households-with-young-children-in-2024.htm)
+- [OECD, How's Life? 2020, Social Connections](https://www.oecd.org/en/publications/how-s-life/volume-/issue-_9870c393-en/full-report/component-14.html)
+- [OECD, How's Life? 2024, Community relationships](https://www.oecd.org/en/publications/2024/11/how-s-life-2024_bdcf2f9f/full-report/component-5.html)
+
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/cooperation-in-perspective/what-is-cooperation/display-2.png" alt="Display 2: Cooperation as a necessary condition" width="400" />
   <figcaption><strong>Display 2:</strong> Cooperation as a necessary condition</figcaption>

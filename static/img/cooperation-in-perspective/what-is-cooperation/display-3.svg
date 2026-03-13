@@ -1,0 +1,34 @@
+<svg width="900" height="420" viewBox="0 0 900 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Estimated relative time division of cooperative behavior</title>
+  <desc id="desc">A donut chart showing mutual accommodation 15 percent, active support 15 percent, shared coordination 45 percent, and norm-sustaining cooperation 25 percent.</desc>
+  <rect width="900" height="420" fill="#FAF7F1"/>
+  <circle cx="210" cy="230" r="90" fill="none" stroke="#E8E1D4" stroke-width="56"/>
+  <g transform="rotate(-90 210 230)">
+    <circle cx="210" cy="230" r="90" fill="none" stroke="#5D8F82" stroke-width="56" stroke-dasharray="84.82 480.67" stroke-linecap="butt"/>
+    <circle cx="210" cy="230" r="90" fill="none" stroke="#D08A5B" stroke-width="56" stroke-dasharray="84.82 480.67" stroke-dashoffset="-84.82" stroke-linecap="butt"/>
+    <circle cx="210" cy="230" r="90" fill="none" stroke="#496FA8" stroke-width="56" stroke-dasharray="254.47 311.02" stroke-dashoffset="-169.64" stroke-linecap="butt"/>
+    <circle cx="210" cy="230" r="90" fill="none" stroke="#B75E73" stroke-width="56" stroke-dasharray="141.37 424.12" stroke-dashoffset="-424.11" stroke-linecap="butt"/>
+  </g>
+  <circle cx="210" cy="230" r="58" fill="#FAF7F1"/>
+
+  <text x="450" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#2E2A26">Estimated relative division of cooperative time</text>
+  <text x="450" y="104" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#6D6257">Modern adult populations in OECD-like time-use-survey settings</text>
+
+  <rect x="382" y="136" width="18" height="18" rx="2" fill="#5D8F82"/>
+  <text x="414" y="151" font-family="Arial, sans-serif" font-size="21" fill="#2E2A26">Mutual accommodation</text>
+  <text x="730" y="151" font-family="Arial, sans-serif" font-size="21" fill="#2E2A26">15%</text>
+
+  <rect x="382" y="182" width="18" height="18" rx="2" fill="#D08A5B"/>
+  <text x="414" y="197" font-family="Arial, sans-serif" font-size="21" fill="#2E2A26">Active support</text>
+  <text x="730" y="197" font-family="Arial, sans-serif" font-size="21" fill="#2E2A26">15%</text>
+
+  <rect x="382" y="228" width="18" height="18" rx="2" fill="#496FA8"/>
+  <text x="414" y="243" font-family="Arial, sans-serif" font-size="21" fill="#2E2A26">Shared coordination</text>
+  <text x="730" y="243" font-family="Arial, sans-serif" font-size="21" fill="#2E2A26">45%</text>
+
+  <rect x="382" y="274" width="18" height="18" rx="2" fill="#B75E73"/>
+  <text x="414" y="289" font-family="Arial, sans-serif" font-size="21" fill="#2E2A26">Norm-sustaining cooperation</text>
+  <text x="730" y="289" font-family="Arial, sans-serif" font-size="21" fill="#2E2A26">25%</text>
+
+  <text x="382" y="344" font-family="Arial, sans-serif" font-size="16" fill="#6D6257">Provisional empirical working estimate, inferred from time-use and social-interaction data.</text>
+</svg>
