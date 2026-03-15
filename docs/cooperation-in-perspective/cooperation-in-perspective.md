@@ -4,6 +4,21 @@ sidebar_position: 2
 slug: /cooperation-in-perspective
 ---
 
+# Cooperation in Perpective
+
+## Why human cooperation matters
+
+The comparison between humans, chimpanzees, and orangutans is broader than cooperation alone, but that is exactly why it is useful here. Humans do not stand out nearly as much in the physical domain as they do in the social domain. Cooperation matters because it reveals a general principle of human behavior: people do not act only as isolated individuals. Human behavior is deeply shaped by interdependence, shared attention, memory, norms, and institutions, so many specifically human outcomes depend on how well individuals can align their behavior with others. In that sense, cooperation is not just one topic within human interaction, but one of the clearest expressions of the unusually strong social capacities that distinguish humans.
+
+<figure style={{ textAlign: 'center' }}>
+  <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 2: Humans stand out much more in the social domain than in the physical domain when compared with other great apes." width="1100" />
+  <figcaption><strong>Display 2:</strong> Humans stand out much more in the social domain than in the physical domain when compared with other great apes.</figcaption>
+</figure>
+
+## Cooperation with general human behavior
+
+The definition of this broader cooperation is developed in [What is Cooperation?](/what-is-cooperation). The adversarial side of human interaction is developed in [What is Adversarial Behavior?](/what-is-adversarial-behavior).
+
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/cooperation-in-perspective/display-1.svg" alt="Display 1: Cooperation interaction within human behavior" width="900" />
   <figcaption><strong>Display 1:</strong> Cooperation interaction within human behavior</figcaption>
@@ -15,16 +30,6 @@ In a broad sense, **cooperation** includes not only explicit teamwork or collect
 
 These modes are not clean opposites. People may cooperate internally in order to compete externally, as in team sports, business organizations, political coalitions, or military groups. Conflict can also serve cooperation, for example when free riders are punished to protect collective norms. Cooperation is therefore best understood not as the absence of conflict or competition, but as one side of a broader interactive landscape shaped by both compatible and incompatible interdependence.
 
-## Why human cooperation matters
-
-The comparison between humans, chimpanzees, and orangutans is broader than cooperation alone, but that is exactly why it is useful here. Humans do not stand out nearly as much in the physical domain as they do in the social domain. Cooperation matters because it reveals a general principle of human behavior: people do not act only as isolated individuals. Human behavior is deeply shaped by interdependence, shared attention, memory, norms, and institutions, so many specifically human outcomes depend on how well individuals can align their behavior with others. In that sense, cooperation is not just one topic within human interaction, but one of the clearest expressions of the unusually strong social capacities that distinguish humans.
-
-<figure style={{ textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 2: Humans stand out much more in the social domain than in the physical domain when compared with other great apes." width="1100" />
-  <figcaption><strong>Display 2:</strong> Humans stand out much more in the social domain than in the physical domain when compared with other great apes.</figcaption>
-</figure>
-
-The definition of this broader cooperation is developed in [What is Cooperation?](/what-is-cooperation). The adversarial side of human interaction is developed in [What is Adversarial Behavior?](/what-is-adversarial-behavior).
 
 ---
 
