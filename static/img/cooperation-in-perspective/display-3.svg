@@ -1,0 +1,99 @@
+<svg width="894" height="623" viewBox="0 0 894 623" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Average social group size versus relative brain neocortex size</title>
+  <desc id="desc">A close reconstruction of the Dunbar chart showing mean group size against neocortex ratio, with black empirical points, a solid regression line, a dashed confidence band, and a square point marking humans.</desc>
+
+  <rect width="894" height="623" fill="#F5F9FD"/>
+
+  <g transform="translate(0,8)">
+    <line x1="258" y1="455" x2="689" y2="455" stroke="#0F3368" stroke-width="1.5"/>
+    <line x1="258" y1="455" x2="258" y2="60" stroke="#0F3368" stroke-width="1.5"/>
+
+    <g stroke="#0F3368" stroke-width="1.2">
+      <line x1="258" y1="455" x2="253" y2="455"/>
+      <line x1="258" y1="413.54" x2="253" y2="413.54"/>
+      <line x1="258" y1="386.33" x2="253" y2="386.33"/>
+      <line x1="258" y1="344.87" x2="253" y2="344.87"/>
+      <line x1="258" y1="317.66" x2="253" y2="317.66"/>
+      <line x1="258" y1="276.20" x2="253" y2="276.20"/>
+      <line x1="258" y1="249.00" x2="253" y2="249.00"/>
+      <line x1="258" y1="221.79" x2="253" y2="221.79"/>
+      <line x1="258" y1="180.33" x2="253" y2="180.33"/>
+      <line x1="258" y1="153.12" x2="253" y2="153.12"/>
+      <line x1="258" y1="125.92" x2="253" y2="125.92"/>
+      <line x1="258" y1="84.45" x2="253" y2="84.45"/>
+
+      <line x1="258" y1="455" x2="258" y2="460"/>
+      <line x1="424" y1="455" x2="424" y2="460"/>
+      <line x1="522" y1="455" x2="522" y2="460"/>
+      <line x1="591" y1="455" x2="591" y2="460"/>
+      <line x1="645" y1="455" x2="645" y2="460"/>
+      <line x1="689" y1="455" x2="689" y2="460"/>
+    </g>
+
+    <g fill="#102A43" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="end">
+      <text x="252" y="462">1</text>
+      <text x="252" y="420">2</text>
+      <text x="252" y="392">3</text>
+      <text x="252" y="351">5</text>
+      <text x="252" y="323">10</text>
+      <text x="252" y="282">20</text>
+      <text x="252" y="255">30</text>
+      <text x="252" y="227">40</text>
+      <text x="252" y="186">50</text>
+      
+      <text x="252" y="132">200</text>
+      <text x="252" y="91">300</text>
+
+      <text x="254" y="476" text-anchor="start">1</text>
+      <text x="420" y="476" text-anchor="start">2</text>
+      <text x="518" y="476" text-anchor="start">3</text>
+      <text x="587" y="476" text-anchor="start">4</text>
+      <text x="641" y="476" text-anchor="start">5</text>
+      <text x="685" y="476" text-anchor="start">6</text>
+    </g>
+
+    <text x="360" y="519" fill="#0F3368" font-family="Arial, Helvetica, sans-serif" font-size="22">Neocortex ratio (log scale)</text>
+    <text transform="translate(211 350) rotate(-90)" fill="#0F3368" font-family="Arial, Helvetica, sans-serif" font-size="20">Mean group size (log scale)</text>
+
+    <line x1="257.5" y1="454.5" x2="689.5" y2="60.5" stroke="#2F6FBB" stroke-width="1.8"/>
+    <line x1="399.314" y1="447.486" x2="662.314" y2="63.486" stroke="#5D87B8" stroke-width="1.6" stroke-dasharray="16 10"/>
+
+    <g fill="#0F3368">
+      <circle cx="344" cy="370" r="6"/>
+      <circle cx="359" cy="336" r="6"/>
+      <circle cx="368" cy="343" r="6"/>
+      <circle cx="376" cy="359" r="6"/>
+      <circle cx="373" cy="386" r="6"/>
+      <circle cx="381" cy="399" r="6"/>
+      <circle cx="392" cy="367" r="6"/>
+      <circle cx="397" cy="305" r="6"/>
+      <circle cx="420" cy="439" r="6"/>
+      <circle cx="425" cy="436" r="6"/>
+      <circle cx="424" cy="296" r="6"/>
+      <circle cx="446" cy="225" r="6"/>
+      <circle cx="449" cy="186" r="6"/>
+      <circle cx="449" cy="212" r="6"/>
+      <circle cx="450" cy="382" r="6"/>
+      <circle cx="460" cy="153" r="6"/>
+      <circle cx="465" cy="246" r="6"/>
+      <circle cx="466" cy="208" r="6"/>
+      <circle cx="466" cy="176" r="6"/>
+      <circle cx="471" cy="283" r="6"/>
+      <circle cx="474" cy="241" r="6"/>
+      <circle cx="486" cy="186" r="6"/>
+      <circle cx="498" cy="218" r="6"/>
+      <circle cx="522" cy="194" r="6"/>
+      <circle cx="536" cy="179" r="6"/>
+    </g>
+
+    <g stroke="#2F6FBB" stroke-width="1.7" fill="#F5F9FD">
+      <circle cx="434" cy="436" r="6.5"/>
+      <circle cx="491" cy="428" r="6.5"/>
+      <circle cx="541" cy="242" r="6.5"/>
+    </g>
+
+    <rect x="590.5" y="213.5" width="12" height="12" fill="#F5F9FD" stroke="#0F3368" stroke-width="1.7"/>
+    <text x="619" y="228" fill="#0F3368" font-family="Arial, Helvetica, sans-serif" font-size="17">Humans</text>
+  </g>
+
+</svg>

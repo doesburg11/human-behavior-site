@@ -4,18 +4,53 @@ sidebar_position: 2
 slug: /cooperation-in-perspective
 ---
 
-# Cooperation in Perpective
+# Cooperation in Perspective
 
 ## Why human cooperation matters
 
-The comparison between humans, chimpanzees, and orangutans is broader than cooperation alone, but that is exactly why it is useful here. Humans do not stand out nearly as much in the physical domain as they do in the social domain. Cooperation matters because it reveals a general principle of human behavior: people do not act only as isolated individuals. Human behavior is deeply shaped by interdependence, shared attention, memory, norms, and institutions, so many specifically human outcomes depend on how well individuals can align their behavior with others. In that sense, cooperation is not just one topic within human interaction, but one of the clearest expressions of the unusually strong social capacities that distinguish humans.
+Cooperation is probably one of the most important reasons humans as a species have come to dominate the earth. Humans are not individually the strongest animals, the fastest animals, or the best equipped to survive alone. What makes humans unusual is that they can coordinate, communicate, learn from one another, transmit norms, and accumulate knowledge across generations. Much of human success therefore depends less on isolated individual ability than on the ability to align behavior with others.
+
+That is why cooperation matters so much in the broader study of human behavior. Cooperation is not just one topic among many. It expresses something more general about the human species: human life is deeply structured by interdependence. People routinely rely on shared attention, communication, teaching, imitation, memory, norms, and institutions. These capacities make possible not only small acts of helping, but also families, markets, political systems, science, and culture itself.
+
+If that is true, then an obvious question is: **where exactly do humans stand out relative to other great apes?** In that respect, the comparison studied by Herrmann et al. (2007) is especially informative. If humans were simply better than chimpanzees and orangutans across the board, cooperation would be less revealing. But if the human difference is especially large in the social domain, then cooperation is not peripheral. It is part of what is most distinctive about humans.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 2: Humans stand out much more in the social domain than in the physical domain when compared with other great apes." width="1100" />
-  <figcaption><strong>Display 2:</strong> Humans stand out much more in the social domain than in the physical domain when compared with other great apes.</figcaption>
+  <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 2: Author-created summary of Herrmann et al. (2007), showing that human children outperform chimpanzees and orangutans much more strongly in the social domain than in the physical domain." width="1100" />
+  <figcaption><strong>Display 2:</strong> Author-created summary of the comparative pattern reported by Herrmann et al. (2007). It is a simplified explanatory chart, not a reproduction of the original <em>Science</em> figure. In the study, 2.5-year-old children performed roughly like chimpanzees in the physical domain but far better than both ape species in the social domain. Source: E. Herrmann et al., “Humans Have Evolved Specialized Skills of Social Cognition: The Cultural Intelligence Hypothesis,” <em>Science</em> 317(5843), 1360-1366. <a href="https://doi.org/10.1126/science.1146282">https://doi.org/10.1126/science.1146282</a>.</figcaption>
 </figure>
 
-## Cooperation with general human behavior
+### Evidence for the human social advantage
+
+The paper by Herrmann and colleagues gives exactly that kind of evidence. It does not show that humans are superior at everything. Its more precise claim is that humans show a distinctive advantage in **social cognition** very early in development, even before literacy and formal schooling. That is the relevant point for this page, because many forms of cooperation depend on exactly those capacities: understanding others' intentions, learning from others, following communicative cues, and participating in shared practices.
+
+The study compared **105 human children** at about **2.5 years old**, **106 chimpanzees**, and **32 orangutans** using the same Primate Cognition Test Battery. The key result was asymmetrical:
+
+- In the **physical domain**, children and chimpanzees performed at roughly the same overall level, at about **68%** correct, whereas orangutans scored about **59%**.
+- In the **social domain**, children scored about **74%** correct, whereas chimpanzees and orangutans scored only about **36%** and **33%**.
+- The human advantage appeared across the three social scales the study tested: **social learning**, **communication**, and **theory of mind**.
+
+This matters for cooperation because cooperation is not mainly a matter of raw strength or isolated problem-solving. It depends heavily on being able to read attention, infer goals, learn culturally from others, and align behavior through communication. The comparative pattern in Herrmann et al. therefore supports the broader claim of this page: humans stand out especially in the social capacities that make large-scale and norm-governed cooperation possible.
+
+### Early social cognition is the starting point, not the end state
+
+One reason this study is so useful is that it focuses on very young children, before literacy, formal schooling, and most explicit cultural instruction. That means the results do not capture the full extent of mature human cooperation. They capture an early starting point: children already show a distinctive social-cognitive advantage before later cultural learning has had much time to compound it.
+
+This is important because human cooperation is not produced by inherited capacities alone. Those early capacities help children learn language, absorb norms, imitate skilled others, and participate in increasingly complex shared practices. In that sense, the human advantage is two-layered: humans begin with unusually strong social-cognitive equipment, and that equipment then supports a much larger process of cumulative cultural learning. The result is not just cooperation in small groups, but the possibility of institutions, traditions, and large-scale coordination among strangers.
+
+### Human brain expansion and social cognition
+
+Another reason cooperation matters so much is that one influential line of research argues that a substantial part of primate brain expansion is tied to the demands of social life. This view is associated especially with **Robert Dunbar's social brain hypothesis**. The basic idea is that larger brains, and especially a larger neocortex, help primates manage more complex social environments: tracking relationships, remembering past interactions, anticipating others' behavior, monitoring status and alliances, and navigating norms of inclusion, exclusion, and reciprocity.
+
+On this view, the human brain did not become large only to solve abstract physical problems or technical tasks in isolation. A major part of its expansion supported increasingly demanding forms of social cognition. For humans, that matters directly for cooperation. Stable cooperation requires more than goodwill. It requires recognizing intentions, maintaining reputations, coordinating roles, learning shared norms, and sustaining relationships across repeated interaction. If Dunbar's general argument is right, then the size of the human brain is itself part of the evidence that social coordination and cooperation were central pressures in human evolution.
+
+<figure style={{ textAlign: 'center' }}>
+  <img src="/img/cooperation-in-perspective/display-3.svg" alt="Display 3: Author-created Dunbar-style chart showing that larger relative neocortex size is associated with larger social group size, with the human extrapolation near 150." width="980" />
+  <figcaption><strong>Display 3:</strong> Close visual reconstruction of the empirical Dunbar chart showing **mean group size** against **neocortex ratio**, including the nonhuman primate data points, the fitted line, the dashed boundary, and the highlighted human point. </figcaption>
+</figure>
+
+The chart is read from left to right: species with a larger **neocortex ratio** tend to live in larger average social groups. The **filled circles** represent the nonhuman primate observations used in Dunbar's comparison. The **square labeled "Humans"** marks the human estimate, which lies high on the same general trend and is the basis for the familiar Dunbar number of roughly **150**. The **solid line** shows the main fitted relationship visible in the original chart. The **dashed line** is also present in the source image and marks a secondary reference boundary drawn in that figure. As the Medium article emphasizes, the point of the chart is not that human social life is simple, but that relative brain expansion and social group size are strongly linked across primates, with humans extending that pattern to especially large and cognitively demanding social networks.
+
+## Cooperation within general human behavior
 
 The definition of this broader cooperation is developed in [What is Cooperation?](/what-is-cooperation). The adversarial side of human interaction is developed in [What is Adversarial Behavior?](/what-is-adversarial-behavior).
 
@@ -170,3 +205,11 @@ This prevents the outside region from being overloaded with examples that actual
 > Human interaction is broader than cooperative and adversarial behavior, but these two categories capture many of its most important relational modes. If cooperation is understood broadly, it includes not only explicit teamwork but also helping, civility, tacit coordination, turn-taking, and routine social accommodation. Adversarial behavior includes both competition and conflict. Under that broad definition, much everyday interaction falls within cooperation rather than outside it. What remains outside cooperative and adversarial behavior consists mainly of social perception, expressive signaling, and some hierarchical relations that are not yet cooperative or adversarial.
 
 ---
+
+## Sources
+
+- Herrmann, E., Call, J., Hernández-Lloreda, M. V., Hare, B., & Tomasello, M. (2007). *Humans Have Evolved Specialized Skills of Social Cognition: The Cultural Intelligence Hypothesis*. *Science*, 317(5843), 1360-1366. https://doi.org/10.1126/science.1146282
+- Starendal, C. (2023). *The Dunbar Number*. Medium. https://cstarendal.medium.com/the-dunbar-number-40c826da34c3
+- Dunbar, R. I. M. (1992). *Neocortex size as a constraint on group size in primates*. *Journal of Human Evolution*, 22(6), 469-493.
+- Dunbar, R. I. M. (1993). *Coevolution of neocortical size, group size and language in humans*. *Behavioral and Brain Sciences*, 16(4), 681-735.
+- Dunbar, R. I. M. (1998). *The social brain hypothesis*. *Evolutionary Anthropology*, 6(5), 178-190.
