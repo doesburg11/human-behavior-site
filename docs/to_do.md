@@ -4,24 +4,12 @@ title: To do
 sidebar_position: 99
 ---
 
-### on top of display 1 at overview 
-- `<=Nature===========Nurture=>`
-- simplify the picture and use the color blue of the game-theory videos??
-- only nature and nurture.
+### Nature v Nurture discussion
 - what is nurture ? Pure "self nurtured" or "man made nurtured" or "nature nurtured? If someone is born near the equator in Africa; is that nurture? Is the behavior of ancestors nurture or nature?
 
-### display 2
-- point out the RL bit and the evolutionary bit in the display
 
-## Why cooperation matters within human behavior
-- [INSERT PICTURE HUMANS V APES IN SOCIAL BEHAVIOR]
-Cooperation is central because it reveals a general principle of behavior:
-
-- people do not respond only as isolated individuals,
-- behavior is shaped by interdependence,
-- and social structure enters directly into individual action.
-
-This makes cooperation especially important for a project about general human behavior. It shows how individual decisions are transformed by ecology, repeated interaction, memory, norms, and institutions.
+## addition to Prisoner's Dilemma
+Stag hunt matrix? To learn cooperation.
 
 ## Why do humans cooperate?
 
