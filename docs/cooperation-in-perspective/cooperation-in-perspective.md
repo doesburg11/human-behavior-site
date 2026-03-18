@@ -6,30 +6,22 @@ slug: /cooperation-in-perspective
 
 # Cooperation in Perspective
 
-## Why human cooperation matters
+This page puts cooperation in perspective in two different senses. First, it explains why cooperation is important in the broader story of human distinctiveness and human evolution. Second, it explains where cooperation belongs conceptually within the wider field of human behavior and human interaction.
+
+## Part I. Why Cooperation Matters
 
 Cooperation is probably one of the most important reasons humans as a species have come to dominate the earth. Humans are not individually the strongest animals, the fastest animals, or the best equipped to survive alone. What makes humans unusual is that they can coordinate, communicate, learn from one another, transmit norms, and accumulate knowledge across generations. Much of human success therefore depends less on isolated individual ability than on the ability to align behavior with others.
 
 That is why cooperation matters so much in the broader study of human behavior. Cooperation is not just one topic among many. It expresses something more general about the human species: human life is deeply structured by interdependence. People routinely rely on shared attention, communication, teaching, imitation, memory, norms, and institutions. These capacities make possible not only small acts of helping, but also families, markets, political systems, science, and culture itself.
 
-If that is true, then an obvious question is: **where exactly do humans stand out relative to other great apes?** In that respect, the comparison studied by Herrmann et al. (2007) is especially informative. If humans were simply better than chimpanzees and orangutans across the board, cooperation would be less revealing. But if the human difference is especially large in the social domain, then cooperation is not peripheral. It is part of what is most distinctive about humans.
+Herrmann et al. (2007) help sharpen that point. The comparison with closely related ape species is especially informative. If humans were simply better than chimpanzees and orangutans across the board, cooperation would be less revealing. But if the human difference is especially large in the social domain, then cooperation is not peripheral. It is part of what is most distinctive about humans.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 2: Author-created summary of Herrmann et al. (2007), showing that human children outperform chimpanzees and orangutans much more strongly in the social domain than in the physical domain." width="1180" style={{ display: 'block', margin: '0 auto' }} />
-  <figcaption style={{ marginTop: '0.6rem' }}><strong>Display 2:</strong> Author-created summary of the comparative pattern reported by Herrmann et al. (2007). It is a simplified explanatory chart, not a reproduction of the original <em>Science</em> figure. In the study, 2.5-year-old children performed roughly like chimpanzees in the physical domain but far better than both ape species in the social domain. Source: E. Herrmann et al., “Humans Have Evolved Specialized Skills of Social Cognition: The Cultural Intelligence Hypothesis,” <em>Science</em> 317(5843), 1360-1366. <a href="https://doi.org/10.1126/science.1146282">https://doi.org/10.1126/science.1146282</a>.</figcaption>
+  <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 2: 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007)" width="1180" style={{ display: 'block', margin: '0 auto' }} />
+  <figcaption style={{ marginTop: '0.6rem' }}><strong>Display 2:</strong> 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007).</figcaption>
 </figure>
 
-### Evidence for the human social advantage
-
-The paper by Herrmann et al. gives exactly that kind of evidence. It does not show that humans are superior at everything. Its more precise claim is that humans show a distinctive advantage in **social cognition** very early in development, even before literacy and formal schooling. That is the relevant point for this page, because many forms of cooperation depend on exactly those capacities: understanding others' intentions, learning from others, following communicative cues, and participating in shared practices.
-
-The study compared **105 human children** at about **2.5 years old**, **106 chimpanzees**, and **32 orangutans** using the same Primate Cognition Test Battery. The key result was asymmetrical:
-
-- In the **physical domain**, children and chimpanzees performed at roughly the same overall level, at about **68%** correct, whereas orangutans scored about **59%**.
-- In the **social domain**, children scored about **74%** correct, whereas chimpanzees and orangutans scored only about **36%** and **33%**.
-- The human advantage appeared across the three social scales the study tested: **social learning**, **communication**, and **theory of mind**.
-
-This matters for cooperation because cooperation is not mainly a matter of raw strength or isolated problem-solving. It depends heavily on being able to read attention, infer goals, learn culturally from others, and align behavior through communication. The comparative pattern in Herrmann et al. therefore supports the broader claim of this page: humans stand out especially in the social capacities that make large-scale and norm-governed cooperation possible.
+Herrmann et al. give exactly that kind of evidence. The point is not that humans are superior at everything. The more precise claim is that humans show a distinctive advantage in social cognition very early in development, even before literacy and formal schooling. In the physical domain, children and chimpanzees performed at roughly the same overall level, whereas orangutans were lower. In the social domain, children scored far higher than both ape species, and the difference appeared across social learning, communication, and theory of mind. That matters for cooperation because cooperation is not mainly a matter of raw strength or isolated problem-solving. It depends heavily on being able to read attention, infer goals, learn culturally from others, and align behavior through communication.
 
 ### Early social cognition is the starting point, not the end state
 
@@ -45,36 +37,32 @@ On this view, the human brain did not become large only to solve abstract physic
 
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/cooperation-in-perspective/display-3.svg" alt="Display 3: Author-created Dunbar-style chart showing that larger relative neocortex size is associated with larger social group size, with the human extrapolation near 150." width="920" />
-  <figcaption><strong>Display 3:</strong> Close visual reconstruction of the empirical Dunbar chart showing **mean group size** against **neocortex ratio**, including the nonhuman primate data points, the fitted line, the dashed boundary, and the highlighted human point. </figcaption>
+  <figcaption><strong>Display 3:</strong> Across primates, larger neocortex ratios are associated with larger social group sizes, with humans extending that trend to especially large networks.</figcaption>
 </figure>
 
-Species with a larger **neocortex ratio** tend to live in larger average social groups. Here, **neocortex ratio** means the size of the neocortex relative to the rest of the brain, used as a rough comparative measure of how much brain tissue is devoted to higher-order cognition. In Dunbar's original figure, different symbols distinguish several primate categories, including polygamous anthropoids, monogamous anthropoids, diurnal prosimians, nocturnal prosimians, and hominoids. This reconstruction mainly highlights the overall comparative pattern rather than reproducing every original symbol distinction exactly. The **square labeled "Humans"** marks the human estimate, which lies high on the same general trend and is the basis for the familiar Dunbar number of roughly **150**. The **solid line** shows the main fitted relationship visible in the original chart. The **dashed line** is also present in the source image and marks a secondary reference boundary drawn in that figure. The point of the chart is not that human social life is simple, but that relative brain expansion and social group size are strongly linked across primates, with humans extending that pattern to especially large and cognitively demanding social networks.
+Species with a larger neocortex ratio tend to live in larger average social groups. Here, neocortex ratio means the size of the neocortex relative to the rest of the brain, used as a rough comparative measure of how much brain tissue is devoted to higher-order cognition. In Dunbar's original figure, different symbols distinguish several primate categories, including polygamous anthropoids, monogamous anthropoids, diurnal prosimians, nocturnal prosimians, and hominoids. This reconstruction mainly highlights the overall comparative pattern rather than reproducing every original symbol distinction exactly. The square labeled "Humans" marks the human estimate, which lies high on the same general trend and is the basis for the familiar Dunbar number of roughly 150. The point of the chart is not that human social life is simple, but that relative brain expansion and social group size are strongly linked across primates, with humans extending that pattern to especially large and cognitively demanding social networks.
 
-## Cooperation within general human behavior
+## Part II. Where Cooperation Fits in Human Behavior
 
 The definition of this broader cooperation is developed in [What is Cooperation?](/what-is-cooperation). The adversarial side of human interaction is developed in [What is Adversarial Behavior?](/what-is-adversarial-behavior).
+
+The discussion so far has explained **why cooperation matters**: humans stand out in social cognition, and one important evolutionary hypothesis links primate brain expansion to the demands of social life. The next question is different: where should cooperation be placed within the broader map of human behavior?
 
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/cooperation-in-perspective/display-1.svg" alt="Display 1: Cooperation interaction within human behavior" width="900" />
   <figcaption><strong>Display 1:</strong> Cooperation interaction within human behavior</figcaption>
 </figure>
 
-Cooperation is one of the most important forms of general human behavior, but it should not be understood in isolation. Within the broader domain of **human behavior**, a major subset is **human interaction**: behavior in which people orient to, respond to, influence, or regulate one another. Within this interactive domain, cooperation is best viewed alongside **adversarial interaction**, rather than as a stand-alone phenomenon.
+Cooperation is one of the most important forms of general human behavior, but it should not be understood in isolation. Within the broader domain of human behavior, a major subset is human interaction: behavior in which people orient to, respond to, influence, or regulate one another. Within this interactive domain, cooperation is best viewed alongside adversarial interaction, rather than as a stand-alone phenomenon.
 
-In a broad sense, **cooperation** includes not only explicit teamwork or collective action, but also many everyday forms of mutual accommodation: helping, sharing, teaching, caregiving, turn-taking, politeness, tacit coordination, and routine civility. At the same time, not all interaction is cooperative. Human interaction can also be **adversarial**, including both **competition**, where actors rival one another for scarce goods, status, or advantage, and **conflict**, where interaction takes the form of more direct opposition, resistance, or obstruction.
+In a broad sense, cooperation includes not only explicit teamwork or collective action, but also many everyday forms of mutual accommodation: helping, sharing, teaching, caregiving, turn-taking, politeness, tacit coordination, and routine civility. At the same time, not all interaction is cooperative. Human interaction can also be adversarial, including both competition, where actors rival one another for scarce goods, status, or advantage, and conflict, where interaction takes the form of more direct opposition, resistance, or obstruction.
 
 These modes are not clean opposites. People may cooperate internally in order to compete externally, as in team sports, business organizations, political coalitions, or military groups. Conflict can also serve cooperation, for example when free riders are punished to protect collective norms. Cooperation is therefore best understood not as the absence of conflict or competition, but as one side of a broader interactive landscape shaped by both compatible and incompatible interdependence.
 
+### Overlap between cooperation and adversarial behavior
 
----
+Cooperative and adversarial behavior can overlap rather than excluding one another cleanly.
 
-## 1. Can cooperative and adversarial behavior overlap?
-
-Yes. These categories are not mutually exclusive.
-
-People may cooperate with some actors while engaging adversarially with others, or they may combine cooperative and adversarial elements within the same broader setting.
-
-### Cooperation within adversarial settings
 People often cooperate internally in order to compete or conflict externally.
 
 Examples:
@@ -84,7 +72,6 @@ Examples:
 - political allies coordinate against opponents
 - soldiers cooperate within a unit during war
 
-### Adversarial behavior in support of cooperation
 Adversarial behavior can also be used to protect, stabilize, or enforce cooperation.
 
 Examples:
@@ -94,7 +81,6 @@ Examples:
 - moderators sanctioning rule-breakers to maintain a cooperative community
 - enforcing norms that sustain orderly collaboration
 
-### Mixed settings
 In many real social settings, cooperative and adversarial behavior are intertwined.
 
 Examples:
@@ -105,11 +91,9 @@ Examples:
 - team sports
 - war coalitions
 
----
+### What lies outside both?
 
-## 2. What lies outside cooperative and adversarial behavior?
-
-If cooperation is interpreted **broadly**, then much ordinary interaction is already absorbed into cooperation. That means the region of human interaction **strictly outside** both cooperative and adversarial behavior becomes smaller.
+If cooperation is interpreted broadly, then much ordinary interaction is already absorbed into cooperation. That means the region of human interaction strictly outside both cooperative and adversarial behavior becomes smaller.
 
 Still, some interaction remains outside both. The clearest cases are forms of social perception and expression that are socially oriented but not yet organized as either accommodation or opposition.
 
@@ -129,7 +113,7 @@ Why this lies outside the two:
 - no facilitating or accommodating action is required
 - no adversarial relation is present
 
-### B. Mere expression or signaling
+### Mere expression or signaling
 
 A person may express something socially without the interaction yet being cooperative or adversarial.
 
@@ -145,9 +129,9 @@ Why this lies outside the two:
 - expression alone is not yet cooperation
 - it is not necessarily adversarial
 
-### C. Authority-based or hierarchical interaction
+### Authority and hierarchy as borderline cases
 
-Some interaction is structured mainly by **power asymmetry**, not by cooperation or adversariality. These cases are more borderline than the two categories above.
+Some interaction is structured mainly by unequal authority or control, not by cooperation or adversariality. These cases are more borderline than the two categories above.
 
 Examples:
 
@@ -157,15 +141,9 @@ Examples:
 - a teacher calling on a student
 - a supervisor issuing routine instructions
 
-Why this may lie outside the two:
-- the relation may not be jointly enabling enough to count as cooperation
-- it may occur without rivalry, resistance, or opposition, so it is not adversarial
+These cases should be treated as context-dependent rather than automatically placed outside both. Some authority relations are cooperative, some adversarial, and some remain mainly formal or procedural.
 
-These cases can shift into cooperation or adversarial interaction depending on context, but are best treated as context-dependent rather than automatically placed outside both.
-
----
-
-## 3. Taxonomy table
+### A compact taxonomy
 
 | Inside broad cooperation | Inside adversarial behavior | Strictly outside both |
 |---|---|---|
@@ -176,17 +154,13 @@ These cases can shift into cooperation or adversarial interaction depending on c
 | yielding space in a corridor | sabotage | blushing perceived by others |
 | letting someone merge in traffic | legal dispute | silent mutual awareness |
 | teaching a child | status rivalry | simply listening without aiding or resisting |
-| orderly queuing | punishing an opponent | routine authority relation without cooperation or resistance |
-| small talk that maintains civility | coercion | a judge formally addressing a defendant |
-| tacit path adjustment to avoid collision | hostile political confrontation | a security guard giving neutral instructions |
-
----
+| orderly queuing | punishing an opponent | neutral observation of another person's expression |
+| small talk that maintains civility | coercion | mere expressive signaling without accommodation or opposition |
+| tacit path adjustment to avoid collision | hostile political confrontation | noninteractive emotional display perceived by others |
 
 Borderline cases such as greeting, small talk, turn-taking, and authority should therefore be classified contextually. In most ordinary settings, greeting, small talk, and turn-taking belong inside broad cooperation because they sustain civility and mutual accommodation. Authority relations vary more sharply by context: some are cooperative, some adversarial, and some remain mainly formal rather than clearly either.
 
----
-
-## 4. What this means for the diagram
+### What this means for the diagram
 
 A useful interpretation of the diagram is the following:
 
@@ -198,11 +172,13 @@ A useful interpretation of the diagram is the following:
 
 This prevents the outside region from being overloaded with examples that actually belong inside broad cooperation.
 
----
-
-## 5. Concise conceptual summary
+### Concise conceptual summary
 
 > Human interaction is broader than cooperative and adversarial behavior, but these two categories capture many of its most important relational modes. If cooperation is understood broadly, it includes not only explicit teamwork but also helping, civility, tacit coordination, turn-taking, and routine social accommodation. Adversarial behavior includes both competition and conflict. Under that broad definition, much everyday interaction falls within cooperation rather than outside it. What remains outside cooperative and adversarial behavior consists mainly of social perception, expressive signaling, and some hierarchical relations that are not yet cooperative or adversarial.
+
+### What follows
+
+For a more explicit definition of the cooperative side, see [What is Cooperation?](/what-is-cooperation). For the opposing side of the same broader interaction space, see [What is Adversarial Behavior?](/what-is-adversarial-behavior).
 
 ---
 
