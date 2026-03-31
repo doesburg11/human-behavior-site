@@ -37,7 +37,7 @@ Human cooperative behavior is one of the central puzzles in biology and the soci
 
 ## Why cooperation is a puzzle
 
-Cooperation is not hard to observe. It is hard to explain. In many environments, individual incentives and collective outcomes pull in different directions. The same behavior may look cooperative at one timescale and exploitative at another.
+Cooperation is easy to observe, but hard to explain. In many environments, individual incentives and collective outcomes pull in different directions. The same behavior may look cooperative at one timescale and exploitative at another.
 
 - Individual and collective interests often diverge in the short run.
 
