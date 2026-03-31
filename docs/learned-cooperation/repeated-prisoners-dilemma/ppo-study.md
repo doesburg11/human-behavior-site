@@ -20,7 +20,7 @@ This case study summarizes the `SequentialPrisonersDilemma` project, where two i
 Payoff matrix per round:
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/learned-cooperation/repeated-prisonners-dilemma/payoff-matrix.svg" alt="Prisoner's Dilemma payoff matrix" width="420" />
+  <img src="/img/learned-cooperation/repeated-prisoners-dilemma/ppo-study/payoff-matrix.svg" alt="Prisoner's Dilemma payoff matrix" width="420" />
 </figure>
 
 Episodes run with a fixed horizon `n_sequential_games`, so each episode is a finite repeated game.
@@ -64,7 +64,7 @@ This matches the finite-horizon all-defect baseline where each round yields `(D,
 The repository also reports a broader sweep across `n_sequential_games = 5..100` (step 5), using 20 seeds and 95% confidence intervals.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/learned-cooperation/repeated-prisonners-dilemma/display-1.png" alt="Display 1: Mean cooperation rates across repeated games with 95% confidence bands" width="1000" />
+  <img src="/img/learned-cooperation/repeated-prisoners-dilemma/ppo-study/display-1.png" alt="Display 1: Mean cooperation rates across repeated games with 95% confidence bands" width="1000" />
   <figcaption><strong>Display 1:</strong> Mean cooperation rates (20 seeds) across the number of repeated Prisoner's Dilemma games, with 95% confidence bands.</figcaption>
 </figure>
 

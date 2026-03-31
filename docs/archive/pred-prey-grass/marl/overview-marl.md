@@ -8,7 +8,7 @@ sidebar_position: 1
 Multi Agent Reinforcement Learning (MARL) is fundamentally different from other traditional Machine Learning (ML) paradigms. The main three traditional paradigms in ML are: Supervised Learning, Unsupervised Learning and Reinforcement Learning. Most applications in ML or (more general) Artificial Intelligence (AI), like for instance Large Language Models (LLM) are largely derived from (a mixture) of those paradigms. 
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/marl/display-1.png" alt="Display 1: Three main paradigms in Machine Learbing" width="800" />
+  <img src="/img/archive/pred-prey-grass/marl/overview-marl/display-1.png" alt="Display 1: Three main paradigms in Machine Learbing" width="800" />
   <figcaption><strong>Display 1:</strong> Three main paradigms in Machine Learning</figcaption>
 </figure>
 
@@ -43,11 +43,11 @@ Multi agent reinforcement learning (MARL) is an interesting avenue to investigat
 
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/marl/display-2.jpg" alt="Display 2: Single Agent Reinforcement learning" width="400" />
+  <img src="/img/archive/pred-prey-grass/marl/overview-marl/display-2.jpg" alt="Display 2: Single Agent Reinforcement learning" width="400" />
   <figcaption><strong>Display 2:</strong> Single Agent Reinforcement Learning</figcaption>
 </figure>
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/marl/display-3.jpg" alt="Display 3: Multi Agent Reinforcement learning" width="400" />
+  <img src="/img/archive/pred-prey-grass/marl/overview-marl/display-3.jpg" alt="Display 3: Multi Agent Reinforcement learning" width="400" />
   <figcaption><strong>Display 3:</strong> Multi Agent Reinforcement Learning</figcaption>
 </figure>
 
@@ -55,7 +55,6 @@ Multi agent reinforcement learning (MARL) is an interesting avenue to investigat
 
 
   
-
 
 
 

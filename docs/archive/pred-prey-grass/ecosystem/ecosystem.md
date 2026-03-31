@@ -8,7 +8,7 @@ title: The Predator, Prey, Grass Ecosystem
 This page explains how energy flows through the simulated ecosystem of grass, prey, and predators, and how entropy increases in accordance with the second law of thermodynamics. The diagram below visualizes the core concepts behind the simulation model.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/archive/pred-prey-grass/ecosystem/display-1.jpg" alt="Display 1: Energy flows in the ecosystem" width="400" />
+  <img src="/img/archive/pred-prey-grass/ecosystem/ecosystem/display-1.jpg" alt="Display 1: Energy flows in the ecosystem" width="400" />
   <figcaption><strong>Display 1:</strong> Energy flows in the ecosystem</figcaption>
 </figure>
 ---
@@ -131,7 +131,7 @@ This mirrors the behavior of real-world ecosystems, where evolution creates comp
 # Energy Flow and Emergence in the Predator-Prey-Grass Ecosystem
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/archive/pred-prey-grass/ecosystem/display-2.jpg" alt="Display 2: The direction of energy flows and behavior" width="600" />
+  <img src="/img/archive/pred-prey-grass/ecosystem/ecosystem/display-2.jpg" alt="Display 2: The direction of energy flows and behavior" width="600" />
   <figcaption><strong>Display 2:</strong> The direction of energy flows and behavior</figcaption>
 </figure>
 

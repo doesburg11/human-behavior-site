@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="582.36182mm"
+   height="250.5517mm"
+   viewBox="0 0 582.36182 250.5517"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="venn-human-behavior.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.27081931"
+     inkscape:cx="2025.3356"
+     inkscape:cy="413.55988"
+     inkscape:window-width="1536"
+     inkscape:window-height="784"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs2">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_1white"
+       id="pattern78934"
+       patternTransform="matrix(2.6458333,0,0,2.6458333,-252.0902,-85.418073)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="2"
+       height="1"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Strips1_1white"
+       inkscape:stockid="Stripes 1:1 white">
+      <rect
+         style="fill:white;stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="2"
+         id="rect77953" />
+    </pattern>
+    <linearGradient
+       id="linearGradient136875"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#d5e5ff;stop-opacity:1;"
+         offset="0"
+         id="stop136873" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(183.63107,-38.224762)">
+    <ellipse
+       style="fill:#000055;fill-rule:evenodd;stroke-width:0.264583"
+       id="path31"
+       cx="107.54984"
+       cy="163.50061"
+       rx="291.18091"
+       ry="125.27585" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-86.44886"
+       y="131.85144"
+       id="text5865"><tspan
+         sodipodi:role="line"
+         id="tspan5863"
+         style="stroke-width:0.264583"
+         x="-86.44886"
+         y="131.85144" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:19.7556px;line-height:1.25;font-family:sans-serif;fill:#d7eef4;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="29.825365"
+       y="68.300644"
+       id="text37461"><tspan
+         sodipodi:role="line"
+         id="tspan37459"
+         style="font-size:19.7556px;fill:#d7eef4;stroke-width:0.264583"
+         x="29.825365"
+         y="68.300644">Human Behavior</tspan></text>
+    <ellipse
+       style="fill:#2a7fff;stroke-width:0.261393"
+       id="path59485"
+       cx="22.549694"
+       cy="183.11603"
+       rx="110.63617"
+       ry="47.521721" />
+    <ellipse
+       style="fill:#5f8dd3;stroke-width:0.28174"
+       id="path59533"
+       cx="192.85173"
+       cy="185.03059"
+       rx="121.06445"
+       ry="48.298008" />
+    <path
+       id="path59485-3"
+       style="fill:url(#pattern78934);fill-opacity:1;stroke-width:0.261393"
+       d="m 103.87307,151.41191 a 121.06445,48.298007 0 0 0 -33.656855,33.384 121.06445,48.298007 0 0 0 29.368247,31.51695 110.63617,47.521719 0 0 0 32.030588,-33.43156 110.63617,47.521719 0 0 0 -27.74198,-31.46939 z" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16.9333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-52.063473"
+       y="188.23106"
+       id="text78970"><tspan
+         sodipodi:role="line"
+         id="tspan78968"
+         style="font-size:16.9333px;fill:#dbe2e3;stroke-width:0.264583"
+         x="-52.063473"
+         y="188.23106">Cooperative</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16.9333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="160.89937"
+       y="190.61432"
+       id="text110372"><tspan
+         sodipodi:role="line"
+         id="tspan110370"
+         style="font-size:16.9333px;fill:#dbe2e3;stroke-width:0.264583"
+         x="160.89937"
+         y="190.61432">Adversarial</tspan></text>
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#1afbf1;stroke-width:2.165;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.274253"
+       id="path133810"
+       cx="111.03596"
+       cy="182.97649"
+       rx="221.0733"
+       ry="93.830612" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16.9333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="66.091621"
+       y="118.58953"
+       id="text141393"><tspan
+         sodipodi:role="line"
+         id="tspan141391"
+         style="font-size:16.9333px;fill:#dbe2e3;stroke-width:0.264583"
+         x="66.091621"
+         y="118.58953">Interaction</tspan></text>
+  </g>
+</svg>

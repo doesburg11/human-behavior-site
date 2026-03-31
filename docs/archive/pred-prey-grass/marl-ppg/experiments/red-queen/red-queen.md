@@ -55,7 +55,7 @@ Observations:
 - **Freezing prey** resulted in shorter lifespans for prey, suggesting that **predator adaptation alone** is not enough to secure ongoing advantage.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/archive/pred-prey-grass/red-queen/display-1.jpg" alt="Display 1: Life span comparison" width="600" />
+  <img src="/img/archive/pred-prey-grass/marl-ppg/experiments/red-queen/red-queen/display-1.jpg" alt="Display 1: Life span comparison" width="600" />
   <figcaption><strong>Display 1:</strong> Life span comparison</figcaption>
 </figure>
 
@@ -85,4 +85,3 @@ Next steps may include:
 - Introducing `type_2` predator/prey variants to observe **strategy replacement**
 - Logging mutation rates and lineage turnover for **evolutionary depth analysis**
 - Visualizing arms race dynamics across generations
-

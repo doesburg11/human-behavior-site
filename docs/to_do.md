@@ -4,14 +4,74 @@ title: To do
 sidebar_position: 99
 ---
 
-### on top of display 1 at overview 
-- `<=Nature===========Nurture=>`
-- simplify the picture and use the color blue of the game-theory videos??
-- only nature and nurture.
+### Nature v Nurture discussion
 - what is nurture ? Pure "self nurtured" or "man made nurtured" or "nature nurtured? If someone is born near the equator in Africa; is that nurture? Is the behavior of ancestors nurture or nature?
 
-### display 2
-- point out the RL bit and the evolutionary bit in the display
+
+## addition to Prisoner's Dilemma
+Stag hunt matrix? To learn cooperation.
+
+## Why do humans cooperate?
+
+The surface answers are many:
+
+- survival,
+- reciprocity,
+- empathy,
+- norms,
+- reputation,
+- laws,
+- morality.
+
+These are important mechanisms, but they can be reduced to a smaller set of structural reasons.
+
+## Interdependence of outcomes
+
+Cooperation becomes rational when payoffs are coupled and agents cannot optimize fully on their own.
+
+Examples include:
+
+- shared resources,
+- division of labor,
+- ecological feedback loops,
+- public goods,
+- tasks that exceed solo capacity.
+
+## Temporal extension
+
+Cooperation becomes more likely when interactions repeat over time. Short-term sacrifice can produce long-term gain through:
+
+- reciprocity,
+- trust,
+- reputation,
+- learning,
+- cultural transmission.
+
+## Internalization of group structure
+
+Humans often carry social regulation inside the individual through:
+
+- empathy,
+- guilt,
+- shame,
+- norms,
+- identity.
+
+This helps explain why cooperation can persist even when direct monitoring or immediate reward is weak.
+
+## One-sentence synthesis
+
+Cooperation emerges when independent optimization breaks down, the future matters, and social coordination becomes internalized.
+
+## Why this matters here
+
+For this site, the central question is not whether cooperation exists, but how it fits into a broader theory of human behavior and under what minimal conditions it emerges:
+
+- through learning within a lifetime,
+- through selection across generations,
+- and through the interaction between those two timescales.
+
+That is why cooperation sits near the center of the project. It is not the whole of human behavior, but it is one of the clearest cases in which behavior cannot be understood at the level of the isolated individual alone.
 
 ### Brainstorming
 - Use Leary's Rose in Learned Cooperation?
@@ -39,21 +99,79 @@ sidebar_position: 99
 - always end defecting if finite ending
 - MARL training with random ending periods (max_steps), might result in cooperating
 
+### [ ] Direct reciprocity without coordination under necessity
 
-### [ ] Failed attack cost energy Predators 
-- proportionally (to own energy level) punish failed Predators 
+Goal:
+- Remove "we must cooperate or we cannot kill the prey" completely.
+- Study whether predators learn to help because help is returned later, not because a kill is impossible alone.
 
-### [ ] Dividing prey
-- Proportionally
-- Equally
+Recommended environment concept:
+- Start from a rabbits-only or `shared_prey` style environment, not `mammoths`.
+- Every prey is individually catchable by one predator.
+- Reproduction remains the only learning reward, so the setup stays aligned with the rest of PredPreyGrass.
 
+Cooperative act:
+- After a successful solo kill, the capturing predator can choose `share_food = 0/1`.
+- If `share_food = 1` and another predator is within Moore neighborhood:
+- A fixed fraction of prey energy is transferred to one nearby predator.
+- The sharer keeps the remainder and is immediately worse off than under selfish consumption.
+- Sharing is therefore voluntary and immediately costly.
 
-### [ ] Mammoths
+Alternative cooperative act:
+- `assist_hunt = 0/1` for a nearby predator that is chasing prey.
+- Assistance lowers the target predator's hunting cost or raises its capture chance.
+- Assistance is never required for capture, only beneficial.
 
-- Make Prey with behaving as Mamoths
-  - [v] Larger energy than Predators
-  - [v] Fewer in numbers than Predator
-  - [ ] Maybe, the sum of energy humans can be smaller (a fraction), because of more intelligence/tool use)
+Direct reciprocity mechanism:
+- Each predator keeps private memory of specific partners, not public reputation.
+- Example memory variable: `trust[i][j]` = how much predator `i` expects predator `j` to return favors.
+- Increase `trust[i][j]` when `j` shared with or assisted `i`.
+- Decrease `trust[i][j]` when `j` refused to share or help in a relevant opportunity.
+- Let trust slowly decay back toward neutral so reciprocity must be maintained.
+
+Observation / state:
+- Standard spatial observation stays intact.
+- Add one extra private observation signal for predators only:
+- At nearby predator positions, encode focal-agent trust toward that predator.
+- Or provide a compact summary such as nearest-partner trust / mean nearby trust.
+- Do not expose a public reputation score; otherwise the mechanism shifts toward indirect reciprocity.
+
+Why this is no longer necessity:
+- A predator can always eat alone.
+- Cooperation now means giving up immediate energy for another predator.
+- The only reason to do this is expectation of future return through repeated interaction.
+
+Core experimental conditions:
+- Baseline selfish condition: no memory, no partner-specific trust signal.
+- Direct reciprocity condition: private partner memory enabled.
+- Identity-shuffle ablation: same reciprocity logic, but predator identities are randomly remapped each episode.
+- Optional indirect reciprocity comparison: public reputation signal instead of private pairwise memory.
+
+Ecological settings that make direct reciprocity testable:
+- Spawn offspring near parents so the same predators meet repeatedly.
+- Keep movement costs and energy decay moderate so repeated interaction matters.
+- Keep prey abundant enough that sharing is feasible, but not so abundant that social help is irrelevant.
+- Keep lifetimes long enough for remembered favors to be returned.
+
+What should emerge if direct reciprocity is real:
+- Predators share or assist reliable partners more than unreliable partners.
+- Predators reduce helping after a partner failed to reciprocate.
+- Cooperation is stronger with partner memory than without it.
+- Cooperation collapses or weakens strongly when identities are shuffled.
+
+Minimal metrics:
+- `P(share | partner shared with me before)`
+- `P(share | partner did not share with me before)`
+- `P(assist | partner assisted me before)`
+- Mean energy transferred per dyad over time
+- Share/assist rate for familiar partners versus unfamiliar partners
+- Change in helping probability after partner defection
+- Reproduction rate under baseline vs reciprocity vs identity-shuffle
+
+Interpretation:
+- If helping rises only when partner-specific memory is available, then cooperation is no longer explained by immediate ecological necessity.
+- It is explained by expected future return from repeated interaction: direct reciprocity.
+
 
 ### [ ] Mixed -Stah Hunt
 - Have to types of Prey: Mammoths and Deer
