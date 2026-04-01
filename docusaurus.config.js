@@ -13,14 +13,14 @@ const config = {
     v4: true,
   },
 
-  url: 'https://doesburg11.github.io',
+  url: 'https://humanbehaviorpatterns.org',
   baseUrl: '/',
   stylesheets: [
     'https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex.min.css',
   ],
 
   organizationName: 'doesburg11', 
-  projectName: 'doesburg11.github.io', 
+  projectName: 'human-behavior-site', 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -38,7 +38,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
-          editUrl: 'https://github.com/doesburg11/doesburg11.github.io/edit/main/',
+          editUrl: 'https://github.com/doesburg11/human-behavior-site/edit/main/',
         },
         // BLOG REMOVED — no blog
         theme: {
