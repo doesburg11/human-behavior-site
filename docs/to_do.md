@@ -5,7 +5,7 @@ sidebar_position: 99
 ---
 
 ### Nature v Nurture discussion
-- what is nurture ? Pure "self nurtured" or "man made nurtured" or "nature nurtured? If someone is born near the equator in Africa; is that nurture? Is the behavior of ancestors nurture or nature?
+- what is nurture ? Pure "self nurtured" or "man made nurtured" or "nature nurtured? If someone is born near the equator in Africa; is that nurture? Is the behavior of ancestors nurture or nature? Is a physical inheritance nurture or nature?
 
 
 ## addition to Prisoner's Dilemma
