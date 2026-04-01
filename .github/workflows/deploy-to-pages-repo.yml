@@ -1,4 +1,4 @@
-name: Deploy Site To Pages Repo
+name: Deploy Site To GitHub Pages
 
 on:
   push:
@@ -6,23 +6,21 @@ on:
       - main
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 concurrency:
-  group: deploy-site-to-pages-repo
+  group: pages
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    env:
-      TARGET_REPO: doesburg11/doesburg11.github.io
-      TARGET_BRANCH: main
-      DOMAIN: humanbehaviorpatterns.org
+    permissions:
+      contents: read
     steps:
       - name: Checkout source repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -37,38 +35,27 @@ jobs:
         run: npm run build
 
       - name: Verify CNAME in build output
+        env:
+          DOMAIN: humanbehaviorpatterns.org
         run: |
           test -f build/CNAME
           grep -qx "$DOMAIN" build/CNAME
 
-      - name: Deploy build/ to target repo
-        env:
-          DEPLOY_REPO_PAT: ${{ secrets.DEPLOY_REPO_PAT }}
-          GIT_AUTHOR_NAME: github-actions[bot]
-          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-          GIT_COMMITTER_NAME: github-actions[bot]
-          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-        run: |
-          if [ -z "${DEPLOY_REPO_PAT}" ]; then
-            echo "Missing required secret: DEPLOY_REPO_PAT"
-            exit 1
-          fi
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: build
 
-          tmpdir="$(mktemp -d)"
-          trap 'rm -rf "$tmpdir"' EXIT
-
-          git clone --depth 1 "https://github.com/${TARGET_REPO}.git" "$tmpdir/target"
-          rsync -av --delete --exclude '.git/' build/ "$tmpdir/target/"
-
-          cd "$tmpdir/target"
-          git remote set-url origin "https://x-access-token:${DEPLOY_REPO_PAT}@github.com/${TARGET_REPO}.git"
-          git checkout "$TARGET_BRANCH" || git checkout -b "$TARGET_BRANCH"
-          git add -A
-
-          if git diff --cached --quiet; then
-            echo "No deploy changes."
-            exit 0
-          fi
-
-          git commit -m "Deploy from ${GITHUB_REPOSITORY}@${GITHUB_SHA}"
-          git push origin "$TARGET_BRANCH"
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
