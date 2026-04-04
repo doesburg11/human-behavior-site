@@ -95,6 +95,8 @@ For GitHub README pages:
 - Leave enough whitespace around figures and sections.
 - Figures should remain centered and clearly captioned.
 - Cards and callouts should use pale blue backgrounds instead of saturated fills.
+- Cards, panels, callouts, and other display surfaces should use sharp corners.
+- Avoid rounded containers for data displays, figure frames, dashboards, and callout backgrounds.
 
 ## Links, Buttons, And UI Accents
 
@@ -102,6 +104,8 @@ For GitHub README pages:
 - Buttons should use the primary blue with white text.
 - Hover and focus states should stay within the same blue family.
 - Avoid green, purple, or bright multi-color accents unless the content itself requires them.
+- Buttons, pills, inputs, and control surfaces should use sharp corners rather than rounded shapes.
+- When CSS is available, prefer `border-radius: 0` for buttons, panels, inputs, and display containers.
 
 For GitHub README pages:
 
@@ -185,6 +189,15 @@ table thead th {
 
 table tbody tr:nth-child(even) {
   background: var(--site-blue-row);
+}
+
+.button,
+.card,
+.panel,
+input,
+select,
+textarea {
+  border-radius: 0;
 }
 ```
 
