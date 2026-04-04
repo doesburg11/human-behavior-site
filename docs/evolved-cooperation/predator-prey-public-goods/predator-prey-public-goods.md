@@ -7,8 +7,6 @@ slug: /evolved-cooperation/predator-prey-public-goods
 
 import PredatorPreyReplay from '@site/src/components/PredatorPreyReplay';
 
-This section incorporates the current-state README of the predator-prey public-goods module into the website as a nested part of **Evolved Cooperation**.
-
 The model is a spatial predator-prey-grass ecology with an evolving predator cooperation trait:
 
 - predators pay a private cost for hunt investment,
@@ -18,9 +16,9 @@ The model is a spatial predator-prey-grass ecology with an evolving predator coo
 
 ## Interactive Replay
 
-The exported browser replay is rendered directly on this page. It is based on sampled frames from a fixed Python run, so it does **not** execute the Python simulation live in the browser.
+The exported browser replay is rendered directly on this page. It is based on sampled frames from a fixed Python run.
 
-[Open Source Module](https://github.com/doesburg11/EvolvedCooperation/tree/main/predpreygrass_public_goods)
+[GitHub Module](https://github.com/doesburg11/EvolvedCooperation/tree/main/predpreygrass_public_goods)
 
 <PredatorPreyReplay />
 
