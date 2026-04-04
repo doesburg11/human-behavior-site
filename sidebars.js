@@ -11,7 +11,26 @@ export default {
         'cooperation-in-perspective/what-is-adversarial-behavior/what-is-adversarial-behavior',
       ],
     },
-    { type: 'doc', id: 'evolved-cooperation/evolved-cooperation', label: 'Evolved Cooperation' },
+    {
+      type: 'category',
+      label: 'Evolved Cooperation',
+      link: { type: 'doc', id: 'evolved-cooperation/evolved-cooperation' },
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: 'Predator-Prey Public Goods',
+          link: {
+            type: 'doc',
+            id: 'evolved-cooperation/predator-prey-public-goods/predator-prey-public-goods',
+          },
+          collapsed: false,
+          items: [
+            'evolved-cooperation/predator-prey-public-goods/interactive-simulation',
+          ],
+        },
+      ],
+    },
     {
       type: 'category',
       label: 'Learned Cooperation',

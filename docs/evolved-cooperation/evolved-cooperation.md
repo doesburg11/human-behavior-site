@@ -170,3 +170,12 @@ Evolved cooperation is:
 Understanding its dynamics is essential for explaining the **nature** component of cooperation and how it interacts with lifetime learning.
 
 In PredPreyGrass, evolved cooperation forms the **nature component** of a two-timescale theory of cooperation.
+
+---
+
+## Predator-Prey Public Goods Case
+
+The current site now includes a nested case study on the predator-prey public-goods module. That subdirectory focuses on an evolving predator hunt-investment trait in a spatial predator-prey-grass ecology and includes an embedded browser replay of a sampled run.
+
+- [Predator-Prey Public Goods Overview](/evolved-cooperation/predator-prey-public-goods/)
+- [Interactive Simulation](/evolved-cooperation/predator-prey-public-goods/interactive-simulation/)

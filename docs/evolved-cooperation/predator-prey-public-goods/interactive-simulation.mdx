@@ -1,0 +1,38 @@
+---
+id: interactive-simulation
+title: Interactive Simulation
+sidebar_position: 2
+slug: /evolved-cooperation/predator-prey-public-goods/interactive-simulation
+---
+
+This page embeds the browser replay of the predator-prey public-goods run inside the website.
+
+The replay is interactive in the limited sense that you can:
+
+- play and pause the exported run,
+- restart from the beginning,
+- change playback speed,
+- scrub through sampled frames with the frame slider.
+
+It is still a replay, not a live browser execution of the Python model.
+
+<div className="simulation-link-grid">
+  <a
+    href="https://github.com/doesburg11/EvolvedCooperation/tree/main/predpreygrass_public_goods"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Open Source Module
+  </a>
+</div>
+
+<div className="simulation-frame-shell">
+  <iframe
+    className="simulation-frame"
+    src="/evolved-cooperation/predator-prey-public-goods/replay/"
+    title="Predator-Prey Public Goods Replay"
+    loading="lazy"
+  />
+</div>
+
+If the frame does not load during local preview, start the Docusaurus site normally rather than opening files directly from disk.
