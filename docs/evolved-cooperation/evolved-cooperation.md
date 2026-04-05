@@ -173,8 +173,8 @@ In PredPreyGrass, evolved cooperation forms the **nature component** of a two-ti
 
 ---
 
-## Predator-Prey Public Goods Case
+## Predator-Prey-Grass Cooperative Hunting Case
 
-The current site now includes a nested case study on the predator-prey public-goods module. That subdirectory focuses on an evolving predator hunt-investment trait in a spatial predator-prey-grass ecology and includes an embedded browser replay of a sampled run.
+The current site now includes a nested case study on the predator-prey cooperative-hunting module. That subdirectory focuses on an evolving predator hunt-investment trait in a spatial predator-prey-grass ecology and includes an embedded browser replay of a sampled run.
 
-- [Predator-Prey Public Goods](/evolved-cooperation/predator-prey-public-goods/)
+- [Predator-Prey-Grass Cooperative Hunting](/evolved-cooperation/predator-prey-cooperative-hunting/)

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Predator-Prey-Grass Cooperative Hunting</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy hero-copy-full">
+          <p class="eyebrow">Evolved Cooperation</p>
+          <h1>Predator-Prey-Grass Cooperative Hunting</h1>
+          <p class="hero-text">
+            Sampled browser replay of the Python model. The preview mirrors the replay page layout.
+          </p>
+          <p id="bundle-note" class="visually-hidden" aria-live="polite">Loading replay...</p>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="card viewer-card">
+          <div class="card-header">
+            <div>
+              <p class="section-eyebrow">Replay</p>
+              <h2>World State</h2>
+            </div>
+          </div>
+
+          <div class="control-row">
+            <button id="play-pause-button" class="button button-primary" type="button">Play</button>
+            <button id="restart-button" class="button button-secondary" type="button">Restart</button>
+            <label class="field">
+              <span>Playback</span>
+              <select id="speed-select">
+                <option value="2">2 fps</option>
+                <option value="4">4 fps</option>
+                <option value="8" selected>8 fps</option>
+                <option value="12">12 fps</option>
+                <option value="16">16 fps</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="slider-row">
+            <label for="frame-slider">Frame</label>
+            <input id="frame-slider" type="range" min="0" max="0" value="0" step="1">
+            <span id="frame-index-label">0 / 0</span>
+          </div>
+
+          <canvas
+            id="world-canvas"
+            class="world-canvas"
+            width="900"
+            height="900"
+            aria-label="Predator-prey world replay"
+          ></canvas>
+
+          <div class="viewer-footer">
+            <p id="step-label">Step 0</p>
+            <p id="viewer-caption">Waiting for the replay bundle.</p>
+          </div>
+        </section>
+
+        <div class="sidebar-column">
+          <section class="card chart-card">
+            <div class="card-header card-header-compact">
+              <div>
+                <h2>Cooperation Rate</h2>
+                <p class="chart-subtitle">Mean Hunt-Investment Trait</p>
+              </div>
+            </div>
+            <canvas
+              id="trait-chart"
+              class="chart-canvas chart-canvas-sidebar"
+              width="420"
+              height="320"
+              aria-label="Cooperation rate history"
+            ></canvas>
+          </section>
+
+          <aside class="card legend-card">
+            <div class="card-header">
+              <div>
+                <p class="section-eyebrow">Guide</p>
+                <h2>Legend</h2>
+              </div>
+            </div>
+
+            <div class="legend-block">
+              <div class="legend-row">
+                <span class="swatch swatch-grass"></span>
+                <span>Grass</span>
+              </div>
+              <div class="legend-row">
+                <span class="swatch swatch-prey"></span>
+                <span>Prey</span>
+              </div>
+              <div class="legend-row">
+                <span class="swatch swatch-pred-high"></span>
+                <span>Predator</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

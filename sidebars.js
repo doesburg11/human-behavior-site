@@ -17,7 +17,7 @@ export default {
       link: { type: 'doc', id: 'evolved-cooperation/evolved-cooperation' },
       collapsed: false,
       items: [
-        'evolved-cooperation/predator-prey-public-goods/predator-prey-public-goods',
+        'evolved-cooperation/predator-prey-cooperative-hunting/predator-prey-cooperative-hunting',
       ],
     },
     {
