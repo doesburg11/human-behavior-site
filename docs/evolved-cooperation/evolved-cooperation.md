@@ -96,12 +96,13 @@ Such settings are better captured by ecological and evolutionary simulations tha
 
 ---
 
-## Evolved Cooperation in PredPreyGrass
+## Evolved Cooperation in Model Systems
 
-PredPreyGrass provides a setting to study how cooperative tendencies may be favored by selection when they improve survival and reproduction over generations.
+Different model systems expose different mechanisms by which cooperative tendencies may be favored by selection across generations.
 
 Examples include:
 
+- local altruism in a spatial patch lattice,
 - inherited predispositions for coordinated hunting,
 - traits that reduce costly interference,
 - selection for timing and spacing that improves capture success,
@@ -142,13 +143,13 @@ This creates several possibilities:
 - Learning can alter ecological conditions and therefore selection pressures.
 - Plasticity can mediate the interaction between immediate adaptation and long-term evolution.
 
-PredPreyGrass provides a system in which both timescales can be studied together.
+Ecological systems like PredPreyGrass provide one way to study both timescales together, while simpler spatial models isolate the selection logic more cleanly.
 
 ---
 
 ## Research Questions
 
-The study of selected cooperation in PredPreyGrass focuses on:
+The study of selected cooperation in the current model systems focuses on:
 
 - Under what ecological conditions does cooperation spread through selection?
 - How stable are cooperative traits against invasion by defectors?
@@ -169,12 +170,15 @@ Evolved cooperation is:
 
 Understanding its dynamics is essential for explaining the **nature** component of cooperation and how it interacts with lifetime learning.
 
-In PredPreyGrass, evolved cooperation forms the **nature component** of a two-timescale theory of cooperation.
+Across these model systems, evolved cooperation forms the **nature component** of a two-timescale theory of cooperation.
 
 ---
 
-## Predator-Prey-Grass Cooperative Hunting Case
+## Current Case Studies
 
-The current site now includes a nested case study on the predator-prey cooperative-hunting module. That subdirectory focuses on an evolving predator hunt-investment trait in a spatial predator-prey-grass ecology and includes an embedded browser replay of a sampled run.
+The current site includes two complementary evolved-cooperation examples:
 
+- [Spatial Altruism](/evolved-cooperation/spatial-altruism/)
+  A minimal patch-based model in which altruist and selfish traits compete through local benefit, private cost, and a neighborhood lottery.
 - [Predator-Prey-Grass Cooperative Hunting](/evolved-cooperation/predator-prey-cooperative-hunting/)
+  A spatial ecological model in which predator cooperation evolves through hunting success, energetic cost, and inherited trait variation.

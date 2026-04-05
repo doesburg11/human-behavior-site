@@ -17,6 +17,7 @@ export default {
       link: { type: 'doc', id: 'evolved-cooperation/evolved-cooperation' },
       collapsed: false,
       items: [
+        'evolved-cooperation/spatial-altruism/spatial-altruism',
         'evolved-cooperation/predator-prey-cooperative-hunting/predator-prey-cooperative-hunting',
       ],
     },
