@@ -141,11 +141,10 @@ The integrated replay exposes a lighter subset of that state: the world grid, ag
 - Predators evolve towards displaying cooperative hunting strategies
 - Prey cluster together
 
-## Source
-
-Source module:
+## References
 
 - [GitHub repository](https://github.com/doesburg11/EvolvedCooperation)
 - [Module directory](https://github.com/doesburg11/EvolvedCooperation/tree/main/predpreygrass_public_goods)
 - [Active runtime](https://github.com/doesburg11/EvolvedCooperation/blob/main/predpreygrass_public_goods/emerging_cooperation.py)
 - [Active configuration](https://github.com/doesburg11/EvolvedCooperation/blob/main/predpreygrass_public_goods/config/emerging_cooperation_config.py)
+- [Website]()
