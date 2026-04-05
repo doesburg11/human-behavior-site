@@ -136,6 +136,11 @@ The Python run collects:
 
 The integrated replay exposes a lighter subset of that state: the world grid, agent positions, and the cooperation-rate trajectory.
 
+## Conlusions
+
+- Predators evolve towards displaying cooperative hunting strategies
+- Prey cluster together
+
 ## Source
 
 Source module:
