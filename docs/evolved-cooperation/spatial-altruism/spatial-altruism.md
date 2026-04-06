@@ -122,7 +122,7 @@ This model is on equal footing with cooperative hunting because both models stud
 The difference is the mechanism:
 
 - `Spatial Altruism` studies a direct altruism-versus-selfishness social dilemma in a patch lottery
-- `Predator-Prey-Grass Cooperative Hunting` studies selection on an inherited hunting-investment trait inside an ecological food web
+- `Cooperative Hunting` studies selection on an inherited hunting-investment trait inside an ecological food web
 
 So they are complementary examples of evolved cooperation at different levels of abstraction:
 

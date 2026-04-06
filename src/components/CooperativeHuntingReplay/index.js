@@ -202,8 +202,8 @@ async function loadJson(path) {
   return response.json();
 }
 
-export default function PredatorPreyReplay() {
-  const replayDataBasePath = useBaseUrl('/evolved-cooperation/predator-prey-cooperative-hunting/replay/data/cooperative-hunting-demo/');
+export default function CooperativeHuntingReplay() {
+  const replayDataBasePath = useBaseUrl('/evolved-cooperation/cooperative-hunting/replay/data/cooperative-hunting-demo/');
   const worldCanvasRef = useRef(null);
   const chartCanvasRef = useRef(null);
 
@@ -306,7 +306,7 @@ export default function PredatorPreyReplay() {
       <header className={styles.hero}>
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>Evolved Cooperation</p>
-          <h2 className={styles.heroTitle}>Predator-Prey-Grass Cooperative Hunting</h2>
+          <h2 className={styles.heroTitle}>Cooperative Hunting</h2>
           <p className={styles.heroText}>
             Sampled browser replay of the Python model. The page now renders the replay directly instead of embedding a separate frame.
           </p>
@@ -366,9 +366,9 @@ export default function PredatorPreyReplay() {
           </div>
 
           <div className={styles.sliderRow}>
-            <label htmlFor="predator-prey-frame-slider">Frame</label>
+            <label htmlFor="cooperative-hunting-frame-slider">Frame</label>
             <input
-              id="predator-prey-frame-slider"
+              id="cooperative-hunting-frame-slider"
               className={styles.rangeInput}
               type="range"
               min="0"

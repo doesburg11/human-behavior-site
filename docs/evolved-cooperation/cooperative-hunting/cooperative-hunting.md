@@ -1,11 +1,11 @@
 ---
-id: predator-prey-cooperative-hunting
-title: Predator-Prey-Grass Cooperative Hunting
+id: cooperative-hunting
+title: Cooperative Hunting
 sidebar_position: 1
-slug: /evolved-cooperation/predator-prey-cooperative-hunting
+slug: /evolved-cooperation/cooperative-hunting
 ---
 
-import PredatorPreyReplay from '@site/src/components/PredatorPreyReplay';
+import CooperativeHuntingReplay from '@site/src/components/CooperativeHuntingReplay';
 
 The model is a spatial predator-prey-grass ecology with an evolving predator cooperation trait:
 
@@ -20,7 +20,7 @@ The exported browser replay is rendered directly on this page. It is based on sa
 
 [GitHub Module](https://github.com/doesburg11/EvolvedCooperation/tree/main/cooperative_hunting)
 
-<PredatorPreyReplay />
+<CooperativeHuntingReplay />
 
 ## State Variables
 
