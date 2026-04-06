@@ -5,6 +5,8 @@ sidebar_position: 2
 slug: /evolved-cooperation/spatial-altruism
 ---
 
+import SpatialAltruismReplay from '@site/src/components/SpatialAltruismReplay';
+
 `spatial_altruism/altruism_model.py` is a direct evolutionary altruism model rather than an ecological predator-prey system.
 
 It models a patch-based population in which:
@@ -14,11 +16,17 @@ It models a patch-based population in which:
 - selfish patches receive the local benefit without paying that cost,
 - the next occupant of each patch is chosen by a local weighted lottery.
 
+## Interactive Replay
+
+The exported browser replay is rendered directly on this page. It is based on sampled frames from a fixed Python run.
+
+[GitHub Module](https://github.com/doesburg11/EvolvedCooperation/tree/main/spatial_altruism)
+
+<SpatialAltruismReplay />
+
 ## Static Run Snapshot
 
 The figure below is generated from a fixed Python run of the current NumPy implementation. It shows the initial patch state, the patch state after `200` updates, and the population counts across time.
-
-[GitHub Module](https://github.com/doesburg11/EvolvedCooperation/tree/main/spatial_altruism)
 
 ![Spatial altruism overview](/evolved-cooperation/spatial-altruism/spatial-altruism-overview.png)
 
