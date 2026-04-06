@@ -5,7 +5,7 @@ sidebar_position: 2
 slug: /evolved-cooperation/spatial-altruism
 ---
 
-`altruism/altruism_model.py` is a direct evolutionary altruism model rather than an ecological predator-prey system.
+`spatial_altruism/altruism_model.py` is a direct evolutionary altruism model rather than an ecological predator-prey system.
 
 It models a patch-based population in which:
 
@@ -18,7 +18,7 @@ It models a patch-based population in which:
 
 The figure below is generated from a fixed Python run of the current NumPy implementation. It shows the initial patch state, the patch state after `200` updates, and the population counts across time.
 
-[GitHub Module](https://github.com/doesburg11/EvolvedCooperation/tree/main/altruism)
+[GitHub Module](https://github.com/doesburg11/EvolvedCooperation/tree/main/spatial_altruism)
 
 ![Spatial altruism overview](/evolved-cooperation/spatial-altruism/spatial-altruism-overview.png)
 
@@ -124,7 +124,7 @@ So they are complementary examples of evolved cooperation at different levels of
 ## References
 
 - [Repository root](https://github.com/doesburg11/EvolvedCooperation)
-- [Module directory](https://github.com/doesburg11/EvolvedCooperation/tree/main/altruism)
-- [Active runtime](https://github.com/doesburg11/EvolvedCooperation/blob/main/altruism/altruism_model.py)
-- [Interactive UI](https://github.com/doesburg11/EvolvedCooperation/blob/main/altruism/altruism_pygame_ui.py)
-- [Module README](https://github.com/doesburg11/EvolvedCooperation/blob/main/altruism/README.md)
+- [Module directory](https://github.com/doesburg11/EvolvedCooperation/tree/main/spatial_altruism)
+- [Active runtime](https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/altruism_model.py)
+- [Interactive UI](https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/altruism_pygame_ui.py)
+- [Module README](https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/README.md)

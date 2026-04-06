@@ -21,7 +21,7 @@ Future pages will include examples, simple models, and experiments connecting al
 
 This page summarizes and links to a working, vectorized Python implementation of an evolutionary altruism model from the EvolvedCooperation repository:
 
-- Repository: https://github.com/doesburg11/EvolvedCooperation/tree/main/altruism
+- Repository: https://github.com/doesburg11/EvolvedCooperation/tree/main/spatial_altruism
 - Core simulation: `altruism_model.py`
 - Interactive UI: `altruism_pygame_ui.py`
 - Plots and analysis: heatmaps, 3D surfaces, and CSV grid search outputs
@@ -88,10 +88,10 @@ conda install -y -c conda-forge gcc=14.2.0
 The model simulates a genetic lottery in plus-shaped neighborhoods. Each patch contributes a weighted “seed” to determine which trait (altruist vs. selfish) occupies a cell next generation. Under non-harsh conditions, selfishness tends to dominate; under harsher conditions, altruism can persist or prevail.
 
 ### Learn more / Source files
-- README: https://github.com/doesburg11/EvolvedCooperation/blob/main/altruism/README.md
-- Code folder: https://github.com/doesburg11/EvolvedCooperation/tree/main/altruism
-- Core model: https://github.com/doesburg11/EvolvedCooperation/blob/main/altruism/altruism_model.py
-- UI: https://github.com/doesburg11/EvolvedCooperation/blob/main/altruism/altruism_pygame_ui.py
+- README: https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/README.md
+- Code folder: https://github.com/doesburg11/EvolvedCooperation/tree/main/spatial_altruism
+- Core model: https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/altruism_model.py
+- UI: https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/altruism_pygame_ui.py
 
 References in the upstream README include the original NetLogo model and BEAGLE/EACH curriculum materials.
 
@@ -125,9 +125,9 @@ class AltruismModel:
 		# initialize state arrays and set up the world...
 ```
 
-> Attribution: The authoritative current version now lives in `EvolvedCooperation/altruism`.
+> Attribution: The authoritative current version now lives in `EvolvedCooperation/spatial_altruism`.
 
 ### Try locally
 - Clone: https://github.com/doesburg11/EvolvedCooperation
-- Navigate: `altruism/`
+- Navigate: `spatial_altruism/`
 - Run CLI or UI with the commands shown above.
