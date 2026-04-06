@@ -18,7 +18,7 @@ The model is a spatial predator-prey-grass ecology with an evolving predator coo
 
 The exported browser replay is rendered directly on this page. It is based on sampled frames from a fixed Python run.
 
-[GitHub Module](https://github.com/doesburg11/EvolvedCooperation/tree/main/predpreygrass_cooperative_hunting)
+[GitHub Module](https://github.com/doesburg11/EvolvedCooperation/tree/main/cooperative_hunting)
 
 <PredatorPreyReplay />
 
@@ -144,6 +144,6 @@ The integrated replay exposes a lighter subset of that state: the world grid, ag
 ## References
 
 - [GitHub repository](https://github.com/doesburg11/EvolvedCooperation)
-- [Module directory](https://github.com/doesburg11/EvolvedCooperation/tree/main/predpreygrass_cooperative_hunting)
-- [Active runtime](https://github.com/doesburg11/EvolvedCooperation/blob/main/predpreygrass_cooperative_hunting/cooperative_hunting.py)
-- [Active configuration](https://github.com/doesburg11/EvolvedCooperation/blob/main/predpreygrass_cooperative_hunting/config/cooperative_hunting_config.py)
+- [Module directory](https://github.com/doesburg11/EvolvedCooperation/tree/main/cooperative_hunting)
+- [Active runtime](https://github.com/doesburg11/EvolvedCooperation/blob/main/cooperative_hunting/cooperative_hunting.py)
+- [Active configuration](https://github.com/doesburg11/EvolvedCooperation/blob/main/cooperative_hunting/config/cooperative_hunting_config.py)
