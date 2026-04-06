@@ -182,3 +182,21 @@ The current site includes two complementary evolved-cooperation examples:
   A minimal patch-based model in which altruist and selfish traits compete through local benefit, private cost, and a neighborhood lottery.
 - [Predator-Prey-Grass Cooperative Hunting](/evolved-cooperation/predator-prey-cooperative-hunting/)
   A spatial ecological model in which predator cooperation evolves through hunting success, energetic cost, and inherited trait variation.
+
+## Next Candidate From The Repo
+
+The strongest remaining candidate for a third evolved-cooperation case study is:
+
+- `Cooperative vs Greedy Grazing`
+
+That model is simpler than the two current examples, but it still fits the same general logic:
+
+- two inherited behavioral types,
+- selection through survival and reproduction,
+- a shared resource environment that couples behavior to long-run population outcomes.
+
+So the current roadmap is:
+
+1. `Spatial Altruism`
+2. `Predator-Prey-Grass Cooperative Hunting`
+3. possible later addition: `Cooperative vs Greedy Grazing`

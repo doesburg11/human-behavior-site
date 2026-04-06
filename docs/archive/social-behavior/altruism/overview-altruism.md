@@ -7,6 +7,10 @@ title: Altruism
 
 Altruism is a form of social behavior where an individual incurs a cost to benefit another. It appears in biological systems (e.g., kin selection, reciprocal altruism) and in human societies through norms, institutions, and moral frameworks.
 
+The current website-native case study for this topic now lives under:
+
+- [Spatial Altruism](/evolved-cooperation/spatial-altruism/)
+
 - Biological roots: kin selection (Hamilton’s rule), reciprocal altruism (Trivers), group-beneficial norms.
 - Mechanisms in multi-agent systems: reward shaping for prosocial outcomes, shared value functions, communication and reputation.
 - Trade-offs: vulnerability to free-riding, need for enforcement or reputation systems.
@@ -15,9 +19,9 @@ Future pages will include examples, simple models, and experiments connecting al
 
 ## Reference implementation
 
-This page summarizes and links to a working, vectorized Python implementation of an evolutionary altruism model from the SocialBehavior repository:
+This page summarizes and links to a working, vectorized Python implementation of an evolutionary altruism model from the EvolvedCooperation repository:
 
-- Repository: https://github.com/doesburg11/SocialBehavior/tree/main/altruism
+- Repository: https://github.com/doesburg11/EvolvedCooperation/tree/main/altruism
 - Core simulation: `altruism_model.py`
 - Interactive UI: `altruism_pygame_ui.py`
 - Plots and analysis: heatmaps, 3D surfaces, and CSV grid search outputs
@@ -84,10 +88,10 @@ conda install -y -c conda-forge gcc=14.2.0
 The model simulates a genetic lottery in plus-shaped neighborhoods. Each patch contributes a weighted “seed” to determine which trait (altruist vs. selfish) occupies a cell next generation. Under non-harsh conditions, selfishness tends to dominate; under harsher conditions, altruism can persist or prevail.
 
 ### Learn more / Source files
-- README: https://github.com/doesburg11/SocialBehavior/blob/main/altruism/README.md
-- Code folder: https://github.com/doesburg11/SocialBehavior/tree/main/altruism
-- Core model: https://github.com/doesburg11/SocialBehavior/blob/main/altruism/altruism_model.py
-- UI: https://github.com/doesburg11/SocialBehavior/blob/main/altruism/altruism_pygame_ui.py
+- README: https://github.com/doesburg11/EvolvedCooperation/blob/main/altruism/README.md
+- Code folder: https://github.com/doesburg11/EvolvedCooperation/tree/main/altruism
+- Core model: https://github.com/doesburg11/EvolvedCooperation/blob/main/altruism/altruism_model.py
+- UI: https://github.com/doesburg11/EvolvedCooperation/blob/main/altruism/altruism_pygame_ui.py
 
 References in the upstream README include the original NetLogo model and BEAGLE/EACH curriculum materials.
 
@@ -121,9 +125,9 @@ class AltruismModel:
 		# initialize state arrays and set up the world...
 ```
 
-> Attribution: Code adapted from SocialBehavior/altruism (`altruism_model.py`). Please refer to the repository for the authoritative version.
+> Attribution: The authoritative current version now lives in `EvolvedCooperation/altruism`.
 
 ### Try locally
-- Clone: https://github.com/doesburg11/SocialBehavior
+- Clone: https://github.com/doesburg11/EvolvedCooperation
 - Navigate: `altruism/`
 - Run CLI or UI with the commands shown above.
