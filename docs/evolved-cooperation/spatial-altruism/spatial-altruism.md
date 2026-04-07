@@ -24,11 +24,68 @@ The exported browser replay is rendered directly on this page. It is based on sa
 
 <SpatialAltruismReplay />
 
+## Culling Variants
+
+The repository now implements the full three-variant Mitteldorf-Wilson set:
+
+- `steady_state`: void competition with continuous empty-patch lottery mass
+- `uniform_culling`: scheduled random evacuation of a fixed share of sites
+- `compact_swath`: scheduled clearing of one contiguous square region
+
+The replay above remains a frozen `steady_state` run, but the underlying Python module also includes both disturbance variants.
+
+## Culling Experiment
+
+A first culling-only sweep compared `uniform_culling` and `compact_swath` under the following settings:
+
+- `benefit_from_altruism` from `0.00` to `1.00` in steps of `0.05`
+- `cost_of_altruism` from `0.00` to `0.35` in steps of `0.05`
+- fixed `harshness = 0.96`
+- disturbance interval `50`
+- disturbance fractions `0.25` and `0.50`
+- `5` replicates per parameter set
+
+Headline outcome:
+
+- both culling variants produced coexistence regions
+- `uniform_culling` was more robust overall than `compact_swath`
+- the strongest gap appeared at disturbance fraction `0.50`
+
+Measured summary from that sweep:
+
+- mean coexistence probability was about `0.089` for `uniform_culling` and `0.057` for `compact_swath`
+- mean occupied fraction was about `0.509` for `uniform_culling` and `0.400` for `compact_swath`
+- at disturbance fraction `0.50`, `uniform_culling` still reached coexistence probability `1.0`, while `compact_swath` peaked at `0.8`
+
 ## Static Run Snapshot
 
 The figure below is generated from a fixed Python run of the current NumPy implementation. It shows the initial patch state, the patch state after `200` updates, and the population counts across time.
 
 ![Spatial altruism overview](/evolved-cooperation/spatial-altruism/spatial-altruism-overview.png)
+
+## Static Culling Heatmaps
+
+The next figures fix `harshness = 0.96`, disturbance interval `50`, and disturbance fraction `0.50`. They compare the two disturbance variants over the `benefit_from_altruism` and `cost_of_altruism` plane.
+
+### Coexistence Probability
+
+![Uniform culling coexistence probability](/evolved-cooperation/spatial-altruism/culling_uniform_fraction_050_coexist_prob.png)
+
+`uniform_culling` still shows parameter cells with coexistence probability `1.0` at disturbance fraction `0.50`.
+
+![Compact swath coexistence probability](/evolved-cooperation/spatial-altruism/culling_compact_swath_fraction_050_coexist_prob.png)
+
+`compact_swath` retains coexistence in a narrower region and does not reach `1.0` at the same disturbance level in this sweep.
+
+### Occupied Fraction
+
+![Uniform culling occupied fraction](/evolved-cooperation/spatial-altruism/culling_uniform_fraction_050_occupied_avg.png)
+
+Under the same disturbance settings, `uniform_culling` preserves substantially more occupied space on average.
+
+![Compact swath occupied fraction](/evolved-cooperation/spatial-altruism/culling_compact_swath_fraction_050_occupied_avg.png)
+
+`compact_swath` produces a sharper occupancy collapse, consistent with a stronger recolonization bottleneck after contiguous clearing.
 
 ## Patch States
 
@@ -128,6 +185,14 @@ So they are complementary examples of evolved cooperation at different levels of
 
 - one minimal and spatial,
 - one ecological and agent-based
+
+## Conclusions
+
+- the package now covers the steady-state model and both paper disturbance variants
+- both culling variants can support altruist-selfish coexistence under some settings
+- `uniform_culling` was more robust than `compact_swath` in the first culling sweep
+- the current evidence suggests that contiguous swath clearing creates a harsher recolonization bottleneck than scattered clearing at the same nominal disturbance level
+- these conclusions come from one sweep at fixed `harshness` and interval, so they are comparative results for this run, not universal claims about every parameter regime
 
 ## References
 
