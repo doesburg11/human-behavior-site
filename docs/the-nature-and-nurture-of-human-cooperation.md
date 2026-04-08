@@ -123,7 +123,7 @@ Plasticity is the bridge between nature and nurture. It is an inherited capacity
 
 Display 2 is the conceptual hinge of the page. Evolution does not need to encode a fixed cooperative act directly. Instead, it can shape the architecture through which cooperation later becomes easier, harder, faster, or slower to learn.
 
-The first table gives the broad nature-versus-nurture split. The table below zooms in on plasticity itself: the specific learning machinery that evolution can tune and learning can use.
+The first table gives the broad nature-versus-nurture split. The table below zooms in on plasticity itself: the specific learning machinery that evolution can tune and learning can use. The table shows the specific plasticity mechanisms that connect evolution to learning.
 
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
@@ -169,7 +169,7 @@ The first table gives the broad nature-versus-nurture split. The table below zoo
   </table>
 </div>
 
-Seen this way, the table is not repeating the earlier summary. It shows the specific plasticity mechanisms that connect evolution to learning.
+
 
 ### Why the feedback loop matters
 
