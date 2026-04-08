@@ -49,30 +49,231 @@ The PredPreyGrass project therefore occupies a unique position—**a genuinely e
 
 
 **Comparison: Ecology × MARL Frameworks**
-| Dimension                  | **PredPreyGrass (PPG)**        | **VMAS**                    | **Melting Pot**             | **NetLogo**                | **MASON**                    | **POET**                    |
-| -------------------------- | ------------------------------ | --------------------------- | --------------------------- | -------------------------- | ---------------------------- | --------------------------- |
-| Primary focus              | Ecological dynamics + learning | Scalable MARL benchmarking  | Social dilemmas & norms     | Agent-based modeling (ABM) | Large-scale ABM              | Open-ended curriculum       |
-| Deep learning              | ✅ PPO / MAPPO (RLlib)          | ✅ PPO / MAPPO (PyTorch)     | ✅ PPO / DQN-style           | ❌                          | ❌                            | ⚠️ (often ES / RL hybrids)  |
-| Multi-agent RL             | ✅                              | ✅                           | ✅                           | ❌                          | ❌                            | ⚠️                          |
-| Population size            | Variable, endogenous           | Fixed                       | Fixed                       | Variable                   | Variable                     | Fixed per env               |
-| Birth & reproduction       | ✅                              | ❌                           | ❌                           | ✅                          | ✅                            | ❌                           |
-| Death & extinction         | ✅ (central)                    | ❌                           | ❌                           | ✅                          | ✅                            | ❌                           |
-| Energy budgets             | ✅                              | ❌                           | ❌                           | ✅ (common pattern)         | ✅                            | ❌                           |
-| Resource metabolism        | ✅ (grass → prey → predator)    | ❌                           | ⚠️ (abstract)               | ✅                          | ✅                            | ❌                           |
-| Predator–prey relations    | ✅ explicit                     | ⚠️ toy                      | ❌                           | ✅ classic                  | ✅ classic                    | ❌                           |
-| Cooperation pressure       | Emergent, ecological           | Reward-engineered           | Game-theoretic              | Rule-based / emergent      | Rule-based / emergent        | Task-driven                 |
-| Costly cooperation         | ✅                              | ⚠️                          | ⚠️                          | ✅                          | ✅                            | ❌                           |
-| Exploitation possible      | ✅                              | ✅                           | ✅                           | ✅                          | ✅                            | ⚠️                          |
-| Exploiters can go extinct  | ✅                              | ❌                           | ❌                           | ✅                          | ✅                            | ❌                           |
-| Lineages / generations     | ✅                              | ❌                           | ❌                           | ✅                          | ✅                            | ❌                           |
-| Co-evolution               | ✅                              | ❌                           | ❌                           | ⚠️ (manual)                | ⚠️ (manual)                  | ✅ (env–agent)               |
-| Open-ended dynamics        | ✅                              | ❌                           | ❌                           | ⚠️                         | ⚠️                           | ✅                           |
-| Environment non-stationary | ✅ (endogenous)                 | ❌                           | ❌                           | ✅                          | ✅                            | ✅                           |
-| Centralized critic         | Optional                       | ✅                           | Varies                      | ❌                          | ❌                            | ❌                           |
-| External reward shaping    | Minimal                        | Heavy                       | Heavy                       | ❌                          | ❌                            | Heavy                       |
-| Norms / conventions        | Implicit                       | Implicit                    | Explicit focus              | Emergent                   | Emergent                     | ❌                           |
-| Typical episode ending     | Ecosystem collapse / horizon   | Fixed horizon               | Fixed horizon               | User-defined               | User-defined                 | Curriculum shift            |
-| Main research question     | *Which behaviors survive?*     | *How do agents coordinate?* | *When do agents cooperate?* | *What patterns emerge?*    | *How do populations evolve?* | *How do skills accumulate?* |
+
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '13.333%' }} />
+      <col style={{ width: '13.333%' }} />
+      <col style={{ width: '13.333%' }} />
+      <col style={{ width: '13.333%' }} />
+      <col style={{ width: '13.333%' }} />
+      <col style={{ width: '13.333%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Dimension</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>PredPreyGrass (PPG)</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>VMAS</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Melting Pot</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>NetLogo</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>MASON</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>POET</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Primary focus</td>
+        <td>Ecological dynamics + learning</td>
+        <td>Scalable MARL benchmarking</td>
+        <td>Social dilemmas &amp; norms</td>
+        <td>Agent-based modeling (ABM)</td>
+        <td>Large-scale ABM</td>
+        <td>Open-ended curriculum</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Deep learning</td>
+        <td>✅ PPO / MAPPO (RLlib)</td>
+        <td>✅ PPO / MAPPO (PyTorch)</td>
+        <td>✅ PPO / DQN-style</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>⚠️ (often ES / RL hybrids)</td>
+      </tr>
+      <tr>
+        <td>Multi-agent RL</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>⚠️</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Population size</td>
+        <td>Variable, endogenous</td>
+        <td>Fixed</td>
+        <td>Fixed</td>
+        <td>Variable</td>
+        <td>Variable</td>
+        <td>Fixed per env</td>
+      </tr>
+      <tr>
+        <td>Birth &amp; reproduction</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Death &amp; extinction</td>
+        <td>✅ (central)</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td>Energy budgets</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅ (common pattern)</td>
+        <td>✅</td>
+        <td>❌</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Resource metabolism</td>
+        <td>✅ (grass → prey → predator)</td>
+        <td>❌</td>
+        <td>⚠️ (abstract)</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td>Predator–prey relations</td>
+        <td>✅ explicit</td>
+        <td>⚠️ toy</td>
+        <td>❌</td>
+        <td>✅ classic</td>
+        <td>✅ classic</td>
+        <td>❌</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Cooperation pressure</td>
+        <td>Emergent, ecological</td>
+        <td>Reward-engineered</td>
+        <td>Game-theoretic</td>
+        <td>Rule-based / emergent</td>
+        <td>Rule-based / emergent</td>
+        <td>Task-driven</td>
+      </tr>
+      <tr>
+        <td>Costly cooperation</td>
+        <td>✅</td>
+        <td>⚠️</td>
+        <td>⚠️</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Exploitation possible</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>⚠️</td>
+      </tr>
+      <tr>
+        <td>Exploiters can go extinct</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Lineages / generations</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td>Co-evolution</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>⚠️ (manual)</td>
+        <td>⚠️ (manual)</td>
+        <td>✅ (env–agent)</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Open-ended dynamics</td>
+        <td>✅</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>⚠️</td>
+        <td>⚠️</td>
+        <td>✅</td>
+      </tr>
+      <tr>
+        <td>Environment non-stationary</td>
+        <td>✅ (endogenous)</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Centralized critic</td>
+        <td>Optional</td>
+        <td>✅</td>
+        <td>Varies</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td>External reward shaping</td>
+        <td>Minimal</td>
+        <td>Heavy</td>
+        <td>Heavy</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>Heavy</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Norms / conventions</td>
+        <td>Implicit</td>
+        <td>Implicit</td>
+        <td>Explicit focus</td>
+        <td>Emergent</td>
+        <td>Emergent</td>
+        <td>❌</td>
+      </tr>
+      <tr>
+        <td>Typical episode ending</td>
+        <td>Ecosystem collapse / horizon</td>
+        <td>Fixed horizon</td>
+        <td>Fixed horizon</td>
+        <td>User-defined</td>
+        <td>User-defined</td>
+        <td>Curriculum shift</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Main research question</td>
+        <td><em>Which behaviors survive?</em></td>
+        <td><em>How do agents coordinate?</em></td>
+        <td><em>When do agents cooperate?</em></td>
+        <td><em>What patterns emerge?</em></td>
+        <td><em>How do populations evolve?</em></td>
+        <td><em>How do skills accumulate?</em></td>
+      </tr>
+    </tbody>
+</table>
+</div>
 
 
 ## References

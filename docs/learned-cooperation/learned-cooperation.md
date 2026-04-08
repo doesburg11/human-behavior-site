@@ -25,12 +25,38 @@ Classical evolutionary models of cooperation (e.g., kin selection, evolutionary 
 
 Learned cooperation differs fundamentally:
 
-| Evolutionary cooperation | Learned cooperation |
-|---|---|
-Strategy is fixed within lifetime | Policy changes within lifetime |
-Selection acts across generations | Learning acts across interactions |
-Fitness determines reproduction | Reward shapes behavior |
-Adaptation is population-level | Adaptation is individual-level |
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '50%' }} />
+      <col style={{ width: '50%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Evolutionary cooperation</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Learned cooperation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Strategy is fixed within lifetime</td>
+        <td>Policy changes within lifetime</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Selection acts across generations</td>
+        <td>Learning acts across interactions</td>
+      </tr>
+      <tr>
+        <td>Fitness determines reproduction</td>
+        <td>Reward shapes behavior</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Adaptation is population-level</td>
+        <td>Adaptation is individual-level</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Thus, cooperation can emerge **without requiring genetic relatedness or population selection**, purely through experience.
 

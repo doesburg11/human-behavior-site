@@ -153,14 +153,54 @@ Cooperation reduces uncertainty by **aligning expectations**.
 
 Your current environment already instantiates some drivers — but not all.
 
-| Mechanism | Present? | Abstract driver |
-|---------|--------|----------------|
-| Energy thresholds (solo cannot kill large prey) | ✅ | Interdependence |
-| Repeated encounters | ✅ | Temporal extension |
-| Spatial clustering | ✅ | Constraint coupling |
-| Norms / punishment | ❌ | Internalization |
-| Reputation / memory | ❌ | Temporal compression |
-| Identity / roles | ❌ | Compression |
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '52%' }} />
+      <col style={{ width: '16%' }} />
+      <col style={{ width: '32%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Mechanism</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Present?</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Abstract driver</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Energy thresholds (solo cannot kill large prey)</td>
+        <td>✅</td>
+        <td>Interdependence</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Repeated encounters</td>
+        <td>✅</td>
+        <td>Temporal extension</td>
+      </tr>
+      <tr>
+        <td>Spatial clustering</td>
+        <td>✅</td>
+        <td>Constraint coupling</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Norms / punishment</td>
+        <td>❌</td>
+        <td>Internalization</td>
+      </tr>
+      <tr>
+        <td>Reputation / memory</td>
+        <td>❌</td>
+        <td>Temporal compression</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Identity / roles</td>
+        <td>❌</td>
+        <td>Compression</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Interpretation
 
@@ -202,4 +242,3 @@ The real research question becomes:
 ---
 
 *This document intentionally bridges biology, game theory, ecology, and MARL, and is suitable as conceptual framing for research notes, project documentation, or theory sections.*
-

@@ -27,12 +27,50 @@ Four evaluation scenarios were created by combining PPO checkpoints from two gen
 
 We then ran:
 
-| Experiment         | Predator Source     | Prey Source        | Purpose                      |
-|-------------------|----------------------|---------------------|------------------------------|
-| **Frozen Prey**   | checkpoint_iter_1000 | checkpoint_iter_500 | Test if predator evolved advantage |
-| **Frozen Predator** | checkpoint_iter_500 | checkpoint_iter_1000 | Test if prey evolved advantage |
-| **Static Baseline** | checkpoint_iter_500 | checkpoint_iter_500 | Baseline (no evolution)     |
-| **Fully Co-Evolved** | checkpoint_iter_1000 | checkpoint_iter_1000 | Full mutual adaptation      |
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '28%' }} />
+      <col style={{ width: '24%' }} />
+      <col style={{ width: '24%' }} />
+      <col style={{ width: '24%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Experiment</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Predator Source</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Prey Source</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Frozen Prey</strong></td>
+        <td>checkpoint_iter_1000</td>
+        <td>checkpoint_iter_500</td>
+        <td>Test if predator evolved advantage</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td><strong>Frozen Predator</strong></td>
+        <td>checkpoint_iter_500</td>
+        <td>checkpoint_iter_1000</td>
+        <td>Test if prey evolved advantage</td>
+      </tr>
+      <tr>
+        <td><strong>Static Baseline</strong></td>
+        <td>checkpoint_iter_500</td>
+        <td>checkpoint_iter_500</td>
+        <td>Baseline (no evolution)</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td><strong>Fully Co-Evolved</strong></td>
+        <td>checkpoint_iter_1000</td>
+        <td>checkpoint_iter_1000</td>
+        <td>Full mutual adaptation</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Each evaluation ran for 1000 steps in the same grid-based environment.
 
@@ -40,12 +78,56 @@ Each evaluation ran for 1000 steps in the same grid-based environment.
 
 ## 📊 Results
 
-| Experiment         | Avg Prey Offspring | Avg Prey Lifespan | Total Prey Offspring | Total Reward |
-|-------------------|--------------------|--------------------|----------------------|--------------|
-| **Frozen Prey**   | 0.96               | 4.76               | 491                  | 6350         |
-| **Frozen Predator** | 0.96             | 6.01               | 523                  | 6660         |
-| **Static Baseline** | 0.96             | 4.70               | 500                  | 6500         |
-| **Fully Co-Evolved** | 0.96            | **8.19**           | **529**              | **6680**     |
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '24%' }} />
+      <col style={{ width: '19%' }} />
+      <col style={{ width: '19%' }} />
+      <col style={{ width: '19%' }} />
+      <col style={{ width: '19%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Experiment</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Avg Prey Offspring</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Avg Prey Lifespan</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Total Prey Offspring</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Total Reward</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Frozen Prey</strong></td>
+        <td>0.96</td>
+        <td>4.76</td>
+        <td>491</td>
+        <td>6350</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td><strong>Frozen Predator</strong></td>
+        <td>0.96</td>
+        <td>6.01</td>
+        <td>523</td>
+        <td>6660</td>
+      </tr>
+      <tr>
+        <td><strong>Static Baseline</strong></td>
+        <td>0.96</td>
+        <td>4.70</td>
+        <td>500</td>
+        <td>6500</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td><strong>Fully Co-Evolved</strong></td>
+        <td>0.96</td>
+        <td><strong>8.19</strong></td>
+        <td><strong>529</strong></td>
+        <td><strong>6680</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
 Observations:

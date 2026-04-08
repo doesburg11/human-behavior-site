@@ -31,16 +31,64 @@ The style should remain usable in:
 
 The main brand color should be the deep blue already used in the homepage top banner and table header.
 
-| Token | Value | Use |
-| --- | --- | --- |
-| Primary blue | `#0F3368` | top bar, table headers, major section accents |
-| Secondary blue | `#1C4B8F` | links, buttons, secondary accents |
-| Soft blue | `#78AAE6` | highlights, diagrams, subtle accents |
-| Pale blue surface | `#EAF2FB` | callouts, panels, gentle backgrounds |
-| Blue border | `#D6E4F5` | table borders, panel outlines |
-| Table stripe | `rgba(120, 170, 230, 0.16)` | alternating table rows |
-| White | `#FFFFFF` | text on dark blue surfaces |
-| Body text | `#1F2D3D` | main reading text |
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '22%' }} />
+      <col style={{ width: '18%' }} />
+      <col style={{ width: '60%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Token</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Value</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Primary blue</td>
+        <td><code>#0F3368</code></td>
+        <td>top bar, table headers, major section accents</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Secondary blue</td>
+        <td><code>#1C4B8F</code></td>
+        <td>links, buttons, secondary accents</td>
+      </tr>
+      <tr>
+        <td>Soft blue</td>
+        <td><code>#78AAE6</code></td>
+        <td>highlights, diagrams, subtle accents</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Pale blue surface</td>
+        <td><code>#EAF2FB</code></td>
+        <td>callouts, panels, gentle backgrounds</td>
+      </tr>
+      <tr>
+        <td>Blue border</td>
+        <td><code>#D6E4F5</code></td>
+        <td>table borders, panel outlines</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Table stripe</td>
+        <td><code>rgba(120, 170, 230, 0.16)</code></td>
+        <td>alternating table rows</td>
+      </tr>
+      <tr>
+        <td>White</td>
+        <td><code>#FFFFFF</code></td>
+        <td>text on dark blue surfaces</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Body text</td>
+        <td><code>#1F2D3D</code></td>
+        <td>main reading text</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Top Bar And Hero Style
 

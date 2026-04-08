@@ -181,16 +181,96 @@ Cooperation = f(learning dynamics, evolutionary dynamics)
 
 No single landmark paper fully matches PredPreyGrass across all dimensions (sequential MARL, ecology, cooperation, population pressure, and learning-selection coupling). The closest lines of work are:
 
-| Work | Closest axis to PPG | Main gap vs PPG |
-|---|---|---|
-| [Claus and Boutilier (1998), *The Dynamics of Reinforcement Learning in Cooperative Multiagent Systems*](https://www.cs.toronto.edu/~cebly/Papers/multirl-abs.html) | Foundational emergence of cooperation in MARL | Small, abstract cooperative games; no ecological population dynamics |
-| [Leibo et al. (2017), *Multi-agent Reinforcement Learning in Sequential Social Dilemmas*](https://arxiv.org/abs/1702.03037) | Sequential social dilemmas and emergent cooperation | Limited evolutionary/selection dynamics |
-| [Hughes et al. (2018), *Inequity Aversion Improves Cooperation in Intertemporal Social Dilemmas*](https://papers.nips.cc/paper/7593-inequity-aversion-improves-cooperation-in-intertemporal-social-dilemmas) | Mechanisms that stabilize cooperation in sequential settings | Focus on social preferences, not ecology-selection coupling |
-| [Eccles et al. (2019), *Learning Reciprocity in Complex Sequential Social Dilemmas*](https://arxiv.org/abs/1903.08082) | Reciprocity under temporal and social complexity | No explicit ecological reproduction-selection loop |
-| [Leibo et al. (2018), *Malthusian Reinforcement Learning*](https://arxiv.org/abs/1812.07019) | Population pressure and ecology-linked MARL adaptation | Less focused on explicit cooperative hunting ecology |
-| [Zheng et al. (2018), *MAgent*](https://ojs.aaai.org/index.php/AAAI/article/view/11771) | Large-scale many-agent ecological-like environments | Benchmark platform, not a specific two-timescale cooperation theory |
-| [Suarez et al. (2019), *Neural MMO*](https://arxiv.org/abs/1903.00784) | Persistent multi-agent worlds with resource pressure and emergent roles | Different task framing; weaker explicit learning-selection theory framing |
-| [Leibo et al. (2021), *Melting Pot*](https://arxiv.org/abs/2107.06857) | Broad evaluation of social behaviors in MARL | Evaluation suite rather than a single ecological cooperation model |
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '38%' }} />
+      <col style={{ width: '24%' }} />
+      <col style={{ width: '38%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Work</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Closest axis to PPG</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Main gap vs PPG</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <a href="https://www.cs.toronto.edu/~cebly/Papers/multirl-abs.html">
+            Claus and Boutilier (1998), <em>The Dynamics of Reinforcement Learning in Cooperative Multiagent Systems</em>
+          </a>
+        </td>
+        <td>Foundational emergence of cooperation in MARL</td>
+        <td>Small, abstract cooperative games; no ecological population dynamics</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>
+          <a href="https://arxiv.org/abs/1702.03037">
+            Leibo et al. (2017), <em>Multi-agent Reinforcement Learning in Sequential Social Dilemmas</em>
+          </a>
+        </td>
+        <td>Sequential social dilemmas and emergent cooperation</td>
+        <td>Limited evolutionary/selection dynamics</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://papers.nips.cc/paper/7593-inequity-aversion-improves-cooperation-in-intertemporal-social-dilemmas">
+            Hughes et al. (2018), <em>Inequity Aversion Improves Cooperation in Intertemporal Social Dilemmas</em>
+          </a>
+        </td>
+        <td>Mechanisms that stabilize cooperation in sequential settings</td>
+        <td>Focus on social preferences, not ecology-selection coupling</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>
+          <a href="https://arxiv.org/abs/1903.08082">
+            Eccles et al. (2019), <em>Learning Reciprocity in Complex Sequential Social Dilemmas</em>
+          </a>
+        </td>
+        <td>Reciprocity under temporal and social complexity</td>
+        <td>No explicit ecological reproduction-selection loop</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://arxiv.org/abs/1812.07019">
+            Leibo et al. (2018), <em>Malthusian Reinforcement Learning</em>
+          </a>
+        </td>
+        <td>Population pressure and ecology-linked MARL adaptation</td>
+        <td>Less focused on explicit cooperative hunting ecology</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>
+          <a href="https://ojs.aaai.org/index.php/AAAI/article/view/11771">
+            Zheng et al. (2018), <em>MAgent</em>
+          </a>
+        </td>
+        <td>Large-scale many-agent ecological-like environments</td>
+        <td>Benchmark platform, not a specific two-timescale cooperation theory</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://arxiv.org/abs/1903.00784">
+            Suarez et al. (2019), <em>Neural MMO</em>
+          </a>
+        </td>
+        <td>Persistent multi-agent worlds with resource pressure and emergent roles</td>
+        <td>Different task framing; weaker explicit learning-selection theory framing</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>
+          <a href="https://arxiv.org/abs/2107.06857">
+            Leibo et al. (2021), <em>Melting Pot</em>
+          </a>
+        </td>
+        <td>Broad evaluation of social behaviors in MARL</td>
+        <td>Evaluation suite rather than a single ecological cooperation model</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Taken together, these works bracket PPG's design space. PPG is closest to their intersection, rather than to any one benchmark or theory.
 

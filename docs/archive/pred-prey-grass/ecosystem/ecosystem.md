@@ -31,11 +31,39 @@ Energy flows through the ecosystem via interactions between different trophic le
 
 ### Real-World Ecological Efficiency Heuristics
 
-| Energy Flow        | Typical Efficiency | Description |
-|--------------------|--------------------|-------------|
-| Sun → Grass        | ~1–2%              | Only a small fraction of solar energy is converted into plant biomass. |
-| Grass → Prey       | ~10–30%            | Much of the energy in grass is lost through digestion, heat, and movement. |
-| Prey → Predator    | ~10–20%            | Energy transfer further degrades; predators expend energy hunting and processing prey. |
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '24%' }} />
+      <col style={{ width: '24%' }} />
+      <col style={{ width: '52%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Energy Flow</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Typical Efficiency</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sun → Grass</td>
+        <td>~1–2%</td>
+        <td>Only a small fraction of solar energy is converted into plant biomass.</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Grass → Prey</td>
+        <td>~10–30%</td>
+        <td>Much of the energy in grass is lost through digestion, heat, and movement.</td>
+      </tr>
+      <tr>
+        <td>Prey → Predator</td>
+        <td>~10–20%</td>
+        <td>Energy transfer further degrades; predators expend energy hunting and processing prey.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 These values are commonly used heuristics in ecology and are derived from studies on trophic efficiency, such as Lindeman’s 10% rule.
 

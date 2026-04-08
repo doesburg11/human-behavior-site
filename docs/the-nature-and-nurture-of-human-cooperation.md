@@ -29,11 +29,15 @@ slug: /
 
 ## How does human cooperation emerge from evolution and learning?
 
-Human cooperative behavior is one of the central puzzles in biology and the social sciences. It emerges across generations through natural selection, and within lifetimes through learning. This project explores cooperation through Artificial Intelligence (AI) and Agent-Based Modeling (ABM) at two complementary and intertwined levels:
+Human cooperative behavior is one of the central puzzles in biology and the social sciences. This page treats cooperation as a two-timescale problem: some cooperative tendencies are shaped across generations by natural selection, and some are acquired within a lifetime through learning. The project studies both with Artificial Intelligence (AI) and Agent-Based Modeling (ABM).
 
 - **Nature** → Evolving cooperation over generations by natural selection
 
 - **Nurture** → Learning to cooperate within a lifetime
+
+### What cooperation means here
+
+In this project, cooperation means behavior that aligns with other actors through accommodation, support, or shared coordination rather than obstruction or opposition. For the fuller definition and the boundary with adversarial behavior, see [What is Cooperation?](/what-is-cooperation) and [What is Adversarial Behavior?](/what-is-adversarial-behavior).
 
 ## Why cooperation is a puzzle
 
@@ -119,24 +123,53 @@ Plasticity is the bridge between nature and nurture. It is an inherited capacity
 
 Display 2 is the conceptual hinge of the page. Evolution does not need to encode a fixed cooperative act directly. Instead, it can shape the architecture through which cooperation later becomes easier, harder, faster, or slower to learn.
 
-### What evolution contributes
+The first table gives the broad nature-versus-nurture split. The table below zooms in on plasticity itself: the specific learning machinery that evolution can tune and learning can use.
 
-Evolution shapes the parameters of learning rather than specifying every final behavior in advance. It can tune:
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '28%' }} />
+      <col style={{ width: '36%' }} />
+      <col style={{ width: '36%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Plasticity parameter</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>What evolution tunes</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>What learning uses it for</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Learning rate</td>
+        <td>How quickly a policy can update from experience.</td>
+        <td>How quickly behavior shifts when cooperation starts to pay off.</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Memory capacity</td>
+        <td>How much past interaction can be retained in the learning system.</td>
+        <td>How much earlier cooperation, defection, or reward history can still influence current action.</td>
+      </tr>
+      <tr>
+        <td>Exploratory bias</td>
+        <td>How much variation is available for trying new behavior.</td>
+        <td>How readily an agent tests new cooperative strategies or role patterns.</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Social-feedback sensitivity</td>
+        <td>How strongly selection can favor responsiveness to cues from others.</td>
+        <td>How strongly praise, punishment, reputation, or reward alter current behavior.</td>
+      </tr>
+      <tr>
+        <td>Robustness under changing environments</td>
+        <td>How well plasticity can remain useful when ecological conditions shift.</td>
+        <td>How well cooperation can persist when partners, costs, or opportunities change.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-- learning rate,
-- memory capacity,
-- exploratory bias,
-- sensitivity to social feedback,
-- robustness under changing environments.
-
-### What learning contributes
-
-Learning operates within those inherited constraints and adapts behavior to local ecological conditions. Agents can:
-
-- discover when cooperation is rewarded,
-- shift strategies across partners or contexts,
-- exploit repeated interaction,
-- coordinate on complementary roles.
+Seen this way, the table is not repeating the earlier summary. It shows the specific plasticity mechanisms that connect evolution to learning.
 
 ### Why the feedback loop matters
 
@@ -175,6 +208,10 @@ Plasticity closes that loop. In unstable environments, high plasticity may be fa
 - They also let us compare conditions under which cooperation is transient, stable, or selected for.
 
 ## Where to go next
+
+- [**What is Cooperation?**](/what-is-cooperation) gives the broad definition used throughout the site.
+
+- [**What is Adversarial Behavior?**](/what-is-adversarial-behavior) explains the main opposing category.
 
 - [**Cooperation in Perspective:**](/cooperation-in-perspective) places cooperation within the broader landscape of human behavior and clarifies what makes it a distinct behavioral pattern.
 

@@ -16,14 +16,56 @@ RL in a way distinguishes itself from Supervised and Unsupervised Learning, whic
 
 
 
-| **Aspect**           | **Supervised Learning**          | **Unsupervised Learning**            | **Reinforcement Learning**                |
-|----------------------|----------------------------------|--------------------------------------|-------------------------------------------|
-| **Feedback signal**  | Correct output labels            | No labels                            | Rewards from environment                  |
-| **Learning type**    | Passive (from examples)          | Passive (find structure)             | Active (trial-and-error interaction)      |
-| **Goal**             | Minimize error                   | Find structure or compression        | Maximize reward over time                 |
-| **Example task**     | Image classification             | Customer segmentation                | Game playing, robot navigation            |
-| **Data type**        | Labeled                          | Unlabeled                            | Dynamic experience                        |
----------------------------------------------------------------------------------------------------------------------------------------------
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '22%' }} />
+      <col style={{ width: '26%' }} />
+      <col style={{ width: '26%' }} />
+      <col style={{ width: '26%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Aspect</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Supervised Learning</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Unsupervised Learning</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Reinforcement Learning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Feedback signal</strong></td>
+        <td>Correct output labels</td>
+        <td>No labels</td>
+        <td>Rewards from environment</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td><strong>Learning type</strong></td>
+        <td>Passive (from examples)</td>
+        <td>Passive (find structure)</td>
+        <td>Active (trial-and-error interaction)</td>
+      </tr>
+      <tr>
+        <td><strong>Goal</strong></td>
+        <td>Minimize error</td>
+        <td>Find structure or compression</td>
+        <td>Maximize reward over time</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td><strong>Example task</strong></td>
+        <td>Image classification</td>
+        <td>Customer segmentation</td>
+        <td>Game playing, robot navigation</td>
+      </tr>
+      <tr>
+        <td><strong>Data type</strong></td>
+        <td>Labeled</td>
+        <td>Unlabeled</td>
+        <td>Dynamic experience</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <figure style={{ textAlign: 'center' }}>
   <figcaption><strong>Display 2:</strong> Distinctions between the three main Machine Learning paradigms</figcaption>
 </figure>
@@ -55,6 +97,5 @@ Multi agent reinforcement learning (MARL) is an interesting avenue to investigat
 
 
   
-
 
 

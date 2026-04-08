@@ -25,12 +25,38 @@ Classical evolutionary models treat cooperation as a trait or strategy that can 
 
 Evolved cooperation differs fundamentally from learned cooperation:
 
-| Learned cooperation | Evolved cooperation |
-|---|---|
-Policy changes within lifetime | Strategy frequencies change across generations |
-Learning acts across interactions | Selection acts across generations |
-Reward shapes behavior | Fitness shapes trait prevalence |
-Adaptation is individual-level | Adaptation is population-level |
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '50%' }} />
+      <col style={{ width: '50%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Learned cooperation</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Evolved cooperation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Policy changes within lifetime</td>
+        <td>Strategy frequencies change across generations</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Learning acts across interactions</td>
+        <td>Selection acts across generations</td>
+      </tr>
+      <tr>
+        <td>Reward shapes behavior</td>
+        <td>Fitness shapes trait prevalence</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Adaptation is individual-level</td>
+        <td>Adaptation is population-level</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Thus, cooperation can persist even when individuals are not explicitly "trying" to cooperate, provided cooperative traits are favored by selection.
 

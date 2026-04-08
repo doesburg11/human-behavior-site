@@ -145,18 +145,74 @@ These cases should be treated as context-dependent rather than automatically pla
 
 ### A compact taxonomy
 
-| Inside broad cooperation | Inside adversarial behavior | Strictly outside both |
-|---|---|---|
-| helping someone carry a box | competing for a promotion | noticing someone looks sad |
-| giving directions | rival firms advertising against each other | brief eye contact without further engagement |
-| greeting politely | arguing over blame | observing another person’s expression |
-| taking turns in conversation | threatening someone | nervous laughter as mere expression |
-| yielding space in a corridor | sabotage | blushing perceived by others |
-| letting someone merge in traffic | legal dispute | silent mutual awareness |
-| teaching a child | status rivalry | simply listening without aiding or resisting |
-| orderly queuing | punishing an opponent | neutral observation of another person's expression |
-| small talk that maintains civility | coercion | mere expressive signaling without accommodation or opposition |
-| tacit path adjustment to avoid collision | hostile political confrontation | noninteractive emotional display perceived by others |
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '34%' }} />
+      <col style={{ width: '33%' }} />
+      <col style={{ width: '33%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Broad cooperation</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Adversarial</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Outside both</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>helping someone carry a box</td>
+        <td>competing for a promotion</td>
+        <td>noticing someone looks sad</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>giving directions</td>
+        <td>rival firms advertising against each other</td>
+        <td>brief eye contact without further engagement</td>
+      </tr>
+      <tr>
+        <td>greeting politely</td>
+        <td>arguing over blame</td>
+        <td>observing another person’s expression</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>taking turns in conversation</td>
+        <td>threatening someone</td>
+        <td>nervous laughter as mere expression</td>
+      </tr>
+      <tr>
+        <td>yielding space in a corridor</td>
+        <td>sabotage</td>
+        <td>blushing perceived by others</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>letting someone merge in traffic</td>
+        <td>legal dispute</td>
+        <td>silent mutual awareness</td>
+      </tr>
+      <tr>
+        <td>teaching a child</td>
+        <td>status rivalry</td>
+        <td>simply listening without aiding or resisting</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>orderly queuing</td>
+        <td>punishing an opponent</td>
+        <td>neutral observation of another person's expression</td>
+      </tr>
+      <tr>
+        <td>small talk that maintains civility</td>
+        <td>coercion</td>
+        <td>mere expressive signaling without accommodation or opposition</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>tacit path adjustment to avoid collision</td>
+        <td>hostile political confrontation</td>
+        <td>noninteractive emotional display perceived by others</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Borderline cases such as greeting, small talk, turn-taking, and authority should therefore be classified contextually. In most ordinary settings, greeting, small talk, and turn-taking belong inside broad cooperation because they sustain civility and mutual accommodation. Authority relations vary more sharply by context: some are cooperative, some adversarial, and some remain mainly formal rather than clearly either.
 
