@@ -68,6 +68,7 @@ Display 1 frames the central problem of the site: cooperation is shaped by what 
 
 Rather than prescribing cooperative behavior through direct engineering, this project asks under which minimal constraints cooperative behavior emerges and persists in a multi-agent ecosystem. Nature and nurture are treated here as dynamically coupled processes rather than separate explanatory boxes.
 
+<figure style={{ margin: '0 0 2rem' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
     <colgroup>
@@ -111,20 +112,25 @@ Rather than prescribing cooperative behavior through direct engineering, this pr
     </tbody>
   </table>
 </div>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Evolution sets the conditions for cooperation; learning turns those conditions into behavior.</figcaption>
+</figure>
 
-## Why plasticity matters
+Display 2 gives the broad nature-versus-nurture split. The next section shows why that split matters for plasticity.
+
+## Why plasticity matters [explain placticity!]
 
 Plasticity is the bridge between nature and nurture. It is an inherited capacity to modify behavior in response to current conditions and experience.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/the-nature-and-nurture-of-human-cooperation/display-2.png" alt="Display 2: Nature and Nurture as fundamentals of behavior" width="400" />
-  <figcaption><strong>Display 2:</strong> Plasticity as the bridge between inherited structure and learned behavior</figcaption>
+  <img src="/img/the-nature-and-nurture-of-human-cooperation/display-2.png" alt="Display 3: Plasticity as the bridge between inherited structure and learned behavior" width="400" />
+  <figcaption><strong>Display 3:</strong> Plasticity as the bridge between inherited structure and learned behavior</figcaption>
 </figure>
 
-Display 2 is the conceptual hinge of the page. Evolution does not need to encode a fixed cooperative act directly. Instead, it can shape the architecture through which cooperation later becomes easier, harder, faster, or slower to learn.
+Display 3 is the conceptual hinge of the page. Evolution does not need to encode a fixed cooperative act directly. Instead, it can shape the architecture through which cooperation later becomes easier, harder, faster, or slower to learn.
 
-The first table gives the broad nature-versus-nurture split. The table below zooms in on plasticity itself: the specific learning machinery that evolution can tune and learning can use. The table shows the specific plasticity mechanisms that connect evolution to learning.
+The next display zooms in on plasticity itself: the specific learning machinery that evolution can tune and learning can use.
 
+<figure style={{ margin: '0 0 2rem' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
     <colgroup>
@@ -168,6 +174,8 @@ The first table gives the broad nature-versus-nurture split. The table below zoo
     </tbody>
   </table>
 </div>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Evolution tunes plasticity parameters; learning uses them to adjust cooperation in context.</figcaption>
+</figure>
 
 
 
