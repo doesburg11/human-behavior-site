@@ -187,6 +187,15 @@ The next display zooms in on plasticity itself: the specific learning machinery 
 
 The relationship does not stop there. Learning changes ecological structure, ecological structure changes selection pressures, and selection changes which forms of plasticity persist.
 
+<figure style={{ margin: '0 0 2rem' }}>
+  <img
+    src="/img/the-nature-and-nurture-of-human-cooperation/display-5.svg"
+    alt="Display 5: Eco-evolutionary feedback loop connecting evolution, learning, ecological structure, selection gradients, and environment-dependent plasticity"
+    style={{ display: 'block', width: '100%', height: 'auto' }}
+  />
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> The interaction between nature and nurture.</figcaption>
+</figure>
+
 - Evolution shapes learning capacities.
 
 - Learning reshapes ecological structure.
