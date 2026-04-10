@@ -10,7 +10,6 @@
       .bg { fill: #ffffff; }
       .header { fill: #0f3368; }
       .panel-soft { fill: #eaf2fb; stroke: #d6e4f5; stroke-width: 2; }
-      .panel-accent { fill: #dfeafb; stroke: #1c4b8f; stroke-width: 2.5; }
       .hub { fill: #f7fbff; stroke: #1c4b8f; stroke-width: 2.5; }
       .title {
         fill: #ffffff;
@@ -105,7 +104,7 @@
     <tspan x="862" dy="28">resource and social conditions are organized.</tspan>
   </text>
 
-  <rect class="panel-accent" x="830" y="540" width="500" height="250"/>
+  <rect class="panel-soft" x="830" y="540" width="500" height="250"/>
   <text class="step-index" x="862" y="582">03</text>
   <text class="step-title" x="862" y="630">
     <tspan x="862" dy="0">Ecological structure</tspan>
