@@ -53,7 +53,7 @@ Cooperation is easy to observe, but hard to explain. In many environments, indiv
 
 Any serious explanation of cooperation therefore has to account for both fast and slow adaptation: how agents change within a lifetime, and how populations change across generations.
 
-### The missing link between evolved and learned cooperation
+### Nature and nurture as intertwined sources of cooperation
 
 Most research has focused either on evolutionary explanations for the emergence of cooperation or on learning-based explanations in isolation. Yet in natural systems, cooperation emerges from their interaction across two timescales.
 
@@ -117,9 +117,15 @@ Rather than prescribing cooperative behavior through direct engineering, this pr
 
 Display 2 gives the broad nature-versus-nurture split. The next section shows why that split matters for plasticity.
 
-## Why plasticity matters [explain placticity!]
+## Plasticity: the missing link between evolved and learned cooperation
 
-Plasticity is the bridge between nature and nurture. It is an inherited capacity to modify behavior in response to current conditions and experience.
+Plasticity is the bridge between nature and nurture: evolution shapes the capacity to adapt, and learning uses that capacity to produce behavior. Here, it means an inherited capacity to adjust behavior in response to local conditions, social feedback, and accumulated experience.
+
+Plasticity is neither learning itself nor a fixed instinct. It is the machinery that makes learning possible: how quickly agents update from experience, how much they remember, how strongly they react to reward or punishment, and how readily they revise trust after cooperation or betrayal. Evolution therefore does not need to hard-code a single cooperative rule such as "always help" or "never trust strangers." Instead, it can shape the capacities that make different responses easier, harder, faster, or slower to learn.
+
+Consider a person entering a new workplace team. They do not arrive with a fully fixed cooperative script. They bring mechanisms for attending to reputation, remembering earlier exchanges, and updating expectations about others. If teammates share work fairly and return favors, that person is likely to become more open and cooperative over time. If teammates free-ride or exploit helpful behavior, the same person may become more cautious. What is inherited is not the exact final strategy, but the capacity to adjust strategy from experience.
+
+A familiar analogy comes from language acquisition. Chomsky argued, first against behaviorist accounts in 1959 and then more systematically in 1965, that children are not born already speaking a particular language, but with an innate capacity for language that develops through environmental input. The same logic applies here: humans may not be born with one fixed cooperative strategy, but with capacities that allow cooperation to be shaped by experience.
 
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/the-nature-and-nurture-of-human-cooperation/display-2.png" alt="Display 3: Plasticity as the bridge between inherited structure and learned behavior" width="400" />
@@ -177,8 +183,6 @@ The next display zooms in on plasticity itself: the specific learning machinery 
 <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Evolution tunes plasticity parameters; learning uses them to adjust cooperation in context.</figcaption>
 </figure>
 
-
-
 ### Why the feedback loop matters
 
 The relationship does not stop there. Learning changes ecological structure, ecological structure changes selection pressures, and selection changes which forms of plasticity persist.
@@ -187,7 +191,7 @@ The relationship does not stop there. Learning changes ecological structure, eco
 
 - Learning reshapes ecological structure.
 
-- Ecological structure reshapes selection gradients.
+- Ecological structure changes which traits selection favors.
 
 Plasticity closes that loop. In unstable environments, high plasticity may be favored because it supports rapid adjustment. In stable environments, lower plasticity may be favored because it reduces cost and preserves reliable behavior.
 
@@ -205,15 +209,15 @@ Plasticity closes that loop. In unstable environments, high plasticity may be fa
 
 ## Why AI and agent-based models?
 
-- AI and ABM offer opportunities to build the two timescales into the same research framework.
+If cooperation depends on both lifetime learning and longer-run selection, then the research tools need to represent both timescales at once. That is why AI and agent-based modeling enter the picture here. They do not appear as add-ons to the argument; they follow from the structure of the problem itself.
 
-- Reinforcement learning provides a concrete model of plasticity and adaptation within lifetimes.
+- Reinforcement learning provides a concrete model of plasticity within lifetimes: how agents update behavior from reward, punishment, memory, and repeated interaction.
 
-- Agent-based modeling provides a concrete model of ecology, local interaction, and population structure.
+- Agent-based modeling provides a concrete model of ecology: who interacts with whom, how often they meet again, how resources flow, and how population structure shapes incentives.
 
-- Together they make it possible to study how micro-level adaptation produces macro-level behavioral patterns.
+- Together they make it possible to study how individual adaptation scales up into collective patterns such as trust, reciprocity, free-riding, or stable cooperation.
 
-- They also let us compare conditions under which cooperation is transient, stable, or selected for.
+- They also allow systematic comparison across conditions, helping us ask when cooperation is fragile, when it stabilizes, and when selection should favor more or less plasticity.
 
 ## Where to go next
 

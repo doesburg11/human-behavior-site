@@ -128,6 +128,14 @@ For GitHub README pages:
 - if alternating row backgrounds are not supported, preserve the style through a strong blue header row and concise column structure
 - do not rely on custom CSS being available
 
+## Display Captions
+
+- Use `Display N:` for all visual elements, including images, diagrams, charts, and tables.
+- Keep captions short, sentence-style, and descriptive.
+- Use the same `figcaption` formatting for all displays on a page.
+- Default caption format: `<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display N:</strong> Caption text.</figcaption>`
+- Center captions by default, keep `Display N:` in bold, and end caption text with a period.
+
 ## Typography
 
 - Use a clean sans-serif stack consistent with the current site and Docusaurus defaults.
