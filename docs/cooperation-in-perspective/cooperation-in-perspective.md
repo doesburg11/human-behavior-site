@@ -12,6 +12,8 @@ Cooperation should not be treated as an isolated topic. It is one of the major r
 
 ## Where Cooperation Fits in Human Behavior
 
+Before focusing on cooperation itself, it helps to clarify the broader frame. Human behavior is the broad spectrum of observable responses through which individuals adapt to internal states, other people, and the environment. For the purposes of this site, the emphasis is on behavior that is available to ordinary social perception: what people can see, hear, or otherwise detect in one another without specialized instruments. That is the practical level at which coordination, accommodation, rivalry, and conflict become socially meaningful.
+
 The fuller definition of broad cooperation is developed in [What is Cooperation?](/what-is-cooperation). The adversarial side of the same interaction space is developed in [What is Adversarial Behavior?](/what-is-adversarial-behavior).
 
 <figure style={{ textAlign: 'center' }}>
@@ -29,99 +31,65 @@ These modes are not clean opposites. People may cooperate internally in order to
 
 Cooperative and adversarial behavior can overlap rather than excluding one another cleanly.
 
-People often cooperate internally in order to compete or conflict externally.
+A compact way to summarize the main overlap patterns is the following:
 
-Examples:
-
-- teammates cooperate in order to defeat another team
-- business partners cooperate inside one firm while competing against rival firms
-- political allies coordinate against opponents
-- soldiers cooperate within a unit during war
-
-Adversarial behavior can also be used to protect, stabilize, or enforce cooperation.
-
-Examples:
-
-- punishing a free rider in a public goods setting
-- confronting a cheat to preserve trust
-- moderators sanctioning rule-breakers to maintain a cooperative community
-- enforcing norms that sustain orderly collaboration
-
-In many real social settings, cooperative and adversarial behavior are intertwined.
-
-Examples:
-
-- party politics
-- labor strikes
-- courtroom settings
-- team sports
-- war coalitions
-
-### What lies outside both?
-
-If cooperation is interpreted broadly, then much ordinary interaction is already absorbed into cooperation. That means the region of human interaction strictly outside both cooperative and adversarial behavior becomes smaller.
-
-Still, some interaction remains outside both. The clearest cases are forms of social perception and expression that are socially oriented but not yet organized as either accommodation or opposition.
-
-### Social perception and awareness
-
-These are cases where people are socially oriented to one another, but are not yet helping, accommodating, rivaling, or opposing.
-
-Examples:
-
-- noticing that someone looks anxious
-- making brief eye contact
-- perceiving hesitation, embarrassment, or fatigue in another person
-- watching another person’s facial expression
-- listening without yet aiding, accommodating, or opposing
-
-Why this lies outside the two:
-
-- no facilitating or accommodating action is required
-- no adversarial relation is present
-
-### Mere expression or signaling
-
-A person may express something socially without the interaction yet being cooperative or adversarial.
-
-Examples:
-
-- blushing
-- nervous laughter
-- a sigh
-- tone of voice as an expressive cue
-- emotional display perceived by others
-
-Why this lies outside the two:
-
-- expression alone is not yet cooperation
-- it is not necessarily adversarial
-
-### Authority and hierarchy as borderline cases
-
-Some interaction is structured mainly by unequal authority or control, not by cooperation or adversariality. These cases are more borderline than the two categories above.
-
-Examples:
-
-- a judge addressing a defendant
-- a security guard directing visitors
-- a bureaucrat checking identity documents
-- a teacher calling on a student
-- a supervisor issuing routine instructions
-
-These cases should be treated as context-dependent rather than automatically placed outside both. Some authority relations are cooperative, some adversarial, and some remain mainly formal or procedural.
-
-### A compact taxonomy
-
+<figure style={{ margin: '0 0 2rem' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
     <colgroup>
+      <col style={{ width: '28%' }} />
       <col style={{ width: '34%' }} />
-      <col style={{ width: '33%' }} />
-      <col style={{ width: '33%' }} />
+      <col style={{ width: '38%' }} />
     </colgroup>
     <thead>
       <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Pattern</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>How the overlap works</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Internal cooperation for external rivalry</td>
+        <td>Actors cooperate within a group in order to compete or conflict with another group.</td>
+        <td>team sports, firms facing rivals, political coalitions, military units</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>Adversarial enforcement of cooperation</td>
+        <td>Opposition, punishment, or sanctioning is used to protect a cooperative norm or arrangement.</td>
+        <td>punishing free riders, confronting cheats, sanctioning rule-breakers, enforcing collaboration norms</td>
+      </tr>
+      <tr>
+        <td>Mixed or intertwined settings</td>
+        <td>Cooperative and adversarial relations operate together in the same social system rather than appearing separately.</td>
+        <td>party politics, labor strikes, courtroom settings, team sports, war coalitions</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Main ways cooperative and adversarial behavior overlap in practice.</figcaption>
+</figure>
+
+### Interaction outside cooperative and adverserial behavior
+
+If cooperation is interpreted broadly, then much ordinary interaction is already absorbed into cooperation. That means the region of human interaction strictly outside both cooperative and adversarial behavior becomes smaller.
+
+Still, some interaction remains outside both. The clearest cases are forms of social perception and mere expression that are socially oriented but not yet organized as either accommodation or opposition: noticing that someone looks anxious, making brief eye contact, watching another person's expression, blushing, nervous laughter, or tone of voice as an expressive cue. These cases involve social orientation, but they do not by themselves facilitate another person's action and they are not adversarial. A more borderline remainder consists of authority and hierarchy, such as a judge addressing a defendant, a security guard directing visitors, or a supervisor issuing routine instructions. These cases should be classified contextually rather than automatically placed outside both, because some are cooperative, some adversarial, and some remain mainly formal or procedural.
+
+### A compact taxonomy
+
+<figure style={{ margin: '0 0 2rem' }}>
+<div style={{ width: '100%', overflowX: 'auto' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
+    <colgroup>
+      <col style={{ width: '26%' }} />
+      <col style={{ width: '24.5%' }} />
+      <col style={{ width: '24.5%' }} />
+      <col style={{ width: '25%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Dimension</th>
         <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Broad cooperation</th>
         <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Adversarial</th>
         <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Outside both</th>
@@ -129,58 +97,28 @@ These cases should be treated as context-dependent rather than automatically pla
     </thead>
     <tbody>
       <tr>
-        <td>helping someone carry a box</td>
-        <td>competing for a promotion</td>
-        <td>noticing someone looks sad</td>
+        <td>Core relation</td>
+        <td>Compatibility, accommodation, support, or orderly coordination</td>
+        <td>Rivalry, opposition, obstruction, or negative interdependence</td>
+        <td>Social orientation without either accommodation or opposition</td>
       </tr>
       <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td>giving directions</td>
-        <td>rival firms advertising against each other</td>
-        <td>brief eye contact without further engagement</td>
+        <td>Typical forms</td>
+        <td>helping, teaching, turn-taking, civility, tacit coordination</td>
+        <td>competition, conflict, coercion, sabotage, punishment</td>
+        <td>social perception, mere expression, some formal hierarchy</td>
       </tr>
       <tr>
-        <td>greeting politely</td>
-        <td>arguing over blame</td>
-        <td>observing another person’s expression</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td>taking turns in conversation</td>
-        <td>threatening someone</td>
-        <td>nervous laughter as mere expression</td>
-      </tr>
-      <tr>
-        <td>yielding space in a corridor</td>
-        <td>sabotage</td>
-        <td>blushing perceived by others</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td>letting someone merge in traffic</td>
-        <td>legal dispute</td>
-        <td>silent mutual awareness</td>
-      </tr>
-      <tr>
-        <td>teaching a child</td>
-        <td>status rivalry</td>
-        <td>simply listening without aiding or resisting</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td>orderly queuing</td>
-        <td>punishing an opponent</td>
-        <td>neutral observation of another person's expression</td>
-      </tr>
-      <tr>
-        <td>small talk that maintains civility</td>
-        <td>coercion</td>
-        <td>mere expressive signaling without accommodation or opposition</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td>tacit path adjustment to avoid collision</td>
-        <td>hostile political confrontation</td>
-        <td>noninteractive emotional display perceived by others</td>
+        <td>Interpretive note</td>
+        <td>Includes much ordinary interaction under a broad definition</td>
+        <td>Can overlap with cooperation in mixed or strategic settings</td>
+        <td>Small residual category; authority cases are often borderline</td>
       </tr>
     </tbody>
   </table>
 </div>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Compact taxonomy of broad cooperation, adversarial behavior, and interaction outside both.</figcaption>
+</figure>
 
 Borderline cases such as greeting, small talk, turn-taking, and authority should therefore be classified contextually. In most ordinary settings, greeting, small talk, and turn-taking belong inside broad cooperation because they sustain civility and mutual accommodation. Authority relations vary more sharply by context: some are cooperative, some adversarial, and some remain mainly formal rather than clearly either.
 
@@ -200,20 +138,22 @@ This prevents the outside region from being overloaded with examples that actual
 
 > Human interaction is broader than cooperative and adversarial behavior, but these two categories capture many of its most important relational modes. If cooperation is understood broadly, it includes not only explicit teamwork but also helping, civility, tacit coordination, turn-taking, and routine social accommodation. Adversarial behavior includes both competition and conflict. Under that broad definition, much everyday interaction falls within cooperation rather than outside it. What remains outside cooperative and adversarial behavior consists mainly of social perception, expressive signaling, and some hierarchical relations that are not yet cooperative or adversarial.
 
-## Why Cooperation Still Matters
+## Why Cooperation Matters Especially for Humans
 
-The front page already explains why cooperation has to be understood across evolution and learning. A short reminder is enough here: cooperation is not a peripheral topic in human life. It is central because human distinctiveness depends so heavily on social cognition, coordination, communication, and cumulative culture.
+The front page explains cooperation as a two-timescale problem shaped by evolution and learning. This page does not repeat that full argument, but it does clarify why cooperation deserves such a central place in it. Human life is deeply structured by interdependence, so any account of behavior has to explain how people become able to coordinate, accommodate, and learn from one another.
 
-Herrmann et al. (2007) are useful here because the comparison with closely related ape species makes the point more precise. If humans were simply better than chimpanzees and orangutans across the board, cooperation would be less revealing. What matters instead is that the human difference is especially large in the social domain.
+Herrmann et al. (2007) help make that point more precise. The comparison with closely related ape species suggests that the human difference is especially large in the social domain rather than across every kind of problem-solving.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 2: 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007)" width="1180" style={{ display: 'block', margin: '0 auto' }} />
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007).</figcaption>
+  <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 4: 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007)" width="1180" style={{ display: 'block', margin: '0 auto' }} />
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007).</figcaption>
 </figure>
 
-The point is not that humans are superior at everything. The more precise claim is that humans show a distinctive advantage in social cognition very early in development, even before literacy and formal schooling. That matters for cooperation because cooperation is not mainly a matter of raw strength or isolated problem-solving. It depends heavily on reading attention, inferring goals, learning culturally from others, and aligning behavior through communication.
+The point is not that humans are superior at everything. The more relevant claim for this site is that humans show an early advantage in social cognition: attending to others, inferring goals, coordinating attention, and learning from social interaction. Those capacities do not amount to a fixed cooperative script, but they do provide part of the inherited background that makes cooperation developmentally and behaviorally possible.
 
-An influential line of work associated with Dunbar's social brain hypothesis makes a related point from another angle. In Dunbar's formulation, a substantial part of primate brain expansion is connected to the demands of social life rather than to solitary problem-solving alone. The exact strength of that claim can be debated, but the broader implication is clear enough for the present page. Cooperation matters because human life is deeply structured by interdependence, and that interdependence places heavy demands on social cognition.
+An influential line of work associated with Dunbar's social brain hypothesis makes a related point from the evolutionary side. In Dunbar's formulation, a substantial part of primate brain expansion is connected to the demands of social life rather than to solitary problem-solving alone. The exact strength of that claim can be debated, but the broader implication is clear enough for the present page. If social life imposed heavy demands on coordination, communication, and relationship management, then selection would be expected to favor capacities that support socially responsive behavior.
+
+On that view, cooperation is not an isolated add-on to human life. It is one expression of a broader system in which inherited social capacities and lifetime learning jointly shape how people interact.
 
 ### What follows
 
