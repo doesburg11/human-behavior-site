@@ -241,3 +241,10 @@ If cooperation depends on both lifetime learning and longer-run selection, then 
 - [**Learned Cooperation:**](/learned-cooperation) asks how cooperative behavior can be acquired within a lifetime through adaptation and experience.
 
 - [**Interaction Evolved-Learned Cooperation:**](/learning-selection-interaction/theory) connects those two timescales and explores how evolution and learning interact.
+
+---
+
+## References
+
+- Chomsky, N. (1959). *Review of B. F. Skinner's Verbal Behavior*. *Language*, 35(1), 26-58. https://doi.org/10.2307/411334
+- Chomsky, N. (1965). *Aspects of the Theory of Syntax*. Cambridge, MA: MIT Press. https://mitpress.mit.edu/9780262527408/aspects-of-the-theory-of-syntax/

@@ -1,5 +1,16 @@
 # Repository Instructions
 
+## Documentation Reference Style
+
+When a docs page makes a source-specific empirical, historical, or textual claim, use a `## References` section at the end of the page rather than inline bibliographic links inside the body text.
+
+Style rules:
+
+- keep the prose readable and uncluttered; do not insert inline citation links like `[Author 2020](...)` into normal explanatory sentences unless explicitly requested
+- add full references in an end-of-page `## References` section
+- match the reference style already used on docs pages in this repo: author, year, title, venue or publisher, and direct link or DOI where available
+- if only one or two claims on a page need sourcing, still prefer the end-of-page `## References` section over inline bibliography-style links
+
 ## Archive Move Rule
 
 When moving a docs section into `docs/archive/...`, always move its related static assets into the matching archive image path as well.
