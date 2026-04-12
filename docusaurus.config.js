@@ -20,7 +20,7 @@ const config = {
   ],
 
   organizationName: 'doesburg11', 
-  projectName: 'human-behavior-site', 
+  projectName: 'humam-cooperation-site', 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -38,7 +38,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
-          editUrl: 'https://github.com/doesburg11/human-behavior-site/edit/main/',
+          editUrl: 'https://github.com/doesburg11/humam-cooperation-site/edit/main/',
         },
         // BLOG REMOVED — no blog
         theme: {

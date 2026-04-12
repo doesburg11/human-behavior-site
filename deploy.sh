@@ -3,7 +3,7 @@ set -euo pipefail
 
 # --- Paths ---
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
-SRC="$SCRIPT_DIR"                             # repo root of human-behavior-site
+SRC="$SCRIPT_DIR"                             # repo root of humam-cooperation-site
 BUILD="$SRC/build"
 TARGET="${TARGET:-$HOME/Projects/doesburg11.github.io}"  # override with env var if needed
 DOMAIN="${DOMAIN:-humanbehaviorpatterns.org}"
