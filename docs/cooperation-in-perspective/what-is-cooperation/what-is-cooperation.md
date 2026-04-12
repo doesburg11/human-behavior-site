@@ -215,9 +215,9 @@ The four-part subdivision above is conceptual. There is no major time-use datase
 
 For **modern adult populations in OECD-like time-use-survey settings**, a plausible **relative division of cooperative time** is:
 
-<figure style={{ textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/what-is-cooperation/display-3.svg" alt="Display 3: Division of the four broad forms of cooperation" width="900" />
-  <figcaption><strong>Display 3:</strong> Division of the four broad forms of cooperation.</figcaption>
+<figure style={{ width: '100%', margin: '0', textAlign: 'center' }}>
+   <img src="/img/cooperation-in-perspective/what-is-cooperation/display-3.svg" alt="Display 3: Division of the four broad forms of cooperation" style={{ display: 'block', width: '100%', maxWidth: '100%', height: 'auto' }} />
+   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Time division of the four broad forms of cooperation.</figcaption>
 </figure>
 
 These percentages are best read as shares of **cooperative time**, not shares of the entire day. In other words, if one looks only at the time people spend in behavior that can reasonably be classified as cooperative, the largest portion likely falls under **shared coordination**, followed by **norm-sustaining cooperation**, with **mutual accommodation** and **active support** each occupying smaller but still substantial shares.

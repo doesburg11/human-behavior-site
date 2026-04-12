@@ -1,6 +1,6 @@
 # Docusaurus Workflow (Desktop + Laptop)
 
-This is the current workflow for working on `humam-cooperation-site` from multiple devices.
+This is the current workflow for working on `human-cooperation-site` from multiple devices.
 
 Publishing is now handled automatically by GitHub Actions when you push to `main`.
 
@@ -10,8 +10,8 @@ Do this once on each computer:
 
 ```bash
 cd ~/Projects
-git clone https://github.com/doesburg11/humam-cooperation-site.git
-cd humam-cooperation-site
+git clone https://github.com/doesburg11/human-cooperation-site.git
+cd human-cooperation-site
 npm install
 ```
 
@@ -24,13 +24,13 @@ Notes:
 This repo has a GitHub Actions deploy workflow:
 - `.github/workflows/deploy-to-pages-repo.yml`
 
-It requires a repository secret in `doesburg11/humam-cooperation-site`:
+It requires a repository secret in `doesburg11/human-cooperation-site`:
 - `DEPLOY_REPO_PAT` (PAT with write access to `doesburg11/doesburg11.github.io`)
 
 ## Regular Workflow (per session)
 
 ```bash
-cd ~/Projects/humam-cooperation-site
+cd ~/Projects/human-cooperation-site
 git pull
 ```
 
@@ -74,7 +74,7 @@ What happens next:
 - The live site updates if the workflow succeeds
 
 Check deploy status in GitHub:
-- `humam-cooperation-site` -> `Actions` -> `Deploy Site To Pages Repo`
+- `human-cooperation-site` -> `Actions` -> `Deploy Site To Pages Repo`
 
 Important:
 - `commit` alone does not publish
@@ -106,14 +106,14 @@ This script:
   - `commit` only saves locally. Run `git push origin main`.
 
 - I pushed, but nothing published:
-  - Check `humam-cooperation-site` -> `Actions` -> `Deploy Site To Pages Repo`.
+  - Check `human-cooperation-site` -> `Actions` -> `Deploy Site To Pages Repo`.
   - If the workflow failed, open the failed step and read the error lines.
 
 - Workflow says `No deploy changes.`:
   - The build output did not change (normal if your edits do not affect generated files).
 
 - Workflow fails with missing secret / auth error:
-  - Verify repository secret `DEPLOY_REPO_PAT` exists in `doesburg11/humam-cooperation-site`.
+  - Verify repository secret `DEPLOY_REPO_PAT` exists in `doesburg11/human-cooperation-site`.
   - Verify the PAT has write access to `doesburg11/doesburg11.github.io`.
 
 - Workflow does not start after push:
