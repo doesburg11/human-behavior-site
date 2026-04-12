@@ -5,7 +5,7 @@ import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'The Nature and Nurture of Cooperation',
+  title: 'The Nature and Nurture of Human Cooperation',
   tagline: 'Exploring the roots of human actions',
   favicon: 'img/favicon.ico',
 
@@ -65,7 +65,7 @@ const config = {
           items: [
             { 
               label: 'GitHub',
-              href: 'https://github.com/doesburg11/PredPreyGrass',
+              href: 'https://github.com/doesburg11/human-cooperation-site',
             },
             { 
               label: 'LinkedIn',

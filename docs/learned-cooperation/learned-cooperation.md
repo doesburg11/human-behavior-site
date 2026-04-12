@@ -212,7 +212,7 @@ In PredPreyGrass, learned cooperation forms the **nurture component** of a two-t
 
 This section is organized around your central motto:
 
-**The Nature and Nurture of Cooperation**  
+**The Nature and Nurture of Human Cooperation**  
 Here we focus on the **nurture** side: how cooperation can emerge from learning.
 
 ## Why start with defection?
