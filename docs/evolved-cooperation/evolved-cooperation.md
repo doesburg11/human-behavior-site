@@ -9,6 +9,12 @@ slug: /evolved-cooperation
 
 Evolved cooperation refers to cooperative behavior that becomes more common **through natural selection across generations**, rather than through adaptation during a single lifetime.
 
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
+  <p style={{ margin: '0' }}>
+    <strong style={{ color: '#0F3368' }}>Working definition.</strong> Evolved cooperation concerns the spread and maintenance of cooperative traits through differential survival and reproduction across generations, rather than through within-lifetime learning alone.
+  </p>
+</div>
+
 In this framework, populations:
 
 - contain heritable variation in behavior,
@@ -25,38 +31,41 @@ Classical evolutionary models treat cooperation as a trait or strategy that can 
 
 Evolved cooperation differs fundamentally from learned cooperation:
 
-<div style={{ width: '100%', overflowX: 'auto' }}>
-  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
-    <colgroup>
-      <col style={{ width: '50%' }} />
-      <col style={{ width: '50%' }} />
-    </colgroup>
-    <thead>
-      <tr>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Learned cooperation</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Evolved cooperation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Policy changes within lifetime</td>
-        <td>Strategy frequencies change across generations</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td>Learning acts across interactions</td>
-        <td>Selection acts across generations</td>
-      </tr>
-      <tr>
-        <td>Reward shapes behavior</td>
-        <td>Fitness shapes trait prevalence</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td>Adaptation is individual-level</td>
-        <td>Adaptation is population-level</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+      <colgroup>
+        <col style={{ width: '50%' }} />
+        <col style={{ width: '50%' }} />
+      </colgroup>
+      <thead>
+        <tr>
+          <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Learned cooperation</th>
+          <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Evolved cooperation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Policy changes within lifetime</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strategy frequencies change across generations</td>
+        </tr>
+        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Learning acts across interactions</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Selection acts across generations</td>
+        </tr>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Reward shapes behavior</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Fitness shapes trait prevalence</td>
+        </tr>
+        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Adaptation is individual-level</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Adaptation is population-level</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Learned cooperation and evolved cooperation compared.</figcaption>
+</figure>
 
 Thus, cooperation can persist even when individuals are not explicitly "trying" to cooperate, provided cooperative traits are favored by selection.
 
@@ -204,10 +213,33 @@ Across these model systems, evolved cooperation forms the **nature component** o
 
 The current site includes two complementary evolved-cooperation examples:
 
-- [Spatial Altruism](/evolved-cooperation/spatial-altruism/)
-  A minimal patch-based model in which altruist and selfish traits compete through local benefit, private cost, and a neighborhood lottery.
-- [Cooperative Hunting](/evolved-cooperation/cooperative-hunting/)
-  A spatial ecological model in which predator cooperation evolves through hunting success, energetic cost, and inherited trait variation.
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+      <colgroup>
+        <col style={{ width: '28%' }} />
+        <col style={{ width: '72%' }} />
+      </colgroup>
+      <thead>
+        <tr>
+          <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Case study</th>
+          <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Selection logic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/spatial-altruism/">Spatial Altruism</a></td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A minimal patch-based model in which altruist and selfish traits compete through local benefit, private cost, and a neighborhood lottery.</td>
+        </tr>
+        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/cooperative-hunting/">Cooperative Hunting</a></td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A spatial ecological model in which predator cooperation evolves through hunting success, energetic cost, and inherited trait variation.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Current evolved-cooperation case studies.</figcaption>
+</figure>
 
 ## Next Candidate From The Repo
 
@@ -223,6 +255,13 @@ That model is simpler than the two current examples, but it still fits the same 
 
 So the current roadmap is:
 
-1. `Spatial Altruism`
-2. `Cooperative Hunting`
-3. possible later addition: `Cooperative vs Greedy Grazing`
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
+  <p style={{ margin: '0 0 0.75rem 0' }}>
+    <strong style={{ color: '#0F3368' }}>Current roadmap.</strong>
+  </p>
+  <ol style={{ margin: '0', paddingLeft: '1.25rem' }}>
+    <li><code>Spatial Altruism</code></li>
+    <li><code>Cooperative Hunting</code></li>
+    <li>possible later addition: <code>Cooperative vs Greedy Grazing</code></li>
+  </ol>
+</div>
