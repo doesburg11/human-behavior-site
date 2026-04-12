@@ -215,9 +215,9 @@ The four-part subdivision above is conceptual. There is no major time-use datase
 
 For **modern adult populations in OECD-like time-use-survey settings**, a plausible **relative division of cooperative time** is:
 
-<figure style={{ width: '100%', margin: '0', textAlign: 'center' }}>
-   <img src="/img/cooperation-in-perspective/what-is-cooperation/display-3.svg" alt="Display 3: Division of the four broad forms of cooperation" style={{ display: 'block', width: '100%', maxWidth: '100%', height: 'auto' }} />
-   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Time division of the four broad forms of cooperation.</figcaption>
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+   <img src="/img/cooperation-in-perspective/what-is-cooperation/display-1.svg" alt="Display 1: Time division of the four broad forms of cooperation" style={{ display: 'block', width: '100%', maxWidth: '100%', height: 'auto' }} />
+   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Time division of the four broad forms of cooperation.</figcaption>
 </figure>
 
 These percentages are best read as shares of **cooperative time**, not shares of the entire day. In other words, if one looks only at the time people spend in behavior that can reasonably be classified as cooperative, the largest portion likely falls under **shared coordination**, followed by **norm-sustaining cooperation**, with **mutual accommodation** and **active support** each occupying smaller but still substantial shares.
@@ -293,14 +293,9 @@ So the table above should be read as a **defensible empirical working estimate**
 
 If cooperation is divided into these four forms, the best empirical approximation is that **shared coordination** occupies the largest portion of cooperative time in modern adult life, **norm-sustaining cooperation** forms the next largest share, and **active support** and **mutual accommodation** each occupy smaller but still important portions.
 
-### Sources
+### References
 
 - [U.S. Bureau of Labor Statistics, American Time Use Survey 2024 Table 2](https://www.bls.gov/news.release/atus.t02.htm)
 - [U.S. Bureau of Labor Statistics, Daily time use in households with young children in 2024](https://www.bls.gov/opub/ted/2025/daily-time-use-in-households-with-young-children-in-2024.htm)
 - [OECD, How's Life? 2020, Social Connections](https://www.oecd.org/en/publications/how-s-life/volume-/issue-_9870c393-en/full-report/component-14.html)
 - [OECD, How's Life? 2024, Community relationships](https://www.oecd.org/en/publications/2024/11/how-s-life-2024_bdcf2f9f/full-report/component-5.html)
-
-<figure style={{ textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/what-is-cooperation/display-2.png" alt="Display 2: Cooperation as a necessary condition" width="400" />
-  <figcaption><strong>Display 2:</strong> Cooperation as a necessary condition</figcaption>
-</figure>

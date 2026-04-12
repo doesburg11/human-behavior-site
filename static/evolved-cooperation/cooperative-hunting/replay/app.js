@@ -1,4 +1,4 @@
-const DEMO_BASE_PATH = "./data/cooperative-hunting-demo/";
+const DEMO_BASE_PATH = "./data/cooperative-hunting/";
 const CHART_PADDING = { left: 56, right: 18, top: 16, bottom: 34 };
 
 const COLORS = {

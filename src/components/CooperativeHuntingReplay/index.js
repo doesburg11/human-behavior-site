@@ -203,7 +203,7 @@ async function loadJson(path) {
 }
 
 export default function CooperativeHuntingReplay() {
-  const replayDataBasePath = useBaseUrl('/evolved-cooperation/cooperative-hunting/replay/data/cooperative-hunting-demo/');
+  const replayDataBasePath = useBaseUrl('/evolved-cooperation/cooperative-hunting/replay/data/cooperative-hunting/');
   const worldCanvasRef = useRef(null);
   const chartCanvasRef = useRef(null);
 

@@ -183,7 +183,7 @@ async function loadJson(path) {
 }
 
 export default function SpatialAltruismReplay() {
-  const replayDataBasePath = useBaseUrl('/evolved-cooperation/spatial-altruism/replay/data/spatial-altruism-demo/');
+  const replayDataBasePath = useBaseUrl('/evolved-cooperation/spatial-altruism/replay/data/spatial-altruism/');
   const worldCanvasRef = useRef(null);
   const chartCanvasRef = useRef(null);
 

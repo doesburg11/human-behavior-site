@@ -136,6 +136,13 @@ For GitHub README pages:
 - Default caption format: `<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display N:</strong> Caption text.</figcaption>`
 - Center captions by default, keep `Display N:` in bold, and end caption text with a period.
 
+## Display Spacing
+
+- Use consistent spacing below display figures before the following paragraph or section.
+- Default figure format: `<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>`
+- Keep caption spacing consistent with `marginTop: '0.6rem'`.
+- Treat this as the default for all display figures unless a page has a specific reason to differ.
+
 ## Typography
 
 - Use a clean sans-serif stack consistent with the current site and Docusaurus defaults.

@@ -1,5 +1,9 @@
 # Repository Instructions
 
+## House Style
+
+Follow `HOUSE_STYLE.md` for docs presentation conventions, including display formatting, captions, and spacing.
+
 ## Documentation Reference Style
 
 When a docs page makes a source-specific empirical, historical, or textual claim, use a `## References` section at the end of the page rather than inline bibliographic links inside the body text.
