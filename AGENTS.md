@@ -8,6 +8,16 @@ Follow `HOUSE_STYLE.md` for docs presentation conventions, including display for
 
 Follow the `## References` rules in `HOUSE_STYLE.md` for docs pages.
 
+## Cross-Repo Mapping
+
+- This repository (`human-cooperation-site`) is the website/documentation layer for models implemented in the sibling `EvolvedCooperation` repo.
+- The public site `https://humanbehaviorpatterns.org/` must stay faithful to the canonical Python implementations in `EvolvedCooperation`.
+- Required 1-to-1 mapping:
+  - `spatial_altruism` page/section in this repo <-> `spatial_altruism/` in `EvolvedCooperation`
+  - `cooperative_hunting` page/section in this repo <-> `cooperative_hunting/` in `EvolvedCooperation`
+- When modifying either page/section here, check whether the corresponding Python implementation or README in `EvolvedCooperation` also needs an update.
+- When the implementation changes in `EvolvedCooperation`, update the matching page here if the behavior, assumptions, or interpretation changed.
+
 ## Archive Move Rule
 
 When moving a docs section into `docs/archive/...`, always move its related static assets into the matching archive image path as well.

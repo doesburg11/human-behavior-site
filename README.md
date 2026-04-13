@@ -2,6 +2,23 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
+## Cross-Repo Mapping
+
+This repo builds `https://humanbehaviorpatterns.org/` and serves as the
+documentation/presentation layer for canonical Python models implemented in the
+sibling `EvolvedCooperation` repo.
+
+Current required 1-to-1 mapping:
+
+- `spatial_altruism` page/section here <-> `spatial_altruism/` in
+  `EvolvedCooperation`
+- `cooperative_hunting` page/section here <-> `cooperative_hunting/` in
+  `EvolvedCooperation`
+
+When the implementation changes in `EvolvedCooperation`, review and update the
+matching page here. When the website explanation changes here, keep it faithful
+to the Python implementation there.
+
 ## Installation
 
 ```bash
