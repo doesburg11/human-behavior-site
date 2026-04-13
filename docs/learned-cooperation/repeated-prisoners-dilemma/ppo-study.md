@@ -7,11 +7,11 @@ sidebar_position: 2
 
 # Repeated Prisoner's Dilemma: PPO Study
 
-This case study summarizes the `SequentialPrisonersDilemma` project, where two independently trained PPO agents repeatedly play a Prisoner's Dilemma game. The goal is to test whether learned behavior converges to persistent defection, cooperative conventions, or mixed horizon-dependent patterns.
+This case study summarizes the `LearnedCooperation` project, where two independently trained PPO agents repeatedly play a Prisoner's Dilemma game. The goal is to test whether learned behavior converges to persistent defection, cooperative conventions, or mixed horizon-dependent patterns.
 
 ## Environment and Learning Setup
 
-- Environment: `envs/prisoners_dilemma_env.py`
+- Environment: `envs/repeated_prisoners_dilemma_env.py`
 - Agents: `player_1` and `player_2`
 - Actions: `0 = cooperate`, `1 = defect`
 - Training algorithm: PPO (RLlib 2.54.0)
@@ -23,7 +23,7 @@ Payoff matrix per round:
   <img src="/img/learned-cooperation/repeated-prisoners-dilemma/ppo-study/payoff-matrix.svg" alt="Prisoner's Dilemma payoff matrix" width="420" />
 </figure>
 
-Episodes run with a fixed horizon `n_sequential_games`, so each episode is a finite repeated game.
+Episodes run with a fixed horizon `n_rounds`, so each episode is a finite repeated game.
 
 ## Research Question and Hypotheses
 
@@ -47,11 +47,11 @@ The project reports:
 It also includes two robustness workflows:
 
 - `stability_sweep`: checks variance and stability across random seeds.
-- `sweep_n_sequential_pd`: measures how cooperation changes as horizon length changes.
+- `sweep_n_rounds_pd`: measures how cooperation changes as horizon length changes.
 
 ## Main Reported Fixed-Horizon Result (50 rounds)
 
-The README reports that for `n_sequential_games = 50`, both agents converge to all-defect behavior in evaluation:
+The README reports that for `n_rounds = 50`, both agents converge to all-defect behavior in evaluation:
 
 - `mean_episode_reward`: `player_1 = 50.0`, `player_2 = 50.0`
 - `cooperation_rate`: `player_1 = 0.0`, `player_2 = 0.0`
@@ -59,13 +59,13 @@ The README reports that for `n_sequential_games = 50`, both agents converge to a
 
 This matches the finite-horizon all-defect baseline where each round yields `(D, D) -> (1, 1)`.
 
-## Sweep Results: Cooperation vs Number of Repeated Games
+## Sweep Results: Cooperation vs Number of Rounds
 
-The repository also reports a broader sweep across `n_sequential_games = 5..100` (step 5), using 20 seeds and 95% confidence intervals.
+The repository also reports a broader sweep across `n_rounds = 5..100` (step 5), using 20 seeds and 95% confidence intervals.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/learned-cooperation/repeated-prisoners-dilemma/ppo-study/display-1.png" alt="Display 1: Mean cooperation rates across repeated games with 95% confidence bands" width="1000" />
-  <figcaption><strong>Display 1:</strong> Mean cooperation rates (20 seeds) across the number of repeated Prisoner's Dilemma games, with 95% confidence bands.</figcaption>
+  <img src="/img/learned-cooperation/repeated-prisoners-dilemma/ppo-study/display-1.png" alt="Display 1: Mean cooperation rates across n_rounds with 95% confidence bands" width="1000" />
+  <figcaption><strong>Display 1:</strong> Mean cooperation rates (20 seeds) across `n_rounds`, with 95% confidence bands.</figcaption>
 </figure>
 
 Key observations summarized from the README:
