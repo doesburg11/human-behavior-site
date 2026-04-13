@@ -10,13 +10,15 @@ Follow the `## References` rules in `HOUSE_STYLE.md` for docs pages.
 
 ## Cross-Repo Mapping
 
-- This repository (`human-cooperation-site`) is the website/documentation layer for models implemented in the sibling `EvolvedCooperation` repo.
-- The public site `https://humanbehaviorpatterns.org/` must stay faithful to the canonical Python implementations in `EvolvedCooperation`.
-- Required 1-to-1 mapping:
+- This repository (`human-cooperation-site`) is the website/documentation layer for canonical code implemented in sibling repos including `EvolvedCooperation` and `SequentialPrisonersDilemma`.
+- The public site `https://humanbehaviorpatterns.org/` must stay faithful to the canonical Python implementations in those source repos.
+- Required code-backed mappings:
   - `spatial_altruism` page/section in this repo <-> `spatial_altruism/` in `EvolvedCooperation`
   - `cooperative_hunting` page/section in this repo <-> `cooperative_hunting/` in `EvolvedCooperation`
-- When modifying either page/section here, check whether the corresponding Python implementation or README in `EvolvedCooperation` also needs an update.
-- When the implementation changes in `EvolvedCooperation`, update the matching page here if the behavior, assumptions, or interpretation changed.
+  - `docs/learned-cooperation/repeated-prisoners-dilemma/ppo-study.md` in this repo <-> `SequentialPrisonersDilemma/`
+- The higher-level learned-cooperation pages `docs/learned-cooperation/learned-cooperation.md`, `docs/learned-cooperation/prisoners-dilemma/prisoners-dilemma.md`, and `docs/learned-cooperation/repeated-prisoners-dilemma/repeated-prisoners-dilemma.md` provide conceptual framing around the `SequentialPrisonersDilemma` experiment family and should stay consistent with concrete claims made there.
+- When modifying a code-backed page/section here, check whether the corresponding Python implementation or README in the source repo also needs an update.
+- When an implementation changes in `EvolvedCooperation` or `SequentialPrisonersDilemma`, update the matching page here if the behavior, assumptions, or interpretation changed.
 
 ## Archive Move Rule
 

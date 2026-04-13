@@ -5,19 +5,29 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 ## Cross-Repo Mapping
 
 This repo builds `https://humanbehaviorpatterns.org/` and serves as the
-documentation/presentation layer for canonical Python models implemented in the
-sibling `EvolvedCooperation` repo.
+documentation/presentation layer for canonical Python models and experiments
+implemented in sibling repos including `EvolvedCooperation` and
+`SequentialPrisonersDilemma`.
 
-Current required 1-to-1 mapping:
+Current required code-backed mappings:
 
 - `spatial_altruism` page/section here <-> `spatial_altruism/` in
   `EvolvedCooperation`
 - `cooperative_hunting` page/section here <-> `cooperative_hunting/` in
   `EvolvedCooperation`
+- `docs/learned-cooperation/repeated-prisoners-dilemma/ppo-study.md` here <->
+  `SequentialPrisonersDilemma/`
 
-When the implementation changes in `EvolvedCooperation`, review and update the
-matching page here. When the website explanation changes here, keep it faithful
-to the Python implementation there.
+The higher-level learned-cooperation pages also frame the
+`SequentialPrisonersDilemma` experiment family:
+
+- `docs/learned-cooperation/learned-cooperation.md`
+- `docs/learned-cooperation/prisoners-dilemma/prisoners-dilemma.md`
+- `docs/learned-cooperation/repeated-prisoners-dilemma/repeated-prisoners-dilemma.md`
+
+When an implementation changes in a source repo, review and update the matching
+page here. When the website explanation changes here, keep it faithful to the
+Python implementation there.
 
 ## Installation
 

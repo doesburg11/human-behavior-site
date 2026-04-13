@@ -25,6 +25,9 @@ The surface answers are many:
 
 These are important mechanisms, but they can be reduced to a smaller set of structural reasons.
 
+## Having options makes people happy
+- Changing (options) seasons makes people happie than peoplewith fixed climate?? This implies relation between equator distance and happiness.
+
 ## Interdependence of outcomes
 
 Cooperation becomes rational when payoffs are coupled and agents cannot optimize fully on their own.
