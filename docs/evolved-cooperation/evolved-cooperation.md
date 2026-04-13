@@ -265,3 +265,14 @@ So the current roadmap is:
     <li>possible later addition: <code>Cooperative vs Greedy Grazing</code></li>
   </ol>
 </div>
+
+---
+
+## References
+
+- Hamilton, W. D. (1964). *The genetical evolution of social behaviour. I*. *Journal of Theoretical Biology*, 7(1), 1-16. https://doi.org/10.1016/0022-5193(64)90038-4
+- Trivers, R. L. (1971). *The evolution of reciprocal altruism*. *The Quarterly Review of Biology*, 46(1), 35-57. https://doi.org/10.1086/406755
+- Axelrod, R., & Hamilton, W. D. (1981). *The evolution of cooperation*. *Science*, 211(4489), 1390-1396. https://doi.org/10.1126/science.7466396
+- Ohtsuki, H., Hauert, C., Lieberman, E., & Nowak, M. A. (2006). *A simple rule for the evolution of cooperation on graphs and social networks*. *Nature*, 441, 502-505. https://doi.org/10.1038/nature04605
+- Nowak, M. A. (2006). *Five rules for the evolution of cooperation*. *Science*, 314(5805), 1560-1563. https://doi.org/10.1126/science.1133755
+- West, S. A., Griffin, A. S., & Gardner, A. (2007). *Evolutionary explanations for cooperation*. *Current Biology*, 17(16), R661-R672. https://doi.org/10.1016/j.cub.2007.06.004

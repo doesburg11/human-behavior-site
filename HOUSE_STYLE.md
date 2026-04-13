@@ -143,6 +143,15 @@ For GitHub README pages:
 - Keep caption spacing consistent with `marginTop: '0.6rem'`.
 - Treat this as the default for all display figures unless a page has a specific reason to differ.
 
+## References
+
+- Every docs page should end with a `## References` section.
+- Place the `## References` section at the end of the page.
+- Use the references section for source material rather than inline bibliography-style links in normal prose, unless inline citations are explicitly requested.
+- When a page makes a source-specific empirical, historical, or textual claim, include full references in the end-of-page section.
+- Match the reference style already used across the docs: author, year, title, venue or publisher, and direct link or DOI where available.
+- If a page does not cite any external source, keep the `## References` heading and add `- No external references cited.`
+
 ## Typography
 
 - Use a clean sans-serif stack consistent with the current site and Docusaurus defaults.
