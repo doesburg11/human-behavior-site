@@ -7,7 +7,7 @@ slug: /evolved-cooperation/spatial-altruism
 
 import SpatialAltruismReplay from '@site/src/components/SpatialAltruismReplay';
 
-`spatial_altruism/altruism_model.py` is a direct evolutionary altruism model rather than an ecological predator-prey system.
+`spatial_altruism/altruism_model.py` is the minimal patch-based evolved-cooperation case study in this section. Unlike cooperative hunting, it is a direct evolutionary altruism model rather than an ecological predator-prey system.
 
 It models a patch-based population in which:
 
@@ -43,7 +43,11 @@ A first culling-only sweep compared `uniform_culling` and `compact_swath` under 
 - fixed `harshness = 0.96`
 - disturbance interval `50`
 - disturbance fractions `0.25` and `0.50`
+- initial `altruistic_probability = 0.39`
+- initial `selfish_probability = 0.39`
+- `disease = 0.0` because both runs use culling variants rather than the steady-state void-lottery term
 - `5` replicates per parameter set
+- outcomes scored at step `1000`
 
 Headline outcome:
 
@@ -89,11 +93,11 @@ Under the same disturbance settings, `uniform_culling` preserves substantially m
 
 ## Patch States
 
-Each patch has one of three states:
+Each patch has one of three model states:
 
-- altruist: pink
-- selfish: green
-- empty: black
+- altruist: `PINK` in the lattice state, rendered burgundy-pink in the replay
+- selfish: `GREEN` in the lattice state, rendered blue in the replay
+- empty: `BLACK` in the lattice state, rendered pale beige in the replay
 
 The model is spatial because each patch interacts only with its own plus-shaped neighborhood:
 
@@ -149,28 +153,36 @@ After each patch computes its fitness, the focal patch collects three local tota
 - `self_fitness`: summed fitness contributed by selfish patches in the focal plus-neighborhood
 - `harsh_fitness`: summed fitness contributed by empty patches in the focal plus-neighborhood
 
-The normalized lottery weights are:
+The local competition neighborhood is always the same five-site plus shape, but the empty-site term depends on the model variant.
+
+For `steady_state`:
 
 - `alt_weight = alt_fitness / fitness_sum`
 - `self_weight = self_fitness / fitness_sum`
 - `harsh_weight = (harsh_fitness + disease) / fitness_sum`
+- `fitness_sum = alt_fitness + self_fitness + harsh_fitness + disease`
 
-with:
+For `uniform_culling` and `compact_swath`:
 
-`fitness_sum = alt_fitness + self_fitness + harsh_fitness + disease`
+- `alt_weight = alt_fitness / fitness_sum`
+- `self_weight = self_fitness / fitness_sum`
+- `harsh_weight = harsh_fitness / fitness_sum`
+- `fitness_sum = alt_fitness + self_fitness + harsh_fitness`
 
 Variable meanings:
 
 - `alt_weight`: probability mass for the next patch becoming altruist
 - `self_weight`: probability mass for the next patch becoming selfish
 - `harsh_weight`: probability mass for the next patch becoming empty
-- `disease`: extra pressure toward emptiness, even when no empty neighbor strongly contributes
+- `disease`: extra void lottery mass `xi` used only in `steady_state`; the culling variants set `disease = 0.0`
 
 The next generation at each patch is then sampled from those weights:
 
 - altruist if the draw lands in `alt_weight`
 - selfish if the draw lands in `self_weight`
 - empty otherwise
+
+The replay above uses the `steady_state` rule, while the culling heatmaps summarize runs under the culling rule.
 
 ## Why This Belongs Under Evolved Cooperation
 
@@ -196,8 +208,7 @@ So they are complementary examples of evolved cooperation at different levels of
 
 ## References
 
-- [Repository root](https://github.com/doesburg11/EvolvedCooperation)
-- [Module directory](https://github.com/doesburg11/EvolvedCooperation/tree/main/spatial_altruism)
-- [Active runtime](https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/altruism_model.py)
-- [Interactive UI](https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/altruism_pygame_ui.py)
-- [Module README](https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/README.md)
+- Mitteldorf, J., & Wilson, D. S. (2000). *Population viscosity and the evolution of altruism*. *Journal of Theoretical Biology*, 204(4), 481-496. https://doi.org/10.1006/jtbi.2000.2007
+- `EvolvedCooperation`. *spatial_altruism* module directory. GitHub. https://github.com/doesburg11/EvolvedCooperation/tree/main/spatial_altruism
+- `EvolvedCooperation`. *spatial_altruism/altruism_model.py*. GitHub. https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/altruism_model.py
+- `EvolvedCooperation`. *spatial_altruism/README.md*. GitHub. https://github.com/doesburg11/EvolvedCooperation/blob/main/spatial_altruism/README.md

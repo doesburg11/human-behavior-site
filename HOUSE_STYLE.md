@@ -170,6 +170,28 @@ For GitHub README pages:
 - Cards, panels, callouts, and other display surfaces should use sharp corners.
 - Avoid rounded containers for data displays, figure frames, dashboards, and callout backgrounds.
 
+## Working Definitions
+
+When a page needs a **working definition**, use the same two-part pattern already established in the docs:
+
+- first, add one normal sentence above the box that gives broad contextual framing
+- then add a pale-blue callout box containing a bold `Working definition.` label followed by the concise definition
+- use the standard callout colors: background `#EAF2FB`, border `#D6E4F5`, label color `#0F3368`, body text `#1F2D3D`
+- keep the box visually plain and sharp-cornered, matching the site callout style
+- do not add a working-definition box by default on every page; use it when explicitly requested or when the page clearly needs that framing device
+
+Recommended Docusaurus/MDX pattern:
+
+```mdx
+Broad contextual sentence introducing the concept in plain prose.
+
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
+  <p style={{ margin: '0' }}>
+    <strong style={{ color: '#0F3368' }}>Working definition.</strong> Concise operational definition goes here.
+  </p>
+</div>
+```
+
 ## Links, Buttons, And UI Accents
 
 - Links should use the secondary blue and darken on hover.

@@ -7,7 +7,13 @@ slug: /learned-cooperation
 
 ## Cooperation Within Lifetimes
 
-Learned cooperation refers to cooperative behavior that emerges **through adaptation during an agent’s lifetime**, rather than through genetic or evolutionary selection across generations.
+Learned cooperation concerns how cooperative behavior can arise **within a lifetime** as agents adapt to repeated interaction, feedback, and changing local conditions.
+
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
+  <p style={{ margin: '0' }}>
+    <strong style={{ color: '#0F3368' }}>Working definition.</strong> Learned cooperation concerns the emergence and maintenance of cooperative behavior through within-lifetime learning and behavioral plasticity, rather than through differential survival and reproduction across generations alone.
+  </p>
+</div>
 
 In this framework, agents:
 
