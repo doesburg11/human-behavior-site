@@ -139,6 +139,17 @@ Default SVG structure:
 
 Set `headerHeight` to at least `150` and increase it whenever the subtitle wraps or the title/subtitle block would otherwise violate the top or bottom padding.
 
+For narrower chart displays around `900px` wide, do not reuse the large-display type scale unchanged. Use a compact variant so the banner stays subordinate to the chart body.
+
+Compact chart-display variant reference:
+
+- Banner minimum height reference: `100px` on a `900px` wide export
+- Internal padding reference: `20px 45px 20px 45px` (top right bottom left)
+- Vertical gap reference between title and subtitle blocks: `12px`
+- Title style: bold, `20px`, left-aligned
+- Subtitle style: regular, `14px`, left-aligned
+- Use this compact variant when the figure body uses text around `18px` to `20px` and the large-display `30px` / `20px` banner would dominate the composition
+
 Default banner typography styles:
 
 ```css
