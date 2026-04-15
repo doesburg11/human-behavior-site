@@ -97,6 +97,109 @@ The main brand color should be the deep blue already used in the homepage top ba
 - The bar should stay simple and solid rather than decorative.
 - Avoid introducing unrelated accent colors into the header.
 - Hero and section banners should follow the same pattern: strong blue field, white text, clean composition.
+- When a generated display image uses a blue top banner, left-align the title block inside that banner rather than centering it.
+- Use one full-width blue banner at the top of the display rather than a short inset strip.
+- Keep the title and subtitle stacked as one left-aligned block, using the same left inset on both lines.
+- Keep the subtitle inside the blue banner in white rather than placing it below the bar in body-text color.
+- Keep banner height and internal padding consistent across generated display images so the subtitle does not crowd either the title above or the panel titles below.
+- Banner titles and subtitles in generated display images should have enough vertical padding that they do not crowd the panel titles below.
+- If a logo or emblem overlays the left edge of a blue banner, increase the title-block inset enough to keep the text clear of that overlay.
+
+### Display Blue Banner Format
+
+Use this as the default banner format for generated display images that follow the same treatment as Display 5 on the front page.
+
+- Background color: `#0F3368`
+- Text color: `#FFFFFF`
+- Banner width: full canvas width
+- Banner minimum height reference: `150px` on a `1400px` wide export; scale proportionally on other canvas sizes
+- Let banner height grow when the subtitle wraps or the header copy needs more vertical space; preserve padding rather than compressing the text block
+- Internal padding reference for box-layout implementations: `30px 70px 30px 70px` (top right bottom left)
+- Horizontal safe area reference: `70px` from both the left and right edges
+- Vertical gap reference between title and subtitle blocks: `18px`
+- When exact top and bottom padding matters in SVG, prefer a box-layout implementation such as `foreignObject` rather than relying on raw text baselines
+- Title style: bold, `30px`, left-aligned
+- Subtitle style: regular, `20px`, left-aligned
+- Keep title and subtitle on the same left edge rather than offsetting one relative to the other
+- Keep the banner visually flat: no gradient, shadow, border, or rounded corners
+- Keep the subtitle to one line where possible; if it wraps, preserve the same left inset and add height rather than compressing the line spacing
+- If a logo or emblem overlaps the left edge, move both text lines right together rather than changing their alignment independently
+
+Default SVG structure:
+
+```svg
+<rect class="header" x="0" y="0" width="1400" height="{headerHeight}" />
+<foreignObject x="0" y="0" width="1400" height="{headerHeight}">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="header-copy">
+    <div class="header-title">Display title</div>
+    <div class="header-subtitle">One-line explanatory subtitle.</div>
+  </div>
+</foreignObject>
+```
+
+Set `headerHeight` to at least `150` and increase it whenever the subtitle wraps or the title/subtitle block would otherwise violate the top or bottom padding.
+
+Default banner typography styles:
+
+```css
+.header {
+  fill: #0f3368;
+}
+
+.header-title {
+  fill: #ffffff;
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.header-subtitle {
+  fill: #ffffff;
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+```
+
+Equivalent CSS box-layout pattern:
+
+```css
+min-height: 150px;
+padding: 30px 70px 30px 70px;
+gap: 18px;
+```
+
+Recommended `foreignObject` content styles for exact padding:
+
+```css
+.header-copy {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  padding: 30px 70px 30px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 18px;
+  color: #ffffff;
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.header-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.header-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+```
 
 For GitHub README usage, where an actual top bar usually does not exist:
 

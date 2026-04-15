@@ -1,19 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="200" viewBox="0 0 1600 200" role="img" aria-labelledby="title desc">
   <title id="title">The Nature and Nurture of Human Cooperation</title>
-  <desc id="desc">Blue banner with white centered text reading The Nature and Nurture of Human Cooperation.</desc>
+  <desc id="desc">Blue banner with a left-aligned white title block reading The Nature and Nurture of Human Cooperation and a subtitle about cooperation across generations and lifetimes.</desc>
 
   <rect width="1600" height="200" fill="#0f3368"/>
 
   <text
-    x="800"
-    y="100"
-    text-anchor="middle"
-    dominant-baseline="middle"
+    x="260"
+    y="88"
+    text-anchor="start"
     fill="#ffffff"
-    font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol"
+    font-family="IBM Plex Sans, Avenir Next, Segoe UI, sans-serif"
     font-size="52"
     font-weight="700"
     letter-spacing="0.5">
     The Nature and Nurture of Human Cooperation
+  </text>
+  <text
+    x="260"
+    y="134"
+    text-anchor="start"
+    fill="#ffffff"
+    font-family="IBM Plex Sans, Avenir Next, Segoe UI, sans-serif"
+    font-size="28"
+    font-weight="400">
+    Explaining cooperation across generations and lifetimes
   </text>
 </svg>

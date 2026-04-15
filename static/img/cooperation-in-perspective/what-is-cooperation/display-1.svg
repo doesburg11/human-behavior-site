@@ -1,11 +1,11 @@
 <svg width="900" height="460" viewBox="0 0 900 460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Estimated relative division of cooperative time</title>
-  <desc id="desc">A blue-styled pie chart showing mutual accommodation at 15 percent, active support at 15 percent, shared coordination at 45 percent, and norm-sustaining cooperation at 25 percent.</desc>
+  <desc id="desc">A blue-styled pie chart with a full-width blue banner and left-aligned white title block, showing mutual accommodation at 15 percent, active support at 15 percent, shared coordination at 45 percent, and norm-sustaining cooperation at 25 percent.</desc>
 
   <rect width="900" height="460" fill="#FFFFFF"/>
-  <rect x="16" y="34" width="868" height="58" fill="#0F3368"/>
-  <text x="450" y="70" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">Estimated Relative Division of Cooperative Time</text>
-  <text x="450" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#1F2D3D">Modern adult populations in OECD-like time-use-survey settings</text>
+  <rect x="0" y="0" width="900" height="120" fill="#0F3368"/>
+  <text x="70" y="54" font-family="IBM Plex Sans, Avenir Next, Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">Estimated Relative Division of Cooperative Time</text>
+  <text x="70" y="90" font-family="IBM Plex Sans, Avenir Next, Segoe UI, sans-serif" font-size="18" font-weight="400" fill="#FFFFFF">Modern adult populations in OECD-like time-use-survey settings</text>
 
   <circle cx="228" cy="280" r="130" fill="#EAF2FB" stroke="#D6E4F5" stroke-width="2"/>
   <path d="M228 280 L228 150 A130 130 0 0 1 351.634 237.023 Z" fill="#78AAE6"/>
