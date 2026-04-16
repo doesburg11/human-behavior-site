@@ -144,8 +144,14 @@ The front page explains cooperation as a two-timescale problem shaped by evoluti
 
 Herrmann et al. (2007) help make that point more precise. The comparison with closely related ape species suggests that the human difference is especially large in the social domain rather than across every kind of problem-solving.
 
-<figure style={{ textAlign: 'center' }}>
-  <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 4: 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007)" width="1180" style={{ display: 'block', margin: '0 auto' }} />
+<figure style={{ margin: '0 0 2rem', textAlign: 'center' }}>
+  <div style={{ width: '100%', maxWidth: '1180px', margin: '0 auto', overflow: 'hidden' }}>
+    <div style={{ backgroundColor: '#0F3368', padding: '20px 45px', color: '#FFFFFF', textAlign: 'left', fontFamily: 'IBM Plex Sans, Avenir Next, Segoe UI, sans-serif' }}>
+      <div style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>Comparative Performance in Physical and Social Domains</div>
+      <div style={{ marginTop: '12px', fontSize: '14px', fontWeight: 400, lineHeight: 1.4 }}>Comparison human children versus other primates in the physical domain (A) and the social domain(B).</div>
+    </div>
+    <img src="/img/cooperation-in-perspective/display-2.png" alt="Display 4: 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007)" style={{ display: 'block', width: '100%', height: 'auto' }} />
+  </div>
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> 2.5-year-old children performed roughly like chimpanzees in the physical domain, with orangutans lower, but far better than both ape species in the social domain (Herrmann et al., 2007).</figcaption>
 </figure>
 

@@ -109,6 +109,10 @@ The main brand color should be the deep blue already used in the homepage top ba
 
 Use this as the default banner format for generated display images that follow the same treatment as Display 5 on the front page.
 
+- If a docs page embeds a figure as a plain `<img>` pointing to a `.png`, any visible blue header bar is part of that raster asset rather than separate page chrome.
+- Do not try to enforce banner house style by incrementally retouching an already-edited PNG header. Rebuild the full banner from the original source image in one pass, or move the banner treatment into MDX/HTML or SVG.
+- When exact banner padding, title/subtitle spacing, and alignment need to match house style precisely, prefer an external HTML/CSS banner wrapper or an SVG/box-layout implementation over manual raster text edits.
+
 - Background color: `#0F3368`
 - Text color: `#FFFFFF`
 - Banner width: full canvas width
