@@ -211,7 +211,7 @@ Across these model systems, evolved cooperation forms the **nature component** o
 
 ## Current Case Studies
 
-The current site includes two complementary evolved-cooperation examples:
+The current site includes three complementary evolved-cooperation examples:
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
   <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
@@ -235,6 +235,10 @@ The current site includes two complementary evolved-cooperation examples:
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/cooperative-hunting/">Cooperative Hunting</a></td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A spatial ecological model in which predator cooperation evolves through hunting success, energetic cost, and inherited trait variation.</td>
         </tr>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/spatial-prisoners-dilemma/">Spatial Prisoner's Dilemma</a></td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A local-game ecology in which inherited same-vs-other Prisoner's Dilemma response rules spread through energy accumulation, local movement, and local reproduction.</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -243,7 +247,7 @@ The current site includes two complementary evolved-cooperation examples:
 
 ## Next Candidate From The Repo
 
-The strongest remaining candidate for a third evolved-cooperation case study is:
+The strongest remaining candidate for a fourth evolved-cooperation case study is:
 
 - `Cooperative vs Greedy Grazing`
 

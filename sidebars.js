@@ -18,6 +18,7 @@ export default {
       items: [
         'evolved-cooperation/spatial-altruism/spatial-altruism',
         'evolved-cooperation/cooperative-hunting/cooperative-hunting',
+        'evolved-cooperation/spatial-prisoners-dilemma/spatial-prisoners-dilemma',
       ],
     },
     {
