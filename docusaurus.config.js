@@ -3,6 +3,26 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
+function removeDuplicateEvolvedCooperationDoc(items) {
+  return items.flatMap((item) => {
+    if (
+      item.type === 'doc'
+      && item.id === 'evolved-cooperation/evolved-cooperation'
+    ) {
+      return [];
+    }
+    if (item.type === 'category') {
+      return [
+        {
+          ...item,
+          items: removeDuplicateEvolvedCooperationDoc(item.items),
+        },
+      ];
+    }
+    return [item];
+  });
+}
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'The Nature and Nurture of Human Cooperation',
@@ -36,6 +56,13 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          async sidebarItemsGenerator({
+            defaultSidebarItemsGenerator,
+            ...args
+          }) {
+            const items = await defaultSidebarItemsGenerator(args);
+            return removeDuplicateEvolvedCooperationDoc(items);
+          },
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
           editUrl: 'https://github.com/doesburg11/human-cooperation-site/edit/main/',
