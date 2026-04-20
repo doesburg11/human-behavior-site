@@ -211,7 +211,7 @@ Across these model systems, evolved cooperation forms the **nature component** o
 
 ## Current Case Studies
 
-The current site includes three complementary evolved-cooperation examples:
+The current site includes four complementary evolved-cooperation examples:
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
   <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
@@ -239,6 +239,10 @@ The current site includes three complementary evolved-cooperation examples:
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/spatial-prisoners-dilemma/">Spatial Prisoner's Dilemma</a></td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A local-game ecology in which inherited same-vs-other Prisoner's Dilemma response rules spread through energy accumulation, local movement, and local reproduction.</td>
         </tr>
+        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/retained-benefit/">Retained Benefit</a></td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>An abstract lattice model in which a continuous cooperation trait spreads only when enough of cooperation's payoff is routed back toward cooperators or their copies.</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -247,7 +251,7 @@ The current site includes three complementary evolved-cooperation examples:
 
 ## Next Candidate From The Repo
 
-The strongest remaining candidate for a fourth evolved-cooperation case study is:
+The strongest remaining candidate for a fifth evolved-cooperation case study is:
 
 - `Cooperative vs Greedy Grazing`
 
@@ -266,6 +270,8 @@ So the current roadmap is:
   <ol style={{ margin: '0', paddingLeft: '1.25rem' }}>
     <li><code>Spatial Altruism</code></li>
     <li><code>Cooperative Hunting</code></li>
+    <li><code>Spatial Prisoner's Dilemma</code></li>
+    <li><code>Retained Benefit</code></li>
     <li>possible later addition: <code>Cooperative vs Greedy Grazing</code></li>
   </ol>
 </div>
