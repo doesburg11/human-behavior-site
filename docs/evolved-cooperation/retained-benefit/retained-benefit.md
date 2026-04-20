@@ -7,17 +7,19 @@ slug: /evolved-cooperation/retained-benefit
 
 import RetainedBenefitReplay from '@site/src/components/RetainedBenefitReplay';
 
-Retained Benefit is the most abstract evolved-cooperation case study on this site. It asks a simpler and more general question than Spatial Altruism, Cooperative Hunting, or Spatial Prisoner's Dilemma: **when does cooperation spread if the decisive variable is not one special story, but how much of cooperation's payoff is routed back toward cooperators or their copies instead of leaking to free-riders?**
+Retained Benefit is the most abstract evolved-cooperation case study on this site. Rather than centering altruism, reciprocity, or cooperative hunting, it evaluates a more general question: **when does cooperation spread when the decisive variable is how much of the value created by cooperation is routed back toward cooperators or their copies rather than leaking to free-riders?**
 
-## The Puzzle
+## Conceptual Focus
 
-Many cooperation models hide the key evolutionary problem inside one mechanism.
+Many cooperation models embed the central evolutionary problem inside a
+particular mechanism family.
 
-- altruism models hide it inside local public good production
-- reciprocity models hide it inside repeated-game memory
-- hunting models hide it inside ecological synergy
+- altruism models embed it in local public-good production
+- reciprocity models embed it in repeated-game memory
+- hunting models embed it in ecological synergy
 
-This model strips those stories back. It asks whether cooperation can rise when:
+This model removes most of that mechanism-specific structure. It asks whether
+cooperation can increase when:
 
 - cooperation creates value
 - cooperation also carries a private cost
@@ -26,44 +28,67 @@ This model strips those stories back. It asks whether cooperation can rise when:
 
 So the central question becomes: **how much retained feedback is enough?**
 
-## What Kind Of Model This Is
+## Model Structure
 
-This is a spatial lattice model with **selection on an inherited continuous cooperation trait**, not a model of learning, planning, or bargaining.
+This is a spatial lattice model with **selection on an inherited continuous
+cooperation trait**, not a model of learning, planning, or bargaining.
 
 Each occupied cell carries:
 
 - one cooperation trait `h in [0, 1]`
 - one inherited lineage label
 
-The lineage label is not meant as a full kinship model. It is an abstract stand-in for copies of the same inherited rule or locally clustered descendants of the same lineage.
+The lineage label is not intended as a full kinship model. It serves as an
+abstract stand-in for copies of the same inherited rule or for locally
+clustered descendants of the same lineage.
 
 ## The Core Rule
 
-At each step, an agent with cooperation trait `h_i` creates benefit:
+At each step, agent <code>i</code> with cooperation trait
+<code>h<sub>i</sub></code> produces gross cooperative output:
 
-<p>B_i = b × h_i</p>
+<p><code>B<sub>i</sub> = b &times; h<sub>i</sub></code></p>
 
-That benefit is split in two:
+That output is split into retained and open components:
 
-<p>B_i^retained = r × B_i</p>
-<p>B_i^open = (1 - r) × B_i</p>
+<p><code>B<sub>i</sub><sup>retained</sup> = r &times; B<sub>i</sub></code></p>
+<p><code>B<sub>i</sub><sup>open</sup> = (1 - r) &times; B<sub>i</sub></code></p>
 
-where:
+The producer also pays a private cost:
 
-- `b` is the benefit scale
+<p><code>C<sub>i</sub> = c &times; h<sub>i</sub></code></p>
+
+Fitness is then computed as:
+
+<p><code>W<sub>i</sub> = w<sub>0</sub> + received_open<sub>i</sub> + received_retained<sub>i</sub> - C<sub>i</sub></code></p>
+
+Variable definitions:
+
+- <code>h<sub>i</sub></code> is agent <code>i</code>'s cooperation trait
+- <code>B<sub>i</sub></code> is the total cooperative value produced by agent
+  <code>i</code>
 - `r` is the retained-benefit fraction
+- `b` is the cooperation-benefit scale
+- <code>C<sub>i</sub></code> is the private cooperation cost paid by agent
+  <code>i</code>
+- `c` is the cooperation-cost scale
+- <code>W<sub>i</sub></code> is the resulting fitness used in local replacement
+- <code>w<sub>0</sub></code> is baseline fitness
+- <code>received_open<sub>i</sub></code> is the open benefit received by agent
+  <code>i</code> from its
+  neighborhood
+- <code>received_retained<sub>i</sub></code> is the retained benefit received
+  by agent <code>i</code> from same-lineage producers in its neighborhood
 
-The **open** part is shared across the full local neighborhood. The **retained** part is shared only across same-lineage recipients in that local neighborhood.
-
-At the same time, cooperation pays a private cost:
-
-<p>C_i = c × h_i</p>
+The **open** component is shared across the full local neighborhood. The
+**retained** component is shared only across same-lineage recipients in that
+local neighborhood.
 
 So the model turns one high-level claim into a direct experiment:
 
 > cooperation rises when enough of its return is protected from leakage
 
-## The Frozen Replay Setup
+## Frozen Replay Configuration
 
 The browser replay below is a specific seeded run from the frozen website-demo configuration, not a schematic animation. It uses:
 
@@ -132,9 +157,10 @@ This model belongs under evolved cooperation because:
 
 What changes here is not a policy inside a lifetime. What changes is the distribution of inherited cooperation levels across the population.
 
-## Why This Model Matters
+## Why This Model Is Useful
 
-This case study is useful because it makes one possible near-law of cooperation unusually explicit:
+This model is useful because it makes one candidate near-law of cooperation
+unusually explicit:
 
 > there is no cooperation without feedback
 
@@ -143,7 +169,10 @@ In other words:
 - if cooperation creates value that leaks too easily to unrelated others, cooperation is hard to sustain
 - if enough of that value is routed back toward cooperators or their copies, cooperation can spread
 
-That claim is more abstract than the special-case logic of altruism, reciprocity, or hunting. This is why Retained Benefit is the best current site model for asking what the minimal conditions of cooperation might look like in general.
+That claim is more abstract than the special-case logic of altruism,
+reciprocity, or hunting. Retained Benefit is therefore the site's most direct
+current model for asking what the minimal conditions of cooperation might look
+like in general.
 
 ## References
 

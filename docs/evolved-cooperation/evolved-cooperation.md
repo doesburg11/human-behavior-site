@@ -241,7 +241,7 @@ The current site includes four complementary evolved-cooperation examples:
         </tr>
         <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/retained-benefit/">Retained Benefit</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>An abstract lattice model in which a continuous cooperation trait spreads only when enough of cooperation's payoff is routed back toward cooperators or their copies.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>An abstract lattice model in which a continuous cooperation trait spreads only when enough of the value created by cooperation is routed back toward cooperators or copies of the cooperative rule.</td>
         </tr>
       </tbody>
     </table>
