@@ -88,6 +88,21 @@ So the model turns one high-level claim into a direct experiment:
 
 > cooperation rises when enough of its return is protected from leakage
 
+## Simulation Step
+
+One full synchronous retained-benefit update is shown below.
+
+<figure style={{ margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <img
+    src="/img/evolved-cooperation/retained-benefit/simulation_step_flow.svg"
+    alt="Flowchart of one retained-benefit simulation step from current lattice state through benefit routing, fitness computation, local parent selection, synchronous replacement, and history recording."
+    style={{ display: 'block', width: '100%', maxWidth: '1080px', height: 'auto', margin: '0 auto' }}
+  />
+  <figcaption><strong>Display 1:</strong> One synchronous retained-benefit update from step <code>t</code> to step <code>t + 1</code>.</figcaption>
+</figure>
+
+Turnover is implemented as a **local replacement lottery** rather than as explicit death, birth, and movement.
+
 ## Frozen Replay Configuration
 
 The browser replay below is a specific seeded run from the frozen website-demo configuration, not a schematic animation. It uses:
