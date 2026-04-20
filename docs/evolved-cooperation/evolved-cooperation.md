@@ -249,35 +249,6 @@ The current site includes four complementary evolved-cooperation examples:
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Current evolved-cooperation case studies.</figcaption>
 </figure>
 
-## Next Candidate From The Repo
-
-The strongest remaining candidate for a fifth evolved-cooperation case study is:
-
-- `Cooperative vs Greedy Grazing`
-
-That model is simpler than the two current examples, but it still fits the same general logic:
-
-- two inherited behavioral types,
-- selection through survival and reproduction,
-- a shared resource environment that couples behavior to long-run population outcomes.
-
-So the current roadmap is:
-
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <p style={{ margin: '0 0 0.75rem 0' }}>
-    <strong style={{ color: '#0F3368' }}>Current roadmap.</strong>
-  </p>
-  <ol style={{ margin: '0', paddingLeft: '1.25rem' }}>
-    <li><code>Spatial Altruism</code></li>
-    <li><code>Cooperative Hunting</code></li>
-    <li><code>Spatial Prisoner's Dilemma</code></li>
-    <li><code>Retained Benefit</code></li>
-    <li>possible later addition: <code>Cooperative vs Greedy Grazing</code></li>
-  </ol>
-</div>
-
----
-
 ## References
 
 - Hamilton, W. D. (1964). *The genetical evolution of social behaviour. I*. *Journal of Theoretical Biology*, 7(1), 1-16. https://doi.org/10.1016/0022-5193(64)90038-4
