@@ -54,6 +54,8 @@ That output is split into retained and open components:
 <p><code>B<sub>i</sub><sup>retained</sup> = r &times; B<sub>i</sub></code></p>
 <p><code>B<sub>i</sub><sup>open</sup> = (1 - r) &times; B<sub>i</sub></code></p>
 
+Here <code>B<sub>i</sub><sup>retained</sup></code> is the retained amount produced by site <code>i</code> before routing, not the accumulated retained benefit that site <code>i</code> eventually receives.
+
 The producer also pays a private cost:
 
 <p><code>C<sub>i</sub> = c &times; h<sub>i</sub></code></p>
@@ -73,16 +75,33 @@ Variable definitions:
   <code>i</code>
 - `c` is the cooperation-cost scale
 - <code>W<sub>i</sub></code> is the resulting fitness used in local replacement
-- <code>w<sub>0</sub></code> is baseline fitness
+- <code>w<sub>0</sub></code> is fixed baseline fitness, added each step as a background term that dampens selection intensity
 - <code>received_open<sub>i</sub></code> is the open benefit received by agent
   <code>i</code> from its
   neighborhood
-- <code>received_retained<sub>i</sub></code> is the retained benefit received
-  by agent <code>i</code> from same-lineage producers in its neighborhood
+- <code>received_retained<sub>i</sub></code> is the accumulated retained benefit
+  received by agent <code>i</code> from same-lineage producers in its
+  neighborhood, not the producer-side term
+  <code>B<sub>i</sub><sup>retained</sup></code>
 
 The **open** component is shared across the full local neighborhood. The
 **retained** component is shared only across same-lineage recipients in that
-local neighborhood.
+local neighborhood and contributes to each recipient site's accumulated
+retained benefit <code>received_retained<sub>i</sub></code>.
+
+### Why The Fixed Baseline Matters
+
+The baseline term <code>w<sub>0</sub></code> does not change from step to step.
+It is added to every candidate parent's fitness before local parent selection,
+so it dampens the strength of selection rather than changing the ordering of
+candidates.
+
+Suppose five local candidate parents have cooperation-related payoff terms
+<code>delta = received_open + received_retained - C = [0.30, 0.10, 0.05, 0.05, 0.00]</code>.
+
+- Without a baseline, parent-choice weights are <code>[0.30, 0.10, 0.05, 0.05, 0.00]</code>, so the probabilities are <code>[0.60, 0.20, 0.10, 0.10, 0.00]</code>.
+- With <code>w<sub>0</sub> = 1.0</code>, the weights become <code>[1.30, 1.10, 1.05, 1.05, 1.00]</code>, so the probabilities are about <code>[0.236, 0.200, 0.191, 0.191, 0.182]</code>.
+- The ranking stays the same, but selection becomes much less extreme.
 
 So the model turns one high-level claim into a direct experiment:
 
