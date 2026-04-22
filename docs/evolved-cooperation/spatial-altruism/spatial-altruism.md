@@ -5,6 +5,7 @@ sidebar_position: 2
 slug: /evolved-cooperation/spatial-altruism
 ---
 
+import EvolvedCooperationCaseStudiesTable from '@site/src/components/EvolvedCooperationCaseStudiesTable';
 import SpatialAltruismReplay from '@site/src/components/SpatialAltruismReplay';
 
 Spatial Altruism is the minimal evolved-cooperation case study on this site. It asks a deceptively simple question: **how can an altruistic inherited trait survive when selfish competitors enjoy the same local benefit without paying the altruist cost?**
@@ -266,15 +267,13 @@ The culling figures later on the page describe an extension of the model, not th
 
 This model belongs under evolved cooperation because it studies cooperation through inherited variation and selection across generations.
 
-The difference is the mechanism:
+Within the site's evolved-cooperation set, Spatial Altruism is the minimal local public-good benchmark.
 
-- `Spatial Altruism` studies a direct altruism-versus-selfishness social dilemma in a patch lottery
-- `Cooperative Hunting` studies selection on an inherited hunting-investment trait inside an ecological food web
-
-So they are complementary examples of evolved cooperation at different levels of abstraction:
-
-- one minimal and spatial,
-- one ecological and agent-based
+<EvolvedCooperationCaseStudiesTable
+  currentCaseStudy="spatial-altruism"
+  displayNumber="3"
+  caption="How Spatial Altruism fits among the site's evolved-cooperation case studies."
+/>
 
 ## Culling Variants
 

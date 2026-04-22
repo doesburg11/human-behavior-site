@@ -5,9 +5,10 @@ sidebar_position: 4
 slug: /evolved-cooperation/retained-benefit
 ---
 
+import EvolvedCooperationCaseStudiesTable from '@site/src/components/EvolvedCooperationCaseStudiesTable';
 import RetainedBenefitReplay from '@site/src/components/RetainedBenefitReplay';
 
-Retained Benefit is the most abstract evolved-cooperation case study on this site. Rather than centering altruism, reciprocity, or cooperative hunting, it evaluates a more general question: **when does cooperation spread when the decisive variable is how much of the value created by cooperation is routed back toward cooperators or their copies rather than leaking to free-riders?**
+Retained Benefit is the most abstract evolved-cooperation case study on this site. Rather than centering one specific mechanism such as patch altruism, local Prisoner's Dilemma response rules, or cooperative hunting, it evaluates a more general question: **when does cooperation spread when the decisive variable is how much of the value created by cooperation is routed back toward cooperators or their copies rather than being lost through evolutionary leakage to unrelated or weakly coupled recipients?**
 
 ## Conceptual Focus
 
@@ -191,6 +192,14 @@ This model belongs under evolved cooperation because:
 
 What changes here is not a policy inside a lifetime. What changes is the distribution of inherited cooperation levels across the population.
 
+Within the site's evolved-cooperation set, Retained Benefit is the most abstract feedback-routing model.
+
+<EvolvedCooperationCaseStudiesTable
+  currentCaseStudy="retained-benefit"
+  displayNumber="2"
+  caption="How Retained Benefit fits among the site's evolved-cooperation case studies."
+/>
+
 ## Why This Model Is Useful
 
 This model is useful because it makes one candidate near-law of cooperation
@@ -200,8 +209,90 @@ unusually explicit:
 
 In other words:
 
-- if cooperation creates value that leaks too easily to unrelated others, cooperation is hard to sustain
+- if cooperation creates value that is lost through evolutionary leakage to unrelated or weakly coupled recipients, cooperation is hard to sustain
 - if enough of that value is routed back toward cooperators or their copies, cooperation can spread
+
+## What "Feedback" Means Here
+
+On this page, **feedback** does not mean only a verbal response, praise, or a conscious social reaction. It means any **causal return channel** by which the consequences of cooperation flow back toward the cooperator, its partners, or copies of the cooperative rule rather than being lost through evolutionary leakage to unrelated or weakly coupled recipients.
+
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
+  <p style={{ margin: '0' }}>
+    <strong style={{ color: '#0F3368' }}>Working definition.</strong> Here, feedback means any process that makes the benefits or downstream consequences of cooperation return non-randomly to cooperators, their partners, or their lineage, so that cooperation improves its own future persistence rather than being lost through evolutionary leakage to unrelated or weakly coupled recipients.
+  </p>
+</div>
+
+Here, <strong>weakly coupled recipients</strong> means recipients whose gain does not feed back strongly enough into the actor's inclusive fitness, lineage persistence, or recurrence of the cooperative rule, even if they are nearby or benefit in the short run.
+
+That return can take several forms.
+
+### Material Feedback
+
+This is the most concrete form.
+
+- food, energy, money, territory, protection, or other usable resources flow back toward the cooperator
+- cooperation therefore changes the material conditions for survival, reproduction, or future action
+
+In many biological and ecological models, this is the clearest channel because cooperative behavior changes who gets access to resources.
+
+### Immaterial Or Social Feedback
+
+The return does not have to be material in the narrow sense.
+
+- reputation can make later help or alliance more likely
+- trust can stabilize repeated cooperation
+- punishment, shame, obligation, or status can redirect future behavior
+- partner choice can reward cooperators with better future interaction opportunities
+
+These are **immaterial** in the sense that they are not food or money, but they still matter if they systematically alter who benefits, who gets chosen, and who is excluded.
+
+### Informational Or Learning Feedback
+
+Feedback can also operate through information.
+
+- agents observe outcomes
+- agents remember who cooperated or defected
+- agents update expectations, policies, or strategies
+- rewards and penalties reshape future behavior within a lifetime
+
+This is the central sense of feedback in learned-cooperation models: behavior changes because experience changes later decisions.
+
+### Ecological Or Structural Feedback
+
+Sometimes the return channel is embedded in the structure of interaction rather than in an explicit transfer.
+
+- spatial clustering makes cooperators more likely to encounter cooperators again
+- local assortment routes benefits back toward similar or related others
+- repeated interaction creates future consequences for present behavior
+- institutions or network structure can reduce leakage to defectors
+
+This kind of feedback often determines whether a cooperative act keeps helping the same social neighborhood or is simply absorbed by outsiders.
+
+### Fitness Feedback
+
+In evolved-cooperation models, this is the deepest level of accounting.
+
+- cooperation changes survival
+- cooperation changes reproductive success
+- cooperation changes inclusive fitness or lineage persistence
+- those changes alter which inherited traits become more common over generations
+
+So material and immaterial returns matter evolutionarily only if they eventually affect **fitness**.
+
+## Feedback In This Model
+
+In Retained Benefit, the relevant feedback is a **fitness-relevant routing rule**.
+
+- cooperation produces value
+- some of that value is shared openly
+- some of it is retained and routed only toward same-lineage recipients in the local neighborhood
+- that retained return contributes to <code>received_retained<sub>i</sub></code>
+- <code>received_retained<sub>i</sub></code> raises fitness <code>W<sub>i</sub></code>
+- higher fitness makes that lineage more likely to persist and spread
+
+So the model uses a material-like local payoff channel, but the real question is evolutionary: **does the routing of cooperative value create enough feedback into fitness to let cooperation survive selection?**
+
+That is why the slogan on this page is intentionally broad. The claim is not that cooperation requires one special substance called feedback. The claim is that cooperation requires some channel, material, immaterial, informational, structural, or fitness-relevant, through which the consequences of cooperation come back toward cooperators or their copies.
 
 That claim is more abstract than the special-case logic of altruism,
 reciprocity, or hunting. Retained Benefit is therefore the site's most direct

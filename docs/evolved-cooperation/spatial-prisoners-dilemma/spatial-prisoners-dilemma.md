@@ -5,9 +5,10 @@ sidebar_position: 3
 slug: /evolved-cooperation/spatial-prisoners-dilemma
 ---
 
+import EvolvedCooperationCaseStudiesTable from '@site/src/components/EvolvedCooperationCaseStudiesTable';
 import SpatialPrisonersDilemmaReplay from '@site/src/components/SpatialPrisonersDilemmaReplay';
 
-Spatial Prisoner's Dilemma is the local-game evolved-cooperation case study on this site. It asks a different question from Spatial Altruism and Cooperative Hunting: **what kinds of inherited response rules spread when agents repeatedly face a local Prisoner's Dilemma, can move only when isolated, and reproduce into nearby empty cells using the energy they accumulated from those games?**
+Spatial Prisoner's Dilemma is the local-game evolved-cooperation case study on this site. It asks **what kinds of inherited response rules spread when agents repeatedly face a local Prisoner's Dilemma, can move only when isolated, and reproduce into nearby empty cells using the energy they accumulated from those games?**
 
 ## The Puzzle
 
@@ -240,6 +241,14 @@ This model belongs under evolved cooperation because the changing object is an i
 - the result is therefore population-level selection, not within-lifetime adaptation
 
 Compared with the learned repeated Prisoner's Dilemma pages elsewhere on the site, the key difference is the timescale. Here, cooperation changes because inherited strategies become more or less common, not because an individual agent updates a policy from experience.
+
+Within the site's evolved-cooperation set, Spatial Prisoner's Dilemma is the clearest bridge between abstract social-dilemma logic and a sparse reproducing spatial ecology.
+
+<EvolvedCooperationCaseStudiesTable
+	currentCaseStudy="spatial-prisoners-dilemma"
+	displayNumber="2"
+	caption="How Spatial Prisoner's Dilemma fits among the site's evolved-cooperation case studies."
+/>
 
 ## Conclusions
 

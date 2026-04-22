@@ -5,6 +5,8 @@ sidebar_position: 1
 slug: /evolved-cooperation
 ---
 
+import EvolvedCooperationCaseStudiesTable from '@site/src/components/EvolvedCooperationCaseStudiesTable';
+
 ## Cooperation Across Generations
 
 Evolved cooperation refers to cooperative behavior that becomes more common **through natural selection across generations**, rather than through adaptation during a single lifetime.
@@ -213,41 +215,7 @@ Across these model systems, evolved cooperation forms the **nature component** o
 
 The current site includes four complementary evolved-cooperation examples:
 
-<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
-    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
-      <colgroup>
-        <col style={{ width: '28%' }} />
-        <col style={{ width: '72%' }} />
-      </colgroup>
-      <thead>
-        <tr>
-          <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Case study</th>
-          <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Selection logic</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/spatial-altruism/">Spatial Altruism</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A minimal patch-based model in which altruist and selfish traits compete through local benefit, private cost, and a neighborhood lottery.</td>
-        </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/cooperative-hunting/">Cooperative Hunting</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A spatial ecological model in which predator cooperation evolves through hunting success, energetic cost, and inherited trait variation.</td>
-        </tr>
-        <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/spatial-prisoners-dilemma/">Spatial Prisoner's Dilemma</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A local-game ecology in which inherited same-vs-other Prisoner's Dilemma response rules spread through energy accumulation, local movement, and local reproduction.</td>
-        </tr>
-        <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/retained-benefit/">Retained Benefit</a></td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>An abstract lattice model in which a continuous cooperation trait spreads only when enough of the value created by cooperation is routed back toward cooperators or copies of the cooperative rule.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Current evolved-cooperation case studies.</figcaption>
-</figure>
+<EvolvedCooperationCaseStudiesTable displayNumber="2" />
 
 ## References
 

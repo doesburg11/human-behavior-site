@@ -5,9 +5,10 @@ sidebar_position: 1
 slug: /evolved-cooperation/cooperative-hunting
 ---
 
+import EvolvedCooperationCaseStudiesTable from '@site/src/components/EvolvedCooperationCaseStudiesTable';
 import CooperativeHuntingReplay from '@site/src/components/CooperativeHuntingReplay';
 
-Cooperative Hunting is the more ecological evolved-cooperation case study on this site. It asks a different question from Spatial Altruism: **how can a costly inherited tendency to invest in group hunting spread when each predator pays the cost privately, but the payoff arrives only through successful shared hunts?**
+Cooperative Hunting is the more ecological evolved-cooperation case study on this site. It asks **how a costly inherited tendency to invest in group hunting can spread when each predator pays the cost privately, but the payoff arrives only through successful shared hunts.**
 
 ## The Puzzle
 
@@ -233,15 +234,12 @@ The integrated replay exposes a lighter subset of that state: the world grid, ag
 
 This model belongs under evolved cooperation because it studies cooperation through inherited variation and selection across generations.
 
-The difference from Spatial Altruism is the mechanism:
+Within the site's evolved-cooperation set, Cooperative Hunting is the most ecological agent-based case study.
 
-- `Spatial Altruism` studies a direct altruism-versus-selfishness social dilemma in a local patch lottery
-- `Cooperative Hunting` studies selection on an inherited hunting-investment trait inside an ecological food web
-
-So they are complementary examples of evolved cooperation at different levels of abstraction:
-
-- one minimal and spatial
-- one ecological and agent-based
+<EvolvedCooperationCaseStudiesTable
+	currentCaseStudy="cooperative-hunting"
+	caption="How Cooperative Hunting fits among the site's evolved-cooperation case studies."
+/>
 
 ## Conclusions
 
