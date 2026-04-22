@@ -217,6 +217,12 @@ The current site includes four complementary evolved-cooperation examples:
 
 <EvolvedCooperationCaseStudiesTable displayNumber="2" />
 
+## Proposed Next Module
+
+The current four case studies are implemented evolved-cooperation modules. A proposed next abstraction is [Feedback Kernel Model](/evolved-cooperation/feedback-kernel-model), which would generalize Retained Benefit by replacing one retained-benefit fraction with a more general return operator.
+
+This is not yet a canonical implemented case study in the sibling <code>EvolvedCooperation</code> repository. It is a design direction for a next module rather than a fifth completed experiment.
+
 ## References
 
 - Hamilton, W. D. (1964). *The genetical evolution of social behaviour. I*. *Journal of Theoretical Biology*, 7(1), 1-16. https://doi.org/10.1016/0022-5193(64)90038-4
