@@ -494,7 +494,10 @@ So the proposed general law is:
 
 $$
 \boxed{
-\text{Cooperation evolves when the expected feedback-weighted marginal return to the cooperative rule exceeds its marginal private cost.}
+\begin{aligned}
+&\text{Cooperation evolves when the expected feedback-weighted marginal return} \\
+&\text{to the cooperative rule exceeds its marginal private cost.}
+\end{aligned}
 }
 $$
 
