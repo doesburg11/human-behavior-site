@@ -48,6 +48,38 @@ Those channels may depend on:
 
 Under that framing, many classical cooperation theories become special parameterizations of one general return operator. The name <strong>Feedback Kernel Model</strong> is meant to signal that the core object is the kernel itself rather than any one specific retained-benefit channel.
 
+## What "Kernel" Means Here
+
+In this context, a **kernel** is not an operating-system kernel or a GPU
+compute kernel. It is the rule that maps value produced by one cooperative
+agent to the agents that receive that value.
+
+Put more simply, if agent or site $j$ creates cooperative benefit, the kernel
+answers:
+
+> who receives that benefit, when do they receive it, and with what weight?
+
+A compact way to write this is:
+
+$$
+R_i(t) = \sum_j \sum_{\tau \ge 0} K_{j \to i}(\tau, X_t) \, B_j(t-\tau)
+$$
+
+where:
+
+- $R_i(t)$ is the total returned benefit received by site $i$ at time $t$
+- $B_j(t-\tau)$ is benefit produced earlier by site $j$
+- $K_{j \to i}(\tau, X_t)$ is the kernel weight from producer $j$ to recipient $i$
+- $\tau$ is the time delay between production and return
+- $X_t$ is the current world state, including spatial structure, lineage labels, memory, reputation, or ecological context
+
+For Retained Benefit, the kernel has one simple shape: nearby sites receive an
+open share, and same-lineage nearby sites receive an additional protected
+retained share. A more general Feedback Kernel Model would let that return
+operator take other forms as well, such as relatedness weighting, spatial
+distance weighting, delayed reciprocity, reputation-gated return, or
+institutional exclusion of free-riders.
+
 ## Proposed General Equation
 
 At time $t$, let site or agent $j$ create cooperative value $B_j(t)$ and let site or agent $i$ pay cost $C_i(t)$ for its current cooperation level.
