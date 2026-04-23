@@ -349,6 +349,82 @@ It allows the same framework to study:
 - mixed social strategies
 - ecological and evolutionary tradeoffs between help and harm
 
+## What Still Needs To Be Specified
+
+To become a closed interaction model rather than a high-level law, the proposal still needs a few additional rules.
+
+### Action-To-Effect Production Rule
+
+Right now the model says that action $a_j(t)$ generates $B_j^{+}(t)$ and $B_j^{-}(t)$, but it does not yet specify how.
+
+A fuller version should include a production map such as:
+
+$$
+\big(B_j^{+}(t), B_j^{-}(t)\big) = F\big(a_j(t), z_j(t), X_t\big)
+$$
+
+where $z_j(t)$ is the internal state, trait, or strategy parameter of agent $j$.
+
+This determines when an action produces help, harm, both, or neither.
+
+### State Transition Rule
+
+The world state $X_t$ already appears inside the kernels, but the proposal does not yet specify how the world itself changes over time.
+
+A fuller version should include something like:
+
+$$
+X_{t+1} = G\big(X_t, a(t), R^{+}(t), R^{-}(t)\big)
+$$
+
+This lets space, resources, memory, institutions, or ecological conditions be altered by prior interactions rather than treated as fixed background.
+
+### Inheritance Or Updating Rule
+
+The proposal defines a selection operator $P_i(t)$, but it still needs a rule for what is transmitted or updated after selection.
+
+For an evolutionary version, one can write:
+
+$$
+z_i(t+1) \sim U\big(z(t), P(t), M\big)
+$$
+
+where $U$ is the reproduction, replacement, or copying rule and $M$ represents mutation or transmission noise.
+
+For a learning version, the same slot could be replaced by a policy-update operator rather than a reproduction operator.
+
+### Resource And Budget Constraints
+
+The proposal also needs to say whether positive and negative outputs are unconstrained, budget-limited, or drawn from a shared ecological stock.
+
+One simple option is:
+
+$$
+0 \le B_j^{+}(t) + B_j^{-}(t) \le Q_j(t)
+$$
+
+where $Q_j(t)$ is the total interaction budget available to agent $j$.
+
+Without a constraint of this kind, the scale of produced positive and negative effects remains underdetermined.
+
+### Information And Targeting Constraints
+
+The current kernels determine where effects go, but a fuller version may also need to specify what agent $j$ can observe when choosing actions or targets.
+
+That can be written by letting action choice and routing depend on an information state $I_j(t)$:
+
+$$
+a_j(t) = A_j\big(I_j(t), z_j(t), X_t\big)
+$$
+
+$$
+K^{\pm}_{j \to i}(\tau, X_t, I_j(t))
+$$
+
+This matters when help and harm depend on recognition, signaling, reputation, deception, or uncertainty.
+
+Together, these additions would turn the current proposal into a more fully specified generative model of interaction, ecology, and selection.
+
 ## Proposed Python Module Layout
 
 The canonical implementation should live as a new top-level module in the sibling <code>EvolvedCooperation</code> repository.
