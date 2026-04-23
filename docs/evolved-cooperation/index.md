@@ -219,7 +219,7 @@ The current site includes four complementary evolved-cooperation examples:
 
 ## Proposed Next Module
 
-The current four case studies are implemented evolved-cooperation modules. A proposed next abstraction is [Feedback Kernel Model](/evolved-cooperation/feedback-kernel-model), which would generalize Retained Benefit by replacing one retained-benefit fraction with a more general return operator.
+The current four case studies are implemented evolved-cooperation modules. A proposed next abstraction is [General Feedback Kernel](/evolved-cooperation/general-feedback-kernel), which would generalize Retained Benefit by replacing one retained-benefit fraction with a more general return operator.
 
 This is not yet a canonical implemented case study in the sibling <code>EvolvedCooperation</code> repository. It is a design direction for a next module rather than a fifth completed experiment.
 
