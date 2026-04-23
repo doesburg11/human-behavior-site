@@ -80,6 +80,163 @@ operator take other forms as well, such as relatedness weighting, spatial
 distance weighting, delayed reciprocity, reputation-gated return, or
 institutional exclusion of free-riders.
 
+### Example: Reading A Kernel Matrix
+
+For a simple no-delay example, suppose there are three agents:
+
+$$
+A,\quad B,\quad C
+$$
+
+Suppose agent $A$ creates cooperative benefit:
+
+$$
+B_A = 10
+$$
+
+One row of the kernel might say:
+
+$$
+K_{A \to A} = 0.30,\quad
+K_{A \to B} = 0.20,\quad
+K_{A \to C} = 0.05
+$$
+
+This means:
+
+- $30\%$ of the value created by $A$ returns to $A$
+- $20\%$ goes to $B$
+- $5\%$ goes to $C$
+- the remaining $45\%$ leaks away or is not fitness-relevant
+
+The returned benefits from $A$'s action are therefore:
+
+$$
+R_A = K_{A \to A}B_A = 0.30 \times 10 = 3
+$$
+
+$$
+R_B = K_{A \to B}B_A = 0.20 \times 10 = 2
+$$
+
+$$
+R_C = K_{A \to C}B_A = 0.05 \times 10 = 0.5
+$$
+
+If $A$ pays private cooperation cost:
+
+$$
+C_A = 2
+$$
+
+then the direct actor-return comparison is:
+
+$$
+R_A - C_A = 3 - 2 = 1
+$$
+
+So $A$'s cooperation is favored from the direct-return perspective.
+
+The full no-delay kernel can be written as a matrix:
+
+$$
+K =
+\begin{bmatrix}
+0.30 & 0.20 & 0.05 \\
+0.10 & 0.25 & 0.15 \\
+0.05 & 0.10 & 0.35
+\end{bmatrix}
+$$
+
+Rows are producers and columns are recipients:
+
+$$
+K =
+\begin{bmatrix}
+K_{A \to A} & K_{A \to B} & K_{A \to C} \\
+K_{B \to A} & K_{B \to B} & K_{B \to C} \\
+K_{C \to A} & K_{C \to B} & K_{C \to C}
+\end{bmatrix}
+$$
+
+If the produced-benefit vector is:
+
+$$
+B =
+\begin{bmatrix}
+10 \\
+4 \\
+6
+\end{bmatrix}
+$$
+
+then total returned benefit to each recipient is:
+
+$$
+R = K^\top B
+$$
+
+which gives:
+
+$$
+R_A = 0.30(10) + 0.10(4) + 0.05(6) = 3.7
+$$
+
+$$
+R_B = 0.20(10) + 0.25(4) + 0.10(6) = 3.6
+$$
+
+$$
+R_C = 0.05(10) + 0.15(4) + 0.35(6) = 3.2
+$$
+
+So the returned-benefit vector is:
+
+$$
+R =
+\begin{bmatrix}
+3.7 \\
+3.6 \\
+3.2
+\end{bmatrix}
+$$
+
+The matrix $K$ is the detailed map of benefit flow. The scalar $\Phi$ is a
+compressed summary of the part of that map that matters for a particular
+cooperation condition. If only direct return to $A$ matters, then:
+
+$$
+\Phi_A = K_{A \to A} = 0.30
+$$
+
+If $B$ is a close copy or lineage relative of $A$ with relatedness
+$q_{AB}=0.5$, and $C$ is unrelated with $q_{AC}=0$, then:
+
+$$
+\Phi_A = K_{A \to A} + q_{AB}K_{A \to B} + q_{AC}K_{A \to C}
+$$
+
+$$
+\Phi_A = 0.30 + 0.5(0.20) + 0(0.05) = 0.40
+$$
+
+The compact cooperation condition becomes:
+
+$$
+\Phi_A B_A > C_A
+$$
+
+$$
+0.40 \times 10 > 2
+$$
+
+$$
+4 > 2
+$$
+
+In that example, cooperation by $A$ is favored because the feedback-weighted
+return exceeds the private cost.
+
 ## Proposed General Equation
 
 At time $t$, let site or agent $j$ create cooperative value $B_j(t)$ and let site or agent $i$ pay cost $C_i(t)$ for its current cooperation level.
@@ -185,16 +342,165 @@ How do new traits enter the system?
 
 ## Why This Is Distinct From Retained Benefit
 
-Retained Benefit should remain a clean benchmark.
+Retained Benefit should remain a clean benchmark. The Feedback Kernel Model
+proposal adds generality by making the return operator explicit.
 
-It can be written as a special case of the general kernel model where:
+### 1. Abstraction
 
-- the kernel is mostly local
-- the decisive protected channel is same-lineage routing
-- return is effectively immediate rather than heavily delayed
-- the open versus retained split is controlled by one scalar parameter
+Retained Benefit uses one specific return rule:
 
-So the proposed new module is not a replacement for Retained Benefit. It is the more universal parent model within which Retained Benefit becomes one interpretable special case.
+$$
+W_i = w_0 + O_i + R_i - C_i
+$$
+
+where:
+
+- $W_i$ is the fitness or replacement weight of site $i$
+- $w_0$ is baseline fitness
+- $O_i$ is open benefit received from local neighbors
+- $R_i$ is retained benefit received from same-lineage neighbors
+- $C_i$ is the private cost paid by site $i$
+
+The Feedback Kernel Model generalizes this to:
+
+$$
+W_i(t) = w_0 - C_i(t) + \sum_j \sum_{\tau \ge 0} K_{j \to i}(\tau, X_t) \, B_j(t-\tau)
+$$
+
+where:
+
+- $W_i(t)$ is the fitness or selection score of agent $i$ at time $t$
+- $w_0$ is baseline fitness
+- $C_i(t)$ is the private cost paid by agent $i$
+- $B_j(t-\tau)$ is benefit produced by agent $j$ at an earlier time
+- $K_{j \to i}(\tau, X_t)$ is the kernel weight saying how much of $j$'s benefit returns to $i$
+- $\tau$ is the delay between production and return
+- $X_t$ is world state, such as space, lineage, memory, reputation, institutions, or ecology
+
+So:
+
+$$
+\text{Retained Benefit} = \text{one fixed kernel}
+$$
+
+$$
+\text{Feedback Kernel Model} = \text{a family of possible kernels}
+$$
+
+### 2. Minimal Conditions For Cooperation
+
+In Retained Benefit, cooperation is favored roughly when:
+
+$$
+rB > C
+$$
+
+where:
+
+- $r$ is the retained-benefit fraction
+- $B$ is cooperative benefit produced
+- $C$ is private cost of cooperation
+
+That condition is useful but narrow, because $r$ represents only one feedback
+channel: immediate same-lineage retained benefit.
+
+The more general kernel condition is:
+
+$$
+\frac{\partial}{\partial h_i}
+\mathbb{E}
+\left[
+\sum_j \sum_{\tau \ge 0}
+K_{j \to i}(\tau, X_t) B_j(t-\tau)
+\right]
+>
+\frac{\partial C_i(t)}{\partial h_i}
+$$
+
+where:
+
+- $h_i$ is the cooperation level of agent $i$
+- the left side is the marginal returned benefit caused by increasing cooperation
+- the right side is the marginal private cost of increasing cooperation
+
+In plain terms:
+
+$$
+\text{cooperation increases when returned benefit from cooperation exceeds private cost}
+$$
+
+The minimal conditions are:
+
+1. There is variation in cooperation, $h_i$.
+2. Cooperation creates benefit, $B_i(h_i)$.
+3. Cooperation has private cost, $C_i(h_i)$.
+4. Some kernel $K$ routes enough benefit back to cooperators, copies, partners, or descendants.
+5. Selection copies or preserves agents or rules with higher $W_i$.
+6. Leakage to free-riders is not too large.
+
+### 3. Universal Cooperation Law
+
+The retained-benefit law is:
+
+$$
+\text{cooperation favored if retained same-lineage return} > \text{cost}
+$$
+
+The proposed universal law is:
+
+$$
+\text{cooperation favored if feedback-weighted return} > \text{cost}
+$$
+
+A compact form is:
+
+$$
+\Phi B > C
+$$
+
+where:
+
+- $\Phi$ is the effective feedback coefficient
+- $B$ is the marginal benefit created by cooperation
+- $C$ is the marginal private cost
+- $\Phi B$ is the part of the created benefit that effectively returns to the actor, copies, partners, or future descendants
+
+More explicitly:
+
+$$
+\Phi_i =
+\sum_j \sum_{\tau \ge 0}
+K_{j \to i}(\tau, X_t)
+$$
+
+and the local cooperation condition becomes:
+
+$$
+\Phi_i B_i > C_i
+$$
+
+The important relationship is:
+
+$$
+r \subset \Phi
+$$
+
+That is, the retained-benefit fraction $r$ is one specific component of the
+more general effective feedback coefficient $\Phi$. The broader coefficient
+can also include lineage, spatial assortment, reciprocity, reputation,
+enforcement, partner choice, delayed return, and ecological synergy.
+
+So the proposed general law is:
+
+$$
+\boxed{
+\text{Cooperation evolves when the expected feedback-weighted marginal return to the cooperative rule exceeds its marginal private cost.}
+}
+$$
+
+The proposed module is therefore not a replacement for Retained Benefit. It is
+the more universal parent model within which Retained Benefit becomes one
+interpretable special case.
 
 ## Important Special Cases
 
