@@ -262,6 +262,36 @@ So in the generalized model:
 - negative routed effects matter through decreasing $W_i$
 - competition can also matter through how changes in one agent's score alter the relative selection probabilities of others
 
+### Aggregate Fitness Versus Relative Selection
+
+It is useful to separate two levels of the model.
+
+At the score level:
+
+$$
+\sum_i W_i(t)
+=
+n w_0 + \sum_i R_i^{+}(t) - \sum_i R_i^{-}(t) - \sum_i C_i(t)
+$$
+
+Nothing in the proposal forces that aggregate quantity to be conserved.
+
+So total fitness-relevant score can:
+
+- rise if routed positive effects are large relative to routed negative effects and private costs
+- fall if negative effects and private costs dominate
+- remain roughly unchanged in approximately zero-sum regimes
+
+This is possible because the kernels are routing operators, not conservation laws. Their row sums are constrained for interpretability, but they are not required to preserve a fixed total returned quantity.
+
+By contrast, the selection layer is often closer to fixed-sum or zero-sum. If the selection rule maps scores into a fixed number of survival, reproduction, or copying opportunities, then one agent's gain in relative success can come partly or entirely at the expense of others.
+
+So the distinction is:
+
+- aggregate fitness-relevant score is not intrinsically zero-sum in this model
+- relative selection often is fixed-sum or zero-sum in practice
+- strict conservation would require an additional assumption, not currently built into the proposal
+
 ## Minimal Conditions For Cooperation And Competition
 
 Let $x_i$ denote the action tendency or strategy parameter of agent $i$.
