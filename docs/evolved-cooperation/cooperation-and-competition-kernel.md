@@ -425,6 +425,70 @@ This matters when help and harm depend on recognition, signaling, reputation, de
 
 Together, these additions would turn the current proposal into a more fully specified generative model of interaction, ecology, and selection.
 
+### One Possible Full Dynamical System
+
+Putting those pieces together, one ordered version of the model is:
+
+1. Action choice:
+
+  $$
+  a_j(t) = A_j\big(I_j(t), z_j(t), X_t\big)
+  $$
+
+2. Positive and negative effect production:
+
+  $$
+  \big(B_j^{+}(t), B_j^{-}(t)\big) = F\big(a_j(t), z_j(t), X_t\big)
+  $$
+
+  with an optional interaction budget:
+
+  $$
+  0 \le B_j^{+}(t) + B_j^{-}(t) \le Q_j(t)
+  $$
+
+3. Routing of those effects through the population:
+
+  $$
+  R_i^{+}(t) = \sum_j \sum_{\tau \ge 0} K^{+}_{j \to i}\big(\tau, X_t, I_j(t)\big)\,B_j^{+}(t-\tau)
+  $$
+
+  $$
+  R_i^{-}(t) = \sum_j \sum_{\tau \ge 0} K^{-}_{j \to i}\big(\tau, X_t, I_j(t)\big)\,B_j^{-}(t-\tau)
+  $$
+
+4. Fitness-relevant score formation:
+
+  $$
+  W_i(t)=w_0 + R_i^{+}(t) - R_i^{-}(t) - C_i\big(a_i(t), z_i(t), X_t\big)
+  $$
+
+5. Relative selection:
+
+  $$
+  P_i(t)=S_i\big(W_1(t),W_2(t),\dots,W_n(t)\big)
+  $$
+
+6. Inheritance, replacement, or policy updating:
+
+  $$
+  z_i(t+1) \sim U\big(z(t), P(t), M\big)
+  $$
+
+7. State transition:
+
+  $$
+  X_{t+1} = G\big(X_t, a(t), R^{+}(t), R^{-}(t), z(t+1)\big)
+  $$
+
+This closes the model as a loop:
+
+$$
+	ext{state} \rightarrow \text{action} \rightarrow \text{produced effects} \rightarrow \text{routed effects} \rightarrow \text{fitness score} \rightarrow \text{selection and updating} \rightarrow \text{new state}
+$$
+
+Different biological or social theories would mainly differ in the specific forms chosen for $A$, $F$, $K^{+}$, $K^{-}$, $C$, $S$, $U$, and $G$.
+
 ## Proposed Python Module Layout
 
 The canonical implementation should live as a new top-level module in the sibling <code>EvolvedCooperation</code> repository.
