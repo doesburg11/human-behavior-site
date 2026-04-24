@@ -166,6 +166,36 @@ So:
 - routed effects are not yet final selection outcome
 - fitness is the resulting score after combining returned positive effects, returned negative effects, and private costs
 
+## Why Separate Production From Routing?
+
+This separation matters because producing an effect and receiving an effect are not the same operation.
+
+In the present setup, an action first generates positive and negative outputs:
+
+$$
+\big(B_j^{+}(t), B_j^{-}(t)\big)
+$$
+
+and only afterward are those outputs distributed through the population:
+
+$$
+R_i^{\pm}(t) = \sum_j \sum_{\tau \ge 0} K^{\pm}_{j \to i}(\tau, X_t)\,B_j^{\pm}(t-\tau)
+$$
+
+That distinction is useful because it preserves causal structure that many payoff-level models compress away.
+
+If the model does not separate production from routing, then several different mechanisms get folded into one net effect:
+
+- how much an action generated
+- who received that effect
+- how much leaked away
+- whether returns were delayed
+- whether institutions, space, lineage, or ecology redirected the effect
+
+Keeping the two stages separate makes it possible to ask whether a change in cooperation or competition came from a change in what agents produced or from a change in how the world redistributed those effects.
+
+Many earlier models collapsed these steps because they were optimized for tractable payoff expressions, graph rules, or structure coefficients. That compression is often enough when interactions are local, immediate, and symmetric. But once one cares about leakage, delayed return, recipient-specific routing, or mixed helping and harming, the distinction becomes explanatory rather than cosmetic.
+
 ## Special Cases
 
 One reason this proposal is useful is that many familiar models become special cases.
@@ -367,6 +397,36 @@ where $z_j(t)$ is the internal state, trait, or strategy parameter of agent $j$.
 
 This determines when an action produces help, harm, both, or neither.
 
+### What Kinds Of Actions Can Produce Benefit?
+
+The model does not privilege one special action type. In principle, any action can produce positive effect if it generates positive, fitness-relevant output before routing.
+
+So an action counts as benefit-producing when:
+
+$$
+B_j^{+}(t) > 0
+$$
+
+under the production map:
+
+$$
+\big(B_j^{+}(t), B_j^{-}(t)\big) = F\big(a_j(t), z_j(t), X_t\big)
+$$
+
+Examples include:
+
+- resource sharing or provisioning
+- collective hunting effort
+- alarm calling or protective defense
+- parental care or brood protection
+- information sharing or coordination signaling
+- environmental modification that later improves survival or reproduction
+- institutional or social enforcement that increases positive returns to cooperators
+
+The important point is that benefit here is not a moral label and not yet final fitness. It is the positive, fitness-relevant output created by an action before that output is routed through the kernel.
+
+The same action can also generate negative output at the same time. For example, territorial defense or coalition action may create positive effects for allies while imposing negative effects on rivals.
+
 ### State Transition Rule
 
 The world state $X_t$ already appears inside the kernels, but the proposal does not yet specify how the world itself changes over time.
@@ -483,9 +543,7 @@ Putting those pieces together, one ordered version of the model is:
 
 This closes the model as a loop:
 
-$$
-	ext{state} \rightarrow \text{action} \rightarrow \text{produced effects} \rightarrow \text{routed effects} \rightarrow \text{fitness score} \rightarrow \text{selection and updating} \rightarrow \text{new state}
-$$
+state -> action -> produced effects -> routed effects -> fitness score -> selection and updating -> new state.
 
 Different biological or social theories would mainly differ in the specific forms chosen for $A$, $F$, $K^{+}$, $K^{-}$, $C$, $S$, $U$, and $G$.
 
@@ -532,10 +590,64 @@ Core responsibilities:
 
 That would let the sibling Python repo move from a cooperation-only theory toward a more general interaction theory.
 
+## Related Research
+
+I have not found an exact prior paper using the same full formulation developed on this page: separate nonnegative positive and negative kernels, explicit routed effects $R_i^{+}$ and $R_i^{-}$, optional delay $	au$, state dependence through $X_t$, and a separate selection or update layer. But several research lines come close to important parts of it.
+
+### Closest Direct Analogue
+
+- **Lehmann, Keller, and Sumpter (2007)** is the closest match I found. It explicitly studies both helping and harming on graphs and, as the abstract notes, allows interactions to vary with distance between nodes. That is very close to the present idea of routing positive and negative fitness-relevant effects through a structured operator over recipients.
+
+### Graph-Structured Cooperation And Interaction Routing
+
+- **Ohtsuki et al. (2006)** is not written in kernel notation, but the graph effectively acts like a sparse local routing operator: who receives the downstream benefit of cooperation depends on network neighborhood rather than random mixing.
+- **Peña et al. (2016)** extends this logic to multiplayer games on graphs. Its structure coefficients are more compressed than an explicit $K_{j \to i}$ operator, but they play a similar role by summarizing how population structure redistributes social effects.
+- **Débarre, Hauert, and Doebeli (2014)** is useful as a broader synthesis of social evolution in structured populations. It is less close to the exact notation used here, but it sits in the same family of models where who affects whom is structured rather than well mixed.
+
+### Interaction Structure As A General Formal Object
+
+- **Allen, Nowak, and Dieckmann (2013)** is a strong formal analogue. It treats interaction structure itself as a general modeling object and shows how long-run evolutionary dynamics depend on which individuals interact with which others. That is conceptually close to making interaction routing a reusable operator.
+
+### Indirect Effects And Interaction Matrices
+
+- **Moore, Brodie, and Wolf (1997)** is not framed as benefit-routing, but it is mathematically close because one individual's trait affects another individual's phenotype through indirect genetic effects.
+- **McGlothlin et al. (2010)** extends that interacting-phenotypes line directly into social evolution. This is one of the best precedents for treating social effects as structured transformations rather than only as entries in a direct payoff matrix.
+
+### Takeaway
+
+So the closest fair summary is:
+
+- the general idea that social effects are redistributed through structure is already well represented in graph theory, structured-population theory, and indirect-effect models
+- the exact formulation on this page still appears more explicit and more general than the closest matches I found, especially because it separates positive and negative routed channels and keeps routing distinct from the later selection or update rule
+
+### Feature Matrix
+
+The matrix below scores the papers already discussed in this section against the main features of the present setup.
+
+`Yes` means the feature is explicit. `Partial` means the feature is present in compressed, indirect, or only partly matching form. `No` means it is absent or not clearly part of the formal setup.
+
+| Feature | This page | Lehmann 2007 | Ohtsuki 2006 | Pena 2016 | Allen 2013 | Moore 1997 | McGlothlin 2010 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Structured redistribution of social effects | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| Explicit produced -> routed separation | Yes | No | No | No | No | No | No |
+| Explicit recipient-level routed quantities | Yes | No | No | No | No | No | No |
+| Separate positive and negative channels | Yes | No | No | No | No | No | No |
+| Distance- or state-dependent structure | Yes | Yes | Partial | Partial | Yes | No | No |
+| Separate interaction layer from selection or update rule | Yes | No | No | Partial | Yes | Partial | Partial |
+| Helping and harming in one framework | Yes | Yes | No | No | No | No | No |
+| Explicit delay in routing | Yes | No | No | No | No | No | No |
+
 ## References
 
+- Allen, B., Nowak, M. A., & Dieckmann, U. (2013). *Adaptive Dynamics with Interaction Structure*. *The American Naturalist*, 181(6), E139-E163. https://doi.org/10.1086/670192
+- Débarre, F., Hauert, C., & Doebeli, M. (2014). *Social evolution in structured populations*. *Nature Communications*, 5, 3409. https://doi.org/10.1038/ncomms4409
 - Hamilton, W. D. (1964). *The genetical evolution of social behaviour. I*. *Journal of Theoretical Biology*, 7(1), 1-16. https://doi.org/10.1016/0022-5193(64)90038-4
+- Lehmann, L., Keller, L., & Sumpter, D. J. T. (2007). *The evolution of helping and harming on graphs: the return of the inclusive fitness effect*. *Journal of Evolutionary Biology*, 20(6), 2284-2295. https://doi.org/10.1111/j.1420-9101.2007.01414.x
 - Maynard Smith, J., & Price, G. R. (1973). *The logic of animal conflict*. *Nature*, 246, 15-18. https://doi.org/10.1038/246015a0
 - Maynard Smith, J. (1982). *Evolution and the Theory of Games*. Cambridge University Press.
+- McGlothlin, J. W., Moore, A. J., Wolf, J. B., & Brodie III, E. D. (2010). *Interacting phenotypes and the evolutionary process. III. Social evolution*. *Evolution*, 64(9), 2558-2574. https://doi.org/10.1111/j.1558-5646.2010.01012.x
+- Moore, A. J., Brodie, E. D., & Wolf, J. B. (1997). *Interacting phenotypes and the evolutionary process: I. Direct and indirect genetic effects of social interactions*. *Evolution*, 51(5), 1352-1362. https://doi.org/10.1111/j.1558-5646.1997.tb01458.x
 - Nowak, M. A. (2006). *Five rules for the evolution of cooperation*. *Science*, 314(5805), 1560-1563. https://doi.org/10.1126/science.1133755
+- Ohtsuki, H., Hauert, C., Lieberman, E., & Nowak, M. A. (2006). *A simple rule for the evolution of cooperation on graphs and social networks*. *Nature*, 441(7092), 502-505. https://doi.org/10.1038/nature04605
+- Peña, J., Wu, B., Arranz, J., & Traulsen, A. (2016). *Evolutionary Games of Multiplayer Cooperation on Graphs*. *PLOS Computational Biology*, 12(8), e1005059. https://doi.org/10.1371/journal.pcbi.1005059
 - West, S. A., Griffin, A. S., & Gardner, A. (2007). *Evolutionary explanations for cooperation*. *Current Biology*, 17(16), R661-R672. https://doi.org/10.1016/j.cub.2007.06.004
