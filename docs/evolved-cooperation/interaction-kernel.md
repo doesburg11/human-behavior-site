@@ -1,27 +1,23 @@
 ---
-id: cooperation-and-competition-kernel-model
-title: Cooperation and Competition Kernel Model (Proposal)
-sidebar_position: 6
-slug: /evolved-cooperation/cooperation-and-competition-kernel-model
+id: interaction-kernel
+title: Interaction Kernel
+sidebar_position: 5
+slug: /evolved-cooperation/interaction-kernel
 ---
 
 ## Status
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
   <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Proposal.</strong> This page describes a further generalization beyond the Feedback Kernel proposal. It is not yet an implemented canonical case study in the <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.
+    <strong style={{ color: '#0F3368' }}>Implemented abstraction.</strong> This page describes the <code>interaction_kernel/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository. It is a reusable kernel engine, not a website replay case study.
   </p>
 </div>
 
-This page extends the cooperation-only [General Feedback Kernel](/evolved-cooperation/general-feedback-kernel) proposal by adding routed negative effects and competition.
+`interaction_kernel/` replaces the earlier feedback-kernel design note with a concrete implementation that routes positive and negative effects through explicit kernels before selection.
 
-## Why Another Proposal
+## Why This Kernel Exists
 
-The Feedback Kernel proposal generalizes Retained Benefit by replacing one retained-benefit fraction with a more flexible return operator for positive cooperative effects.
-
-That is already a useful abstraction, but it still treats the routed object as positive benefit only.
-
-The next step is broader:
+Retained Benefit generalizes several cooperation mechanisms by asking how much cooperative value returns to cooperators or copies of the cooperative rule. The interaction kernel takes the next step:
 
 > allow actions to generate both positive and negative fitness-relevant effects, and route both through explicit kernels
 
@@ -34,7 +30,7 @@ Examples:
 - territorial defense can benefit allies while harming competitors
 - predatory or antagonistic actions can create mixed positive and negative downstream consequences
 
-So this proposal is not just a more general cooperation model. It is a more general **interaction model**.
+So this is not just a more general cooperation model. It is a more general **interaction model**.
 
 ## Core Idea
 
@@ -150,7 +146,7 @@ So the sign lives in the **type of routed effect**, not in negative kernel weigh
 
 ## Minimal Interpretation
 
-This proposal does **not** say that “negative fitness” is directly distributed.
+This model does **not** say that “negative fitness” is directly distributed.
 
 A better statement is:
 
@@ -200,7 +196,7 @@ Many earlier models collapsed these steps because they were optimized for tracta
 
 ## Special Cases
 
-One reason this proposal is useful is that many familiar models become special cases.
+One reason this framework is useful is that many familiar models become special cases.
 
 ### Retained Benefit
 
@@ -222,9 +218,9 @@ So:
 - some of it is open to the local neighborhood
 - some of it is protected for same-lineage recipients
 
-### Feedback Kernel Model
+### Positive-Only Feedback Kernel
 
-The Feedback Kernel proposal is recovered when:
+A positive-only feedback-kernel case is recovered when:
 
 $$
 B_j^{-}(t)=0
@@ -232,11 +228,7 @@ $$
 
 but $K^{+}$ is allowed to vary across a broad family of positive return structures.
 
-So:
-
-$$
-\text{General Feedback Kernel} \subset \text{Cooperation and Competition Kernel Model}
-$$
+The old General feedback-kernel subset is therefore best read as a positive-only subset of the implemented Interaction Kernel.
 
 ### Competition-Only Case
 
@@ -306,7 +298,7 @@ $$
 n w_0 + \sum_i R_i^{+}(t) - \sum_i R_i^{-}(t) - \sum_i C_i(t)
 $$
 
-Nothing in the proposal forces that aggregate quantity to be conserved.
+Nothing in the current formulation forces that aggregate quantity to be conserved.
 
 So total fitness-relevant score can:
 
@@ -322,7 +314,7 @@ So the distinction is:
 
 - aggregate fitness-relevant score is not intrinsically zero-sum in this model
 - relative selection often is fixed-sum or zero-sum in practice
-- strict conservation would require an additional assumption, not currently built into the proposal
+- strict conservation would require an additional assumption, not currently built into the current implementation
 
 ## Minimal Conditions For Cooperation And Competition
 
@@ -356,17 +348,17 @@ So the generalized law is no longer just about cooperation. It becomes:
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
   <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Generalized law.</strong> An action is favored when its feedback-weighted marginal positive effects, minus its feedback-weighted marginal negative effects, including delayed routed effects, improve expected selection success enough to outweigh its marginal private cost.
+    <strong style={{ color: '#0F3368' }}>Generalized law.</strong> An action is favored when its feedback-weighted marginal positive effects, minus its feedback-weighted marginal negative effects, including routed effects that return after delay, improve expected selection success enough to outweigh its marginal private cost.
   </p>
 </div>
 
 ## Why This Generalization Matters
 
-The cooperation-only Feedback Kernel proposal is already useful for asking:
+The positive-only feedback-kernel subset is already useful for asking:
 
 > when does enough positive return flow back to cooperators or copies of the cooperative rule?
 
-The Cooperation and Competition Kernel proposal asks a broader question:
+The Interaction Kernel framework asks a broader question:
 
 > how do both helping and harming flow through structured populations, and when do those routed effects favor one action over another?
 
@@ -383,7 +375,7 @@ It allows the same framework to study:
 
 ## What Still Needs To Be Specified
 
-To become a closed interaction model rather than a high-level law, the proposal still needs a few additional rules.
+To become a richer generative interaction model, the current implementation still needs a few additional rules.
 
 ### Action-To-Effect Production Rule
 
@@ -431,7 +423,7 @@ The same action can also generate negative output at the same time. For example,
 
 ### State Transition Rule
 
-The world state $X_t$ already appears inside the kernels, but the proposal does not yet specify how the world itself changes over time.
+The world state $X_t$ already appears inside the kernels, but the current implementation does not yet specify how the world itself changes over time.
 
 A fuller version should include something like:
 
@@ -443,7 +435,7 @@ This lets space, resources, memory, institutions, or ecological conditions be al
 
 ### Inheritance Or Updating Rule
 
-The proposal defines a selection operator $P_i(t)$, but it still needs a rule for what is transmitted or updated after selection.
+The framework defines a selection operator $P_i(t)$, but it still needs a rule for what is transmitted or updated after selection.
 
 For an evolutionary version, one can write:
 
@@ -522,7 +514,7 @@ The caveat applies only to implementation detail, not representability: group se
 
 ### Resource And Budget Constraints
 
-The proposal also needs to say whether positive and negative outputs are unconstrained, budget-limited, or drawn from a shared ecological stock.
+The implementation also needs to say whether positive and negative outputs are unconstrained, budget-limited, or drawn from a shared ecological stock.
 
 One simple option is:
 
@@ -550,7 +542,7 @@ $$
 
 This matters when help and harm depend on recognition, signaling, reputation, deception, or uncertainty.
 
-Together, these additions would turn the current proposal into a more fully specified generative model of interaction, ecology, and selection.
+Together, these additions would turn the current implementation into a more fully specified generative model of interaction, ecology, and selection.
 
 ### One Possible Full Dynamical System
 
@@ -614,48 +606,50 @@ state -> action -> produced effects -> routed effects -> fitness score -> select
 
 Different biological or social theories would mainly differ in the specific forms chosen for $A$, $F$, $K^{+}$, $K^{-}$, $C$, $S$, $U$, and $G$.
 
-## Proposed Python Module Layout
+## Python Module Layout
 
-The canonical implementation should live as a new top-level module in the sibling <code>EvolvedCooperation</code> repository.
+The canonical implementation lives as a top-level module in the sibling <code>EvolvedCooperation</code> repository.
 
 ```text
-signed_interaction_kernel_model/
+interaction_kernel/
   __init__.py
   README.md
-  signed_interaction_kernel_model.py
-  positive_kernel.py
-  negative_kernel.py
+  interaction_kernel_model.py
+  kernels.py
   selection.py
   metrics.py
   config/
-    signed_interaction_default_config.py
-    retained_equivalent_config.py
-    competition_only_config.py
-    mixed_interaction_config.py
-  utils/
-    export_github_pages_demo.py
-    plot_phase_diagrams.py
-  experiments/
-    compare_help_vs_harm_regimes.py
-    sweep_positive_negative_coupling.py
+    interaction_kernel_config.py
+  data/
+    latest_run.json
 ```
 
 Core responsibilities:
 
-- <code>signed_interaction_kernel_model.py</code>: simulation loop and state update logic
-- <code>positive_kernel.py</code>: routing rules for positive effects
-- <code>negative_kernel.py</code>: routing rules for negative effects
+- <code>interaction_kernel_model.py</code>: simulation loop and state update logic
+- <code>kernels.py</code>: routing rules for positive and negative effects
 - <code>selection.py</code>: relative-success rule based on the vector of agent scores
-- <code>metrics.py</code>: cooperation, competition, mean positive return, mean negative return, and regime-boundary diagnostics
+- <code>metrics.py</code>: trait, routed-effect, and fitness summary diagnostics
+- <code>config/interaction_kernel_config.py</code>: active runtime parameters
 
-## Recommended Implementation Order
+## Current Implementation Scope
 
-1. Reproduce Retained Benefit as the positive-only baseline.
-2. Add a competition-only case with routed negative effects and explicit relative selection.
-3. Add a mixed case where one action creates both positive and negative downstream effects.
-4. Compare the boundaries under which helping, harming, or mixed strategies spread.
+The current implementation is deliberately small:
 
-That would let the sibling Python repo move from a cooperation-only theory toward a more general interaction theory.
+- each site carries a continuous trait <code>h</code> and an inherited lineage label
+- <code>B_plus</code> and <code>B_minus</code> are produced from <code>h</code>
+- <code>K_plus</code> can be uniform or kin-weighted
+- <code>K_minus</code> can be absent or uniform
+- selection is local and synchronous
+- output is written to <code>interaction_kernel/data/latest_run.json</code>
+
+Run from the <code>EvolvedCooperation</code> repo root:
+
+```bash
+./.conda/bin/python -m interaction_kernel.interaction_kernel_model
+```
+
+The next implementation steps are retained-benefit-equivalent presets, competition-only presets, and mixed positive/negative interaction sweeps.
 
 ## Related Research
 
@@ -802,7 +796,7 @@ The matrix below scores the papers already discussed in this section against the
       </tbody>
     </table>
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Feature coverage of related research compared with the cooperation and competition kernel setup.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Feature coverage of related research compared with the interaction-kernel setup.</figcaption>
 </figure>
 
 ## References
