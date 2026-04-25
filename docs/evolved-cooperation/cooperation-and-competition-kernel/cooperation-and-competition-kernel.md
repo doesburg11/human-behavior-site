@@ -356,7 +356,7 @@ So the generalized law is no longer just about cooperation. It becomes:
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
   <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Generalized law.</strong> An action is favored when its feedback-weighted marginal positive effects, minus its feedback-weighted marginal negative effects, improve expected selection success enough to outweigh its marginal private cost.
+    <strong style={{ color: '#0F3368' }}>Generalized law.</strong> An action is favored when its feedback-weighted marginal positive effects, minus its feedback-weighted marginal negative effects, including delayed routed effects, improve expected selection success enough to outweigh its marginal private cost.
   </p>
 </div>
 
@@ -454,6 +454,71 @@ $$
 where $U$ is the reproduction, replacement, or copying rule and $M$ represents mutation or transmission noise.
 
 For a learning version, the same slot could be replaced by a policy-update operator rather than a reproduction operator.
+
+### Why Group Selection Needs A Multilevel Update Rule
+
+Group structure in the interaction kernels is useful, but by itself it does not yet implement group selection.
+
+The kernels say who affects whom. The selection or update rule says who leaves descendants, gets copied, persists, or is replaced.
+
+So if the model only uses individual-level replacement based on individual scores, then the setup is still primarily structured individual selection, even when interactions are clustered by groups.
+
+To represent group selection explicitly, selection must include two levels:
+
+- within-group competition among individuals
+- between-group competition among groups
+
+One simple formal sketch is:
+
+$$
+W_i(t)=w_0 + R_i^{+}(t) - R_i^{-}(t) - C_i(t)
+$$
+
+$$
+\bar{W}_g(t)=\frac{1}{|g|}\sum_{i\in g}W_i(t)
+$$
+
+where:
+
+- $W_i(t)$ is individual score
+- $\bar{W}_g(t)$ is a group-level score for group $g$
+
+Then define both:
+
+$$
+P(i\mid g,t)\propto f\big(W_i(t)\big)
+$$
+
+$$
+P(g,t)\propto F\big(\bar{W}_g(t)\big)
+$$
+
+Interpretation:
+
+- $P(i\mid g,t)$ handles selection within groups
+- $P(g,t)$ handles selection between groups
+
+In mixed formulations, one can also use a weighting parameter to interpolate between levels:
+
+$$
+P_i(t)=(1-\lambda)P_{\text{within}}(i,t)+\lambda P_{\text{between}}(g(i),t)
+$$
+
+with $\lambda\in[0,1]$ controlling the strength of group-level selection.
+
+So the key caveat is:
+
+group-aware interaction kernels are necessary for many grouped settings, but explicit multilevel selection or update dynamics are needed if the claim is specifically group selection.
+
+Within this framework, all five mechanisms from Nowak (2006) can be represented as parameterizations of action, state, routing, and selection:
+
+- kin selection
+- direct reciprocity
+- indirect reciprocity
+- network reciprocity
+- group selection
+
+The caveat applies only to implementation detail, not representability: group selection is included, but it requires an explicit multilevel selection or update rule rather than interaction kernels alone.
 
 ### Resource And Budget Constraints
 
