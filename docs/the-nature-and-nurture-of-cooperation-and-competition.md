@@ -1,29 +1,21 @@
 ---
-id: the-nature-and-nurture-of-human-cooperation
-title: The Nature and Nurture of Human Cooperation
+id: the-nature-and-nurture-of-cooperation-and-competition
+title: The Nature and Nurture of Cooperation and Competition
 hide_title: true
 sidebar_position: 1
 slug: /
 ---
-<figure style={{ position: 'relative', margin: '0 0 2rem' }}>
+<figure className="home-hero-banner">
   <img
-    src="/img/the-nature-and-nurture-of-human-cooperation/display-0.svg"
-    alt="Display 0: The Nature and Nurture of Human Cooperation"
-    style={{ display: 'block', width: '100%', height: 'auto' }}
+    src="/img/the-nature-and-nurture-of-cooperation-and-competition/display-0.svg"
+    alt="Display 0: The Nature and Nurture of Cooperation and Competition"
+    className="home-hero-banner__background"
   />
   <img
-    src="/img/the-nature-and-nurture-of-human-cooperation/logo-white.png"
+    src="/img/the-nature-and-nurture-of-cooperation-and-competition/logo-white.png"
     alt=""
     aria-hidden="true"
-    style={{
-      position: 'absolute',
-      top: '50%',
-      left: 'clamp(0.75rem, 2vw, 2rem)',
-      width: 'clamp(2.5rem, 6vw, 4.5rem)',
-      height: 'auto',
-      transform: 'translateY(-50%)',
-      pointerEvents: 'none',
-    }}
+    className="home-hero-banner__logo"
   />
 </figure>
 
@@ -60,7 +52,7 @@ Most research has focused either on evolutionary explanations for the emergence 
 Human cooperative behavior can be understood as present-day action running on ancestral hardware. Its origins span multiple timescales, from evolutionary changes millions of years ago to learning processes unfolding fractions of a second ago.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/the-nature-and-nurture-of-human-cooperation/display-1.png" alt="Display 1: Origins of cooperative behavior by Nature and Nurture" width="1000" />
+  <img src="/img/the-nature-and-nurture-of-cooperation-and-competition/display-1.png" alt="Display 1: Origins of cooperative behavior by Nature and Nurture" width="1000" />
   <figcaption><strong>Display 1:</strong> Cooperation explained across evolutionary and learning timescales</figcaption>
 </figure>
 
@@ -128,7 +120,7 @@ Consider a person entering a new workplace team. They do not arrive with a fully
 A familiar analogy comes from language acquisition. Chomsky argued, first against behaviorist accounts in 1959 and then more systematically in 1965, that children are not born already speaking a particular language, but with an innate capacity for language that develops through environmental input. The same logic applies here: humans may not be born with one fixed cooperative strategy, but with capacities that allow cooperation to be shaped by experience.
 
 <figure style={{ textAlign: 'center' }}>
-  <img src="/img/the-nature-and-nurture-of-human-cooperation/display-2.png" alt="Display 3: Plasticity as the bridge between inherited structure and learned behavior" width="400" />
+  <img src="/img/the-nature-and-nurture-of-cooperation-and-competition/display-2.png" alt="Display 3: Plasticity as the bridge between inherited structure and learned behavior" width="400" />
   <figcaption><strong>Display 3:</strong> Plasticity as the bridge between inherited structure and learned behavior</figcaption>
 </figure>
 
@@ -189,7 +181,7 @@ The relationship does not stop there. Learning changes ecological structure, eco
 
 <figure style={{ margin: '0 0 2rem' }}>
   <img
-    src="/img/the-nature-and-nurture-of-human-cooperation/display-5.svg"
+    src="/img/the-nature-and-nurture-of-cooperation-and-competition/display-5.svg"
     alt="Display 5: Eco-evolutionary feedback loop connecting evolution, learning, ecological structure, selection gradients, and environment-dependent plasticity"
     style={{ display: 'block', width: '100%', height: 'auto' }}
   />

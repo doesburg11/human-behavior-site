@@ -25,7 +25,7 @@ function removeDuplicateEvolvedCooperationDoc(items) {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'The Nature and Nurture of Human Cooperation',
+  title: 'The Nature and Nurture of Cooperation and Competition',
   tagline: 'Exploring the roots of human actions',
   favicon: 'img/favicon.ico',
 
@@ -77,7 +77,7 @@ const config = {
 
   themeConfig: {
     navbar: {
-      title: 'The Nature and Nurture of Human Cooperation',
+      title: 'The Nature and Nurture of Cooperation and Competition',
       logo: {
         alt: 'Behavior Logo',
         src: 'img/logo.png',

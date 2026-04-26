@@ -28,3 +28,30 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.home-hero-banner {
+  position: relative;
+  margin: 0 0 2rem;
+}
+
+.home-hero-banner__background {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-hero-banner__logo {
+  position: absolute;
+  top: 50%;
+  left: clamp(0.3rem, 1vw, 0.9rem);
+  width: clamp(1.9rem, 4.2vw, 3rem);
+  height: auto;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .home-hero-banner__logo {
+    display: none;
+  }
+}

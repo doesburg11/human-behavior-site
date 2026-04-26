@@ -163,7 +163,7 @@ On that view, cooperation is not an isolated add-on to human life. It is one exp
 
 ### What follows
 
-For a more explicit definition of the cooperative side, see [What is Cooperation?](/what-is-cooperation). For the opposing side of the same broader interaction space, see [What is Adversarial Behavior?](/what-is-adversarial-behavior). For the two-timescale explanation of how cooperation emerges through evolution and learning, return to [The Nature and Nurture of Human Cooperation](/).
+For a more explicit definition of the cooperative side, see [What is Cooperation?](/what-is-cooperation). For the opposing side of the same broader interaction space, see [What is Adversarial Behavior?](/what-is-adversarial-behavior). For the two-timescale explanation of how cooperation emerges through evolution and learning, return to [The Nature and Nurture of Cooperation and Competition](/).
 
 ---
 

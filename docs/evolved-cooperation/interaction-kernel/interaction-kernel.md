@@ -665,6 +665,25 @@ I have not found an exact prior paper using the same full formulation developed 
 - **Peña et al. (2016)** extends this logic to multiplayer games on graphs. Its structure coefficients are more compressed than an explicit $K_{j \to i}$ operator, but they play a similar role by summarizing how population structure redistributes social effects.
 - **Débarre, Hauert, and Doebeli (2014)** is useful as a broader synthesis of social evolution in structured populations. It is less close to the exact notation used here, but it sits in the same family of models where who affects whom is structured rather than well mixed.
 
+### Relation To Evolutionary Dynamics On Graphs
+
+The lecture video *Evolutionary Dynamics on Graphs: Steering Evolution* is relevant background for this page because it focuses on structured-population evolution rather than well-mixed interaction.
+
+In interaction-kernel terms, a graph can be read as a special parameterization of routing:
+
+- graph edges constrain who can affect whom
+- edge weights or local update rules constrain how strongly effects are routed
+- replacement rules constrain who reproduces or replaces whom under selection
+
+That maps directly to the present separation between:
+
+- interaction routing through $K^{+}$ and $K^{-}$
+- selection mapping through $P_i(t)=S_i(W_1,\dots,W_n)$
+
+So the graph-dynamics framing is not a separate theory from this page. It is a concrete and widely used special case of structured routing and relative selection.
+
+The main nuance is scope: graph-dynamics lectures often emphasize network-structured selection in general, while kin selection is one particular mechanism that requires explicit relatedness assumptions on top of the interaction structure.
+
 ### Interaction Structure As A General Formal Object
 
 - **Allen, Nowak, and Dieckmann (2013)** is a strong formal analogue. It treats interaction structure itself as a general modeling object and shows how long-run evolutionary dynamics depend on which individuals interact with which others. That is conceptually close to making interaction routing a reusable operator.
@@ -812,4 +831,5 @@ The matrix below scores the papers already discussed in this section against the
 - Nowak, M. A. (2006). *Five rules for the evolution of cooperation*. *Science*, 314(5805), 1560-1563. https://doi.org/10.1126/science.1133755
 - Ohtsuki, H., Hauert, C., Lieberman, E., & Nowak, M. A. (2006). *A simple rule for the evolution of cooperation on graphs and social networks*. *Nature*, 441(7092), 502-505. https://doi.org/10.1038/nature04605
 - Peña, J., Wu, B., Arranz, J., & Traulsen, A. (2016). *Evolutionary Games of Multiplayer Cooperation on Graphs*. *PLOS Computational Biology*, 12(8), e1005059. https://doi.org/10.1371/journal.pcbi.1005059
+- YouTube. (n.d.). *Evolutionary Dynamics on Graphs: Steering Evolution*. https://www.youtube.com/watch?v=m2ZCW4oLmB8
 - West, S. A., Griffin, A. S., & Gardner, A. (2007). *Evolutionary explanations for cooperation*. *Current Biology*, 17(16), R661-R672. https://doi.org/10.1016/j.cub.2007.06.004
