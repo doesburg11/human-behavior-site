@@ -1,7 +1,7 @@
 ---
 id: interaction-kernel
 title: Interaction Kernel
-sidebar_position: 5
+sidebar_position: 1
 slug: /evolved-cooperation/interaction-kernel
 ---
 
