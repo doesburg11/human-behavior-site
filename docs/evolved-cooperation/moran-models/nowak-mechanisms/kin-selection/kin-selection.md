@@ -56,7 +56,7 @@ Each site stores one cooperation trait $h$ and one inherited lineage label.
 
 <div style={{ textAlign: 'center', padding: '2px 0', color: '#1c4b8f', fontSize: '1.5rem', lineHeight: 1, borderTop: '1px solid #d6e4f5', borderBottom: '1px solid #d6e4f5', background: '#ffffff' }}>↓</div>
 
-<div style={{ display: 'flex', borderBottom: '1px solid #d6e4f5', background: '#ffffff' }}>
+<div style={{ display: 'flex', borderBottom: '1px solid #d6e4f5', background: '#eaf2fb' }}>
 <div style={{ width: '6px', background: '#0f3368', flexShrink: 0 }} />
 <div style={{ display: 'flex', gap: '1rem', padding: '0.9rem 1.25rem', alignItems: 'flex-start', flex: 1 }}>
 <div style={{ minWidth: '42px', width: '42px', height: '42px', background: '#1c4b8f', color: '#ffffff', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '1rem' }}>2</div>
@@ -69,7 +69,7 @@ $$B_i^+ = B_{\text{plus}} \cdot h_i, \qquad C_i = C_{\text{scale}} \cdot h_i$$
 </div>
 </div>
 
-<div style={{ textAlign: 'center', padding: '2px 0', color: '#1c4b8f', fontSize: '1.5rem', lineHeight: 1, borderTop: '1px solid #d6e4f5', borderBottom: '1px solid #d6e4f5', background: '#eaf2fb' }}>↓</div>
+<div style={{ textAlign: 'center', padding: '2px 0', color: '#1c4b8f', fontSize: '1.5rem', lineHeight: 1, borderTop: '1px solid #d6e4f5', borderBottom: '1px solid #d6e4f5', background: '#ffffff' }}>↓</div>
 
 <div style={{ display: 'flex', borderBottom: '1px solid #d6e4f5', background: '#eaf2fb' }}>
 <div style={{ width: '6px', background: '#0f3368', flexShrink: 0 }} />
@@ -88,7 +88,7 @@ $$w_{ij} = \begin{cases} w_{\text{same}} & \text{if } \text{lineage}_i = \text{l
 
 <div style={{ textAlign: 'center', padding: '2px 0', color: '#1c4b8f', fontSize: '1.5rem', lineHeight: 1, borderTop: '1px solid #d6e4f5', borderBottom: '1px solid #d6e4f5', background: '#ffffff' }}>↓</div>
 
-<div style={{ display: 'flex', borderBottom: '1px solid #d6e4f5', background: '#ffffff' }}>
+<div style={{ display: 'flex', borderBottom: '1px solid #d6e4f5', background: '#eaf2fb' }}>
 <div style={{ width: '6px', background: '#0f3368', flexShrink: 0 }} />
 <div style={{ display: 'flex', gap: '1rem', padding: '0.9rem 1.25rem', alignItems: 'flex-start', flex: 1 }}>
 <div style={{ minWidth: '42px', width: '42px', height: '42px', background: '#1c4b8f', color: '#ffffff', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '1rem' }}>4</div>
@@ -103,7 +103,7 @@ $$R_i^+ = \sum_j K_{ji}^+ \cdot B_j^+$$
 </div>
 </div>
 
-<div style={{ textAlign: 'center', padding: '2px 0', color: '#1c4b8f', fontSize: '1.5rem', lineHeight: 1, borderTop: '1px solid #d6e4f5', borderBottom: '1px solid #d6e4f5', background: '#eaf2fb' }}>↓</div>
+<div style={{ textAlign: 'center', padding: '2px 0', color: '#1c4b8f', fontSize: '1.5rem', lineHeight: 1, borderTop: '1px solid #d6e4f5', borderBottom: '1px solid #d6e4f5', background: '#ffffff' }}>↓</div>
 
 <div style={{ display: 'flex', borderBottom: '1px solid #d6e4f5', background: '#eaf2fb' }}>
 <div style={{ width: '6px', background: '#0f3368', flexShrink: 0 }} />
@@ -122,7 +122,7 @@ Baseline fitness $w_0$ dampens selection intensity.
 
 <div style={{ textAlign: 'center', padding: '2px 0', color: '#1c4b8f', fontSize: '1.5rem', lineHeight: 1, borderTop: '1px solid #d6e4f5', borderBottom: '1px solid #d6e4f5', background: '#ffffff' }}>↓</div>
 
-<div style={{ display: 'flex', background: '#ffffff' }}>
+<div style={{ display: 'flex', background: '#eaf2fb' }}>
 <div style={{ width: '6px', background: '#0f3368', flexShrink: 0 }} />
 <div style={{ display: 'flex', gap: '1rem', padding: '0.9rem 1.25rem', alignItems: 'flex-start', flex: 1 }}>
 <div style={{ minWidth: '42px', width: '42px', height: '42px', background: '#1c4b8f', color: '#ffffff', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '1rem' }}>6</div>
