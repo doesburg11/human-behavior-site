@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1560" viewBox="0 0 1320 1560" role="img" aria-labelledby="title desc">
+  <title id="title">Kin Selection simulation step flowchart</title>
+  <desc id="desc">A blue publication-style flowchart showing one kin-selection simulation step: start from the current grid, compute cooperative output and private cost, build the kin-weighted routing kernel, accumulate lineage-weighted receipts, compute fitness, then sample a local parent by softmax over fitness and replace the grid synchronously.</desc>
+  <style>
+    .canvas { fill: #ffffff; }
+    .header { fill: #0f3368; }
+    .headerTitle {
+      font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      fill: #ffffff;
+    }
+    .headerSubtitle {
+      font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      fill: #ffffff;
+    }
+    .panelWhite { fill: #eaf2fb; stroke: #d6e4f5; stroke-width: 3; }
+    .panelBlue  { fill: #eaf2fb; stroke: #d6e4f5; stroke-width: 3; }
+    .panelStripe { fill: #eaf2fb; stroke: #d6e4f5; stroke-width: 3; }
+    .accent { fill: #0f3368; }
+    .stepBadge { fill: #1c4b8f; }
+    .badgeText {
+      font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      fill: #ffffff;
+    }
+    .stepTitle {
+      font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      fill: #0f3368;
+    }
+    .bodyText {
+      font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      fill: #1f2d3d;
+    }
+    .formulaText {
+      font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      fill: #1c4b8f;
+    }
+    .formulaSub { font-size: 72%; baseline-shift: sub; }
+    .formulaSup { font-size: 68%; baseline-shift: super; }
+    .smallText {
+      font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      fill: #415a77;
+    }
+    .arrow { stroke: #1c4b8f; stroke-width: 5; fill: none; stroke-linecap: square; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#1c4b8f"/>
+    </marker>
+  </defs>
+
+  <rect class="canvas" x="0" y="0" width="1320" height="1560"/>
+  <rect class="header" x="0" y="0" width="1320" height="150"/>
+  <text class="headerTitle" x="70" y="58">Kin Selection Simulation Step</text>
+  <text class="headerSubtitle" x="70" y="96">One synchronous grid update from step t to step t + 1 under kin-selection routing.</text>
+
+  <!-- Panel 1: Start -->
+  <rect class="panelBlue" x="180" y="200" width="980" height="116"/>
+  <rect class="accent" x="180" y="200" width="18" height="116"/>
+  <rect class="stepBadge" x="220" y="228" width="56" height="56"/>
+  <text class="badgeText" x="248" y="264" text-anchor="middle">1</text>
+  <text class="stepTitle" x="308" y="252">Start from the current grid state</text>
+  <text class="bodyText" x="308" y="286">Each site stores one cooperation trait h and one inherited lineage label.</text>
+
+  <path class="arrow" d="M 670 316 L 670 370" marker-end="url(#arrowhead)"/>
+
+  <!-- Panel 2: Production -->
+  <rect class="panelWhite" x="180" y="388" width="980" height="140"/>
+  <rect class="accent" x="180" y="388" width="18" height="140"/>
+  <rect class="stepBadge" x="220" y="424" width="56" height="56"/>
+  <text class="badgeText" x="248" y="460" text-anchor="middle">2</text>
+  <text class="stepTitle" x="308" y="442">Compute cooperative output and private cost</text>
+  <text class="formulaText" x="308" y="472">B<tspan dy="6" font-size="72%">i</tspan><tspan dy="-6"> = B_plus_scale × h</tspan><tspan dy="6" font-size="72%">i</tspan><tspan dy="-6"></tspan></text>
+  <text class="formulaText" x="308" y="498">C<tspan dy="6" font-size="72%">i</tspan><tspan dy="-6"> = C_scale × h</tspan><tspan dy="6" font-size="72%">i</tspan><tspan dy="-6"></tspan></text>
+  <text class="smallText" x="308" y="520">Both terms scale linearly with trait h; cost is subtracted later in the fitness expression.</text>
+
+  <path class="arrow" d="M 670 528 L 670 582" marker-end="url(#arrowhead)"/>
+
+  <!-- Panel 3: Kernel Construction -->
+  <rect class="panelStripe" x="180" y="600" width="980" height="220"/>
+  <rect class="accent" x="180" y="600" width="18" height="220"/>
+  <rect class="stepBadge" x="220" y="636" width="56" height="56"/>
+  <text class="badgeText" x="248" y="672" text-anchor="middle">3</text>
+  <text class="stepTitle" x="308" y="654">Build the kin-weighted routing kernel</text>
+  <text class="bodyText" x="308" y="688">For each producer i, assign raw weights by lineage match, then row-normalize:</text>
+  <text class="formulaText" x="308" y="716">raw_w(i → j)  =  w<tspan dy="6" font-size="72%">same</tspan><tspan dy="-6">     if lineage</tspan><tspan dy="6" font-size="72%">i</tspan><tspan dy="-6"> = lineage</tspan><tspan dy="6" font-size="72%">j</tspan><tspan dy="-6"></tspan></text>
+  <text class="formulaText" x="308" y="742">raw_w(i → j)  =  w<tspan dy="6" font-size="72%">other</tspan><tspan dy="-6">    otherwise</tspan></text>
+  <text class="formulaText" x="308" y="772">K(i, j)  =  raw_w(i → j)  /  Σ<tspan dy="6" font-size="72%">k</tspan><tspan dy="-6"> raw_w(i → k)</tspan></text>
+  <text class="smallText" x="308" y="800">Default weights: w_same = 0.8 for same lineage, w_other = 0.2 for other lineage.</text>
+
+  <path class="arrow" d="M 670 820 L 670 874" marker-end="url(#arrowhead)"/>
+
+  <!-- Panel 4: Routing -->
+  <rect class="panelBlue" x="180" y="892" width="980" height="154"/>
+  <rect class="accent" x="180" y="892" width="18" height="154"/>
+  <rect class="stepBadge" x="220" y="928" width="56" height="56"/>
+  <text class="badgeText" x="248" y="964" text-anchor="middle">4</text>
+  <text class="stepTitle" x="308" y="946">Accumulate lineage-weighted receipts</text>
+  <text class="bodyText" x="308" y="980">Each site sums the kin-weighted share of benefit it receives from its neighbors:</text>
+  <text class="formulaText" x="308" y="1010">R<tspan dy="6" font-size="72%">i</tspan><tspan dy="-6"> = Σ</tspan><tspan dy="6" font-size="72%">j</tspan><tspan dy="-6"> K</tspan><tspan dy="6" font-size="72%">ji</tspan><tspan dy="-6"> × B</tspan><tspan dy="6" font-size="72%">j</tspan><tspan dy="-6"></tspan></text>
+  <text class="smallText" x="308" y="1034">Cooperators in same-lineage clusters receive more benefit than cross-lineage neighbors.</text>
+
+  <path class="arrow" d="M 670 1046 L 670 1100" marker-end="url(#arrowhead)"/>
+
+  <!-- Panel 5: Fitness -->
+  <rect class="panelWhite" x="180" y="1118" width="980" height="128"/>
+  <rect class="accent" x="180" y="1118" width="18" height="128"/>
+  <rect class="stepBadge" x="220" y="1154" width="56" height="56"/>
+  <text class="badgeText" x="248" y="1190" text-anchor="middle">5</text>
+  <text class="stepTitle" x="308" y="1172">Compute site fitness</text>
+  <text class="formulaText" x="308" y="1206">W<tspan dy="6" font-size="72%">i</tspan><tspan dy="-6"> = w</tspan><tspan dy="6" font-size="72%">0</tspan><tspan dy="-6"> + R</tspan><tspan dy="6" font-size="72%">i</tspan><tspan dy="-6"> − C</tspan><tspan dy="6" font-size="72%">i</tspan><tspan dy="-6"></tspan></text>
+  <text class="smallText" x="308" y="1230">Baseline fitness w0 dampens selection intensity; fitness values drive parent sampling.</text>
+
+  <path class="arrow" d="M 670 1246 L 670 1300" marker-end="url(#arrowhead)"/>
+
+  <!-- Panel 6: Local Replacement -->
+  <rect class="panelStripe" x="180" y="1318" width="980" height="220"/>
+  <rect class="accent" x="180" y="1318" width="18" height="220"/>
+  <rect class="stepBadge" x="220" y="1354" width="56" height="56"/>
+  <text class="badgeText" x="248" y="1390" text-anchor="middle">6</text>
+  <text class="stepTitle" x="308" y="1372">For each site, sample a local parent by softmax over fitness</text>
+  <text class="bodyText" x="308" y="1406">Parent selection is restricted to the site's local neighborhood.</text>
+  <text class="bodyText" x="308" y="1440">The offspring inherits the chosen parent's trait h (with small Gaussian mutation)</text>
+  <text class="bodyText" x="308" y="1474">and lineage label — same-lineage clusters grow when cooperators reproduce locally.</text>
+  <text class="smallText" x="308" y="1504">This synchronous replacement completes one Moran step; the grid becomes step t + 1.</text>
+
+</svg>
