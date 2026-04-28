@@ -179,6 +179,48 @@ Variable definitions:
 - $W_i$ is the fitness score used for local replacement
 - $w_0$ is the fixed baseline fitness shared by all sites, which dampens selection intensity
 
+## Worked Example
+
+Consider a focal site $i$ with four von Neumann neighbors, two same-lineage (A) and two other-lineage (B):
+
+| Site | Lineage | Trait $h$ |
+|------|---------|-----------|
+| $i$  | A | 0.8 |
+| $j_1$ | A | 0.7 |
+| $j_2$ | A | 0.6 |
+| $j_3$ | B | 0.9 |
+| $j_4$ | B | 0.5 |
+
+**Production**
+
+$$B_i^+ = 1.0 \times 0.8 = 0.80, \qquad C_i = 0.2 \times 0.8 = 0.16$$
+
+**Outgoing kernel row for site $i$**
+
+Raw weights: $w_{\text{same}} = 0.8$ for $j_1, j_2$; $w_{\text{other}} = 0.2$ for $j_3, j_4$. Row sum = 2.00, so normalized weights are 0.40 for same-lineage and 0.10 for other-lineage.
+
+**What $i$ sends**
+
+$$i \to j_1: \ 0.80 \times 0.40 = 0.32 \qquad i \to j_3: \ 0.80 \times 0.10 = 0.08$$
+
+Same-lineage neighbors receive 4× more benefit than other-lineage neighbors.
+
+**What $i$ receives** (assuming symmetric neighborhood structure)
+
+$$R_i^+ = \underbrace{0.7 \times 0.40}_{j_1} + \underbrace{0.6 \times 0.40}_{j_2} + \underbrace{0.9 \times 0.10}_{j_3} + \underbrace{0.5 \times 0.10}_{j_4} = 0.66$$
+
+**Fitness**
+
+$$W_i = 1.0 + 0.66 - 0.16 = 1.50$$
+
+**Why kinship helps**
+
+If $i$ were surrounded by four other-lineage neighbors with the same traits, all incoming weights would be 0.10:
+
+$$R_i^+ = (0.7 + 0.6 + 0.9 + 0.5) \times 0.10 = 0.27, \qquad W_i = 1.0 + 0.27 - 0.16 = 1.11$$
+
+The lineage cluster raises fitness from 1.11 to 1.50 — a difference that compounds over many steps as same-lineage cooperators expand together.
+
 ## Key Parameters
 
 | Parameter | Default | Role |
