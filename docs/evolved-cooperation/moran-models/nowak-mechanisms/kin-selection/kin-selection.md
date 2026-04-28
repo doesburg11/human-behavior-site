@@ -33,13 +33,110 @@ with row normalization applied afterward. Because offspring inherit the parent's
 
 One full synchronous kin-selection update runs as follows. All sites update simultaneously.
 
-<figure style={{ margin: '0 0 1.25rem 0', textAlign: 'center' }}>
-  <img
-    src="/img/evolved-cooperation/kin-selection/simulation_step_flow.svg"
-    alt="Flowchart of one kin-selection simulation step: start, production, kernel construction, routing, fitness, local replacement"
-    style={{ display: 'block', width: '100%', maxWidth: '1080px', height: 'auto', margin: '0 auto' }}
-  />
-  <figcaption><strong>Display 1:</strong> One synchronous kin-selection update from step <code>t</code> to step <code>t + 1</code>.</figcaption>
+<figure style={{ margin: '0 0 1.25rem 0' }}>
+<div style={{ border: '1px solid #d6e4f5', overflow: 'hidden' }}>
+
+<div style={{ background: '#0f3368', padding: '1rem 1.5rem' }}>
+<div style={{ color: '#ffffff', fontWeight: 700, fontSize: '1.15rem', marginBottom: '0.2rem' }}>Kin Selection Simulation Step</div>
+<div style={{ color: '#ccdcef', fontSize: '0.9rem' }}>One synchronous grid update from step t to step t + 1 under kin-selection routing.</div>
+</div>
+
+<div style={{ display: 'flex', borderBottom: '1px solid #d6e4f5', background: '#eaf2fb' }}>
+<div style={{ width: '6px', background: '#0f3368', flexShrink: 0 }} />
+<div style={{ display: 'flex', gap: '1rem', padding: '0.9rem 1.25rem', alignItems: 'flex-start', flex: 1 }}>
+<div style={{ minWidth: '42px', width: '42px', height: '42px', background: '#1c4b8f', color: '#ffffff', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '1rem' }}>1</div>
+<div style={{ flex: 1 }}>
+<p style={{ fontWeight: 700, color: '#0f3368', margin: '0 0 0.35rem' }}>Start from the current grid state</p>
+
+Each site stores one cooperation trait $h$ and one inherited lineage label.
+
+</div>
+</div>
+</div>
+
+<div style={{ textAlign: 'center', padding: '2px 0', color: '#1c4b8f', fontSize: '1.5rem', lineHeight: 1, borderTop: '1px solid #d6e4f5', borderBottom: '1px solid #d6e4f5', background: '#ffffff' }}>↓</div>
+
+<div style={{ display: 'flex', borderBottom: '1px solid #d6e4f5', background: '#ffffff' }}>
+<div style={{ width: '6px', background: '#0f3368', flexShrink: 0 }} />
+<div style={{ display: 'flex', gap: '1rem', padding: '0.9rem 1.25rem', alignItems: 'flex-start', flex: 1 }}>
+<div style={{ minWidth: '42px', width: '42px', height: '42px', background: '#1c4b8f', color: '#ffffff', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '1rem' }}>2</div>
+<div style={{ flex: 1 }}>
+<p style={{ fontWeight: 700, color: '#0f3368', margin: '0 0 0.35rem' }}>Compute cooperative output and private cost</p>
+
+$$B_i^+ = B_{\text{plus}} \cdot h_i, \qquad C_i = C_{\text{scale}} \cdot h_i$$
+
+</div>
+</div>
+</div>
+
+<div style={{ textAlign: 'center', padding: '2px 0', color: '#1c4b8f', fontSize: '1.5rem', lineHeight: 1, borderTop: '1px solid #d6e4f5', borderBottom: '1px solid #d6e4f5', background: '#eaf2fb' }}>↓</div>
+
+<div style={{ display: 'flex', borderBottom: '1px solid #d6e4f5', background: '#eaf2fb' }}>
+<div style={{ width: '6px', background: '#0f3368', flexShrink: 0 }} />
+<div style={{ display: 'flex', gap: '1rem', padding: '0.9rem 1.25rem', alignItems: 'flex-start', flex: 1 }}>
+<div style={{ minWidth: '42px', width: '42px', height: '42px', background: '#1c4b8f', color: '#ffffff', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '1rem' }}>3</div>
+<div style={{ flex: 1 }}>
+<p style={{ fontWeight: 700, color: '#0f3368', margin: '0 0 0.35rem' }}>Build the kin-weighted routing kernel</p>
+
+Assign raw weight $w_{\text{same}}$ to same-lineage neighbors and $w_{\text{other}}$ to other-lineage neighbors, then row-normalize:
+
+$$w_{ij} = \begin{cases} w_{\text{same}} & \text{if } \text{lineage}_i = \text{lineage}_j \\ w_{\text{other}} & \text{otherwise} \end{cases} \qquad K_{ij}^+ = \frac{w_{ij}}{\sum_k w_{ik}}$$
+
+</div>
+</div>
+</div>
+
+<div style={{ textAlign: 'center', padding: '2px 0', color: '#1c4b8f', fontSize: '1.5rem', lineHeight: 1, borderTop: '1px solid #d6e4f5', borderBottom: '1px solid #d6e4f5', background: '#ffffff' }}>↓</div>
+
+<div style={{ display: 'flex', borderBottom: '1px solid #d6e4f5', background: '#ffffff' }}>
+<div style={{ width: '6px', background: '#0f3368', flexShrink: 0 }} />
+<div style={{ display: 'flex', gap: '1rem', padding: '0.9rem 1.25rem', alignItems: 'flex-start', flex: 1 }}>
+<div style={{ minWidth: '42px', width: '42px', height: '42px', background: '#1c4b8f', color: '#ffffff', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '1rem' }}>4</div>
+<div style={{ flex: 1 }}>
+<p style={{ fontWeight: 700, color: '#0f3368', margin: '0 0 0.35rem' }}>Accumulate lineage-weighted receipts</p>
+
+Each site sums the kin-weighted share of cooperative benefit received from its neighbors:
+
+$$R_i^+ = \sum_j K_{ji}^+ \cdot B_j^+$$
+
+</div>
+</div>
+</div>
+
+<div style={{ textAlign: 'center', padding: '2px 0', color: '#1c4b8f', fontSize: '1.5rem', lineHeight: 1, borderTop: '1px solid #d6e4f5', borderBottom: '1px solid #d6e4f5', background: '#eaf2fb' }}>↓</div>
+
+<div style={{ display: 'flex', borderBottom: '1px solid #d6e4f5', background: '#eaf2fb' }}>
+<div style={{ width: '6px', background: '#0f3368', flexShrink: 0 }} />
+<div style={{ display: 'flex', gap: '1rem', padding: '0.9rem 1.25rem', alignItems: 'flex-start', flex: 1 }}>
+<div style={{ minWidth: '42px', width: '42px', height: '42px', background: '#1c4b8f', color: '#ffffff', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '1rem' }}>5</div>
+<div style={{ flex: 1 }}>
+<p style={{ fontWeight: 700, color: '#0f3368', margin: '0 0 0.35rem' }}>Compute site fitness</p>
+
+$$W_i = w_0 + R_i^+ - C_i$$
+
+Baseline fitness $w_0$ dampens selection intensity.
+
+</div>
+</div>
+</div>
+
+<div style={{ textAlign: 'center', padding: '2px 0', color: '#1c4b8f', fontSize: '1.5rem', lineHeight: 1, borderTop: '1px solid #d6e4f5', borderBottom: '1px solid #d6e4f5', background: '#ffffff' }}>↓</div>
+
+<div style={{ display: 'flex', background: '#ffffff' }}>
+<div style={{ width: '6px', background: '#0f3368', flexShrink: 0 }} />
+<div style={{ display: 'flex', gap: '1rem', padding: '0.9rem 1.25rem', alignItems: 'flex-start', flex: 1 }}>
+<div style={{ minWidth: '42px', width: '42px', height: '42px', background: '#1c4b8f', color: '#ffffff', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '1rem' }}>6</div>
+<div style={{ flex: 1 }}>
+<p style={{ fontWeight: 700, color: '#0f3368', margin: '0 0 0.35rem' }}>Sample a local parent by softmax over fitness, copy trait and lineage</p>
+
+Parent selection is restricted to the site's local neighborhood. The offspring inherits trait $h$ (with small Gaussian mutation) and lineage label — same-lineage clusters grow when cooperators reproduce locally.
+
+</div>
+</div>
+</div>
+
+</div>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> One synchronous kin-selection update from step <code>t</code> to step <code>t + 1</code>.</figcaption>
 </figure>
 
 **Production**

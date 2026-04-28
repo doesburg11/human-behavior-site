@@ -8,7 +8,7 @@ BUILD="$SRC/build"
 TARGET="${TARGET:-$HOME/Projects/doesburg11.github.io}"  # override with env var if needed
 DOMAIN="${DOMAIN:-humanbehaviorpatterns.org}"
 BRANCH="${BRANCH:-main}"
-REMOTE_URL="${REMOTE_URL:-https://github.com/doesburg11/doesburg11.github.io.git}"
+REMOTE_URL="${REMOTE_URL:-git@github.com:doesburg11/doesburg11.github.io.git}"
 COMMIT_MESSAGE="${COMMIT_MESSAGE:-Manual deploy}"
 
 echo "Building Docusaurus site..."
