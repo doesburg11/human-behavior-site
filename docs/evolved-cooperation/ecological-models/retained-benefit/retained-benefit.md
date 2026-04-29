@@ -118,7 +118,7 @@ One full synchronous retained-benefit update runs as follows. All sites update s
 <div style={{ flex: 1 }}>
 <p style={{ fontWeight: 700, color: '#0f3368', margin: '0 0 0.35rem' }}>Start from the current grid state</p>
 
-Each site stores one cooperation trait $h \in [0, 1]$ and one inherited lineage label.
+Each cell stores one cooperation trait $h \in [0, 1]$ and one inherited lineage label.
 
 </div>
 </div>
