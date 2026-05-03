@@ -11,9 +11,36 @@ Implement a range of in-debtness, to model the concept of friend/informal busine
 ### Nature v Nurture definitions
 - what is nurture ? Pure "self nurtured" or "man made nurtured" or "nature nurtured? If someone is born near the equator in Africa; is that nurture? Is the behavior of ancestors nurture or nature? Is a physical inheritance nurture or nature?
 
+- "Humans seem to have evolved capacities for learning reciprocity, but the actual reciprocal rules are built through development, attachment, repeated interaction, and culture. A newborn does not “reciprocate” in the game-theory sense. A baby mainly receives care. But babies are already equipped for social responsiveness: attention to faces, voices, emotional expressions, turn-taking rhythms, comfort, attachment, and sensitivity to contingent responses. Those are evolved foundations."
 
-## addition to Prisoner's Dilemma
-Stag hunt matrix? To learn cooperation.
+| Nowak mechanism                            | “Nature” side                                                                                             | “Nurture” side                                                                                                                  | Human version                                     |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| **Kin selection**                          | Strong. Selection favors helping genetic relatives because they share genes.                              | Moderate. Humans learn who counts as “family,” and culture can expand or weaken kin duties.                                     | “I help my child, sibling, cousin, clan.”         |
+| **Direct reciprocity**                     | Strong-medium. Evolution favors capacities for memory, trust, gratitude, resentment, partner recognition. | Strong. Individuals learn who helps, who cheats, who can be trusted.                                                            | “You helped me before, so I help you now.”        |
+| **Indirect reciprocity**                   | Medium. Evolution favors reputation tracking, moral emotions, concern for social evaluation.              | Very strong. Reputation depends on language, gossip, norms, morality, cultural rules.                                           | “You helped others, so I trust/help you.”         |
+| **Network reciprocity**                    | Medium. Evolution can favor clustering, bonding, local loyalty, partner choice.                           | Strong. Human networks are shaped by family, school, work, religion, online groups, institutions.                               | “People in my circle help each other.”            |
+| **Group selection / multilevel selection** | Medium-strong. Groups with more internal cooperation may outcompete less cooperative groups.              | Very strong in humans. Group identity, norms, punishment, rituals, laws, ideology, and institutions are culturally transmitted. | “We cooperate because we are part of this group.” |
+
+
+- Kin selection is the most “nature-heavy.” Indirect reciprocity and group-level cooperation are the most “nurture/culture-heavy.” Direct reciprocity sits in the middle. But none of them is purely nature or purely nurture.
+
+A more useful division is this:
+
+| Level                         | What evolution supplies                                                                    | What learning/culture supplies                                          |
+| ----------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
+| **Basic social architecture** | attachment, social emotions, memory, recognition, fairness sensitivity, punishment motives | —                                                                       |
+| **Development**               | readiness to learn social rules                                                            | who helped me, who cheated, whom to trust                               |
+| **Culture**                   | capacity for norm learning                                                                 | actual rules: family duty, fairness, debt, gratitude, honor, punishment |
+| **Institutions**              | capacity for group living                                                                  | law, religion, markets, reputation systems, contracts                   |
+
+
+So in humans, evolutionary selection does not simply produce fixed cooperation rules like:
+
+“Always cooperate.”
+
+That would be too rigid and easily exploited.
+
+Instead, selection favors **learning systems** that allow humans to become cooperative under the right social conditions: cooperate with kin, reciprocate with reliable partners, care about reputation, cluster with cooperators, follow group norms, and punish or avoid exploiters.
 
 ## Why do humans cooperate?
 
