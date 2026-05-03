@@ -56,6 +56,10 @@ The surface answers are many:
 
 These are important mechanisms, but they can be reduced to a smaller set of structural reasons.
 
+## Evolutionary Stable Strategy (ESS)
+
+- **"With only thieves ther's nothing to steal"**
+
 ## Having options makes people happy
 - Changing (options) seasons makes people happie than peoplewith fixed climate?? This implies relation between equator distance and happiness.
 
