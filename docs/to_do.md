@@ -9,6 +9,10 @@ Implement a range of in-debtness, to model the concept of friend/informal busine
 
 ### ESS : with only thieves in the world there is nothing to steal
 
+### make a vizualization with manually inserting a strange startegy into a basin/gird
+- To (dis) proof ESS
+
+
 ### Nature v Nurture definitions
 - what is nurture ? Pure "self nurtured" or "man made nurtured" or "nature nurtured? If someone is born near the equator in Africa; is that nurture? Is the behavior of ancestors nurture or nature? Is a physical inheritance nurture or nature?
 
