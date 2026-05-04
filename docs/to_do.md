@@ -9,6 +9,8 @@ Implement a range of in-debtness, to model the concept of friend/informal busine
 
 ### ESS : with only thieves in the world there is nothing to steal
 
+### if defectors get punished with a certain probability; how does that reduce crime? [Rachel: "commiting crime is inversely related to chance of being caught/punished"] 
+
 ### make a vizualization with manually inserting a strange startegy into a basin/gird
 - To (dis) proof ESS
 
