@@ -18,7 +18,7 @@ These processes operate on entirely different timescales:
 
 `Learning timescale <<< Evolutionary timescale`
 
-In natural systems they interact. PredPreyGrass provides a framework in which both occur in the same ecological environment.
+In natural systems they interact. The two-timescale simulation family in this section provides a controlled framework where both processes can be analyzed together.
 
 ---
 
@@ -34,13 +34,12 @@ $$
 
 Where:
 
-- $s$ = state (local ecological context),
-- $a$ = action (e.g., hunt, wait, share space),
-- $R$ = reward (in PredPreyGrass: reproduction),
+- $s$ = social state (partner history, local interaction context),
+- $a$ = action (cooperate or defect),
+- $R$ = interaction reward/payoff,
 - $\alpha$ = learning rate.
 
-Reward is determined by ecological and social interaction.  
-In PredPreyGrass: reproduction is the only reward.
+In this simulation family, reward is defined by donation-game payoffs and partner-specific interaction outcomes.
 
 ---
 
@@ -114,24 +113,23 @@ Learning and evolution can interact in different ways:
 
 ---
 
-## Manifestation in PredPreyGrass
+## Manifestation in the Simulation Suite
 
-In PredPreyGrass:
+In the integrated two-timescale cooperation simulations:
 
-- reward = reproduction
-- cooperation increases capture efficiency
-- learned coordination increases lifetime fitness
+- interactions are local by default (ring structure)
+- agents update behavior within generation (trust or Q-values)
+- agents reproduce between generations based on accumulated payoff
 
-This creates a Baldwin pathway:
+This creates a Baldwin-style pathway:
 
-1. Predators learn group hunting  
-2. Group hunters reproduce more  
-3. Offspring inherit traits that improve coordination conditions  
-   (e.g. speed ratios, spatial proximity tendencies, reduced interference)
+1. Agents learn partner-contingent cooperation during life
+2. Learners with better long-run payoff leave more offspring
+3. Offspring inherit parameter settings that make successful learning more likely
 
 Cooperation shifts from:
 
-purely learned → facilitated by inherited traits
+context-dependent learning alone -> learning supported by evolved predispositions
 
 ---
 
@@ -139,12 +137,12 @@ purely learned → facilitated by inherited traits
 
 Selection can act on:
 
-- morphological traits (speed, vision, energy capacity)
-- learning parameters
-- initial policy biases
-- social attraction or avoidance tendencies
+- trust predispositions (`trust_prior`)
+- social responsiveness to experience
+- reinforcement-learning parameters (`alpha`, `epsilon`, `gamma`, bias)
+- social-cognitive parameters (reputation weighting, rejection threshold, forgiveness)
 
-This leads to cooperation-friendly phenotypes rather than fixed cooperative strategies.
+This leads to cooperation-friendly learning phenotypes rather than fixed cooperative strategies.
 
 ---
 
@@ -152,12 +150,12 @@ This leads to cooperation-friendly phenotypes rather than fixed cooperative stra
 
 The two-timescale framework generates testable predictions:
 
-- Populations with learning evolve cooperation faster than populations without learning.
-- Disabling learning after evolution reveals partially innate cooperation.
-- High plasticity reduces selection gradients.
-- Low plasticity increases evolutionary pressure on morphology.
+- Populations with repeated interaction should evolve higher cooperation than one-shot regimes.
+- Selection should favor parameter combinations that improve partner discrimination.
+- In stranger-rich environments, reputation-mediated mechanisms should outperform pure partner-memory mechanisms.
+- Different learning rules (trust update vs Q-learning) should produce different cooperation-payoff trade-offs.
 
-All of these can be tested in PredPreyGrass.
+All of these are testable within the integrated model family.
 
 ---
 
@@ -179,7 +177,7 @@ Cooperation = f(learning dynamics, evolutionary dynamics)
 
 ## Related Work (Closest by Axis)
 
-No single landmark paper fully matches PredPreyGrass across all dimensions (sequential MARL, ecology, cooperation, population pressure, and learning-selection coupling). The closest lines of work are:
+No single landmark paper fully matches this integrated setup across all dimensions (reciprocal cooperation, reinforcement learning, social structure, and learning-selection coupling). The closest lines of work are:
 
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
@@ -203,7 +201,7 @@ No single landmark paper fully matches PredPreyGrass across all dimensions (sequ
           </a>
         </td>
         <td>Foundational emergence of cooperation in MARL</td>
-        <td>Small, abstract cooperative games; no ecological population dynamics</td>
+        <td>Small, abstract cooperative games; limited evolutionary parameter dynamics</td>
       </tr>
       <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
         <td>
@@ -212,7 +210,7 @@ No single landmark paper fully matches PredPreyGrass across all dimensions (sequ
           </a>
         </td>
         <td>Sequential social dilemmas and emergent cooperation</td>
-        <td>Limited evolutionary/selection dynamics</td>
+        <td>Limited explicit between-generation selection over learning traits</td>
       </tr>
       <tr>
         <td>
@@ -221,7 +219,7 @@ No single landmark paper fully matches PredPreyGrass across all dimensions (sequ
           </a>
         </td>
         <td>Mechanisms that stabilize cooperation in sequential settings</td>
-        <td>Focus on social preferences, not ecology-selection coupling</td>
+        <td>Focus on social preferences, not explicit inheritance/mutation of learning parameters</td>
       </tr>
       <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
         <td>
@@ -230,7 +228,7 @@ No single landmark paper fully matches PredPreyGrass across all dimensions (sequ
           </a>
         </td>
         <td>Reciprocity under temporal and social complexity</td>
-        <td>No explicit ecological reproduction-selection loop</td>
+        <td>No explicit reproduction-selection loop over agent-level traits</td>
       </tr>
       <tr>
         <td>
@@ -239,7 +237,7 @@ No single landmark paper fully matches PredPreyGrass across all dimensions (sequ
           </a>
         </td>
         <td>Population pressure and ecology-linked MARL adaptation</td>
-        <td>Less focused on explicit cooperative hunting ecology</td>
+        <td>Less focused on partner-specific reciprocity mechanisms</td>
       </tr>
       <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
         <td>
@@ -248,7 +246,7 @@ No single landmark paper fully matches PredPreyGrass across all dimensions (sequ
           </a>
         </td>
         <td>Large-scale many-agent ecological-like environments</td>
-        <td>Benchmark platform, not a specific two-timescale cooperation theory</td>
+        <td>Benchmark platform, not a targeted two-timescale reciprocity model</td>
       </tr>
       <tr>
         <td>
@@ -257,7 +255,7 @@ No single landmark paper fully matches PredPreyGrass across all dimensions (sequ
           </a>
         </td>
         <td>Persistent multi-agent worlds with resource pressure and emergent roles</td>
-        <td>Different task framing; weaker explicit learning-selection theory framing</td>
+        <td>Different task framing; weaker explicit reciprocity-selection theory framing</td>
       </tr>
       <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
         <td>
@@ -266,13 +264,13 @@ No single landmark paper fully matches PredPreyGrass across all dimensions (sequ
           </a>
         </td>
         <td>Broad evaluation of social behaviors in MARL</td>
-        <td>Evaluation suite rather than a single ecological cooperation model</td>
+        <td>Evaluation suite rather than a single coupled learning-selection model</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-Taken together, these works bracket PPG's design space. PPG is closest to their intersection, rather than to any one benchmark or theory.
+Taken together, these works bracket the design space of the present simulation family. The integrated model set is closest to their intersection, rather than to any one benchmark or theory.
 
 ---
 
@@ -295,4 +293,4 @@ The interaction between learning and selection:
 - allows plasticity to guide evolution
 - explains how cooperation emerges, stabilizes, or collapses
 
-This interaction forms the core mechanism linking nurture and nature in PredPreyGrass.
+This interaction forms the core mechanism linking nurture and nature in the integrated two-timescale cooperation simulations.
