@@ -177,7 +177,9 @@ Cooperation = f(learning dynamics, evolutionary dynamics)
 
 ## Related Work (Closest by Axis)
 
-No single landmark paper fully matches this integrated setup across all dimensions (reciprocal cooperation, reinforcement learning, social structure, and learning-selection coupling). The closest lines of work are:
+No single landmark paper fully matches this integrated setup across all dimensions (reciprocal cooperation, local interaction structure, reinforcement learning, and between-generation selection over learning parameters). The most relevant work falls into three overlapping groups: reciprocal altruism theory, network reciprocity theory, and modern multi-agent learning studies of social dilemmas.
+
+Within this project, Model 1 maps most directly to direct reciprocity and network reciprocity theory, Model 2 maps most directly to learned reciprocity in multi-agent reinforcement learning, and Model 3 extends that line toward reputation, partner choice, and socially mediated cooperation with strangers.
 
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
@@ -189,37 +191,55 @@ No single landmark paper fully matches this integrated setup across all dimensio
     <thead>
       <tr>
         <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Work</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Closest axis to PPG</th>
-        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Main gap vs PPG</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Closest axis to this simulation family</th>
+        <th style={{ backgroundColor: '#0f3368', color: '#ffffff', textAlign: 'left' }}>Main gap vs this simulation family</th>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td>
+          <a href="https://doi.org/10.1086/406755">
+            Trivers (1971), <em>The Evolution of Reciprocal Altruism</em>
+          </a>
+        </td>
+        <td>Foundational logic of repeated reciprocal cooperation</td>
+        <td>Verbal evolutionary theory rather than an explicit learning-plus-selection simulation</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>
+          <a href="https://doi.org/10.1126/science.7466396">
+            Axelrod and Hamilton (1981), <em>The Evolution of Cooperation</em>
+          </a>
+        </td>
+        <td>Repeated-interaction conditions under which reciprocity can stabilize cooperation</td>
+        <td>Strategy tournament framework rather than agents that learn within life and evolve between generations</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://doi.org/10.1126/science.1133755">
+            Nowak (2006), <em>Five Rules for the Evolution of Cooperation</em>
+          </a>
+        </td>
+        <td>Direct reciprocity, indirect reciprocity, and network reciprocity as a unifying framework</td>
+        <td>Analytic synthesis rather than a concrete parameter-evolution simulation</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td>
+          <a href="https://doi.org/10.1038/nature04605">
+            Ohtsuki et al. (2006), <em>A Simple Rule for the Evolution of Cooperation on Graphs and Social Networks</em>
+          </a>
+        </td>
+        <td>Why local interaction structure can protect cooperation</td>
+        <td>Graph-theoretic selection result rather than within-lifetime partner learning</td>
+      </tr>
       <tr>
         <td>
           <a href="https://www.cs.toronto.edu/~cebly/Papers/multirl-abs.html">
             Claus and Boutilier (1998), <em>The Dynamics of Reinforcement Learning in Cooperative Multiagent Systems</em>
           </a>
         </td>
-        <td>Foundational emergence of cooperation in MARL</td>
-        <td>Small, abstract cooperative games; limited evolutionary parameter dynamics</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td>
-          <a href="https://arxiv.org/abs/1702.03037">
-            Leibo et al. (2017), <em>Multi-agent Reinforcement Learning in Sequential Social Dilemmas</em>
-          </a>
-        </td>
-        <td>Sequential social dilemmas and emergent cooperation</td>
-        <td>Limited explicit between-generation selection over learning traits</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="https://papers.nips.cc/paper/7593-inequity-aversion-improves-cooperation-in-intertemporal-social-dilemmas">
-            Hughes et al. (2018), <em>Inequity Aversion Improves Cooperation in Intertemporal Social Dilemmas</em>
-          </a>
-        </td>
-        <td>Mechanisms that stabilize cooperation in sequential settings</td>
-        <td>Focus on social preferences, not explicit inheritance/mutation of learning parameters</td>
+        <td>Foundational emergence of cooperation in multi-agent reinforcement learning</td>
+        <td>Small, abstract cooperative games with no explicit generational inheritance of learning traits</td>
       </tr>
       <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
         <td>
@@ -227,50 +247,25 @@ No single landmark paper fully matches this integrated setup across all dimensio
             Eccles et al. (2019), <em>Learning Reciprocity in Complex Sequential Social Dilemmas</em>
           </a>
         </td>
-        <td>Reciprocity under temporal and social complexity</td>
-        <td>No explicit reproduction-selection loop over agent-level traits</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="https://arxiv.org/abs/1812.07019">
-            Leibo et al. (2018), <em>Malthusian Reinforcement Learning</em>
-          </a>
-        </td>
-        <td>Population pressure and ecology-linked MARL adaptation</td>
-        <td>Less focused on partner-specific reciprocity mechanisms</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td>
-          <a href="https://ojs.aaai.org/index.php/AAAI/article/view/11771">
-            Zheng et al. (2018), <em>MAgent</em>
-          </a>
-        </td>
-        <td>Large-scale many-agent ecological-like environments</td>
-        <td>Benchmark platform, not a targeted two-timescale reciprocity model</td>
-      </tr>
-      <tr>
-        <td>
-          <a href="https://arxiv.org/abs/1903.00784">
-            Suarez et al. (2019), <em>Neural MMO</em>
-          </a>
-        </td>
-        <td>Persistent multi-agent worlds with resource pressure and emergent roles</td>
-        <td>Different task framing; weaker explicit reciprocity-selection theory framing</td>
-      </tr>
-      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td>
-          <a href="https://arxiv.org/abs/2107.06857">
-            Leibo et al. (2021), <em>Melting Pot</em>
-          </a>
-        </td>
-        <td>Broad evaluation of social behaviors in MARL</td>
-        <td>Evaluation suite rather than a single coupled learning-selection model</td>
+        <td>Reciprocity under temporal and social complexity in learned agents</td>
+        <td>No explicit reproduction-selection loop over inherited social-learning parameters</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-Taken together, these works bracket the design space of the present simulation family. The integrated model set is closest to their intersection, rather than to any one benchmark or theory.
+Taken together, these works capture the core logic behind the present simulation family: reciprocal altruism, repeated interaction, local network structure, and partner-contingent learning. The distinctive contribution here is that these ingredients are combined in a single two-timescale setup where learning unfolds within life and learning parameters themselves evolve across generations.
+
+### Adjacent computational environments
+
+Some broader MARL and artificial-society papers remain relevant as neighboring context, but they are no longer the primary fit for this page's argument:
+
+- <a href="https://arxiv.org/abs/1702.03037">Leibo et al. (2017), <em>Multi-agent Reinforcement Learning in Sequential Social Dilemmas</em></a> for sequential social-dilemma structure
+- <a href="https://arxiv.org/abs/1812.07019">Leibo et al. (2018), <em>Malthusian Reinforcement Learning</em></a> for ecology-linked population dynamics
+- <a href="https://ojs.aaai.org/index.php/AAAI/article/view/11771">Zheng et al. (2018), <em>MAgent</em></a> and <a href="https://arxiv.org/abs/1903.00784">Suarez et al. (2019), <em>Neural MMO</em></a> for large-scale multi-agent environments
+- <a href="https://arxiv.org/abs/2107.06857">Leibo et al. (2021), <em>Melting Pot</em></a> for broad evaluation of social behaviors
+
+These works are best understood here as adjacent environment or benchmark context, not as the closest direct precedents for the trust-learning, Q-learning, and extended reciprocity models documented in this section.
 
 ---
 
