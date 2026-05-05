@@ -276,6 +276,16 @@ Taken together, these works bracket PPG's design space. PPG is closest to their 
 
 ---
 
+## Simulation Companion
+
+The concrete two-timescale experiments documented for this site are available in:
+
+- [Two-Timescale Simulations](/learning-selection-interaction/simulations)
+
+That section contains model-by-model results (trust learning, Q-learning, extended social mechanisms), the network-diversity experiment, and focused appendices.
+
+---
+
 ## Summary
 
 The interaction between learning and selection:
