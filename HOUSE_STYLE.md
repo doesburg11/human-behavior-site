@@ -416,3 +416,80 @@ textarea {
 ## Practical Rule
 
 If a new page, component, or table does not look like it belongs next to the current front page, it should be revised until it matches this blue, structured, publication-style visual language.
+
+---
+
+## Simulation and experiment page structure
+
+Every simulation page and experiment page must follow this section order:
+
+```
+1. Front matter (id, title, sidebar_position, slug)
+2. Page title (H1)
+3. One-line description of what the script does
+4. Key findings        ← short bullets, placed BEFORE the technical description
+5. Model-specific technical sections
+   - Learning during a lifetime
+   - Evolution between generations
+   - Extra sections as needed (new parameters, payoff structure, etc.)
+6. Results summary     ← table + plots
+   - One-shot interaction (if applicable)
+   - Repeated interaction (if applicable)
+7. Summary             ← elaborate prose conclusions, placed AFTER results
+```
+
+### Key findings
+
+- Placed **immediately after the page intro**, before any technical description.
+- Short scannable bullet list — typically 3–6 bullets.
+- Each bullet states a concrete result in plain language, with numbers included.
+- No sub-bullets. No hedging qualifiers like "appears to suggest".
+- Example:
+
+```markdown
+## Key findings
+
+- Cooperation collapses to zero in one-shot interaction; selection drives `trust_prior` strongly negative (−0.86).
+- In repeated interaction, cooperation stabilises near 98% within ~40 generations.
+- `responsiveness` is the key evolved trait: high responsiveness makes reciprocity sharp and stable.
+- The two timescales reinforce each other: learning needs evolution to shape its parameters, and evolution needs learning to produce the cooperation signal it selects on.
+```
+
+### Summary
+
+- Placed at the **end of the page**, after all results and plots.
+- Elaborate prose — typically 3–6 bold-lead sentences followed by explanation.
+- Explains *why* the results look the way they do, not just *what* they are.
+- Connects results to human psychology or evolutionary biology where appropriate.
+- Uses bold lead sentences for scanability:
+
+```markdown
+## Summary
+
+**Cooperation rate is lower than in the basic Q-learning model (0.38 vs 0.56).** This is not a failure...
+
+**Forgiveness evolves to be high (0.76) in the repeated case.** Agents that recover quickly...
+```
+
+### Appendix cross-references
+
+- Place appendix links inline in the relevant technical section, not in a separate list at the bottom.
+- Pattern: `see [Appendix: Name](/path#anchor)`.
+
+### Figures
+
+- All figures use JSX `<figure>` with `<figcaption>`.
+- Caption format: `**Display N:** Short description of what is shown.`
+- Width: `70%` for single-model plots, `80%` for multi-model comparison plots.
+
+### Tables
+
+- Results tables use plain Markdown pipe syntax.
+- Metric names match the script output exactly (e.g. `Final cooperation rate`).
+- Bold the winning value per row where a comparison is meaningful.
+
+### Tone
+
+- Precise and direct. State what happened, then explain why.
+- Avoid hedging ("appears to", "might suggest").
+- Human/evolutionary implications are welcome but kept clearly separate from the numerical results.
