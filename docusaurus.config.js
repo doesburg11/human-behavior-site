@@ -56,6 +56,7 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          sidebarCollapsed: true,
           async sidebarItemsGenerator({
             defaultSidebarItemsGenerator,
             ...args
