@@ -24,6 +24,8 @@ score_i = trust_prior[i] + responsiveness[i] * learned_trust[i, j]
 cooperate_i = score_i > 0.0
 ```
 
+The trust update rule follows a Rescorla–Wagner style prediction-error update — see [Appendix: Rescorla–Wagner style learning](/learning-selection-interaction/simulations/appendices#rescorlawagner-style-learning).
+
 ## Evolution between generations
 
 Agents reproduce proportional to lifetime payoff. Offspring inherit and mutate:

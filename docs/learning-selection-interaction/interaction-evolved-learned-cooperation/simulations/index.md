@@ -19,6 +19,7 @@ The common architecture is:
 
 1. Fast timescale: learning within lifetimes
 2. Slow timescale: selection across generations
+3. Shared topology: all three models place agents on a **ring network** — see [Appendix: The ring network](/learning-selection-interaction/simulations/appendices#the-ring-network) for the rationale and per-model neighbor counts.
 
 ## Model progression
 
@@ -75,6 +76,8 @@ The common architecture is:
 ## Core takeaway
 
 Across all three models, cooperation is not a fixed trait. It is an adaptive outcome that depends on interaction structure, learning dynamics, and selective pressures acting over generations.
+
+For which cooperation mechanisms are included and which are out of scope, see [Appendix: Cooperation mechanisms and model scope](/learning-selection-interaction/simulations/appendices#cooperation-mechanisms-and-model-scope).
 
 ---
 
