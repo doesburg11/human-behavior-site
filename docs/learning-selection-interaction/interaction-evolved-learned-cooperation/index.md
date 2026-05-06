@@ -322,3 +322,4 @@ This interaction forms the core mechanism linking nurture and nature in the inte
 
 - <a href="https://www.jstor.org/stable/2453130">Baldwin, J.M. (1896). <em>A New Factor in Evolution.</em> The American Naturalist, 30(354), 441–451.</a>
 - <a href="https://www.cs.toronto.edu/~hinton/absps/evolution.pdf">Hinton, G.E. & Nowlan, S.J. (1987). <em>How Learning Can Guide Evolution.</em> Complex Systems, 1(3), 495–502.</a>
+- <a href="https://doi.org/10.1111/j.1558-5646.1953.tb00070.x">Waddington, C.H. (1953). <em>Genetic Assimilation of an Acquired Character.</em> Evolution, 7(2), 118–126.</a>
