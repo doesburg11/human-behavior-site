@@ -2,8 +2,7 @@
   "label": "Two-Timescale Simulations",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "title": "Two-Timescale Simulations",
-    "description": "Simulation results for trust learning, Q-learning, and extended social mechanisms across one-shot and repeated interaction regimes."
+    "type": "doc",
+    "id": "learning-selection-interaction/simulations/simulations-index"
   }
 }
