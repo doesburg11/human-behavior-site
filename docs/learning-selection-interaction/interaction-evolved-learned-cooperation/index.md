@@ -63,10 +63,12 @@ Evolution therefore selects based on learning outcomes.
 
 ## The Baldwin Effect
 
-The Baldwin effect describes how learning changes evolutionary trajectories without requiring inheritance of learned behavior.
+The Baldwin effect describes how learning changes evolutionary trajectories without requiring inheritance of learned behavior. James Mark Baldwin proposed it in 1896–1897 under the name *Organic Selection*; George Gaylord Simpson gave it its modern name in 1953. The mechanism is Darwinian throughout — no acquired traits are inherited.
+
+The core insight: an organism that can learn a beneficial behavior survives long enough to reproduce even before its genes encode that behavior directly. Over generations, genetic variants that facilitate the learned behavior accumulate — not because the learned trait is passed on, but because those variants are selected for.
 
 Step 1 — Plasticity enables adaptive behavior  
-Individuals that can learn cooperative strategies reproduce more.
+Individuals that can learn cooperative strategies survive and reproduce even when their starting genotype alone would not suffice. Plasticity keeps them viable while genetic variants that support cooperation spread through the population.
 
 Step 2 — Selection favors learnability  
 Evolution favors traits that:
@@ -74,11 +76,31 @@ Evolution favors traits that:
 - reduce learning cost
 - bias initial behavior toward cooperation
 - increase learning speed
+- improve partner discrimination
 
 Step 3 — Partial genetic assimilation  
-Cooperation becomes easier or faster to learn and may become partially innate.
+Cooperation becomes easier or faster to learn and may become partially innate. This is distinct from Waddington's *genetic assimilation*, where a trait becomes fully encoded and developmentally canalized. The Baldwin effect produces *facilitation* of learning — the learned behavior becomes cheaper or faster — rather than necessarily replacing it.
 
-Learning reshapes the fitness landscape by making cooperative strategies reachable.
+### Why learning smooths the fitness landscape
+
+Hinton and Nowlan (1987) showed computationally that learning converts a needle-in-a-haystack fitness landscape into a smooth gradient that evolution can climb. Without learning, a cooperative genotype must be nearly complete to provide any fitness advantage. With learning, a partial genotype gets finished within a lifetime and still reproduces — turning a cliff into a slope.
+
+In the cooperation context:
+
+- Without learning: a genotype predisposed to cooperate has low fitness unless partners are also cooperative, which is rare in a defector-dominated population — cooperative genotypes are eliminated before they can spread.
+- With learning: an agent with even a weak cooperative predisposition can learn to discriminate — cooperating with cooperators, withholding from defectors — and accumulate net positive payoff even in a mixed population.
+
+Learning rescues cooperative genotypes that selection alone would eliminate.
+
+### Learning creates new selection pressures
+
+A learned cooperative strategy, once widespread in the population, creates selection pressure for genetic variants that achieve the same behavior at lower cost:
+
+- lower learning rates suffice when the behavior is already partially encoded
+- initial cooperation biases can be set more aggressively when the social environment has become reliably cooperative
+- discrimination thresholds can loosen as defectors become rarer
+
+This feedback loop — learning expands what is reachable; evolution consolidates what learning discovered — is the core dynamic this simulation family is designed to capture.
 
 ---
 
