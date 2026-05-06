@@ -49,9 +49,13 @@ Population composition changes across generations:
 
 frequency_next = (fitness / mean_fitness) * frequency
 
-Fitness depends on learned behavior:
+Fitness is the payoff accumulated over a lifetime of interactions under the learned policy:
 
-fitness = f(learned_policy)
+$$
+\text{fitness}(\pi^*) = \sum_{t=1}^{T} R_t\!\left(s_t,\, \pi^*(s_t)\right)
+$$
+
+Where $\pi^*$ is the policy the agent has learned by the end of its lifetime and $T$ is the number of interactions per generation. Agents that learned to cooperate with reliable partners and defect against exploiters accumulate higher payoffs and therefore reproduce more.
 
 Evolution therefore selects based on learning outcomes.
 
