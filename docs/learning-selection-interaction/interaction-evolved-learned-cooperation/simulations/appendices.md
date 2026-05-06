@@ -9,11 +9,15 @@ slug: /learning-selection-interaction/simulations/appendices
 
 ## Ecological realism of benefit > cost
 
+*Applies to: all three models.*
+
 The donation game uses `benefit = 3.0` and `cost = 1.0`. This does not imply free energy. It captures settings where social coordination or information transfer produces synergistic gains.
 
 For pure resource transfer, conservation constraints imply `b <= c`. But for alarm signaling, collective defense, and division of labor, effective social benefit can exceed individual cost.
 
 ## The ring network
+
+*Applies to: all three models. Neighbor count differs per model (see table below).*
 
 All three models are embedded in a ring topology with repeated local encounters.
 
@@ -58,6 +62,8 @@ The ring is used because it provides repeated local interaction while minimizing
 
 ## Why compare one-shot and repeated interaction?
 
+*Applies to: Model 1 only. Models 2 and 3 run repeated interaction only.*
+
 Model 1 runs both:
 
 - `lifetime_rounds = 1` (one-shot dominant)
@@ -67,21 +73,92 @@ This isolates whether cooperation emerges from actual partner-history learning o
 
 ## Cooperation mechanisms and model scope
 
+*Applies to: all three models (with differences noted below).*
+
 ### Included
 
 - Direct reciprocity (partner-specific learning)
 - Network reciprocity (local repeated interaction)
 
-### Not yet fully included
+### Out of scope
 
-- Kin selection
-- Population-wide indirect reciprocity
-- Group selection
+#### Kin selection
+
+Agents do not know who their relatives are. Kin selection is not implemented in any model.
+
+#### Population-wide indirect reciprocity
+
+**Included in Model 3 (local form):** Agents can observe a partner's reputation score and adjust behavior accordingly.
+
+**Not included (population-wide form):** Reputation does not spread across the entire population; only local observation.
+
+#### Group selection
+
+Groups do not reproduce or die as units. All selection acts on individual payoff.
 
 ## Strategic and psychological interpretation
+
+*Applies to: Models 1 and 2 (direct comparison); Model 3 noted where relevant.*
 
 Trust-learning tends toward high cooperation rates in repeated settings, but can be exploitable.
 
 Q-learning tends to cooperate less often while earning more by preserving strategic selectivity and accounting for future relationship value.
 
 The broader interpretation is that adaptive human cooperation resembles selective, future-oriented reciprocity rather than unconditional cooperation.
+
+## Rescorla–Wagner style learning
+
+*Applies to: Model 1 only.*
+
+Model 1 (`two_timescale_reciprocity.py`) describes its trust update as "Rescorla–Wagner style". This appendix explains what that means.
+
+### The Rescorla–Wagner model
+
+The Rescorla–Wagner model (1972) is a mathematical rule for **classical conditioning**: it describes how the strength of a learned association changes after each trial.
+
+The core update rule is:
+
+$$\Delta V = \alpha \beta (\lambda - V)$$
+
+Where:
+
+| Symbol | Meaning |
+|---|---|
+| $V$ | Current associative strength (the learned prediction) |
+| $\lambda$ | Maximum possible conditioning (the actual outcome) |
+| $(\lambda - V)$ | **Prediction error** — how surprised the learner is |
+| $\alpha$ | Salience of the conditioned stimulus (learning rate) |
+| $\beta$ | Salience of the unconditioned stimulus (learning rate) |
+
+**Key insight:** learning only occurs when the outcome is unexpected. If $V = \lambda$, the prediction error is zero and the association does not change. Surprise drives learning; confirmation does not.
+
+### How this maps onto Model 1
+
+In Model 1, the trust update is:
+
+```python
+learned_trust[i, j] += alpha_i * (target_for_i - learned_trust[i, j])
+```
+
+This is structurally identical to the Rescorla–Wagner rule:
+
+| Model 1 term | Rescorla–Wagner equivalent |
+|---|---|
+| `learned_trust[i, j]` | $V$ — current learned prediction |
+| `target_for_i` (+1 or −1) | $\lambda$ — actual observed outcome |
+| `target - learned_trust` | $(\lambda - V)$ — prediction error |
+| `alpha_i` | $\alpha\beta$ — learning rate |
+
+The agent updates its trust in partner `j` in proportion to how surprised it was by `j`'s behavior. If the agent already expected cooperation and got it, trust barely moves. If the agent was betrayed unexpectedly, trust drops sharply.
+
+### Relationship to reinforcement learning
+
+The Rescorla–Wagner rule is the conceptual ancestor of the **TD (temporal-difference) prediction error** used in modern reinforcement learning:
+
+$$Q \leftarrow Q + \alpha\,(r - Q)$$
+
+The key difference is that Rescorla–Wagner describes learning about a *stimulus* (what to expect from a partner), whereas Q-learning describes learning about *actions* (what to do). Model 1 uses the simpler, stimulus-learning form; Models 2 and 3 upgrade to full action-value learning.
+
+### Reference
+
+Rescorla, R. A., & Wagner, A. R. (1972). A theory of Pavlovian conditioning: Variations in the effectiveness of reinforcement and nonreinforcement. In A. H. Black & W. F. Prokasy (Eds.), *Classical conditioning II: Current research and theory* (pp. 64–99). Appleton-Century-Crofts.
