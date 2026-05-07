@@ -7,7 +7,7 @@ slug: /learning-selection-interaction/simulations/model-1
 
 # Model 1 - Trust Learning
 
-Model 1 (`two_timescale_reciprocity.py`) is the baseline two-timescale model: agents update a scalar trust value per partner within a lifetime, and evolution selects on the inherited parameters that shape that learning.
+Model 1 ([`two_timescale_reciprocity.py`](https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_reciprocity.py)) is the baseline two-timescale model: agents update a scalar trust value per partner within a lifetime, and evolution selects on the inherited parameters that shape that learning.
 
 ## Key findings
 

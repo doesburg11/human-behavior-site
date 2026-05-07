@@ -7,7 +7,7 @@ slug: /learning-selection-interaction/simulations/model-2
 
 # Model 2 - Q-learning
 
-Model 2 (`two_timescale_q_learning.py`) keeps the same two-timescale framework as Model 1 but replaces scalar trust with action-value learning, giving agents a more principled reinforcement-learning algorithm.
+Model 2 ([`two_timescale_q_learning.py`](https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_q_learning.py)) keeps the same two-timescale framework as Model 1 but replaces scalar trust with action-value learning, giving agents a more principled reinforcement-learning algorithm.
 
 ## Key findings
 

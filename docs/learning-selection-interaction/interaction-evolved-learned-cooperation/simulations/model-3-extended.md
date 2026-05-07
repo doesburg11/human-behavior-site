@@ -7,7 +7,7 @@ slug: /learning-selection-interaction/simulations/model-3
 
 # Model 3 - Extended
 
-Model 3 (`two_timescale_extended.py`) adds three social mechanisms on top of Q-learning: reputation, partner choice (interaction refusal), and forgiveness after betrayal.
+Model 3 ([`two_timescale_extended.py`](https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/two_timescale_extended.py)) adds three social mechanisms on top of Q-learning: reputation, partner choice (interaction refusal), and forgiveness after betrayal.
 
 ## Key findings
 

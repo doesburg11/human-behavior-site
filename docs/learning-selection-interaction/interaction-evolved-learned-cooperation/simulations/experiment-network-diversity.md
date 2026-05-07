@@ -7,7 +7,7 @@ slug: /learning-selection-interaction/simulations/network-diversity
 
 # Experiment - Network Diversity
 
-This experiment (`experiment_network_diversity.py`) tests when simple partner-memory mechanisms stop being sufficient and social infrastructure mechanisms start to dominate.
+This is not a new model — no new agent architecture is introduced. It takes all three existing models and runs them under systematically varied network conditions via [`experiment_network_diversity.py`](https://github.com/doesburg11/EvolvedAndLearnedCooperation/blob/main/experiment_network_diversity.py), testing when simple partner-memory mechanisms stop being sufficient and social infrastructure mechanisms start to dominate.
 
 ## Key findings
 
