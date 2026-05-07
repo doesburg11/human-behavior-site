@@ -29,6 +29,16 @@ $$
 
 **The re-encounter probability $w$ is the critical variable.** Everything below follows from whether it meets this threshold.
 
+### Stability vs. origin — two separate questions
+
+This condition answers one specific question: *can ALLD invade a population already dominated by TFT?* If $w > 0.41$, the answer is no. TFT–TFT pairs accumulate mutual cooperation payoff ($R$ each round) and outcompete any defector that enters, because the defector's short-term gain from exploiting a cooperator is offset by the subsequent rounds of mutual punishment.
+
+It does not answer a second, harder question: *can TFT invade a population already dominated by ALLD?*
+
+When TFT is rare, it encounters mostly ALLD opponents. In that first interaction TFT cooperates and ALLD defects — TFT receives $S = -0.5$ while ALLD receives $T = 1.7$. TFT retaliates from the second encounter onward, but in a well-mixed population the pair is unlikely to persist long enough and is surrounded by enough ALLD to recover that initial deficit. Rare TFT cannot outcompete common ALLD even when $w > 0.41$.
+
+This is the core distinction: **direct reciprocity can maintain cooperation once it is common, but it cannot originate cooperation from a population dominated by defectors.** The three steps below test both questions in sequence — and the results track this distinction exactly.
+
 ## Payoff Matrix
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
@@ -122,7 +132,7 @@ Three models test direct reciprocity progressively, adding one feature at a time
 
 **Model:** [`well_mixed/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed) with `partner_persistence_probability = 0.0`
 
-In a well-mixed population of 200 agents with random re-pairing every step, the re-encounter probability is:
+In a well-mixed population — where every agent can interact with any other agent with equal probability, with no spatial structure or fixed neighbors — of 200 agents with random re-pairing every step, the re-encounter probability is:
 
 $$
 w \approx \frac{1}{n - 1} \approx 0.005
@@ -132,7 +142,7 @@ This is far below 0.41. Memory is useless: even if TFT punished a defector last 
 
 **Result: ALLD dominates. Cooperation cannot emerge.**
 
-### Step 2 — Partner persistence enables direct reciprocity
+### Step 2 — Partner persistence is necessary but not sufficient from a random start
 
 **Model:** [`well_mixed/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed) with `partner_persistence_probability = 0.9`
 
@@ -141,9 +151,15 @@ This is far below 0.41. Memory is useless: even if TFT punished a defector last 
 - with probability $p$: the pair is kept; $i$ and $j$ play together again
 - with probability $1 - p$: the pair is dissolved; both agents are reshuffled into new random pairs
 
-When $p = 0.9$, the effective re-encounter probability is $w \approx 0.9 > 0.41$. The condition is satisfied. TFT–TFT pairs that find each other build mutual cooperation across rounds. ALLD exploits TFT in round 1 (earning $T = 1.7$), but TFT retaliates from round 2 onwards; the persistent ALLD–TFT pair quickly degrades to mutual defection ($P = 0.0$ for both). TFT–TFT pairs earn $R = 1.0$ per round and spread.
+When $p = 0.9$, the effective re-encounter probability is $w \approx 0.9 > 0.41$. The theoretical condition is satisfied: TFT–TFT pairs that find each other can build mutual cooperation across rounds, and ALLD–TFT pairs degrade to mutual defection ($P = 0.0$ for both), removing the exploiter's advantage.
 
-**Result: Cooperation emerges through direct reciprocity alone, without any spatial structure.** The time-averaged cooperation rate rises from ≈0.33 ($p = 0.0$) to ≈0.52 ($p = 0.9$).
+In practice, however, a simulation run of 500 steps from a random mixed start shows that ALLD still dominates. Cooperation collapses across all seeds and starting conditions tested (final cooperation rate ≈0.008, ALLD frequency ≈0.99). High partner persistence is necessary for the mechanism to operate, but the initial frequency of ALLD in a random population is high enough to outrun reciprocal strategies before TFT–TFT partnerships can establish.
+
+This is precisely the stability vs. origin distinction playing out in simulation. The condition $w > 0.41$ is an evolutionary stability condition: it guarantees that *if the population were already dominated by TFT*, ALLD could not invade. But the population starts randomly. When TFT is rare, it mostly encounters ALLD — it cooperates in round 1, is exploited, and loses fitness before repeated interaction can compensate. ALLD spreads while TFT is still too rare to find other TFT partners. The mechanism that would protect cooperation cannot get started because there is not yet enough cooperation to protect.
+
+Direct reciprocity, on its own, has no answer to this. It is a mechanism for *preserving* a cooperative norm, not for *creating* one.
+
+**Result: Cooperation does not emerge from a random start despite the condition being met.** The $w > 0.41$ condition is necessary but not sufficient — it is a maintenance condition, not an emergence condition. A cooperative founding population or spatial structure is also required.
 
 ### Step 3 — Spatial structure adds network reciprocity
 
@@ -151,30 +167,72 @@ When $p = 0.9$, the effective re-encounter probability is $w \approx 0.9 > 0.41$
 
 Placing agents on a 2D grid and restricting both interactions and Moran replacement to local neighbors adds a second mechanism on top of direct reciprocity: **network reciprocity**. Cooperators can form spatial clusters and preferentially interact with each other, even before any trust has been established.
 
-Both mechanisms are active simultaneously:
+Network reciprocity solves specifically the *origin* problem — the one that direct reciprocity alone cannot solve. In a well-mixed population, rare TFT agents mostly encounter ALLD and are exploited before repeated interaction can help. On a grid, cooperators that happen to sit adjacent to one another interact mostly with each other. Within such a cluster, direct reciprocity operates effectively from the start: partners meet repeatedly, TFT–TFT pairs accumulate $R = 1.0$ each round, and the cluster grows. ALLD can only attack the cluster at its boundary, where it does gain a short-term advantage, but interior cooperators generate enough fitness to outpace boundary losses.
 
-- Pair memory and repeated rounds sustain cooperation within established pairs (direct reciprocity).
-- The grid prevents ALLD from reaching the interior of a cooperator cluster (network reciprocity).
+The two mechanisms therefore work in sequence on two distinct problems:
 
-**Result: Cooperation emerges more robustly, but the mechanism is no longer pure direct reciprocity.**
+- **Network reciprocity** (spatial clustering) handles *emergence*: it creates the protected founding environment that TFT needs to become common.
+- **Direct reciprocity** (partner memory, repeated rounds) handles *maintenance*: once cooperation is established, it sustains cooperation within partnerships and punishes any defector that enters.
 
-### Note — Continuous spatial memory model
+Removing either one causes complete collapse — as the ablation tests confirm. The grid alone without partner memory fails (no direct reciprocity means no sustained cooperation within pairs). Partner memory without the grid also fails (Step 2). Both are necessary; neither is sufficient alone.
 
-**Model:** [`scaffolds/continuous_spatial_memory/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/direct_reciprocity/scaffolds/continuous_spatial_memory)
+Simulation runs of 500 steps confirm this is highly robust. Cooperation reaches ≈98% from a random mixed start and ≈96% even from a rare 5% reciprocal cluster, with 100% success across all seeds in both cases. Two ablation tests reveal what is essential: removing partner memory or reducing to a single round per pair both cause complete collapse (cooperation ≈0.7%, ALLD ≈99%) — identical to the well-mixed model without spatial structure. The grid alone is not enough; memory and repeated rounds are required.
 
-A separate, continuous-trait implementation wraps the shared interaction-kernel engine. Each site carries a cooperation capacity $h$ and pair-specific partner memory. Expressed cooperation is scaled by that memory:
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '34%' }} />
+      <col style={{ width: '16%' }} />
+      <col style={{ width: '18%' }} />
+      <col style={{ width: '18%' }} />
+      <col style={{ width: '14%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scenario</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Success rate</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperation rate</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Reciprocal frequency</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>ALLD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Default mixed start</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.00</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.978</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.893</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.019</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Rare cluster start (5% reciprocal)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.00</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.961</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.889</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.024</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No memory (ablation)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.00</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.007</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.008</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.989</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>One round per pair (ablation)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.00</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.007</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.008</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.989</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Proof-of-mechanism results for the spatial clustering model (500 steps, 5 seeds each). Success criteria: cooperation ≥ 0.60, reciprocal frequency ≥ 0.50, ALLD ≤ 0.25.</figcaption>
+</figure>
 
-$$
-B^+_i = \text{B\_plus\_scale} \times h_i \times \text{clip}(\text{baseline} + \text{gain} \times m_i,\; 0, 1)
-$$
-
-After reproduction, memory is updated from the parent's memory and the positive return it received:
-
-$$
-m_i \leftarrow \text{decay} \times m_{\text{parent}} + (1 - \text{decay}) \times \frac{R^+_{\text{parent}}}{\text{B\_plus\_scale}}
-$$
-
-This model uses a benefit–cost framework rather than a Prisoner's Dilemma and is not directly comparable to the discrete-strategy models above.
+**Result: Cooperation emerges reliably (≈97–98%) from any starting condition. Spatial structure, partner memory, and multiple rounds are all necessary — removing any one of them causes full collapse.**
 
 ## Summary
 
@@ -182,19 +240,17 @@ This model uses a benefit–cost framework rather than a Prisoner's Dilemma and 
 <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
     <colgroup>
-      <col style={{ width: '20%' }} />
-      <col style={{ width: '20%' }} />
-      <col style={{ width: '20%' }} />
-      <col style={{ width: '20%' }} />
-      <col style={{ width: '20%' }} />
+      <col style={{ width: '25%' }} />
+      <col style={{ width: '25%' }} />
+      <col style={{ width: '25%' }} />
+      <col style={{ width: '25%' }} />
     </colgroup>
     <thead>
       <tr>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}></th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>well_mixed</code> p = 0.0</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>well_mixed</code> p = 0.9</th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>spatial_clustering</code></th>
-        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>continuous_spatial_memory</code></th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Property</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>well_mixed p = 0.0</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>well_mixed p = 0.9</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>spatial_clustering</th>
       </tr>
     </thead>
     <tbody>
@@ -203,41 +259,38 @@ This model uses a benefit–cost framework rather than a Prisoner's Dilemma and 
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>≈0.005</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>≈0.9</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>High (fixed neighbors)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>N/A</td>
       </tr>
       <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Condition w > 0.41</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Condition w &gt; 0.41</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>N/A</td>
       </tr>
       <tr>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Spatial clustering</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
       </tr>
       <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Active mechanisms</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>None</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Direct reciprocity</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Direct + network</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Direct reciprocity</td>
       </tr>
       <tr>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperation emerges</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (moderate)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (robust)</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No (collapses)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (≈97–98%)</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Outcome comparison across the three direct reciprocity implementations.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Outcome comparison across the three comparable direct reciprocity implementations (discrete strategies, Prisoner's Dilemma payoffs).</figcaption>
 </figure>
+
+The `continuous_spatial_memory` scaffold is excluded from this comparison. It uses a benefit–cost framework with continuous cooperation traits rather than discrete strategies and PD payoffs, making it incommensurable with the three models above.
 
 ## Python Module Layout
 
@@ -263,11 +316,6 @@ moran_models/nowak_mechanisms/direct_reciprocity/
       config/
       data/
       utils/
-    continuous_spatial_memory/
-      __init__.py
-      continuous_spatial_memory_model.py
-      continuous_spatial_memory_pygame_ui.py
-      config/
 ```
 
 ## Usage
@@ -294,18 +342,6 @@ Live viewer:
 
 ```bash
 ./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.scaffolds.spatial_clustering.spatial_clustering_pygame_ui
-```
-
-**Continuous spatial memory scaffold:**
-
-```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.scaffolds.continuous_spatial_memory.continuous_spatial_memory_model
-```
-
-Live viewer:
-
-```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.scaffolds.continuous_spatial_memory.continuous_spatial_memory_pygame_ui
 ```
 
 ## References
