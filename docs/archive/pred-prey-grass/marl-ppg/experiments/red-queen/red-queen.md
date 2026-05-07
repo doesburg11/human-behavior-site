@@ -27,6 +27,7 @@ Four evaluation scenarios were created by combining PPO checkpoints from two gen
 
 We then ran:
 
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
     <colgroup>
@@ -71,6 +72,8 @@ We then ran:
     </tbody>
   </table>
 </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Experimental setup: predator and prey source conditions for the Red Queen experiment.</figcaption>
+</figure>
 
 Each evaluation ran for 1000 steps in the same grid-based environment.
 
@@ -78,6 +81,7 @@ Each evaluation ran for 1000 steps in the same grid-based environment.
 
 ## 📊 Results
 
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
     <colgroup>
@@ -128,6 +132,8 @@ Each evaluation ran for 1000 steps in the same grid-based environment.
     </tbody>
   </table>
 </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Red Queen experiment results: survival and offspring metrics across evaluation conditions.</figcaption>
+</figure>
 
 
 Observations:
@@ -138,7 +144,7 @@ Observations:
 
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/archive/pred-prey-grass/marl-ppg/experiments/red-queen/red-queen/display-1.jpg" alt="Display 1: Life span comparison" width="600" />
-  <figcaption><strong>Display 1:</strong> Life span comparison</figcaption>
+  <figcaption><strong>Display 3:</strong> Life span comparison</figcaption>
 </figure>
 
 ---

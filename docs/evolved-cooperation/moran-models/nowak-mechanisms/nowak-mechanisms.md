@@ -7,11 +7,7 @@ slug: /evolved-cooperation/nowak-mechanisms
 
 ## Status
 
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Python-backed.</strong> This section describes the five named Moran-process packages under <code>moran_models/nowak_mechanisms/</code> in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository. None are browser replay case studies yet.
-  </p>
-</div>
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This section describes the five named Moran-process packages under <code>moran_models/nowak_mechanisms/</code> in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.</div>
 
 This section contains one package for each of the five mechanisms for the evolution of cooperation identified in Nowak (2006). Each package is a thin wrapper over the shared [`interaction_kernel`](/evolved-cooperation/interaction-kernel) Moran engine.
 

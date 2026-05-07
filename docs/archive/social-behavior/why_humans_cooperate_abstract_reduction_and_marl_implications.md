@@ -153,6 +153,7 @@ Cooperation reduces uncertainty by **aligning expectations**.
 
 Your current environment already instantiates some drivers — but not all.
 
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
     <colgroup>
@@ -201,6 +202,8 @@ Your current environment already instantiates some drivers — but not all.
     </tbody>
   </table>
 </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Cooperation-driving mechanisms mapped to their presence and abstract driver in the MARL simulation.</figcaption>
+</figure>
 
 ### Interpretation
 

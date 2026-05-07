@@ -7,11 +7,7 @@ slug: /evolved-cooperation/network-reciprocity
 
 ## Status
 
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Python-backed.</strong> This page describes the <code>moran_models/nowak_mechanisms/network_reciprocity/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository. It is not yet a browser replay case study.
-  </p>
-</div>
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes the <code>moran_models/nowak_mechanisms/network_reciprocity/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.</div>
 
 Network reciprocity is cooperation sustained by population structure. When interactions are restricted to a local neighborhood rather than the whole population, cooperators can form clusters that shield each other from exploitation by defectors — the network does the work that memory or reputation does in reciprocity models.
 
@@ -23,12 +19,47 @@ There is no memory, reputation, or lineage bias — the only structural ingredie
 
 ## Key Parameters
 
-| Parameter | Default | Role |
-|---|---|---|
-| `positive_kernel_mode` | `"uniform"` | Uniform routing over local neighbors |
-| `initial_identity_count` | `1` | Number of distinct initial lineage identities |
-| `B_plus_scale` | `1.0` | Scales cooperative benefit produced per unit trait |
-| `C_scale` | `0.2` | Private cost per unit trait |
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Parameter</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Default</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>positive_kernel_mode</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>"uniform"</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Uniform routing over local neighbors</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>initial_identity_count</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>1</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Number of distinct initial lineage identities</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>B_plus_scale</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>1.0</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scales cooperative benefit produced per unit trait</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>C_scale</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.2</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Private cost per unit trait</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Key parameters controlling spatial routing and payoff scaling in the network reciprocity model.</figcaption>
+</figure>
 
 ## Python Module Layout
 

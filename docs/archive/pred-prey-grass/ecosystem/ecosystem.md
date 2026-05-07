@@ -31,6 +31,7 @@ Energy flows through the ecosystem via interactions between different trophic le
 
 ### Real-World Ecological Efficiency Heuristics
 
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
     <colgroup>
@@ -64,6 +65,8 @@ Energy flows through the ecosystem via interactions between different trophic le
     </tbody>
   </table>
 </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Real-world energy transfer efficiency heuristics across trophic levels.</figcaption>
+</figure>
 
 These values are commonly used heuristics in ecology and are derived from studies on trophic efficiency, such as Lindeman’s 10% rule.
 
@@ -160,7 +163,7 @@ This mirrors the behavior of real-world ecosystems, where evolution creates comp
 
 <figure style={{ textAlign: 'center' }}>
   <img src="/img/archive/pred-prey-grass/ecosystem/ecosystem/display-2.jpg" alt="Display 2: The direction of energy flows and behavior" width="600" />
-  <figcaption><strong>Display 2:</strong> The direction of energy flows and behavior</figcaption>
+  <figcaption><strong>Display 3:</strong> The direction of energy flows and behavior</figcaption>
 </figure>
 
 

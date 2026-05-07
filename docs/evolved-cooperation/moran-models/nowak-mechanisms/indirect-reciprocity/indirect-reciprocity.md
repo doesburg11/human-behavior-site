@@ -7,11 +7,7 @@ slug: /evolved-cooperation/indirect-reciprocity
 
 ## Status
 
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Python-backed.</strong> This page describes the <code>moran_models/nowak_mechanisms/indirect_reciprocity/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository. It is not yet a browser replay case study.
-  </p>
-</div>
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes the <code>moran_models/nowak_mechanisms/indirect_reciprocity/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.</div>
 
 Indirect reciprocity is cooperation sustained by reputation. Rather than requiring repeated encounters with the same individual, an agent helps others whose public reputation signals that they are good cooperators — "I help you because others are watching."
 
@@ -33,14 +29,57 @@ where $\omega$ is the observation weight. Agents that help more accumulate highe
 
 ## Key Parameters
 
-| Parameter | Default | Role |
-|---|---|---|
-| `reputation_default` | `0.5` | Initial reputation for all sites |
-| `reputation_observation_weight` | `0.35` | How quickly reputation tracks recent helping |
-| `reputation_kernel_bias` | `0.10` | Minimum routing weight regardless of reputation |
-| `reputation_kernel_exponent` | `1.0` | Curvature of reputation-to-weight mapping |
-| `B_plus_scale` | `1.0` | Scales cooperative benefit produced per unit trait |
-| `C_scale` | `0.2` | Private cost per unit trait |
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Parameter</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Default</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>reputation_default</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.5</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Initial reputation for all sites</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>reputation_observation_weight</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.35</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>How quickly reputation tracks recent helping</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>reputation_kernel_bias</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.10</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Minimum routing weight regardless of reputation</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>reputation_kernel_exponent</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>1.0</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Curvature of reputation-to-weight mapping</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>B_plus_scale</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>1.0</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scales cooperative benefit produced per unit trait</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>C_scale</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.2</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Private cost per unit trait</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Key parameters controlling reputation dynamics and routing in the indirect reciprocity model.</figcaption>
+</figure>
 
 ## Python Module Layout
 

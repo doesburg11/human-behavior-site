@@ -7,11 +7,7 @@ slug: /evolved-cooperation/group-selection
 
 ## Status
 
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Python-backed.</strong> This page describes the <code>moran_models/nowak_mechanisms/group_selection/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository. It is not yet a browser replay case study.
-  </p>
-</div>
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes the <code>moran_models/nowak_mechanisms/group_selection/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.</div>
 
 Group selection adds a second level of selection on top of individual competition. Groups whose members cooperate more produce higher average fitness, and periodically the most successful group is copied into the least successful group — selection acts on groups as well as on individuals.
 
@@ -26,13 +22,52 @@ This implements a two-level selection process:
 
 ## Key Parameters
 
-| Parameter | Default | Role |
-|---|---|---|
-| `group_count` | `8` | Number of groups the population is divided into |
-| `group_selection_interval` | `25` | Steps between between-group selection events |
-| `group_selection_mode` | `"copy_best_group_into_worst_group"` | Between-group replacement rule |
-| `B_plus_scale` | `1.0` | Scales cooperative benefit produced per unit trait |
-| `C_scale` | `0.2` | Private cost per unit trait |
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Parameter</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Default</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>group_count</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>8</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Number of groups the population is divided into</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>group_selection_interval</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>25</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Steps between between-group selection events</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>group_selection_mode</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>"copy_best_group_into_worst_group"</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Between-group replacement rule</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>B_plus_scale</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>1.0</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scales cooperative benefit produced per unit trait</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>C_scale</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.2</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Private cost per unit trait</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Key parameters controlling group partitioning and between-group selection.</figcaption>
+</figure>
 
 ## Python Module Layout
 

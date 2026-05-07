@@ -7,11 +7,7 @@ slug: /evolved-cooperation/direct-reciprocity
 
 ## Status
 
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Python-backed.</strong> This page describes three implementations in the <code>moran_models/nowak_mechanisms/direct_reciprocity/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository. None is yet a browser replay case study.
-  </p>
-</div>
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes three implementations in the <a href="https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/direct_reciprocity"><code>moran_models/nowak_mechanisms/direct_reciprocity/</code></a> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.</div>
 
 Direct reciprocity is cooperation sustained by repeated encounters between the same individuals. A cooperator can punish a defector in the next round and reward a cooperator — but only if they meet again.
 
@@ -35,22 +31,88 @@ $$
 
 ## Payoff Matrix
 
-| Actor / Partner | Partner cooperates | Partner defects |
-|---|---|---|
-| Actor cooperates | R = 1.0 (reward) | S = −0.5 (sucker) |
-| Actor defects | T = 1.7 (temptation) | P = 0.0 (punishment) |
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Actor / Partner</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partner cooperates</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partner defects</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><strong>Actor cooperates</strong></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$R$ = 1.0 (Reward)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$S$ = −0.5 (Sucker)</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><strong>Actor defects</strong></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$T$ = 1.7 (Temptation)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$P$ = 0.0 (Punishment)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Prisoner's Dilemma payoff matrix with default values ($T$ = 1.7, $R$ = 1.0, $S$ = −0.5, $P$ = 0.0).</figcaption>
+</figure>
 
 This satisfies $T > R > P > S$ — the standard definition of the Prisoner's Dilemma. Defection is individually tempting ($T > R$), mutual cooperation beats mutual defection ($R > P$), and defecting is the safe choice ($P > S$). The dilemma is that rational individuals defect even though both would be better off cooperating.
 
 ## Strategies
 
-| Strategy | Full name | Rule |
-|---|---|---|
-| ALLC | Always Cooperate | Cooperate unconditionally. |
-| ALLD | Always Defect | Defect unconditionally. |
-| TFT | Tit for Tat | Cooperate on the first round; then copy the partner's previous action. |
-| GTFT | Generous Tit for Tat | Like TFT, but forgive a defection with fixed probability. |
-| WSLS | Win-Stay Lose-Shift | Repeat the previous action if it paid at or above aspiration; otherwise switch. |
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Strategy</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Full name</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Rule</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>ALLC</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Always Cooperate</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperate unconditionally.</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>ALLD</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Always Defect</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Defect unconditionally.</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>TFT</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Tit for Tat</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperate on the first round; then copy the partner's previous action.</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>GTFT</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Generous Tit for Tat</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Like TFT, but forgive a defection with fixed probability.</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>WSLS</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Win-Stay Lose-Shift</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Repeat the previous action if it paid at or above aspiration; otherwise switch.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> The five strategies implemented in the direct reciprocity models and their decision rules.</figcaption>
+</figure>
 
 ## Three Implementations
 
@@ -58,7 +120,7 @@ Three models test direct reciprocity progressively, adding one feature at a time
 
 ### Step 1 — Pure direct reciprocity fails
 
-**Model:** `well_mixed/` with `partner_persistence_probability = 0.0`
+**Model:** [`well_mixed/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed) with `partner_persistence_probability = 0.0`
 
 In a well-mixed population of 200 agents with random re-pairing every step, the re-encounter probability is:
 
@@ -72,7 +134,7 @@ This is far below 0.41. Memory is useless: even if TFT punished a defector last 
 
 ### Step 2 — Partner persistence enables direct reciprocity
 
-**Model:** `well_mixed/` with `partner_persistence_probability = 0.9`
+**Model:** [`well_mixed/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed) with `partner_persistence_probability = 0.9`
 
 `partner_persistence_probability` ($p$) is the probability that an existing pair stays together in the next step. Each step, for every pair $(i, j)$:
 
@@ -85,7 +147,7 @@ When $p = 0.9$, the effective re-encounter probability is $w \approx 0.9 > 0.41$
 
 ### Step 3 — Spatial structure adds network reciprocity
 
-**Model:** `pair_game/`
+**Model:** [`scaffolds/spatial_clustering/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/direct_reciprocity/scaffolds/spatial_clustering)
 
 Placing agents on a 2D grid and restricting both interactions and Moran replacement to local neighbors adds a second mechanism on top of direct reciprocity: **network reciprocity**. Cooperators can form spatial clusters and preferentially interact with each other, even before any trust has been established.
 
@@ -96,9 +158,9 @@ Both mechanisms are active simultaneously:
 
 **Result: Cooperation emerges more robustly, but the mechanism is no longer pure direct reciprocity.**
 
-### Note — Continuous model
+### Note — Continuous spatial memory model
 
-**Model:** `continuous/`
+**Model:** [`scaffolds/continuous_spatial_memory/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/direct_reciprocity/scaffolds/continuous_spatial_memory)
 
 A separate, continuous-trait implementation wraps the shared interaction-kernel engine. Each site carries a cooperation capacity $h$ and pair-specific partner memory. Expressed cooperation is scaled by that memory:
 
@@ -116,33 +178,96 @@ This model uses a benefit–cost framework rather than a Prisoner's Dilemma and 
 
 ## Summary
 
-| | `well_mixed` p = 0.0 | `well_mixed` p = 0.9 | `pair_game` | `continuous` |
-|---|---|---|---|---|
-| Re-encounter probability w | ≈0.005 | ≈0.9 | High (fixed neighbors) | N/A |
-| Condition w > 0.41 | No | Yes | Yes | N/A |
-| Spatial clustering | No | No | Yes | No |
-| Active mechanisms | None | Direct reciprocity | Direct + network | Direct reciprocity |
-| Cooperation emerges | No | Yes (moderate) | Yes (robust) | Yes |
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '20%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}></th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>well_mixed</code> p = 0.0</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>well_mixed</code> p = 0.9</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>spatial_clustering</code></th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>continuous_spatial_memory</code></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Re-encounter probability w</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>≈0.005</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>≈0.9</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>High (fixed neighbors)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>N/A</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Condition w > 0.41</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>N/A</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Spatial clustering</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Active mechanisms</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>None</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Direct reciprocity</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Direct + network</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Direct reciprocity</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperation emerges</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (moderate)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (robust)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Outcome comparison across the three direct reciprocity implementations.</figcaption>
+</figure>
 
 ## Python Module Layout
 
 ```text
 moran_models/nowak_mechanisms/direct_reciprocity/
   __init__.py
-  continuous/
-    direct_reciprocity_model.py
-    direct_reciprocity_pygame_ui.py
-    config/direct_reciprocity_config.py
-  pair_game/
-    direct_reciprocity_pair_game_model.py
-    direct_reciprocity_pair_game_pygame_ui.py
-    config/direct_reciprocity_pair_game_config.py
-    utils/proof_of_mechanism.py
   well_mixed/
+    __init__.py
     direct_reciprocity_well_mixed_model.py
+    direct_reciprocity_well_mixed_async_model.py
     direct_reciprocity_well_mixed_pygame_ui.py
-    config/direct_reciprocity_well_mixed_config.py
-    utils/proof_of_mechanism.py
+    direct_reciprocity_well_mixed_grid_pygame_ui.py
+    direct_reciprocity_well_mixed_linked_pygame_ui.py
+    config/
+    data/
+    utils/
+  scaffolds/
+    __init__.py
+    spatial_clustering/
+      __init__.py
+      spatial_clustering_model.py
+      spatial_clustering_pygame_ui.py
+      config/
+      data/
+      utils/
+    continuous_spatial_memory/
+      __init__.py
+      continuous_spatial_memory_model.py
+      continuous_spatial_memory_pygame_ui.py
+      config/
 ```
 
 ## Usage
@@ -159,40 +284,28 @@ Live viewer:
 ./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.well_mixed.direct_reciprocity_well_mixed_pygame_ui
 ```
 
-Proof utility:
+**Spatial clustering scaffold:**
 
 ```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.well_mixed.utils.proof_of_mechanism
-```
-
-**Spatial pair game:**
-
-```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.pair_game.direct_reciprocity_pair_game_model
+./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.scaffolds.spatial_clustering.spatial_clustering_model
 ```
 
 Live viewer:
 
 ```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.pair_game.direct_reciprocity_pair_game_pygame_ui
+./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.scaffolds.spatial_clustering.spatial_clustering_pygame_ui
 ```
 
-Proof utility:
+**Continuous spatial memory scaffold:**
 
 ```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.pair_game.utils.proof_of_mechanism
-```
-
-**Continuous model:**
-
-```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.continuous.direct_reciprocity_model
+./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.scaffolds.continuous_spatial_memory.continuous_spatial_memory_model
 ```
 
 Live viewer:
 
 ```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.continuous.direct_reciprocity_pygame_ui
+./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.scaffolds.continuous_spatial_memory.continuous_spatial_memory_pygame_ui
 ```
 
 ## References

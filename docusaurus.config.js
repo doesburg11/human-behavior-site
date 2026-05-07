@@ -2,6 +2,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import rehypeExternalLinks from 'rehype-external-links';
 
 function removeDuplicateEvolvedCooperationDoc(items) {
   return items.flatMap((item) => {
@@ -65,7 +66,7 @@ const config = {
             return removeDuplicateEvolvedCooperationDoc(items);
           },
           remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
+          rehypePlugins: [rehypeKatex, [rehypeExternalLinks, { target: false }]],
           editUrl: 'https://github.com/doesburg11/human-cooperation-site/edit/main/',
         },
         // BLOG REMOVED — no blog

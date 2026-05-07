@@ -43,18 +43,77 @@ Together they form a coherent social-cognitive system: *assess strangers by repu
 
 ## Results summary
 
-| Metric | One-shot | Repeated |
-|---|---|---|
-| Final cooperation rate | 0.450 | **0.380** |
-| Final mean payoff | 4.100 | **288.120** |
-| Final exploration rate | 0.717 | 0.073 |
-| Final learning rate | 0.353 | 0.514 |
-| Final discount factor | 0.395 | 0.581 |
-| Final initial Q-bias | 1.222 | −0.519 |
-| Final rejection threshold | −0.539 | −0.687 |
-| Final forgiveness rate | 0.595 | 0.761 |
-| Final reputation weight | 0.522 | 0.381 |
-| Final mean reputation | 0.023 | 0.016 |
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Metric</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>One-shot</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Repeated</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final cooperation rate</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.450</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><strong>0.380</strong></td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final mean payoff</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>4.100</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><strong>288.120</strong></td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final exploration rate</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.717</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.073</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final learning rate</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.353</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.514</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final discount factor</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.395</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.581</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final initial Q-bias</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.222</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>−0.519</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final rejection threshold</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>−0.539</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>−0.687</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final forgiveness rate</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.595</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.761</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final reputation weight</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.522</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.381</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final mean reputation</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.023</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.016</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Evolved parameter values and cooperation outcomes for Model 3 (Extended) under one-shot and repeated interaction.</figcaption>
+</figure>
 
 ### One-shot interaction
 

@@ -31,6 +31,7 @@ Classical evolutionary models of cooperation (e.g., kin selection, evolutionary 
 
 Learned cooperation differs fundamentally:
 
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
     <colgroup>
@@ -63,6 +64,8 @@ Learned cooperation differs fundamentally:
     </tbody>
   </table>
 </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Contrasting features of evolutionary and learned cooperation.</figcaption>
+</figure>
 
 Thus, cooperation can emerge **without requiring genetic relatedness or population selection**, purely through experience.
 

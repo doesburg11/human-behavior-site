@@ -59,14 +59,65 @@ The manipulated variable is `stranger_fraction`: the probability that each inter
 
 ## Results
 
-| Stranger fraction | Trust learning | Q-learning | Extended |
-|---|---|---|---|
-| 0% | **315.7** | 199.2 | 191.8 |
-| 10% | 111.2 | 185.9 | 177.4 |
-| 25% | 297.3 | 229.8 | 169.3 |
-| 50% | 4.9 | 232.9 | 172.3 |
-| 75% | 0.0 | 268.4 | **251.5** |
-| 100% | 0.0 | 168.1 | **242.5** |
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '25%' }} />
+      <col style={{ width: '25%' }} />
+      <col style={{ width: '25%' }} />
+      <col style={{ width: '25%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Stranger fraction</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Trust learning</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Q-learning</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Extended</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0%</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><strong>315.7</strong></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>199.2</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>191.8</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>10%</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>111.2</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>185.9</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>177.4</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>25%</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>297.3</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>229.8</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>169.3</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>50%</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>4.9</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>232.9</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>172.3</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>75%</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.0</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>268.4</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><strong>251.5</strong></td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>100%</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.0</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>168.1</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><strong>242.5</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Final mean payoff by model across network-diversity conditions after evolution.</figcaption>
+</figure>
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 	<img src="/img/learning-selection-interaction/simulations/experiment_network_diversity.png" width="80%" alt="Payoff versus stranger exposure across models"/>

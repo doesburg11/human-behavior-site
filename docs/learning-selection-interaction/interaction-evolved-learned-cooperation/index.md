@@ -207,6 +207,7 @@ No single landmark paper fully matches this integrated setup across all dimensio
 
 Within this project, Model 1 maps most directly to direct reciprocity and network reciprocity theory, Model 2 maps most directly to learned reciprocity in multi-agent reinforcement learning, and Model 3 extends that line toward reputation, partner choice, and socially mediated cooperation with strangers.
 
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
     <colgroup>
@@ -279,6 +280,8 @@ Within this project, Model 1 maps most directly to direct reciprocity and networ
     </tbody>
   </table>
 </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Related work positioned by proximity to this simulation family along key conceptual axes.</figcaption>
+</figure>
 
 Taken together, these works capture the core logic behind the present simulation family: reciprocal altruism, repeated interaction, local network structure, and partner-contingent learning. The distinctive contribution here is that these ingredients are combined in a single two-timescale setup where learning unfolds within life and learning parameters themselves evolve across generations.
 

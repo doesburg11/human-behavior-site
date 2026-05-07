@@ -7,11 +7,7 @@ slug: /evolved-cooperation/kin-selection
 
 ## Status
 
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '1rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <p style={{ margin: '0' }}>
-    <strong style={{ color: '#0F3368' }}>Python-backed.</strong> This page describes the <code>moran_models/nowak_mechanisms/kin_selection/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository. It is not yet a browser replay case study.
-  </p>
-</div>
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes the <code>moran_models/nowak_mechanisms/kin_selection/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.</div>
 
 Kin selection is the first of Nowak's five mechanisms for the evolution of cooperation. Cooperation spreads when the benefit delivered to a recipient, weighted by genetic relatedness, exceeds the private cost paid by the actor — Hamilton's rule: $rB > C$.
 
@@ -183,13 +179,52 @@ Variable definitions:
 
 Consider a focal site $i$ with four von Neumann neighbors, two same-lineage (A) and two other-lineage (B):
 
-| Site | Lineage | Trait $h$ |
-|------|---------|-----------|
-| $i$  | A | 0.8 |
-| $j_1$ | A | 0.7 |
-| $j_2$ | A | 0.6 |
-| $j_3$ | B | 0.9 |
-| $j_4$ | B | 0.5 |
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Site</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Lineage</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Trait $h$</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$i$</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.8</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$j_1$</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.7</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$j_2$</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>A</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.6</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$j_3$</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>B</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.9</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$j_4$</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>B</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.5</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Worked example: trait values and lineage assignments for focal site i and its four von Neumann neighbors.</figcaption>
+</figure>
 
 **Production**
 
@@ -223,12 +258,47 @@ The lineage cluster raises fitness from 1.11 to 1.50 — a difference that compo
 
 ## Key Parameters
 
-| Parameter | Default | Role |
-|---|---|---|
-| `kin_weight_same_lineage` | `0.8` | Routing weight toward same-lineage neighbors |
-| `kin_weight_other_lineage` | `0.2` | Routing weight toward other-lineage neighbors |
-| `B_plus_scale` | `1.0` | Scales cooperative benefit produced per unit trait |
-| `C_scale` | `0.2` | Private cost per unit trait |
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Parameter</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Default</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>kin_weight_same_lineage</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.8</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Routing weight toward same-lineage neighbors</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>kin_weight_other_lineage</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.2</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Routing weight toward other-lineage neighbors</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>B_plus_scale</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>1.0</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scales cooperative benefit produced per unit trait</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>C_scale</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><code>0.2</code></td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Private cost per unit trait</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Key parameters controlling kin-selection routing weights and payoff scaling.</figcaption>
+</figure>
 
 Hamilton's rule maps onto these parameters as $r \approx w_{\text{same}} / (w_{\text{same}} + w_{\text{other}})$, $B = $ `B_plus_scale`, $C = $ `C_scale`.
 

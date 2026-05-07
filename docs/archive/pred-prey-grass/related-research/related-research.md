@@ -50,6 +50,7 @@ The PredPreyGrass project therefore occupies a unique position—**a genuinely e
 
 **Comparison: Ecology × MARL Frameworks**
 
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
     <colgroup>
@@ -274,6 +275,8 @@ The PredPreyGrass project therefore occupies a unique position—**a genuinely e
     </tbody>
 </table>
 </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Positioning of PredPreyGrass relative to related multi-agent and ecological modeling environments.</figcaption>
+</figure>
 
 
 ## References

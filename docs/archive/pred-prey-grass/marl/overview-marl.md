@@ -16,6 +16,7 @@ RL in a way distinguishes itself from Supervised and Unsupervised Learning, whic
 
 
 
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 <div style={{ width: '100%', overflowX: 'auto' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed' }}>
     <colgroup>
@@ -66,8 +67,7 @@ RL in a way distinguishes itself from Supervised and Unsupervised Learning, whic
     </tbody>
   </table>
 </div>
-<figure style={{ textAlign: 'center' }}>
-  <figcaption><strong>Display 2:</strong> Distinctions between the three main Machine Learning paradigms</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Distinctions between the three main Machine Learning paradigms</figcaption>
 </figure>
 
 In our endeavor of modeling human behavior we have decided to follow the **descriptive agenda of Multi Agent Reinforcement Learning**. The descriptive agenda uses MARL to study the behaviors of natural agents, such as humans and animals, when learning in a population.This agenda typically begins by proposing a certain MARL algorithm which is designed to mimic how humans or animals adapt their actions based on past interactions. Methods from social sciences and behavioral economics can be used to test how closely a MARL algorithm matches the behavior of a natural agent, such as via controlled experimentation in a laboratory setting. This is then followed by analyzing whether a population of such natural agents converges to a certain kind of equilibrium solution if all agents use the proposed MARL algorithm.

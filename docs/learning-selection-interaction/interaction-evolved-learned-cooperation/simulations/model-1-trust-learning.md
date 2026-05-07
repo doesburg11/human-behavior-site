@@ -57,13 +57,52 @@ For one-shot versus repeated scenario rationale, see [Appendix: Why compare one-
 
 ## Results summary
 
-| Metric | One-shot (`rounds=1`) | Repeated (`rounds=80`) |
-|---|---|---|
-| Final cooperation rate | 0.000 | **0.979** |
-| Final mean payoff | 0.000 | **313.300** |
-| Final trust prior | −0.864 | 1.447 |
-| Final learning rate | 0.095 | 0.186 |
-| Final responsiveness | 1.126 | 2.459 |
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+      <col style={{ width: '33.33%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Metric</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>One-shot (<code>rounds=1</code>)</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Repeated (<code>rounds=80</code>)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final cooperation rate</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.000</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><strong>0.979</strong></td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final mean payoff</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.000</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><strong>313.300</strong></td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final trust prior</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>−0.864</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.447</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final learning rate</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.095</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.186</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Final responsiveness</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.126</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>2.459</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Evolved parameter values and cooperation outcomes for Model 1 (Trust Learning) under one-shot and repeated interaction.</figcaption>
+</figure>
 
 ### One-shot interaction
 
