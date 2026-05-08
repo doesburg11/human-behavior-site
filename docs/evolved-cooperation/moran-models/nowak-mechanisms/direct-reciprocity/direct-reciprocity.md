@@ -39,6 +39,14 @@ When TFT is rare, it encounters mostly ALLD opponents. In that first interaction
 
 This is the core distinction: **direct reciprocity can maintain cooperation once it is common, but it cannot originate cooperation from a population dominated by defectors.** The three steps below test both questions in sequence — and the results track this distinction exactly.
 
+### Three phases of cooperation
+
+This origin–stability distinction is an instance of a general principle that holds across all five Nowak mechanisms: each mechanism's condition describes phase 3 (maintenance), not phase 1 (initiation) or phase 2 (spread from rare). See [Nowak Mechanisms — Three phases of cooperation](/evolved-cooperation/nowak-mechanisms#three-phases-of-cooperation) for the full cross-mechanism comparison.
+
+For direct reciprocity specifically, the three phases play out as follows. Initiation is easy — any finite population with at least one TFT agent can produce a cooperative TFT–TFT pair by chance. Spread is hard: the fitness advantage of that pair (4.0 vs. ALLD–ALLD 1.0) must survive long enough to propagate, which requires async replacement, weak selection, and an absence of unconditional cooperators (ALLC). Maintenance is clean: the Nowak condition $w > 0.41$ is precisely the ESS condition, and 100 of 100 seeds hold cooperation when cooperators are already common.
+
+The simulation results below track all three phases. Phase 3 is reliably demonstrated. Phase 2 is stochastic: cooperation established from a 5% reciprocal foothold in 62 of 100 seeds, and from a single TFT invader in only 15 of 100. Phase 1 is not solved by the mechanism — the ignition is luck.
+
 ## Payoff Matrix
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
@@ -158,6 +166,8 @@ In practice, however, a simulation run of 500 steps from a random mixed start sh
 This is precisely the stability vs. origin distinction playing out in simulation. The condition $w > 0.41$ is an evolutionary stability condition: it guarantees that *if the population were already dominated by TFT*, ALLD could not invade. But the population starts randomly. When TFT is rare, it mostly encounters ALLD — it cooperates in round 1, is exploited, and loses fitness before repeated interaction can compensate. ALLD spreads while TFT is still too rare to find other TFT partners. The mechanism that would protect cooperation cannot get started because there is not yet enough cooperation to protect.
 
 Direct reciprocity, on its own, has no answer to this. It is a mechanism for *preserving* a cooperative norm, not for *creating* one.
+
+There is, however, a narrow exception under specific finite-population conditions. If replacement is asynchronous (one birth and one death per step rather than a simultaneous global reshuffle), selection is weak, partner persistence is high ($p = 0.9$), and there are no unconditional cooperators (ALLC) in the initial population, cooperation can sometimes emerge from a small reciprocal foothold via a two-step process. First, **stochastic ignition**: by chance, a TFT–TFT pair forms in the initial random pairing. Second, **deterministic spread**: that pair earns fitness $1.0 + 3R = 4.0$ per step while ALLD–ALLD pairs earn only $1.0 + 3P = 1.0$, a large enough fitness gap for selection to amplify the foothold. Proof results: starting from a 5% random reciprocal foothold (no ALLC), cooperation established in 62 of 100 seeds; starting from a single TFT invader in 199 ALLD, only 15 of 100 seeds. The ignition is luck — stochastic basin crossing in a finite population — the spread is the mechanism. Remove ALLC from the picture and give the right replacement dynamics, and direct reciprocity can carry cooperation from rare; but it cannot be relied upon to do so, and the origin problem is not cleanly solved.
 
 **Result: Cooperation does not emerge from a random start despite the condition being met.** The $w > 0.41$ condition is necessary but not sufficient — it is a maintenance condition, not an emergence condition. A cooperative founding population or spatial structure is also required.
 

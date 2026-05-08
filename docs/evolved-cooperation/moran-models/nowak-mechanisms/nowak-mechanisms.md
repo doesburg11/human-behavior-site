@@ -59,6 +59,28 @@ The full engine description is on the [Interaction Kernel](/evolved-cooperation/
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> The five Nowak mechanisms and how each sustains cooperation in this implementation.</figcaption>
 </figure>
 
+## Three phases of cooperation
+
+The five mechanisms are often described as answers to the question "how does cooperation evolve?" But that question contains three distinct sub-questions, each requiring a separate answer:
+
+| Phase | Unit of analysis | Question |
+|---|---|---|
+| **1. Initiation** | Single pair or individual | Can a cooperative act occur at all? |
+| **2. Spread** | Population frequency | Can cooperation increase in frequency when rare? |
+| **3. Maintenance** | Population equilibrium | Can cooperation resist invasion once common? |
+
+**The Nowak conditions are maintenance conditions.** Each of the five rules — $rb > c$, $w > (T-R)/(T-P)$, $q > c/b$, $b/c > k$, $m/n > c/b$ — describes when a population already dominated by cooperators resists invasion by defectors. This is an evolutionary stability (ESS) condition. It is not a condition for spread from rare, and it is not a condition for the first cooperative act to occur.
+
+| Mechanism | Condition | Phase addressed | Spread from rare |
+|---|---|---|---|
+| Kin selection | $rb > c$ | Maintenance | Easier — rare cooperators are biased toward related partners who also cooperate |
+| Direct reciprocity | $w > (T{-}R)/(T{-}P)$ | Maintenance | Hard — needs specific replacement dynamics, weak selection, and absence of unconditional cooperators |
+| Indirect reciprocity | $q > c/b$ | Maintenance | Hard — reputation system must bootstrap without an existing cooperative base |
+| Network reciprocity | $b/c > k$ | Maintenance | Partial — spatial clusters can form and grow, but a single isolated cooperator still faces mostly defectors |
+| Group selection | $m/n > c/b$ | Maintenance | Possible — if between-group selection is strong enough to offset within-group defector advantage |
+
+The direct implication: demonstrating that a mechanism *maintains* cooperation (phase 3) is not the same as demonstrating that it *produces* cooperation (phases 1–2). The simulation results in this section test all three phases, and the distinction shows up clearly in every mechanism — particularly in direct reciprocity, where the maintenance condition is cleanly met but spread from rare is stochastic and unreliable.
+
 ## Beyond These Five
 
 Nowak's taxonomy is a useful compact framework but not an exhaustive list. Important cooperation mechanisms outside the five include:
