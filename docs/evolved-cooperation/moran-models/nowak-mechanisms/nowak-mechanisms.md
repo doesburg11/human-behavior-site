@@ -119,25 +119,56 @@ The five mechanisms are often described as answers to the question "how does coo
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> The five Nowak conditions mapped to spread from rare and maintenance. All five conditions are ESS (maintenance) conditions. Only kin selection reliably supports spread from rare; network reciprocity and group selection offer a partial route.</figcaption>
 </figure>
 
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <strong>Direct reciprocity — fully proven by simulation:</strong>
-  <ul style={{ marginTop: '0.4rem', marginBottom: '0' }}>
-    <li><strong>Maintenance:</strong> proven — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed/utils/proof_of_mechanism.py">well_mixed/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-1-pure-direct-reciprocity-fails">Step 1 on direct reciprocity page</a></li>
-    <li><strong>Spread from rare = No:</strong> proven — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed/utils/proof_stability_vs_invasion.py">well_mixed/proof_stability_vs_invasion.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-2-partner-persistence-is-necessary-but-not-sufficient-from-a-random-start">Step 2 on direct reciprocity page</a></li>
-    <li><strong>Spatial clustering scaffold:</strong> network reciprocity provides origin, direct reciprocity provides maintenance — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/scaffolds/spatial_clustering/utils/proof_of_mechanism.py">spatial_clustering/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-3-spatial-structure-adds-network-reciprocity">Step 3 on direct reciprocity page</a></li>
-    <li><strong>Kin clustering scaffold:</strong> partner permanence is the origin mechanism — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/scaffolds/kin_clustering/utils/proof_of_mechanism.py">kin_clustering/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-4-partner-permanence-not-spatial-clustering-is-the-origin-mechanism">Step 4 on direct reciprocity page</a></li>
-  </ul>
-</div>
+<figure style={{ margin: '0 0 1.5rem 0' }}>
+  <div style={{ border: '1px solid #D6E4F5', overflow: 'hidden' }}>
+    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Kin selection — fully proven by simulation</div>
+    <div style={{ backgroundColor: '#EAF2FB', color: '#1F2D3D', padding: '0.6rem 1.25rem' }}>
+      <ul style={{ margin: '0' }}>
+        <li><strong>Maintenance:</strong> proven — 5/5 seeds, mean trait 0.984 — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/kin-selection#step-1-maintenance-cooperation-holds-when-common">Step 1 on kin selection page</a></li>
+        <li><strong>Spread from rare = Yes:</strong> proven — 5/5 seeds, mean trait 0.872 — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/kin-selection#step-2-spread-from-rare-kin-bias-enables-invasion">Step 2 on kin selection page</a></li>
+        <li><strong>No kin bias ablation:</strong> spread unreliable (1/5 seeds, mean trait 0.488) — kin-biased routing, not spatial structure alone, is the decisive mechanism</li>
+        <li><strong>Below Hamilton's rule:</strong> full collapse from 90% to near zero (0/5 seeds) — rb &gt; c boundary confirmed</li>
+      </ul>
+    </div>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Kin selection simulation evidence for the spread and maintenance claims in Display 2.</figcaption>
+</figure>
 
-<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-  <strong>Kin selection — fully proven by simulation:</strong>
-  <ul style={{ marginTop: '0.4rem', marginBottom: '0' }}>
-    <li><strong>Maintenance:</strong> proven — 5/5 seeds, mean trait 0.984 — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/kin-selection#step-1-maintenance-cooperation-holds-when-common">Step 1 on kin selection page</a></li>
-    <li><strong>Spread from rare = Yes:</strong> proven — 5/5 seeds, mean trait 0.872 — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/kin-selection#step-2-spread-from-rare-kin-bias-enables-invasion">Step 2 on kin selection page</a></li>
-    <li><strong>No kin bias ablation:</strong> spread unreliable (1/5 seeds, mean trait 0.488) — kin-biased routing, not spatial structure alone, is the decisive mechanism</li>
-    <li><strong>Below Hamilton's rule:</strong> full collapse from 90% to near zero (0/5 seeds) — rb &gt; c boundary confirmed</li>
-  </ul>
-</div>
+<figure style={{ margin: '0 0 1.5rem 0' }}>
+  <div style={{ border: '1px solid #D6E4F5', overflow: 'hidden' }}>
+    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Direct reciprocity — fully proven by simulation</div>
+    <div style={{ backgroundColor: '#EAF2FB', color: '#1F2D3D', padding: '0.6rem 1.25rem' }}>
+      <ul style={{ margin: '0' }}>
+        <li><strong>Maintenance:</strong> proven — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed/utils/proof_of_mechanism.py">well_mixed/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-1-pure-direct-reciprocity-fails">Step 1 on direct reciprocity page</a></li>
+        <li><strong>Spread from rare = No:</strong> proven — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed/utils/proof_stability_vs_invasion.py">well_mixed/proof_stability_vs_invasion.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-2-partner-persistence-is-necessary-but-not-sufficient-from-a-random-start">Step 2 on direct reciprocity page</a></li>
+        <li><strong>Spatial clustering scaffold:</strong> network reciprocity provides origin, direct reciprocity provides maintenance — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/scaffolds/spatial_clustering/utils/proof_of_mechanism.py">spatial_clustering/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-3-spatial-structure-adds-network-reciprocity">Step 3 on direct reciprocity page</a></li>
+        <li><strong>Kin clustering scaffold:</strong> partner permanence is the origin mechanism — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/scaffolds/kin_clustering/utils/proof_of_mechanism.py">kin_clustering/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-4-partner-permanence-not-spatial-clustering-is-the-origin-mechanism">Step 4 on direct reciprocity page</a></li>
+      </ul>
+    </div>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Direct reciprocity simulation evidence for the spread and maintenance claims in Display 2.</figcaption>
+</figure>
+
+<figure style={{ margin: '0 0 1.5rem 0' }}>
+  <div style={{ border: '1px solid #D6E4F5', overflow: 'hidden' }}>
+    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Indirect reciprocity — simulation findings (spatial · continuous well-mixed · binary Nowak model)</div>
+    <div style={{ backgroundColor: '#EAF2FB', color: '#1F2D3D', padding: '0.6rem 1.25rem' }}>
+      <ul style={{ margin: '0' }}>
+        <li><strong>Maintenance (spatial model):</strong> 5/5, mean trait 0.997 — reputation routing sustains cooperation from common start — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/indirect_reciprocity/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a></li>
+        <li><strong>Spread from rare (spatial model):</strong> 5/5 — grid provides network-reciprocity assortment alongside the reputation channel; the two cannot be separated in the spatial model</li>
+        <li><strong>Maintenance (continuous well-mixed):</strong> 5/5, mean trait 0.998 — confirmed without spatial structure — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/indirect_reciprocity/well_mixed/utils/proof_of_mechanism.py">well_mixed/proof_of_mechanism.py</a></li>
+        <li><strong>No reputation routing ablation (continuous well-mixed):</strong> 0/5, mean trait 0.005 — cooperation collapses when reputation channel is disabled; proves reputation routing is the sustaining mechanism, not spatial structure</li>
+        <li><strong>Spread from rare (continuous well-mixed):</strong> 5/5 — succeeds due to the continuous public-goods payoff; reputation feedback creates sufficient selection advantage even from rare. This differs from Nowak's binary model (see below)</li>
+        <li><strong>Maintenance (binary Nowak model, q=0.80 &gt; c/b=0.20):</strong> 5/5, mean trait 0.873 — cooperation maintained against defector mutation — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/indirect_reciprocity/well_mixed_binary/utils/proof_of_mechanism.py">well_mixed_binary/proof_of_mechanism.py</a></li>
+        <li><strong>Spread from rare (binary Nowak model, q=0.80):</strong> 0/5, mean trait 0.276 — rare cooperators cannot invade; they help defectors (who have neutral initial reputation) but defectors never reciprocate; cooperators are eliminated before the reputation feedback loop can bootstrap</li>
+        <li><strong>Spread from rare (binary Nowak model, q=0.05 &lt; c/b):</strong> 0/5, mean trait 0.201 — fails even more decisively; reputation is so rarely observed that discriminating cooperation provides no selective advantage</li>
+        <li><strong>No reputation gating ablation (binary Nowak model):</strong> 2/5, mean trait 0.432 — without reputation-gated access to help, defectors receive the same benefit as cooperators without paying the cost; cooperation is not reliably maintained (vs. 5/5 with gating active)</li>
+        <li><strong>Key result:</strong> the binary model confirms Nowak's theoretical "No" for spread from rare — rare cooperators cannot invade a defector population regardless of q, because defectors never help based on reputation. The q &gt; c/b condition governs maintenance (ESS), not invasion</li>
+      </ul>
+    </div>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Indirect reciprocity findings across three model variants. The binary Nowak model confirms: maintenance YES when q &gt; c/b; spread from rare NO regardless of q. The continuous model's "spread from rare" success is a formulation artifact — reputation-weighted public goods, not binary pairwise discrimination.</figcaption>
+</figure>
 
 The direct implication: demonstrating that a mechanism *maintains* cooperation is not the same as demonstrating that it *produces* cooperation. The simulation results in this section test both, and the distinction shows up clearly in every mechanism — particularly in direct reciprocity, where the maintenance condition is cleanly met but spread from rare is stochastic and unreliable.
 
