@@ -175,7 +175,7 @@ This makes kin selection the most plausible *initiator* of cooperation: a single
 **Where it gets complicated:**
 
 - **Scale matters.** At the molecular level there is no individual yet — just replicating molecules. Kin selection in the Hamilton sense does not cleanly apply there; byproduct mutualism (an act that immediately benefits the actor) is the more appropriate concept for the very first cooperative chemistry.
-- **Nowak's 2010 controversy.** In a high-profile *Nature* paper Nowak, Tarnita, and Wilson argued that inclusive fitness and kin selection are not the fundamental mechanism — that multilevel (group) selection is the more general framework and kin selection a special case. Hamilton's defenders responded sharply. The debate is not settled, but it shows that "kin selection is the origin" is a theoretical claim, not a consensus fact.
+- **Nowak's 2010 controversy.** In a high-profile *Nature* paper Nowak, Tarnita, and Wilson (2010) argued that inclusive fitness and kin selection are not the fundamental mechanism — that multilevel (group) selection is the more general framework and kin selection a special case. Hamilton's defenders responded sharply. The debate is not settled, but it shows that "kin selection is the origin" is a theoretical claim, not a consensus fact.
 - **Kin selection as ignition, not engine.** Once a cooperative cluster exists — however it formed — direct reciprocity, network reciprocity, and group selection can sustain and amplify it far beyond what kin selection alone could. Kin selection may be best understood as the *scaffolding* that gets cooperation off the ground, after which other mechanisms take over and scale it up.
 
 The working hypothesis the simulation results support: kin selection is the most mechanistically clean answer to how cooperation escapes rarity. What happens after that is a different question.
@@ -199,4 +199,5 @@ The shared condition across all of them mirrors the repo-level feedback framing:
 ## References
 
 - Nowak, M. A. (2006). *Five rules for the evolution of cooperation*. *Science*, 314(5805), 1560–1563. https://doi.org/10.1126/science.1133755
+- Nowak, M. A., Tarnita, C. E., & Wilson, E. O. (2010). *The evolution of eusociality*. *Nature*, 466(7310), 1057–1062. https://doi.org/10.1038/nature09205
 - Hamilton, W. D. (1964). *The genetical evolution of social behaviour. I*. *Journal of Theoretical Biology*, 7(1), 1–16. https://doi.org/10.1016/0022-5193(64)90038-4
