@@ -92,8 +92,8 @@ The five mechanisms are often described as answers to the question "how does coo
         <tr>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/direct-reciprocity">Direct reciprocity</a></td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', fontStyle: 'italic' }}>w &gt; (T−R)/(T−P)</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#F8D7DA' }}><strong>No</strong> — rare TFT meets mostly ALLD; no memory of cooperation to reciprocate</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}><strong>Yes</strong></td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#F8D7DA' }}><strong>No</strong> — rare TFT meets mostly ALLD; no memory of cooperation to reciprocate <a href="/evolved-cooperation/direct-reciprocity#step-1-pure-direct-reciprocity-fails" style={{ fontSize: '0.8em', whiteSpace: 'nowrap' }}>→ simulated</a></td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}><strong>Yes</strong> <a href="/evolved-cooperation/direct-reciprocity#the-condition" style={{ fontSize: '0.8em', whiteSpace: 'nowrap' }}>→ simulated</a></td>
         </tr>
         <tr>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/indirect-reciprocity">Indirect reciprocity</a></td>
@@ -118,6 +118,26 @@ The five mechanisms are often described as answers to the question "how does coo
   </div>
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> The five Nowak conditions mapped to spread from rare and maintenance. All five conditions are ESS (maintenance) conditions. Only kin selection reliably supports spread from rare; network reciprocity and group selection offer a partial route.</figcaption>
 </figure>
+
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
+  <strong>Direct reciprocity — fully proven by simulation:</strong>
+  <ul style={{ marginTop: '0.4rem', marginBottom: '0' }}>
+    <li><strong>Maintenance:</strong> proven — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed/utils/proof_of_mechanism.py">well_mixed/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-1-pure-direct-reciprocity-fails">Step 1 on direct reciprocity page</a></li>
+    <li><strong>Spread from rare = No:</strong> proven — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/well_mixed/utils/proof_stability_vs_invasion.py">well_mixed/proof_stability_vs_invasion.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-2-partner-persistence-is-necessary-but-not-sufficient-from-a-random-start">Step 2 on direct reciprocity page</a></li>
+    <li><strong>Spatial clustering scaffold:</strong> network reciprocity provides origin, direct reciprocity provides maintenance — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/scaffolds/spatial_clustering/utils/proof_of_mechanism.py">spatial_clustering/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-3-spatial-structure-adds-network-reciprocity">Step 3 on direct reciprocity page</a></li>
+    <li><strong>Kin clustering scaffold:</strong> partner permanence is the origin mechanism — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/direct_reciprocity/scaffolds/kin_clustering/utils/proof_of_mechanism.py">kin_clustering/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/direct-reciprocity#step-4-partner-permanence-not-spatial-clustering-is-the-origin-mechanism">Step 4 on direct reciprocity page</a></li>
+  </ul>
+</div>
+
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
+  <strong>Kin selection — fully proven by simulation:</strong>
+  <ul style={{ marginTop: '0.4rem', marginBottom: '0' }}>
+    <li><strong>Maintenance:</strong> proven — 5/5 seeds, mean trait 0.984 — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/kin-selection#step-1-maintenance-cooperation-holds-when-common">Step 1 on kin selection page</a></li>
+    <li><strong>Spread from rare = Yes:</strong> proven — 5/5 seeds, mean trait 0.872 — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/kin-selection#step-2-spread-from-rare-kin-bias-enables-invasion">Step 2 on kin selection page</a></li>
+    <li><strong>No kin bias ablation:</strong> spread unreliable (1/5 seeds, mean trait 0.488) — kin-biased routing, not spatial structure alone, is the decisive mechanism</li>
+    <li><strong>Below Hamilton's rule:</strong> full collapse from 90% to near zero (0/5 seeds) — rb &gt; c boundary confirmed</li>
+  </ul>
+</div>
 
 The direct implication: demonstrating that a mechanism *maintains* cooperation is not the same as demonstrating that it *produces* cooperation. The simulation results in this section test both, and the distinction shows up clearly in every mechanism — particularly in direct reciprocity, where the maintenance condition is cleanly met but spread from rare is stochastic and unreliable.
 

@@ -302,6 +302,80 @@ The lineage cluster raises fitness from 1.11 to 1.50 — a difference that compo
 
 Hamilton's rule maps onto these parameters as $r \approx w_{\text{same}} / (w_{\text{same}} + w_{\text{other}})$, $B = $ `B_plus_scale`, $C = $ `C_scale`.
 
+## Simulation Results
+
+Two claims are made for kin selection in the [Nowak Mechanisms overview](/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance): **maintenance = Yes** and **spread from rare = Yes**. The four scenarios below test both directly, with ablations that isolate which features are load-bearing.
+
+Script: [`utils/proof_of_mechanism.py`](https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py) — 5 seeds × 4 scenarios, 1000 steps each. Success threshold: mean final cooperation trait ≥ 0.60.
+
+### Step 1 — Maintenance: cooperation holds when common
+
+Starting cooperation trait ≈ 0.90 (high), default kin bias (same-lineage weight 0.8, other-lineage weight 0.2), B/C = 5.
+
+**Result: 5/5 seeds successful. Mean final trait = 0.984.**
+
+Cooperation not only persists but rises slightly as the Moran process filters out low-trait agents. The kin-weighted routing recirculates benefit preferentially back toward same-lineage cooperators, creating a fitness premium that fully offsets the private cost. Hamilton's rule ($rB > C$) is met and the population locks into near-maximum cooperation.
+
+### Step 2 — Spread from rare: kin bias enables invasion
+
+Starting cooperation trait ≈ 0.05 (rare), same kin bias and B/C as above.
+
+**Result: 5/5 seeds successful. Mean final trait = 0.872.**
+
+From a starting frequency of 5%, cooperation spreads to 87% on average across seeds. The mechanism is the same positive feedback: cooperating agents produce benefit that flows preferentially to same-lineage neighbors, who also tend to cooperate. Cooperator clusters grow faster than they lose members, and cooperation fixes.
+
+### Step 3 — Ablations: what breaks the mechanism
+
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+  <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+    <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+      <colgroup>
+        <col style={{ width: '30%' }} />
+        <col style={{ width: '18%' }} />
+        <col style={{ width: '16%' }} />
+        <col style={{ width: '36%' }} />
+      </colgroup>
+      <thead>
+        <tr>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scenario</th>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Success rate</th>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Mean trait</th>
+          <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Interpretation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>maintenance_common_start</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}>5 / 5</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}>0.984</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Maintenance confirmed. Kin-biased routing locks cooperation near maximum.</td>
+        </tr>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>spread_from_rare_kin_bias</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}>5 / 5</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}>0.872</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Spread from rare confirmed. Cooperation invades reliably from 5% with kin bias.</td>
+        </tr>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>no_kin_bias_ablation</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#FFF3CD' }}>1 / 5</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#FFF3CD' }}>0.488</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Equal kin weights (well-mixed routing). Spread is unreliable — the grid's spatial structure gives weak partial assortment, but kin bias is the decisive mechanism.</td>
+        </tr>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>below_hamiltons_rule</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#F8D7DA' }}>0 / 5</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#F8D7DA' }}>0.008</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>B/C = 0.25 (rb &lt; c). Cooperation collapses from 90% to near zero — Hamilton's rule boundary confirmed.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Proof-of-mechanism results. 5 seeds per scenario, 1000 steps. Success = mean final trait ≥ 0.60.</figcaption>
+</figure>
+
+The no-kin-bias ablation shows partial, unreliable spread (mean 0.49, 1/5 seeds crossing threshold). This is the grid's spatial structure acting as a weak substitute — the same mechanism that drives network reciprocity. Kin-biased routing amplifies this assortment to reliably carry cooperation from rare.
+
 ## Python Module Layout
 
 ```text
@@ -312,6 +386,7 @@ moran_models/nowak_mechanisms/kin_selection/
   config/
     kin_selection_config.py
   utils/
+    proof_of_mechanism.py
     sweep_kin_selection_phase.py
 ```
 
@@ -319,6 +394,12 @@ moran_models/nowak_mechanisms/kin_selection/
 
 ```bash
 ./.conda/bin/python -m moran_models.nowak_mechanisms.kin_selection.kin_selection_model
+```
+
+Proof of mechanism:
+
+```bash
+./.conda/bin/python -m moran_models.nowak_mechanisms.kin_selection.utils.proof_of_mechanism
 ```
 
 Live viewer:

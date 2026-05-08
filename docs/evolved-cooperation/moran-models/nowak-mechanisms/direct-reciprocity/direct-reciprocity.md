@@ -41,7 +41,7 @@ This is the core distinction: **direct reciprocity can maintain cooperation once
 
 ### Three phases of cooperation
 
-This origin–stability distinction is an instance of a general principle that holds across all five Nowak mechanisms: each mechanism's condition describes phase 3 (maintenance), not phase 1 (initiation) or phase 2 (spread from rare). See [Nowak Mechanisms — Three phases of cooperation](/evolved-cooperation/nowak-mechanisms#three-phases-of-cooperation) for the full cross-mechanism comparison.
+This origin–stability distinction is an instance of a general principle that holds across all five Nowak mechanisms: each mechanism's condition describes maintenance (ESS), not spread from rare. See [Nowak Mechanisms — Spread vs. maintenance](/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance) for the full cross-mechanism comparison.
 
 For direct reciprocity specifically, the three phases play out as follows. Initiation is easy — any finite population with at least one TFT agent can produce a cooperative TFT–TFT pair by chance. Spread is hard: the fitness advantage of that pair (4.0 vs. ALLD–ALLD 1.0) must survive long enough to propagate, which requires async replacement, weak selection, and an absence of unconditional cooperators (ALLC). Maintenance is clean: the Nowak condition $w > 0.41$ is precisely the ESS condition, and 100 of 100 seeds hold cooperation when cooperators are already common.
 
