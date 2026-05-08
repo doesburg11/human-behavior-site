@@ -234,16 +234,96 @@ Simulation runs of 500 steps confirm this is highly robust. Cooperation reaches 
 
 **Result: Cooperation emerges reliably (≈97–98%) from any starting condition. Spatial structure, partner memory, and multiple rounds are all necessary — removing any one of them causes full collapse.**
 
+### Step 4 — Partner permanence, not spatial clustering, is the origin mechanism
+
+**Model:** [`scaffolds/kin_clustering/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/moran_models/nowak_mechanisms/direct_reciprocity/scaffolds/kin_clustering)
+
+Step 3 showed that combining a fixed spatial graph with partner memory and multiple rounds produces robust cooperation. But it left open a question: is it the *spatial clustering* of cooperators that matters, or the *permanence* of the interaction graph itself?
+
+To separate these, the kin-clustering scaffold replaces the 2D grid with a kin-biased interaction graph. At initialization, agents are assigned to lineages. Each agent's interaction partners are drawn with a bias toward same-lineage agents — controlled by `kin_interaction_fraction` — creating a genetic-clustering analog of the spatial grid. The graph is static (fixed at initialization, just like the grid), and all other parameters are identical to the spatial-clustering scaffold: same discrete strategies, same PD payoffs, same partner memory and replacement rule.
+
+The result surprises and clarifies. Cooperation emerges reliably from a random start. But when `kin_interaction_fraction` is set to 0.0 — removing all kin bias so the interaction graph is purely random — cooperation still emerges just as strongly (99.1%). A random fixed graph is sufficient.
+
+This identifies the true origin mechanism: **partner permanence**, not kin clustering. What Step 3's grid accomplished was not the clustering of cooperators but the locking of interaction pairs. When the same agents face each other every step, a TFT agent that is exploited by ALLD in round 1 locks ALLD into mutual defection ($P = 0$) from round 2 onward — permanently. ALLD cannot escape to exploit fresh cooperators. Meanwhile TFT–TFT pairs keep accumulating $R = 1.0$ each round. TFT outcompetes ALLD in fitness not through clustering but through freezing the punishment.
+
+This is why Step 2's p = 0.9 was insufficient: with a 10% dissolution probability each step, ALLD could occasionally be reshuffled to a new cooperator and reset the exploitation cycle. A completely static graph (p = 1.0) closes that loophole.
+
+The ablation tests confirm the same conclusions as in Step 3: memory is necessary (without it, cooperation collapses to ≈1.2%) and multiple rounds are necessary (one round per pair also collapses to ≈1.2%). The kin bias itself is not among the necessary conditions.
+
+<figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
+<div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
+  <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
+    <colgroup>
+      <col style={{ width: '34%' }} />
+      <col style={{ width: '16%' }} />
+      <col style={{ width: '18%' }} />
+      <col style={{ width: '18%' }} />
+      <col style={{ width: '14%' }} />
+    </colgroup>
+    <thead>
+      <tr>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Scenario</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Success rate</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperation rate</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Reciprocal frequency</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>ALLD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Default mixed start</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.00</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.977</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.883</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.022</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Rare lineage start (5% reciprocal)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.00</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.988</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.839</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.021</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No memory (ablation)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.00</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.012</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.008</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.990</td>
+      </tr>
+      <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>One round per pair (ablation)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.00</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.012</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.008</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.990</td>
+      </tr>
+      <tr>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No kin bias — random fixed graph (ablation)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.00</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.991</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.880</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>0.010</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Proof-of-mechanism results for the kin-clustering model (500 steps, 5 seeds each). Success criteria: cooperation ≥ 0.60, reciprocal frequency ≥ 0.50, ALLD ≤ 0.25.</figcaption>
+</figure>
+
+**Result: Cooperation emerges reliably (≈97–99%) under any starting condition, with or without kin bias. The origin mechanism is partner permanence — a completely static interaction graph. Removing memory or multiple rounds causes full collapse regardless of graph structure.**
+
 ## Summary
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
 <div style={{ width: '100%', overflowX: 'auto', textAlign: 'left' }}>
   <table style={{ display: 'table', width: '100%', tableLayout: 'fixed', borderCollapse: 'collapse' }}>
     <colgroup>
-      <col style={{ width: '25%' }} />
-      <col style={{ width: '25%' }} />
-      <col style={{ width: '25%' }} />
-      <col style={{ width: '25%' }} />
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '20%' }} />
+      <col style={{ width: '20%' }} />
     </colgroup>
     <thead>
       <tr>
@@ -251,6 +331,7 @@ Simulation runs of 500 steps confirm this is highly robust. Cooperation reaches 
         <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>well_mixed p = 0.0</th>
         <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>well_mixed p = 0.9</th>
         <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>spatial_clustering</th>
+        <th style={{ backgroundColor: '#0F3368', color: '#FFFFFF', textAlign: 'left', padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>kin_clustering</th>
       </tr>
     </thead>
     <tbody>
@@ -258,91 +339,61 @@ Simulation runs of 500 steps confirm this is highly robust. Cooperation reaches 
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Re-encounter probability w</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>≈0.005</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>≈0.9</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>High (fixed neighbors)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.0 (fixed grid)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>1.0 (fixed graph)</td>
       </tr>
       <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Condition w &gt; 0.41</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
       </tr>
       <tr>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Spatial clustering</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Static interaction graph</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (grid)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (kin graph)</td>
       </tr>
       <tr style={{ backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Active mechanisms</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>None</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Direct reciprocity</td>
-        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Direct + network</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partner permanence + direct reciprocity</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Partner permanence + direct reciprocity</td>
       </tr>
       <tr>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Cooperation emerges</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>No (collapses)</td>
         <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (≈97–98%)</td>
+        <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Yes (≈97–99%)</td>
       </tr>
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Outcome comparison across the three comparable direct reciprocity implementations (discrete strategies, Prisoner's Dilemma payoffs).</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 6:</strong> Outcome comparison across all four direct reciprocity implementations (discrete strategies, Prisoner's Dilemma payoffs).</figcaption>
 </figure>
 
-The `continuous_spatial_memory` scaffold is excluded from this comparison. It uses a benefit–cost framework with continuous cooperation traits rather than discrete strategies and PD payoffs, making it incommensurable with the three models above.
+The shared feature of the two successful models is a completely static interaction graph ($w = 1.0$), not spatial or genetic clustering specifically. The kin_clustering no-kin-bias ablation (random fixed graph) produces the same outcome as the full kin-biased model, confirming that partner permanence is the load-bearing mechanism.
 
-## Python Module Layout
+The three steps together tell a single, coherent story — but it is not the story that a naive reading of the condition $w > 0.41$ would suggest.
 
-```text
-moran_models/nowak_mechanisms/direct_reciprocity/
-  __init__.py
-  well_mixed/
-    __init__.py
-    direct_reciprocity_well_mixed_model.py
-    direct_reciprocity_well_mixed_async_model.py
-    direct_reciprocity_well_mixed_pygame_ui.py
-    direct_reciprocity_well_mixed_grid_pygame_ui.py
-    direct_reciprocity_well_mixed_linked_pygame_ui.py
-    config/
-    data/
-    utils/
-  scaffolds/
-    __init__.py
-    spatial_clustering/
-      __init__.py
-      spatial_clustering_model.py
-      spatial_clustering_pygame_ui.py
-      config/
-      data/
-      utils/
-```
+**Direct reciprocity is a maintenance mechanism, not an origin mechanism.** The theoretical condition describes when a cooperating population resists invasion — when TFT is already common, when cooperative pairs already exist, when the norm is already in place. It says nothing about how that norm arrived. Step 1 and Step 2 make this concrete: even when $w$ is well above the threshold, ALLD dominates a random starting population. The mechanism that would protect cooperation cannot activate because it has nothing yet to protect.
 
-## Usage
+This reveals a general principle that holds across evolutionary game theory. Evolutionary stability (ESS) and evolutionary origin are separate questions with separate answers. A strategy can be an ESS — impossible to invade once fixed — while simultaneously being unable to invade from rare. TFT is exactly such a strategy in a well-mixed population. It is both stable when common and unable to spread when rare. Proving that direct reciprocity can sustain cooperation is therefore not the same as explaining how cooperation got started.
 
-**Well-mixed model:**
+**Step 4 sharpens what Steps 1–3 revealed.** Step 3 showed that a spatial grid combined with partner memory and multiple rounds produces robust cooperation — but it left open whether it was the *clustering* of cooperators or the *permanence* of the interaction graph that mattered. Step 4 answers this directly: the kin-clustering scaffold with zero kin bias (a purely random fixed graph) produces cooperation just as strongly as the kin-biased version. The origin mechanism is **partner permanence** — a completely static interaction graph — not any form of clustering.
 
-```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.well_mixed.direct_reciprocity_well_mixed_model
-```
+The logic is precise. With a static graph, a TFT agent exploited by ALLD in round 1 locks ALLD into mutual defection ($P = 0$) from round 2 onward — permanently. ALLD cannot escape to exploit fresh cooperators. TFT–TFT pairs keep accumulating $R = 1.0$ each round. TFT outcompetes ALLD in fitness not through geographic or genetic clustering but through freezing the punishment. This is why Step 2's $p = 0.9$ was insufficient: a 10% dissolution probability per step allows ALLD to occasionally refresh the exploitation cycle against a new cooperating partner. A completely static graph ($p = 1.0$) closes that loophole entirely.
 
-Live viewer:
+**What is required is partner permanence plus direct reciprocity.** Partner permanence solves the *origin* problem: it prevents ALLD from escaping the consequences of exploiting TFT. Direct reciprocity (partner memory + multiple rounds) solves the *maintenance* problem: it sustains cooperation within established pairs and ensures that TFT–TFT interactions remain more profitable than TFT–ALLD interactions. Removing either one causes full collapse — as the ablation tests in both Step 3 and Step 4 confirm.
 
-```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.well_mixed.direct_reciprocity_well_mixed_pygame_ui
-```
+This is worth distinguishing carefully from Nowak's Rule 4 (network reciprocity). Nowak's network reciprocity operates through spatial clustering *without* memory: cooperators survive on a lattice as long as the benefit-to-cost ratio exceeds the degree, $b/c > k$. With our parameters ($T = 1.7$, $R = 1.0$, $P = 0.0$, $S = -0.5$) and degree $k = 4$, the ratio is approximately $b/c \approx 2.4$, which falls short of the threshold $k = 4$. The no-memory ablation confirms this: even on a static graph, removing partner memory causes full collapse. The static graph in our models does not supply cooperation through network reciprocity in Nowak's sense. What it supplies is $w = 1.0$ — a re-encounter probability high enough that Nowak's Rule 2 (direct reciprocity) becomes fully effective. The graph is the delivery mechanism for Rule 2, not an independent instance of Rule 4. Both rules operate in nature; these models are specifically in the parameter regime where Rule 2 does the work and the graph's role is to make Rule 2 possible.
 
-**Spatial clustering scaffold:**
+This has a direct biological implication. In early human populations, small stable bands — where the same individuals interacted repeatedly over long periods — provided the partner permanence that made direct reciprocity viable as a maintenance mechanism. The bands themselves (created by geography, kinship, or social structure) were the origin mechanism. The evolution of cooperation is not the story of a single mechanism doing everything. It is the story of partner permanence enabling direct reciprocity, which then protects cooperation from invasion and maintains it indefinitely.
 
-```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.scaffolds.spatial_clustering.spatial_clustering_model
-```
-
-Live viewer:
-
-```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.direct_reciprocity.scaffolds.spatial_clustering.spatial_clustering_pygame_ui
-```
 
 ## References
 
