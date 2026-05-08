@@ -59,15 +59,9 @@ The full engine description is on the [Interaction Kernel](/evolved-cooperation/
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> The five Nowak mechanisms and how each sustains cooperation in this implementation.</figcaption>
 </figure>
 
-## Three phases of cooperation
+## Spread vs. maintenance
 
-The five mechanisms are often described as answers to the question "how does cooperation evolve?" But that question contains three distinct sub-questions, each requiring a separate answer:
-
-| Phase | Unit of analysis | Question |
-|---|---|---|
-| **1. Initiation** | Single pair or individual | Can a cooperative act occur at all? |
-| **2. Spread** | Population frequency | Can cooperation increase in frequency when rare? |
-| **3. Maintenance** | Population equilibrium | Can cooperation resist invasion once common? |
+The five mechanisms are often described as answers to the question "how does cooperation evolve?" But that question contains three distinct sub-questions — initiation (can a cooperative act occur at all?), spread (can cooperation increase in frequency when rare?), and maintenance (can cooperation resist invasion once common?) — and the five Nowak conditions address only the last.
 
 **The Nowak conditions are maintenance conditions.** Each of the five rules — $rb > c$, $w > (T-R)/(T-P)$, $q > c/b$, $b/c > k$, $m/n > c/b$ — describes when a population already dominated by cooperators resists invasion by defectors. This is an evolutionary stability (ESS) condition. It is not a condition for spread from rare, and it is not a condition for the first cooperative act to occur.
 
@@ -125,7 +119,7 @@ The five mechanisms are often described as answers to the question "how does coo
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> The five Nowak conditions mapped to spread from rare and maintenance. All five conditions are ESS (maintenance) conditions. Only kin selection reliably supports spread from rare; network reciprocity and group selection offer a partial route.</figcaption>
 </figure>
 
-The direct implication: demonstrating that a mechanism *maintains* cooperation (phase 3) is not the same as demonstrating that it *produces* cooperation (phases 1–2). The simulation results in this section test all three phases, and the distinction shows up clearly in every mechanism — particularly in direct reciprocity, where the maintenance condition is cleanly met but spread from rare is stochastic and unreliable.
+The direct implication: demonstrating that a mechanism *maintains* cooperation is not the same as demonstrating that it *produces* cooperation. The simulation results in this section test both, and the distinction shows up clearly in every mechanism — particularly in direct reciprocity, where the maintenance condition is cleanly met but spread from rare is stochastic and unreliable.
 
 ## Beyond These Five
 
