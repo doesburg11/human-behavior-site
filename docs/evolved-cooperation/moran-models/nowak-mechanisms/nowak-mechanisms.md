@@ -162,6 +162,21 @@ The five mechanisms are often described as answers to the question "how does coo
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Indirect reciprocity simulation evidence for the spread and maintenance claims in Display 2.</figcaption>
 </figure>
 
+<figure style={{ margin: '0 0 1.5rem 0' }}>
+  <div style={{ border: '1px solid #D6E4F5', overflow: 'hidden' }}>
+    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Network reciprocity — fully proven by simulation</div>
+    <div style={{ backgroundColor: '#EAF2FB', color: '#1F2D3D', padding: '0.6rem 1.25rem' }}>
+      <ul style={{ margin: '0' }}>
+        <li><strong>Maintenance = Yes:</strong> proven — 5/5 seeds, mean trait 0.928 — 24×24 von Neumann grid (k=4), b/c=5 &gt; k — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/network_reciprocity/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a></li>
+        <li><strong>Spread from rare = Partial:</strong> proven — 2/5 seeds, mean trait 0.536 — cooperation spreads in replicates where a viable cluster forms by chance; fails in the others; directly demonstrates the stochastic cluster-formation threshold</li>
+        <li><strong>b/c &gt; k boundary:</strong> proven — B_plus_scale=0.5 → b/c=2.5 &lt; k=4 — 0/5 seeds, mean trait 0.012 — cooperation collapses completely from 90% when condition is violated</li>
+        <li><strong>k is the decisive parameter:</strong> proven — Moore neighbourhood (k=8) with same b/c=5 — 0/5 seeds, mean trait 0.009 — condition violated by increasing neighbourhood size, not by changing payoffs; confirms k as the network degree in Nowak's condition</li>
+      </ul>
+    </div>
+  </div>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 6:</strong> Network reciprocity simulation evidence for the spread and maintenance claims in Display 2.</figcaption>
+</figure>
+
 The direct implication: demonstrating that a mechanism *maintains* cooperation is not the same as demonstrating that it *produces* cooperation. The simulation results in this section test both, and the distinction shows up clearly in every mechanism — particularly in direct reciprocity, where the maintenance condition is cleanly met but spread from rare is stochastic and unreliable.
 
 ## The origin of cooperation
