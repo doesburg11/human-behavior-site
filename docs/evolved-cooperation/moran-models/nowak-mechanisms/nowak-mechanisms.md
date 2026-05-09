@@ -15,8 +15,6 @@ This section contains one package for each of the five mechanisms for the evolut
 
 All five mechanisms run on the same Moran update loop. What differs across them is the routing step — specifically the kernel that distributes cooperative benefit to neighbors, and any additional per-site state that modulates it.
 
-The full engine description is on the [Interaction Kernel](/evolved-cooperation/interaction-kernel) page.
-
 ## The Five Mechanisms
 
 <figure style={{ width: '100%', margin: '0 0 1.25rem 0', textAlign: 'center' }}>
