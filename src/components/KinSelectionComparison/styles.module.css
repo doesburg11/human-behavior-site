@@ -1,0 +1,143 @@
+.shell {
+  margin: 0 0 1.5rem;
+  border: 1px solid #D6E4F5;
+  background: #FAFCFF;
+  padding: 1rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.875rem;
+}
+
+.btnPrimary {
+  background: #0F3368;
+  color: #fff;
+  border: none;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.btnPrimary:hover {
+  background: #1a4a8a;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #0F3368;
+  border: 1px solid #0F3368;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.btnSecondary:hover {
+  background: #EAF2FB;
+}
+
+.speedLabel {
+  font-size: 0.82rem;
+  color: #4e6279;
+  margin-left: 0.35rem;
+}
+
+.btnSpeed {
+  background: transparent;
+  border: 1px solid #c0cfe0;
+  color: #4e6279;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.btnSpeed:hover {
+  background: #EAF2FB;
+}
+
+.btnSpeedActive {
+  background: #EAF2FB;
+  border: 1px solid #0F3368;
+  color: #0F3368;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.stepCount {
+  font-size: 0.82rem;
+  font-family: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
+  color: #1F2D3D;
+  margin-left: auto;
+}
+
+.gridsRow {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.gridPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.gridLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0F3368;
+}
+
+.canvas {
+  border: 1px solid #D6E4F5;
+  display: block;
+}
+
+.coopStat {
+  font-size: 0.85rem;
+  font-family: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
+  color: #1F2D3D;
+  background: #EAF2FB;
+  border: 1px solid #D6E4F5;
+  padding: 0.2rem 0.6rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.legend {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.legendRow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #1F2D3D;
+}
+
+.swatchBlue {
+  width: 13px;
+  height: 13px;
+  background: rgb(35, 88, 196);
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.swatchOrange {
+  width: 13px;
+  height: 13px;
+  background: rgb(229, 118, 42);
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}

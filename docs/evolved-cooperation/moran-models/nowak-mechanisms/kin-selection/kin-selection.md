@@ -6,12 +6,17 @@ slug: /evolved-cooperation/kin-selection
 ---
 
 import KinSelectionLiveGrid from '@site/src/components/KinSelectionLiveGrid';
+import KinSelectionComparison from '@site/src/components/KinSelectionComparison';
 
 ## Status
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes the <code>moran_models/nowak_mechanisms/kin_selection/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.</div>
 
 Kin selection is the first of Nowak's five mechanisms for the evolution of cooperation. Cooperation spreads when the benefit delivered to a recipient, weighted by genetic relatedness, exceeds the private cost paid by the actor — Hamilton's rule: $rB > C$.
+
+<div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
+<strong>Unique capability.</strong> Of the five Nowak mechanisms, kin selection is the only one that reliably carries cooperation from a single rare mutant to fixation. The other four mechanisms sustain cooperation once it is already common (maintenance), but cannot bootstrap it from a rare start. The <a href="/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance">overview table</a> maps all five mechanisms against this distinction. This page demonstrates both spread and maintenance for kin selection, and shows exactly why the mechanism achieves what the others cannot.
+</div>
 
 ## How It Is Implemented Here
 
@@ -348,26 +353,26 @@ From a starting frequency of 5%, cooperation spreads to 87% on average across se
       <tbody>
         <tr>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>maintenance_common_start</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}>5 / 5</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}>0.984</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D6E4F5' }}>5 / 5</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D6E4F5' }}>0.984</td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Maintenance confirmed. Kin-biased routing locks cooperation near maximum.</td>
         </tr>
         <tr>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>spread_from_rare_kin_bias</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}>5 / 5</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}>0.872</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D6E4F5' }}>5 / 5</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D6E4F5' }}>0.872</td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Spread from rare confirmed. Cooperation invades reliably from 5% with kin bias.</td>
         </tr>
         <tr>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>no_kin_bias_ablation</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#FFF3CD' }}>1 / 5</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#FFF3CD' }}>0.488</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>1 / 5</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>0.488</td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Equal kin weights (well-mixed routing). Spread is unreliable — the grid's spatial structure gives weak partial assortment, but kin bias is the decisive mechanism.</td>
         </tr>
         <tr>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>below_hamiltons_rule</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#F8D7DA' }}>0 / 5</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#F8D7DA' }}>0.008</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#FFFFFF' }}>0 / 5</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#FFFFFF' }}>0.008</td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>B/C = 0.25 (rb &lt; c). Cooperation collapses from 90% to near zero — Hamilton's rule boundary confirmed.</td>
         </tr>
       </tbody>
@@ -376,13 +381,23 @@ From a starting frequency of 5%, cooperation spreads to 87% on average across se
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Proof-of-mechanism results. 5 seeds per scenario, 1000 steps. Success = mean final trait ≥ 0.60.</figcaption>
 </figure>
 
-The no-kin-bias ablation shows partial, unreliable spread (mean 0.49, 1/5 seeds crossing threshold). This is the grid's spatial structure acting as a weak substitute — the same mechanism that drives network reciprocity. Kin-biased routing amplifies this assortment to reliably carry cooperation from rare.
+**What the no-kin-bias ablation tests.** Setting `kin_weight_same = kin_weight_other = 0.2` makes the weights equal, so the kernel row-normalises to uniform — every neighbour receives the same share of benefit regardless of lineage. The kin routing mechanism is entirely removed; what remains is pure **network reciprocity** (spatial structure only). The result is not complete failure but unreliable spread: 1/5 seeds cross the threshold, mean trait = 0.488. Cooperation sometimes grows because cooperator clusters occasionally form by chance and spatial structure gives them a local advantage, but without preferential routing to same-lineage neighbours that advantage is weak and inconsistent. The comparison with kin selection (5/5 seeds, mean 0.872) makes the mechanism's contribution precise: it is the lineage-biased routing, not the spatial grid itself, that makes spread from rare reliable.
+
+## Why kin selection spreads from rare: the self-routing advantage
+
+The cluster-growth story — cooperators form patches, patches expand — explains maintenance. It does not explain why the very first cooperator survives long enough to form a patch. A lone cooperator surrounded entirely by defectors from other lineages looks like a pure loser: it pays cost $C = 0.2h$ and appears to receive nothing in return.
+
+The key is the kin kernel's self-routing term. Because self is always same-lineage and the neighbourhood includes self, the kernel routes approximately 50% of a cooperator's own output back to itself ($K^+_{i \to i} = w_\text{same} / (w_\text{same} + 4 \cdot w_\text{other}) = 0.8 / 1.6 = 0.5$ when all spatial neighbours are other-lineage). Fitness for that lone cooperator becomes:
+
+$$W_i = 1 + 0.5 \cdot h_i \cdot B_\text{plus} - 0.2 \cdot h_i = 1 + 0.3 h_i > 1$$
+
+Even before a single cluster forms, cooperators already outcompete defectors. Network reciprocity lacks this: without lineage-based routing, a lone cooperator on a uniform grid receives zero net benefit from its spatial neighbours and immediately loses. This is the mechanistic reason kin selection achieves reliable spread from rare while network reciprocity only achieves partial spread.
 
 ## Live simulation
 
-The grid below runs the Moran kin selection model directly in the browser. Each agent is one cell; colour runs from blue (defector, trait 0) to orange (cooperator, trait 1). The simulation starts with ~5% cooperators scattered across a defector-dominated grid. Press **Play** to watch kin-biased routing carry cooperation from rare. Press **Reset** to start a new random invasion — outcomes vary across seeds.
+Both grids below start from the **same random initial state** — roughly 5% cooperators, 18 lineages, kin bias 0.8/0.2. Left satisfies Hamilton's rule (b/c = 5, rb ≈ 0.5 × 5 = 2.5 > 1). Right violates it (b/c = 0.2, rb ≈ 0.5 × 0.2 = 0.1 < 1) — cost swamps benefit even with kin-biased routing. Press **Play** to watch cooperation invade on the left and collapse on the right. Press **Reset** to start a new random configuration.
 
-<KinSelectionLiveGrid />
+<KinSelectionComparison />
 
 ## Phase diagram
 
@@ -413,39 +428,6 @@ The proof-of-mechanism results tell us whether cooperation reaches fixation from
 </figure>
 
 With kin bias, all five seeds rise steeply and consistently, reaching near-fixation within roughly 600–800 steps. The trajectories are tightly clustered, reflecting that kin-biased routing reliably amplifies any initial cooperator cluster regardless of where it forms. Without kin bias, the rise is much slower and the seeds diverge — the spatial grid's structure provides a weak assortment effect (the same mechanism as network reciprocity), but without preferential routing to same-lineage neighbours the invasion stalls well below fixation by step 1000. The contrast makes the mechanism's contribution visible as a difference in invasion speed and reliability, not just final outcome.
-
-## Python Module Layout
-
-```text
-moran_models/nowak_mechanisms/kin_selection/
-  __init__.py
-  kin_selection_model.py
-  kin_selection_pygame_ui.py
-  config/
-    kin_selection_config.py
-  utils/
-    proof_of_mechanism.py
-    sweep_kin_selection_phase.py
-    plot_invasion_trajectories.py
-```
-
-## Usage
-
-```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.kin_selection.kin_selection_model
-```
-
-Proof of mechanism:
-
-```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.kin_selection.utils.proof_of_mechanism
-```
-
-Live viewer:
-
-```bash
-./.conda/bin/python -m moran_models.nowak_mechanisms.kin_selection.kin_selection_pygame_ui
-```
 
 ## References
 

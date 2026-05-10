@@ -64,19 +64,26 @@ function makeState() {
 // One synchronous step: every agent simultaneously copies a local neighbour
 // (or itself) selected by local softmax on fitness — matching selection.py exactly.
 function moranStep(h, lin) {
-  // 1. Compute fitness for all agents using row-normalised kin-weighted kernel
+  // 1. Compute fitness: R_plus[i] = sum_{j in nbrs(i)} K_plus[j,i] * h[j]
+  //    K_plus[j,i] = kin(j,i) / row_sum_j  (exact K_plus.T @ B_plus from engine.py)
+  //    Self IS included: cooperators route ~50% back to themselves, making them viable.
   const fit = new Float32Array(N);
   for (let i = 0; i < N; i++) {
     const ns = NBRS[i];
-    // Only the 4 spatial neighbours contribute to benefit (not self)
-    let wSum = 0;
-    let benefit = 0;
-    for (let k = 1; k < 5; k++) {
-      const w = lin[ns[k]] === lin[i] ? KIN_SAME : KIN_OTHER;
-      wSum += w;
-      benefit += w * h[ns[k]];
+    let r_plus = 0;
+    for (let k = 0; k < 5; k++) {
+      const j = ns[k];
+      // kin from j's perspective toward i (k=0 → j=i, always same lineage)
+      const kinJI = (k === 0) ? KIN_SAME : (lin[j] === lin[i] ? KIN_SAME : KIN_OTHER);
+      // j's row-normalisation denominator: j→self (always KIN_SAME) + j's 4 spatial nbrs
+      const jn = NBRS[j];
+      let jRowSum = KIN_SAME;
+      for (let m = 1; m < 5; m++) {
+        jRowSum += (lin[jn[m]] === lin[j]) ? KIN_SAME : KIN_OTHER;
+      }
+      r_plus += (kinJI / jRowSum) * h[j];
     }
-    fit[i] = Math.max(0.001, BASE_FITNESS + (benefit / wSum) * B_PLUS - h[i] * C_SCALE);
+    fit[i] = Math.max(0.001, BASE_FITNESS + r_plus * B_PLUS - h[i] * C_SCALE);
   }
 
   // 2. Each agent picks a parent from its local neighbourhood (self + 4 neighbours)
