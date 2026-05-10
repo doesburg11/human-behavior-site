@@ -130,10 +130,11 @@ function moranStep(h, lin) {
 
 function drawGrid(canvas, h) {
   const ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < N; i++) {
     ctx.fillStyle = traitToColor(h[i]);
-    ctx.fillRect((i % W) * CELL, Math.floor(i / W) * CELL, CELL, CELL);
+    ctx.fillRect((i % W) * CELL + 1, Math.floor(i / W) * CELL + 1, CELL - 1, CELL - 1);
   }
 }
 

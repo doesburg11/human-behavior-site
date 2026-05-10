@@ -121,10 +121,11 @@ function moranStep(h, lin, kinSame, kinOther, bPlus, cScale) {
 
 function drawGrid(canvas, h) {
   const ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < N; i++) {
     ctx.fillStyle = traitToColor(h[i]);
-    ctx.fillRect((i % W) * CELL, Math.floor(i / W) * CELL, CELL, CELL);
+    ctx.fillRect((i % W) * CELL + 1, Math.floor(i / W) * CELL + 1, CELL - 1, CELL - 1);
   }
 }
 
@@ -226,7 +227,7 @@ export default function KinSelectionComparison() {
 
       <div className={styles.gridsRow}>
         <div className={styles.gridPanel}>
-          <div className={styles.gridLabel}>Hamilton's rule satisfied (b/c = 5)</div>
+          <div className={styles.gridLabel}>Hamilton's rule satisfied (<span style={{fontFamily:'KaTeX_Math,KaTeX_Main,serif',fontStyle:'italic'}}>B</span>/<span style={{fontFamily:'KaTeX_Math,KaTeX_Main,serif',fontStyle:'italic'}}>C</span> = 5)</div>
           <canvas
             ref={canvasKinRef}
             width={W * CELL}
@@ -240,7 +241,7 @@ export default function KinSelectionComparison() {
         </div>
 
         <div className={styles.gridPanel}>
-          <div className={styles.gridLabel}>Hamilton's rule violated (b/c = 0.2)</div>
+          <div className={styles.gridLabel}>Hamilton's rule violated (<span style={{fontFamily:'KaTeX_Math,KaTeX_Main,serif',fontStyle:'italic'}}>B</span>/<span style={{fontFamily:'KaTeX_Math,KaTeX_Main,serif',fontStyle:'italic'}}>C</span> = 0.2)</div>
           <canvas
             ref={canvasAblRef}
             width={W * CELL}
