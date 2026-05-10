@@ -1,0 +1,149 @@
+.shell {
+  margin: 0 0 1.5rem;
+  border: 1px solid #D6E4F5;
+  background: #FAFCFF;
+  padding: 1rem;
+}
+
+.layout {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.canvas {
+  border: 1px solid #D6E4F5;
+  display: block;
+  flex-shrink: 0;
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btnPrimary {
+  background: #0F3368;
+  color: #fff;
+  border: none;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.btnPrimary:hover {
+  background: #1a4a8a;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #0F3368;
+  border: 1px solid #0F3368;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.btnSecondary:hover {
+  background: #EAF2FB;
+}
+
+.speedRow {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-size: 0.82rem;
+  color: #4e6279;
+  margin-right: 0.25rem;
+}
+
+.btnSpeed {
+  background: transparent;
+  border: 1px solid #c0cfe0;
+  color: #4e6279;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.btnSpeed:hover {
+  background: #EAF2FB;
+}
+
+.btnSpeedActive {
+  background: #EAF2FB;
+  border: 1px solid #0F3368;
+  color: #0F3368;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.stats {
+  border: 1px solid #D6E4F5;
+  background: #EAF2FB;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  font-family: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
+  color: #1F2D3D;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.legendRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: #1F2D3D;
+}
+
+.swatchBlue {
+  width: 14px;
+  height: 14px;
+  background: rgb(35, 88, 196);
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.swatchOrange {
+  width: 14px;
+  height: 14px;
+  background: rgb(229, 118, 42);
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: #4e6279;
+  line-height: 1.45;
+  margin: 0;
+}

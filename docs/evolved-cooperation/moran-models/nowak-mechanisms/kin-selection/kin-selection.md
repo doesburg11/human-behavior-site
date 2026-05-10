@@ -5,6 +5,8 @@ sidebar_position: 1
 slug: /evolved-cooperation/kin-selection
 ---
 
+import KinSelectionLiveGrid from '@site/src/components/KinSelectionLiveGrid';
+
 ## Status
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.4rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>This page describes the <code>moran_models/nowak_mechanisms/kin_selection/</code> package in the sibling <a href="https://github.com/doesburg11/EvolvedCooperation">EvolvedCooperation</a> repository.</div>
@@ -375,6 +377,12 @@ From a starting frequency of 5%, cooperation spreads to 87% on average across se
 </figure>
 
 The no-kin-bias ablation shows partial, unreliable spread (mean 0.49, 1/5 seeds crossing threshold). This is the grid's spatial structure acting as a weak substitute — the same mechanism that drives network reciprocity. Kin-biased routing amplifies this assortment to reliably carry cooperation from rare.
+
+## Live simulation
+
+The grid below runs the Moran kin selection model directly in the browser. Each agent is one cell; colour runs from blue (defector, trait 0) to orange (cooperator, trait 1). The simulation starts with ~5% cooperators scattered across a defector-dominated grid. Press **Play** to watch kin-biased routing carry cooperation from rare. Press **Reset** to start a new random invasion — outcomes vary across seeds.
+
+<KinSelectionLiveGrid />
 
 ## Phase diagram
 
