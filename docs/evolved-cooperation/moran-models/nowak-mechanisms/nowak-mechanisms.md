@@ -84,7 +84,7 @@ The five mechanisms are often described as answers to the question "how does coo
         <tr>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}><a href="/evolved-cooperation/kin-selection">Kin selection</a></td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', fontStyle: 'italic' }}>rb &gt; c</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}><strong>Yes</strong> — rare cooperators preferentially interact with relatives who share the cooperative gene</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}><strong>Yes</strong> — offspring stay near parents by definition, automatically creating kin clusters; 5/5 seeds <a href="#kin-selection-isolation-evidence" style={{ fontSize: '0.8em', whiteSpace: 'nowrap' }}>→ simulated</a></td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#D4EDDA' }}><strong>Yes</strong></td>
         </tr>
         <tr>
@@ -114,22 +114,23 @@ The five mechanisms are often described as answers to the question "how does coo
       </tbody>
     </table>
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> The five Nowak conditions mapped to spread from rare and maintenance. All five conditions are ESS (maintenance) conditions. Only kin selection reliably supports spread from rare; network reciprocity and group selection offer a partial route.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> The five Nowak conditions mapped to spread from rare and maintenance. All five conditions are ESS (maintenance) conditions. Kin selection reliably spreads cooperation from rare because offspring proximity to parents is a trivial consequence of reproduction. The other mechanisms require additional biological conditions to achieve the same.</figcaption>
 </figure>
 
-<figure style={{ margin: '0 0 1.5rem 0' }}>
+<figure id="kin-selection-isolation-evidence" style={{ margin: '0 0 1.5rem 0' }}>
   <div style={{ border: '1px solid #D6E4F5', overflow: 'hidden' }}>
-    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Kin selection — fully proven by simulation</div>
+    <div style={{ backgroundColor: '#0F3368', color: '#FFFFFF', padding: '0.5rem 1.25rem', fontWeight: 'bold' }}>Kin selection — simulation evidence</div>
     <div style={{ backgroundColor: '#EAF2FB', color: '#1F2D3D', padding: '0.6rem 1.25rem' }}>
       <ul style={{ margin: '0' }}>
-        <li><strong>Maintenance:</strong> proven — 5/5 seeds, mean trait 0.984 — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/kin-selection#step-1-maintenance-cooperation-holds-when-common">Step 1 on kin selection page</a></li>
-        <li><strong>Spread from rare = Yes:</strong> proven — 5/5 seeds, mean trait 0.872 — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a> · <a href="/evolved-cooperation/kin-selection#step-2-spread-from-rare-kin-bias-enables-invasion">Step 2 on kin selection page</a></li>
-        <li><strong>No kin bias ablation:</strong> spread unreliable (1/5 seeds, mean trait 0.488) — kin-biased routing, not spatial structure alone, is the decisive mechanism</li>
-        <li><strong>Below Hamilton's rule:</strong> full collapse from 90% to near zero (0/5 seeds) — rb &gt; c boundary confirmed</li>
+        <li><strong>Spread from rare:</strong> 5/5 seeds, mean trait 0.872 — offspring inherit lineage and stay local, automatically creating kin clusters; this is kin selection as it operates in biology — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py">utils/proof_of_mechanism.py</a></li>
+        <li><strong>Maintenance:</strong> 5/5 seeds, mean trait 0.984 — kin-biased routing locks cooperation near maximum once common</li>
+        <li><strong>No kin bias ablation:</strong> 1/5 seeds, mean trait 0.488 — removing kin bias while keeping local reproduction gives only partial spread; confirms kin-biased routing is the decisive amplifier on top of local reproduction</li>
+        <li><strong>Well-mixed control — kin preference without kin proximity:</strong> 0/5 seeds, mean trait 0.006 — biologically incoherent scenario (kin selection requires offspring proximity, which local reproduction provides automatically); confirms that kin preference without kin proximity is meaningless — <a href="https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/well_mixed/utils/proof_of_mechanism.py">well_mixed/proof_of_mechanism.py</a></li>
+        <li><strong>Below Hamilton's rule:</strong> 0/5 seeds from 90% — rb &gt; c boundary confirmed</li>
       </ul>
     </div>
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Kin selection simulation evidence for the spread and maintenance claims in Display 2.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Kin selection simulation evidence. The 5/5 spread result is kin selection operating as it does in biology — local reproduction automatically provides the kin proximity the mechanism requires. The well-mixed control tests kin preference without kin proximity, which has no biological counterpart.</figcaption>
 </figure>
 
 <figure style={{ margin: '0 0 1.5rem 0' }}>
@@ -192,21 +193,25 @@ The five mechanisms are often described as answers to the question "how does coo
   <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 7:</strong> Group selection simulation evidence for the spread and maintenance claims in Display 2.</figcaption>
 </figure>
 
-The direct implication: demonstrating that a mechanism *maintains* cooperation is not the same as demonstrating that it *produces* cooperation. The simulation results in this section test both, and the distinction shows up clearly in every mechanism — particularly in direct reciprocity, where the maintenance condition is cleanly met but spread from rare is stochastic and unreliable.
+The direct implication: demonstrating that a mechanism *maintains* cooperation is not the same as demonstrating that it *produces* cooperation. The simulation results in this section test both, and the distinction shows up clearly in every mechanism.
 
 ## The origin of cooperation
 
-Looking across all five mechanisms, kin selection is the only one with a reliable "Yes" for spread from rare. Direct reciprocity and indirect reciprocity fail outright. Network reciprocity requires a pre-existing cooperative cluster — a single isolated cooperator still loses to surrounding defectors, pushing the question back to how that cluster formed. Group selection is conditional on between-group selection being strong enough to overcome the within-group disadvantage.
+The five Nowak conditions are maintenance conditions. Of the five, only kin selection reliably spreads cooperation from rare — but understanding *why* requires distinguishing what each mechanism needs from the biological environment in order to operate.
 
-This makes kin selection the most plausible *initiator* of cooperation: a single rare cooperator's offspring share the cooperative trait, so kin-biased benefit creates a positive feedback loop from the very first generation. The early evidence is consistent — multicellularity, the mitochondrion, and the eukaryotic cell all originated as cooperation between near-identical entities (r ≈ 1). At the highest relatedness, kin selection is barely distinguishable from self-interest.
+**Kin selection and local reproduction are inseparable.** Kin selection works because offspring inherit the parent's cooperative trait and stay nearby, automatically clustering same-lineage cooperators together. This spatial clustering is not an extra assumption — it is a trivial consequence of reproduction itself. You cannot have kin selection without offspring proximity, and offspring proximity comes for free from biology. The local grid structure in the spatial model is not a confound; it is what kin reproduction looks like.
 
-**Where it gets complicated:**
+This is confirmed by the well-mixed control (Display 3): kin preference without kin proximity — offspring scattered globally — produces no benefit at all (0/5, indistinguishable from a no-kin-bias control). Not because kin selection is weak, but because the scenario is biologically incoherent. Kin selection *is* local reproduction with relatedness-biased routing. Separating the two removes the mechanism entirely.
 
-- **Scale matters.** At the molecular level there is no individual yet — just replicating molecules. Kin selection in the Hamilton sense does not cleanly apply there; byproduct mutualism (an act that immediately benefits the actor) is the more appropriate concept for the very first cooperative chemistry.
-- **Nowak's 2010 controversy.** In a high-profile *Nature* paper Nowak, Tarnita, and Wilson (2010) argued that inclusive fitness and kin selection are not the fundamental mechanism — that multilevel (group) selection is the more general framework and kin selection a special case. Hamilton's defenders responded sharply — a reply signed by 137 researchers appeared in the same journal (Abbot et al., 2011). The debate is not settled, but it shows that "kin selection is the origin" is a theoretical claim, not a consensus fact.
-- **Kin selection as ignition, not engine.** Once a cooperative cluster exists — however it formed — direct reciprocity, network reciprocity, and group selection can sustain and amplify it far beyond what kin selection alone could. Kin selection may be best understood as the *scaffolding* that gets cooperation off the ground, after which other mechanisms take over and scale it up.
+**The other mechanisms are not as automatic.** Direct reciprocity also spreads cooperation reliably from rare when given spatial structure (100% success with a spatial scaffold). But spatial structure is not trivially given for direct reciprocity — it additionally requires partner stability, memory of past interactions, and repeated encounters with the same individuals. These are real biological requirements that are not automatically satisfied by reproduction alone. Direct reciprocity needs a stable community structure to have something to reciprocate.
 
-The working hypothesis the simulation results support: kin selection is the most mechanistically clean answer to how cooperation escapes rarity. What happens after that is a different question.
+Network reciprocity alone — without kin bias or reciprocity memory — gives only partial, stochastic spread (2/5). It is the structural foundation but not sufficient on its own.
+
+Group selection adds nothing for spread from rare (2/5 — identical to the network reciprocity baseline). Its role is confined to maintenance.
+
+**What makes kin selection the most robust initiator** is therefore not that it is the only mechanism capable of spreading cooperation from rare, but that the structural condition it requires — offspring near parents — is automatically provided by reproduction in any biological system. Direct reciprocity and network reciprocity depend on additional conditions that must be independently met.
+
+**The Nowak 2010 controversy.** In arguing that multilevel selection subsumes kin selection, Nowak, Tarnita, and Wilson (2010) pointed at the mathematical equivalence between kin selection and spatial/group structure. The simulation results here are consistent with that entanglement — kin selection operates through the same local structure that defines network reciprocity. The 137-researcher rebuttal (Abbot et al., 2011) defends the kin selection framework. The debate is not settled, but the practical implication is clear: kin selection and local population structure are two descriptions of the same biological reality, not two competing mechanisms.
 
 ## Beyond These Five
 

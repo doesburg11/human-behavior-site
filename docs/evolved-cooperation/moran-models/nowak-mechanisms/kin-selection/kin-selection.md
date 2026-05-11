@@ -15,7 +15,7 @@ import KinSelectionComparison from '@site/src/components/KinSelectionComparison'
 Kin selection is the first of Nowak's five mechanisms for the evolution of cooperation. Cooperation spreads when the benefit delivered to a recipient, weighted by genetic relatedness, exceeds the private cost paid by the actor — Hamilton's rule: $rB > C$.
 
 <div style={{ backgroundColor: '#EAF2FB', border: '1px solid #D6E4F5', padding: '0.6rem 1.25rem', margin: '0 0 1.5rem 0', color: '#1F2D3D' }}>
-<strong>Unique capability.</strong> Of the five Nowak mechanisms, kin selection is the only one that reliably carries cooperation from a single rare mutant to fixation. The other four mechanisms sustain cooperation once it is already common (maintenance), but cannot bootstrap it from a rare start. The <a href="/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance">overview table</a> maps all five mechanisms against this distinction. This page demonstrates both spread and maintenance for kin selection, and shows exactly why the mechanism achieves what the others cannot.
+<strong>Unique robustness.</strong> Of the five Nowak mechanisms, kin selection is the most biologically robust initiator of cooperation from rare. It works because offspring inherit the parent's cooperative trait and stay nearby — automatically clustering cooperators together. This spatial proximity is a trivial consequence of reproduction itself, requiring no additional biological conditions. Other mechanisms that also spread cooperation from rare (direct reciprocity with a spatial scaffold) depend on partner stability and memory that are not automatically given. The <a href="/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance">Nowak Mechanisms overview</a> maps this distinction across all five mechanisms.
 </div>
 
 ## How It Is Implemented Here
@@ -230,7 +230,7 @@ Consider a focal site $i$ with four von Neumann neighbors, two same-lineage (A) 
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Worked example: trait values and lineage assignments for focal site $i$ and its four von Neumann neighbors.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Worked example: trait values and lineage assignments for focal site $i$ and its four von Neumann neighbors.</figcaption>
 </figure>
 
 **Production**
@@ -304,16 +304,16 @@ The lineage cluster raises fitness from 1.11 to 1.50 — a difference that compo
     </tbody>
   </table>
 </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 2:</strong> Key parameters controlling kin-selection routing weights and payoff scaling.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Key parameters controlling kin-selection routing weights and payoff scaling.</figcaption>
 </figure>
 
 Hamilton's rule maps onto these parameters as $r \approx w_{\text{same}} / (w_{\text{same}} + w_{\text{other}})$, $B = $ `B_plus_scale`, $C = $ `C_scale`.
 
 ## Simulation Results
 
-Two claims are made for kin selection in the [Nowak Mechanisms overview](/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance): **maintenance = Yes** and **spread from rare = Yes**. The four scenarios below test both directly, with ablations that isolate which features are load-bearing.
+The [Nowak Mechanisms overview](/evolved-cooperation/nowak-mechanisms#spread-vs-maintenance) reports kin selection as **Yes** for both spread from rare and maintenance. This page demonstrates both and shows exactly how the mechanism operates.
 
-Script: [`utils/proof_of_mechanism.py`](https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py) — 5 seeds × 4 scenarios, 1000 steps each. Success threshold: mean final cooperation trait ≥ 0.60.
+Scripts: [`utils/proof_of_mechanism.py`](https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/utils/proof_of_mechanism.py) and [`well_mixed/utils/proof_of_mechanism.py`](https://github.com/doesburg11/EvolvedCooperation/blob/main/moran_models/nowak_mechanisms/kin_selection/well_mixed/utils/proof_of_mechanism.py). 5 seeds per scenario, 1000 steps each. Success threshold: mean final cooperation trait ≥ 0.60.
 
 ### Step 1 — Maintenance: cooperation holds when common
 
@@ -323,13 +323,13 @@ Starting cooperation trait ≈ 0.90 (high), default kin bias (same-lineage weigh
 
 Cooperation not only persists but rises slightly as the Moran process filters out low-trait agents. The kin-weighted routing recirculates benefit preferentially back toward same-lineage cooperators, creating a fitness premium that fully offsets the private cost. Hamilton's rule ($rB > C$) is met and the population locks into near-maximum cooperation.
 
-### Step 2 — Spread from rare: kin bias enables invasion
+### Step 2 — Spread from rare: kin selection enables invasion
 
 Starting cooperation trait ≈ 0.05 (rare), same kin bias and $B/C$ as above.
 
 **Result: 5/5 seeds successful. Mean final trait = 0.872.**
 
-From a starting frequency of 5%, cooperation spreads to 87% on average across seeds. The mechanism is the same positive feedback: cooperating agents produce benefit that flows preferentially to same-lineage neighbors, who also tend to cooperate. Cooperator clusters grow faster than they lose members, and cooperation fixes.
+From a starting frequency of 5%, cooperation spreads to 87% on average across seeds. Offspring inherit the parent's lineage and stay local, automatically clustering same-lineage cooperators together. The kin-biased routing then preferentially recirculates benefit within those clusters, accelerating their growth. The ablation below isolates how much each component contributes.
 
 ### Step 3 — Ablations: what breaks the mechanism
 
@@ -364,42 +364,48 @@ From a starting frequency of 5%, cooperation spreads to 87% on average across se
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Spread from rare confirmed. Cooperation invades reliably from 5% with kin bias.</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>no_kin_bias_ablation</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>no_kin_bias_ablation (spatial)</td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>1 / 5</td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: 'rgba(120, 170, 230, 0.16)' }}>0.488</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Equal kin weights (well-mixed routing). Spread is unreliable — the grid's spatial structure gives weak partial assortment, but kin bias is the decisive mechanism.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Equal kin weights on the same spatial grid — network reciprocity alone. Spread is partial and stochastic. The kin bias amplifies the spatial baseline from 1/5 to 5/5; the spatial structure is the necessary foundation.</td>
         </tr>
         <tr>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>below_hamiltons_rule</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>well_mixed_control (kin preference, no kin proximity)</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#F8D7DA' }}>0 / 5</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#F8D7DA' }}>0.006</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>Fully connected population — kin preference active but offspring scattered globally, so no kin proximity. Indistinguishable from the no-kin-bias control (0.005). Confirms that kin proximity (provided automatically by local reproduction) is what makes kin selection work.</td>
+        </tr>
+        <tr>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>below_hamiltons_rule (spatial)</td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#FFFFFF' }}>0 / 5</td>
           <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5', backgroundColor: '#FFFFFF' }}>0.008</td>
-          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$B/C = 0.25$ ($rB$ &lt; $C$). Cooperation collapses from 90% to near zero — Hamilton's rule boundary confirmed.</td>
+          <td style={{ padding: '0.75rem 1rem', border: '1px solid #D6E4F5' }}>$B/C = 0.25$ ($rB$ &lt; $C$). Cooperation collapses from 90% to near zero — Hamilton's rule boundary confirmed within the spatial model.</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 3:</strong> Proof-of-mechanism results. 5 seeds per scenario, 1000 steps. Success = mean final trait ≥ 0.60.</figcaption>
+  <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Proof-of-mechanism results. 5 seeds per scenario, 1000 steps. Success = mean final trait ≥ 0.60.</figcaption>
 </figure>
 
-**What the no-kin-bias ablation tests.** Setting `kin_weight_same = kin_weight_other = 0.2` makes the weights equal, so the kernel row-normalises to uniform — every neighbour receives the same share of benefit regardless of lineage. The kin routing mechanism is entirely removed; what remains is pure **network reciprocity** (spatial structure only). The result is not complete failure but unreliable spread: 1/5 seeds cross the threshold, mean trait = 0.488. Cooperation sometimes grows because cooperator clusters occasionally form by chance and spatial structure gives them a local advantage, but without preferential routing to same-lineage neighbours that advantage is weak and inconsistent. The comparison with kin selection (5/5 seeds, mean 0.872) makes the mechanism's contribution precise: it is the lineage-biased routing, not the spatial grid itself, that makes spread from rare reliable.
+**What the ablations show.** The no-kin-bias ablation removes lineage weighting while keeping local reproduction, leaving only the spatial assortment from offspring proximity. The result — 1/5 seeds, mean 0.488 — is the baseline from local reproduction alone. Kin-biased routing amplifies that to 5/5 by preferentially recirculating benefit within same-lineage clusters. The well-mixed control confirms the other side: kin preference without kin proximity produces no effect at all (0/5, mean 0.006 — identical to the no-kin-bias well-mixed control at 0.005). Kin proximity — automatically provided by local reproduction — is the necessary condition; kin-biased routing is the amplifier on top of it.
 
-## Why kin selection spreads from rare: the self-routing advantage
+## Why kin bias amplifies spatial structure: the self-routing advantage
 
-The cluster-growth story — cooperators form patches, patches expand — explains maintenance. It does not explain why the very first cooperator survives long enough to form a patch. A lone cooperator surrounded entirely by defectors from other lineages looks like a pure loser: it pays cost $C = 0.2h$ and appears to receive nothing in return.
+The cluster-growth story — cooperators form patches, patches expand — explains maintenance. It does not explain why the kin bias makes patch formation so much more reliable than spatial structure alone. A lone cooperator on the grid surrounded entirely by other-lineage defectors would seem to gain little from kin routing.
 
-The key is the kin kernel's self-routing term. Because self is always same-lineage and the neighbourhood includes self, the kernel routes approximately 50% of a cooperator's own output back to itself ($K^+_{i \to i} = w_\text{same} / (w_\text{same} + 4 \cdot w_\text{other}) = 0.8 / 1.6 = 0.5$ when all spatial neighbours are other-lineage). Fitness for that lone cooperator becomes:
+The key is the self-routing term. Because self is always same-lineage and the neighbourhood includes self, the kernel routes approximately 50% of a cooperator's own output back to itself ($K^+_{i \to i} = w_\text{same} / (w_\text{same} + 4 \cdot w_\text{other}) = 0.8 / 1.6 = 0.5$ when all spatial neighbours are other-lineage). Fitness for that lone cooperator becomes:
 
 $$W_i = 1 + 0.5 \cdot h_i \cdot B_\text{plus} - 0.2 \cdot h_i = 1 + 0.3 h_i > 1$$
 
-Even before a single cluster forms, cooperators already outcompete defectors. Network reciprocity lacks this: without lineage-based routing, a lone cooperator on a uniform grid receives zero net benefit from its spatial neighbours and immediately loses. This is the mechanistic reason kin selection achieves reliable spread from rare while network reciprocity only achieves partial spread.
+Even before a cluster forms, a lone cooperator on the spatial grid already outcompetes local defectors. Network reciprocity without kin bias lacks this: a lone cooperator with uniform routing receives zero net benefit from its spatial neighbours and loses immediately. This is why the kin bias converts network reciprocity's stochastic 1/5 into a reliable 5/5 — it removes the vulnerable solo-cooperator phase. In a well-mixed population this advantage disappears: the self-routing benefit is diffused across 575 neighbours rather than concentrated in a local neighbourhood, and the effect vanishes.
 
 ## Live simulation
 
-Both grids below start from the **same random initial state** — roughly 5% cooperators, 18 lineages, kin bias 0.8/0.2. Left satisfies Hamilton's rule ($B/C = 5$, $rB > C$). Right violates it ($B/C = 0.2$, $rB < C$) — cost swamps benefit even with kin-biased routing. Press **Play** to watch cooperation invade on the left and collapse on the right. Press **Reset** to start a new random configuration.
+Both grids below start from the **same random initial state** — roughly 5% cooperators, 18 lineages, kin bias 0.8/0.2. Left satisfies Hamilton's rule ($B/C = 5$, $rB > C$). Right violates it ($B/C = 0.2$, $rB < C$) — cost swamps benefit even with kin-biased routing. Press **Play** to watch spatial kin clusters grow on the left and collapse on the right. Press **Reset** to start a new random configuration.
 
 <figure style={{ margin: '0 0 1.25rem 0' }}>
 <KinSelectionComparison />
-<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 4:</strong> Live kin-selection comparison. Both grids start from the same random initial state (~5% cooperators, 18 lineages, kin bias 0.8/0.2). Left: Hamilton's rule satisfied ($B/C = 5$, $rB$ &gt; $C$ — cooperation spreads). Right: Hamilton's rule violated ($B/C = 0.2$, $rB$ &lt; $C$ — cooperation collapses).</figcaption>
+<figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 5:</strong> Live kin-selection comparison. Both grids start from the same random initial state (~5% cooperators, 18 lineages, kin bias 0.8/0.2). Left: Hamilton's rule satisfied ($B/C = 5$, $rB$ &gt; $C$ — cooperation spreads). Right: Hamilton's rule violated ($B/C = 0.2$, $rB$ &lt; $C$ — cooperation collapses).</figcaption>
 </figure>
 
 ## References
