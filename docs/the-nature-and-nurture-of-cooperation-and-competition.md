@@ -21,7 +21,7 @@ slug: /
 
 ## How does human cooperation emerge from evolution and learning?
 
-Human cooperative behavior is one of the central puzzles in biology and the social sciences. This page treats cooperation as a two-timescale problem: some cooperative tendencies are shaped across generations by natural selection, and some are acquired within a lifetime through learning. The project studies both with Artificial Intelligence (AI) and Agent-Based Modeling (ABM).
+Human cooperative behavior is one of the central puzzles in biology and the social sciences. This page treats cooperation as a two-timescale problem: some cooperative tendencies are shaped across generations by natural selection, and some are acquired within a lifetime through learning. 
 
 - **Nature** → Evolving cooperation over generations by natural selection
 
@@ -196,9 +196,12 @@ The relationship does not stop there. Learning changes ecological structure, eco
 
 Plasticity closes that loop. In unstable environments, high plasticity may be favored because it supports rapid adjustment. In stable environments, lower plasticity may be favored because it reduces cost and preserves reliable behavior.
 
-## Research questions
+## Research tools and questions
+**Tools** 
+This project studies both with Artificial Intelligence (AI) and Agent-Based Modeling (ABM).
 
-- Under which ecological conditions does cooperation emerge at all?
+**Questions**
+- Under which ecological conditions does human cooperation emerge at all?
 
 - When should selection favor fixed cooperative tendencies, and when should it favor plasticity?
 
