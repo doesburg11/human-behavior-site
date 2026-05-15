@@ -211,6 +211,34 @@ This project studies both with Artificial Intelligence (AI) and Agent-Based Mode
 
 - Can cooperative behavior emerge from minimal rules without being explicitly engineered?
 
+## Methodology
+
+### The limits of verification in evolutionary research
+
+A fundamental constraint runs through all research on the evolution of cooperation: it is not possible to prove that any particular mechanism was causally responsible for the emergence of cooperative behavior in human evolutionary history. Evolutionary history is unrepeatable. The selection pressures, population structures, and ecological conditions that shaped human behavior over millions of years cannot be reconstructed with sufficient precision to support the kind of controlled, statistical verification that would settle causal claims. This is sometimes called the historical sciences problem — the evidential record is always incomplete, events branch contingently, and retrospective inference is underdetermined no matter how rich the comparative or archaeological data. Kinship, reciprocity, reputation, punishment, and group selection are all plausible candidates, but demonstrating that any one of them was *necessary* for human cooperation to emerge, rather than merely consistent with it, lies beyond what current evidence can deliver.
+
+### From historical proof to predictive modeling
+
+Given this constraint, the most defensible scientific strategy shifts from verification of past causes to prediction of present behavior. A model earns credibility not by reconstructing what happened but by generating specific, falsifiable predictions about what should be observable in human cooperative behavior today — and under which conditions those patterns should change. This is the standard this project holds itself to: models should make ex ante predictions that can be tested against controlled laboratory experiments, field data, or cross-cultural comparisons of cooperative behavior. The verification happens in the present, even if the mechanisms being modeled operate across evolutionary time.
+
+### The tension between abstraction and realism
+
+This creates a genuine methodological tension. On one side, abstract models with few prior assumptions have the most inferential power. When cooperation emerges from a model that assumes very little about human nature, the result is informative precisely because little was smuggled in. Axelrod's tournament models and Nowak's five mechanisms work this way: their value comes from parsimony. On the other side, a model that closely mirrors known features of human behavior — social preferences, language, institutions, cultural norms — may fit observed patterns well but explain little, because the explanation has been absorbed into the assumptions. This is the overfitting problem in a theoretical register: a model calibrated to reproduce what we already know about human cooperation has fewer degrees of freedom left to surprise us. It becomes descriptively rich but explanatorily constrained.
+
+### A dual modeling strategy
+
+To navigate this tension, this project pursues two modeling approaches in parallel rather than choosing between them.
+
+The first approach starts from minimal assumptions: agents with no pre-specified social preferences, interacting under simple ecological rules, with only the capacity to learn from local experience. From this sparse starting point, the goal is to build upward — adding structure only when it proves necessary to reproduce patterns of cooperation that would otherwise not emerge. This bottom-up approach treats every added assumption as a cost that must be justified by what it explains.
+
+The second approach starts from a richer description of human behavior: agents endowed with the cognitive and social capacities that current evidence associates with human cooperation, including reputation sensitivity, norm enforcement, and structured group membership. From this detailed starting point, the goal is to break downward — identifying which assumptions can be removed without destroying the cooperative outcomes. This top-down approach asks which features of human nature are load-bearing and which are dispensable.
+
+The logic of running both approaches is that convergence is more trustworthy than single-model conclusions. If a sparse bottom-up model and a richly parameterized top-down model produce overlapping predictions about when cooperation stabilizes and when it breaks down, those predictions do not depend on one particular set of assumptions. Where the two approaches diverge, the divergence itself is informative: it identifies which assumptions are doing the explanatory work.
+
+### Computational experiments as a substitute for natural experiments
+
+Because evolutionary history cannot be replayed and the conditions that shaped human cooperation cannot be held constant in the field, this project uses computational experiments to substitute for natural ones. Agent-based simulations and reinforcement learning environments allow conditions to be set precisely, varied one parameter at a time, and replicated across thousands of runs. This makes it possible to ask causal questions — does cooperation increase when relatedness increases, or when memory extends, or when group size shrinks — under controlled conditions that field observation cannot provide. The predictions those experiments generate are then the empirical targets: patterns that should appear in human cooperative behavior if the model captures something real, and whose absence would count against it.
+
 ## Why AI and agent-based models?
 
 If cooperation depends on both lifetime learning and longer-run selection, then the research tools need to represent both timescales at once. That is why AI and agent-based modeling enter the picture here. They do not appear as add-ons to the argument; they follow from the structure of the problem itself.
