@@ -8,6 +8,7 @@ export default {
       items: [
         'cooperation-in-perspective/what-is-cooperation/what-is-cooperation',
         'cooperation-in-perspective/what-is-adversarial-behavior/what-is-adversarial-behavior',
+        'cooperation-in-perspective/history-of-human-cooperation-and-competition/history-of-human-cooperation-and-competition',
       ],
     },
     {
