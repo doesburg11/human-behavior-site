@@ -171,6 +171,22 @@ A useful model should include at least some of the following capacities:
 <figcaption style={{ marginTop: '0.6rem', textAlign: 'center' }}><strong>Display 1:</strong> Historically important capacities for a behaviorally anchored model of cooperation and competition.</figcaption>
 </figure>
 
+## Python Implementation
+
+The corresponding Python implementation lives in the `EvolvedCooperation`
+repository:
+
+- package: [`behaviorally_anchored_model/`](https://github.com/doesburg11/EvolvedCooperation/tree/main/behaviorally_anchored_model)
+- runtime: [`behaviorally_anchored_model/behaviorally_anchored_model.py`](https://github.com/doesburg11/EvolvedCooperation/blob/main/behaviorally_anchored_model/behaviorally_anchored_model.py)
+- config and proof scenarios: [`behaviorally_anchored_model/config/behaviorally_anchored_config.py`](https://github.com/doesburg11/EvolvedCooperation/blob/main/behaviorally_anchored_model/config/behaviorally_anchored_config.py)
+
+That model implements the small-scale family and foraging-band layer of this
+page: repeated interaction, reputation, norm enforcement, group boundaries,
+kin/household child care, ecological pressure, and social learning. It does not
+try to model the later institutional layers discussed above, such as
+agriculture, states, law, money, writing, bureaucracy, markets, or formal
+education.
+
 ## Methodological Role
 
 This page supports the richer side of the dual modeling strategy. The minimal generative model asks how far cooperation can emerge from sparse assumptions. The behaviorally anchored model asks what happens when agents are given capacities that human social history suggests are important.
@@ -182,7 +198,7 @@ In that sense, the two approaches should discipline each other. The behaviorally
 ## References
 
 - Boehm, C. (1999). *Hierarchy in the Forest: The Evolution of Egalitarian Behavior*. Harvard University Press.
-- Boyd, R., & Richerson, P. J. (1985). *Culture and the Evolutionary Process*. University of Chicago Press. https://press.uchicago.edu/ucp/books/book/chicago/C/bo5970597.html
+- Boyd, R., & Richerson, P. J. (1985). *Culture and Evolutionary Process*. University of Chicago Press. https://press.uchicago.edu/ucp/books/book/chicago/C/bo5970597.html
 - Gurven, M., & Hill, K. (2009). Why Do Men Hunt? *Current Anthropology*, 50(1), 51-74. https://doi.org/10.1086/595620
 - Henrich, J. (2015). *The Secret of Our Success: How Culture Is Driving Human Evolution, Domesticating Our Species, and Making Us Smarter*. Princeton University Press.
 - Hrdy, S. B. (2009). *Mothers and Others: The Evolutionary Origins of Mutual Understanding*. Harvard University Press.
