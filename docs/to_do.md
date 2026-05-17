@@ -3,6 +3,8 @@ id: to_do
 title: To do
 sidebar_position: 99
 ---
+### Model Hunter Gathererers
+- Decisison to Fight-or-Flight
 
 ### Mental accounting
 Implement a range of in-debtness, to model the concept of friend/informal business. For instance if defected x-times in a row / or if the accumulated investement is 'fair'.
