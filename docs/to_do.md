@@ -5,6 +5,28 @@ sidebar_position: 99
 ---
 ### Model Hunter Gathererers
 - Decisison to Fight-or-Flight
+#### eating
+=- More varied than setllers
+- Scavanging
+- Nuts
+- Deer
+- Large Deer (stronger than humans)
+#### sheletering
+
+#### household formation
+
+#### movement
+
+#### bands
+- size (150)
+- social structure
+- specializasing
+
+
+#### steps
+-every step 1 month, to acurately enough simulate the seasons.
+
+
 
 ### Mental accounting
 Implement a range of in-debtness, to model the concept of friend/informal business. For instance if defected x-times in a row / or if the accumulated investement is 'fair'.
